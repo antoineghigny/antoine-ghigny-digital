@@ -2,6 +2,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import localFont from "next/font/local";
 import "../globals.css";
 import Providers from "@/components/Providers";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
       >
         <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03] contrast-150 brightness-150 mix-blend-multiply bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         <Providers locale={locale} messages={messages}>
+          <LocaleSwitcher />
           {children}
         </Providers>
       </body>

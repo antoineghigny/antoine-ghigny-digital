@@ -2,47 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "@phosphor-icons/react";
-import { usePathname, useRouter } from "@/i18n/navigation";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-};
-
-const LocaleSwitcher = () => {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const handleLocaleChange = (nextLocale: "en" | "fr") => {
-    router.replace(pathname, { locale: nextLocale });
-  };
-
-  return (
-    <div className="flex items-center gap-4">
-      <button
-        onClick={() => handleLocaleChange("fr")}
-        className={`text-xs uppercase tracking-widest transition-colors duration-300 font-medium ${
-          locale === "fr" ? "text-[#B34B44]" : "text-stone-400 hover:text-[#B34B44]"
-        }`}
-      >
-        FR
-      </button>
-      <span className="w-px h-3 bg-stone-200" />
-      <button
-        onClick={() => handleLocaleChange("en")}
-        className={`text-xs uppercase tracking-widest transition-colors duration-300 font-medium ${
-          locale === "en" ? "text-[#B34B44]" : "text-stone-400 hover:text-[#B34B44]"
-        }`}
-      >
-        EN
-      </button>
-    </div>
-  );
 };
 
 export default function ContactFooter() {
@@ -130,12 +97,9 @@ export default function ContactFooter() {
       <div className="bg-white py-12 border-t border-stone-100">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-            <div className="flex items-center gap-8">
-              <p className="text-xs text-stone-500 tracking-wide font-medium">
-                {tf("copyright", { year: currentYear })}
-              </p>
-              <LocaleSwitcher />
-            </div>
+            <p className="text-xs text-stone-500 tracking-wide font-medium">
+              {tf("copyright", { year: currentYear })}
+            </p>
             <div className="flex items-center gap-10">
               <a
                 href="#"

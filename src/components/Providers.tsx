@@ -12,7 +12,11 @@ export default function Providers({
   messages: AbstractIntlMessages;
 }) {
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider 
+      locale={locale} 
+      messages={messages}
+      timeZone="Europe/Brussels"
+    >
       {children}
     </NextIntlClientProvider>
   );
