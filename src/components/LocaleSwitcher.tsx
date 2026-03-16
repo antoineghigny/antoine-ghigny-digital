@@ -24,8 +24,8 @@ export function LocaleSwitcher() {
   return (
     <div className="fixed top-8 right-8 z-[100]">
       <div 
-        className="backdrop-blur-md bg-white/70 border border-white/20 p-1.5 rounded-full flex items-center gap-1 shadow-sm"
-        style={{ boxShadow: '0 4px 20px -5px rgba(45, 41, 38, 0.05)' }}
+        className="backdrop-blur-md bg-white/80 border border-white/20 p-1 rounded-full flex items-center gap-1 shadow-sm overflow-hidden"
+        style={{ boxShadow: '0 8px 32px -4px rgba(45, 41, 38, 0.08)' }}
       >
         {locales.map((l) => {
           const isActive = locale === l.id;
@@ -36,7 +36,7 @@ export function LocaleSwitcher() {
               onClick={() => handleLocaleChange(l.id as "en" | "fr")}
               onMouseEnter={() => setHovered(l.id)}
               onMouseLeave={() => setHovered(null)}
-              className="relative px-3 py-1.5 rounded-full text-[11px] font-medium tracking-widest transition-all duration-300 outline-none"
+              className="relative px-3.5 py-1.5 rounded-full text-[10px] font-bold tracking-[0.15em] transition-colors duration-200 outline-none uppercase"
               style={{ 
                 color: isActive ? '#FAF8F5' : '#5C5652',
               }}
@@ -45,9 +45,10 @@ export function LocaleSwitcher() {
               {isActive && (
                 <motion.div
                   layoutId="activeLocale"
+                  initial={false}
                   className="absolute inset-0 z-0 rounded-full"
                   style={{ backgroundColor: '#B34B44' }}
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                 />
               )}
 
@@ -55,9 +56,9 @@ export function LocaleSwitcher() {
               <AnimatePresence>
                 {hovered === l.id && !isActive && (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     className="absolute inset-0 z-[-1] rounded-full bg-[#2D2926]/5"
                   />
                 )}
@@ -68,15 +69,6 @@ export function LocaleSwitcher() {
           );
         })}
       </div>
-      
-      {/* Subtle bottom indicator line for the fixed element depth */}
-      <motion.div 
-        className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1/3 h-[1px] opacity-20"
-        style={{ backgroundColor: '#2D2926' }}
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ delay: 0.5 }}
-      />
     </div>
   );
 }
