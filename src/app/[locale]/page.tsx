@@ -1,3 +1,5 @@
+"use client";
+
 import HeroAndWhy from "@/components/landing/HeroAndWhy";
 import WhyMeSection from "@/components/landing/WhyMeSection";
 import ContactFooter from "@/components/landing/ContactFooter";

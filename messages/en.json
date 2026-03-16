@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "title": "Antoine Ghigny · Digital Creation",
+    "description": "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium."
+  },
+  "hero": {
+    "availability": "Available for new projects",
+    "title_part1": "Your website.",
+    "title_part2": "Finally done right.",
+    "description": "I design bespoke, modern and performant websites for freelancers and SMEs who want a digital presence that pays off.",
+    "cta": "Launch my project",
+    "trust": {
+      "satisfied": "Satisfied or reworked",
+      "fixed_price": "Fixed price",
+      "response_time": "Reply within 24h"
+    }
+  },
+  "whyMe": {
+    "badge": "Why work with me",
+    "title_part1": "Digital should work",
+    "title_part2": "for you",
+    "title_part3": ", not the other way around.",
+    "bento": {
+      "professionalism": {
+        "label": "First Impression",
+        "title": "A modern and fast site that <highlight>converts</highlight> your visitors into loyal customers."
+      },
+      "trust": {
+        "label": "Digital Authority",
+        "title": "An image that matches your real <highlight>expertise</highlight>."
+      },
+      "performance": {
+        "label": "Performance & Speed",
+        "title": "Optimized for uncompromising <highlight>fluidity</highlight>."
+      },
+      "design": {
+        "label": "User Experience",
+        "title": "Bespoke design that captures the deep <highlight>essence</highlight> of your brand.",
+        "footer": "Refinement & Clarity"
+      }
+    },
+    "collaboration": {
+      "client": {
+        "title_part1": "Your Industry",
+        "title_part2": "Expertise.",
+        "description": "Nobody knows your industry better than you. You bring the field knowledge and indispensable strategic challenges."
+      },
+      "my": {
+        "title_part1": "My Digital",
+        "title_part2": "Vision.",
+        "description": "I translate your ambitions into high-precision tools, transforming your know-how into an exceptional digital experience."
+      }
+    }
+  },
+  "contact": {
+    "badge": "First step",
+    "title": "Let's talk about your project.",
+    "description": "A free 30-minute introductory call to understand your needs and propose a concrete solution.",
+    "cta": "Book my free call",
+    "status": "No commitment — Available this week"
+  },
+  "footer": {
+    "copyright": "© {year} Antoine Ghigny. All rights reserved.",
+    "links": {
+      "legal": "Legal mentions",
+      "privacy": "Privacy policy"
+    },
+    "tva": "VAT BE0XXX.XXX.XXX"
+  }
+}

@@ -2,7 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations, useLocale } from "next-intl";
 import { ArrowUpRight } from "@phosphor-icons/react";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -11,7 +13,43 @@ const fadeUp = {
   whileInView: { opacity: 1, y: 0 },
 };
 
+const LocaleSwitcher = () => {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLocaleChange = (nextLocale: "en" | "fr") => {
+    router.replace(pathname, { locale: nextLocale });
+  };
+
+  return (
+    <div className="flex items-center gap-4">
+      <button
+        onClick={() => handleLocaleChange("fr")}
+        className={`text-xs uppercase tracking-widest transition-colors duration-300 font-medium ${
+          locale === "fr" ? "text-[#B34B44]" : "text-stone-400 hover:text-[#B34B44]"
+        }`}
+      >
+        FR
+      </button>
+      <span className="w-px h-3 bg-stone-200" />
+      <button
+        onClick={() => handleLocaleChange("en")}
+        className={`text-xs uppercase tracking-widest transition-colors duration-300 font-medium ${
+          locale === "en" ? "text-[#B34B44]" : "text-stone-400 hover:text-[#B34B44]"
+        }`}
+      >
+        EN
+      </button>
+    </div>
+  );
+};
+
 export default function ContactFooter() {
+  const t = useTranslations("contact");
+  const tf = useTranslations("footer");
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-[#FAF8F5] selection:bg-[#B34B44] selection:text-white">
       {/* Contact Section */}
@@ -33,13 +71,13 @@ export default function ContactFooter() {
                 variants={fadeUp}
                 className="text-xs uppercase tracking-widest font-medium text-[#B34B44]"
               >
-                Premier pas
+                {t("badge")}
               </motion.span>
               <motion.h2
                 variants={fadeUp}
                 className="text-5xl md:text-8xl font-bold tracking-tight text-[#2D2926] leading-[0.95] lg:leading-[1.1] max-w-[12ch]"
               >
-                Parlons de votre projet.
+                {t("title")}
               </motion.h2>
             </div>
 
@@ -49,8 +87,7 @@ export default function ContactFooter() {
                 variants={fadeUp}
                 className="text-xl md:text-2xl text-[#5C5652] leading-relaxed font-light max-w-[40ch]"
               >
-                Un premier echange gratuit de 30 minutes pour comprendre vos
-                besoins et vous proposer une solution concrete.
+                {t("description")}
               </motion.p>
               
               <motion.div variants={fadeUp} className="space-y-6">
@@ -61,7 +98,7 @@ export default function ContactFooter() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-10 py-6 rounded-full font-medium text-xl shadow-2xl shadow-[#B34B44]/30 hover:bg-[#963f39] transition-all duration-300 group overflow-hidden"
                 >
-                  <span>Reserver mon appel gratuit</span>
+                  <span>{t("cta")}</span>
                   <div className="relative h-6 w-6 overflow-hidden pointer-events-none">
                     <motion.div
                       variants={{
@@ -80,7 +117,7 @@ export default function ContactFooter() {
                 <div className="flex items-center gap-3 px-6">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <p className="text-sm text-[#5C5652] font-medium tracking-wide">
-                    Sans engagement — Disponible cette semaine
+                    {t("status")}
                   </p>
                 </div>
               </motion.div>
@@ -93,26 +130,29 @@ export default function ContactFooter() {
       <div className="bg-white py-12 border-t border-stone-100">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-            <p className="text-xs text-stone-500 tracking-wide font-medium">
-              &copy; 2026 Antoine Ghigny. Tous droits reserves.
-            </p>
+            <div className="flex items-center gap-8">
+              <p className="text-xs text-stone-500 tracking-wide font-medium">
+                {tf("copyright", { year: currentYear })}
+              </p>
+              <LocaleSwitcher />
+            </div>
             <div className="flex items-center gap-10">
               <a
                 href="#"
                 className="text-xs text-stone-500 hover:text-[#B34B44] transition-colors duration-300 tracking-wide font-medium uppercase"
               >
-                Mentions legales
+                {tf("links.legal")}
               </a>
               <span className="w-px h-3 bg-stone-200 hidden md:block" />
               <a
                 href="#"
                 className="text-xs text-stone-500 hover:text-[#B34B44] transition-colors duration-300 tracking-wide font-medium uppercase"
               >
-                Politique de confidentialite
+                {tf("links.privacy")}
               </a>
             </div>
             <p className="text-xs text-stone-400 font-[family-name:var(--font-geist-mono)] tracking-wider">
-              TVA BE0XXX.XXX.XXX
+              {tf("tva")}
             </p>
           </div>
         </div>

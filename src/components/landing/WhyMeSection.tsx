@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
@@ -12,8 +13,10 @@ const fadeUp = {
 };
 
 export default function WhyMeSection() {
+  const t = useTranslations("whyMe");
+  
   return (
-    <section className="bg-[#FAF8F5] py-24 md:py-40 overflow-hidden">
+    <section className="bg-[#FAF8F5] pt-12 md:pt-20 pb-24 md:pb-40 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 md:px-12">
         <motion.div
           initial="initial"
@@ -28,14 +31,14 @@ export default function WhyMeSection() {
               variants={fadeUp}
               className="text-xs uppercase tracking-widest font-medium text-[#B34B44] mb-6"
             >
-              Pourquoi faire appel a moi
+              {t("badge")}
             </motion.p>
             <motion.h2 
               variants={fadeUp}
               className="text-5xl md:text-7xl font-bold tracking-tight text-[#2D2926] leading-[0.9] lg:leading-[1.1]"
             >
-              Le digital devrait travailler<br />
-              <span className="text-[#B34B44]">pour vous</span>, pas l&apos;inverse.
+              {t("title_part1")}<br />
+              <span className="text-[#B34B44]">{t("title_part2")}</span>{t("title_part3")}
             </motion.h2>
           </div>
 
@@ -48,9 +51,11 @@ export default function WhyMeSection() {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">Premiere Impression</span>
+                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.professionalism.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight max-w-xl">
-                    Un site moderne et rapide qui <span className="text-[#B34B44]">convertit vos visiteurs</span> en clients fideles.
+                    {t.rich("bento.professionalism.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
                 <div className="mt-12 flex items-center justify-between">
@@ -68,9 +73,11 @@ export default function WhyMeSection() {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">Autorite Digitale</span>
+                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.trust.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight">
-                    Une image a la hauteur de votre <span className="text-[#B34B44]">expertise</span> reelle.
+                    {t.rich("bento.trust.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
                 <div className="mt-12">
@@ -88,9 +95,11 @@ export default function WhyMeSection() {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">Performance & Vitesse</span>
+                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.performance.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight">
-                    Optimise pour une <span className="text-[#B34B44]">fluidite</span> sans compromis.
+                    {t.rich("bento.performance.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
                 <div className="mt-12">
@@ -108,16 +117,18 @@ export default function WhyMeSection() {
             >
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">Experience Utilisateur</span>
+                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.design.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight max-w-xl">
-                    Design sur mesure qui capture <span className="text-[#B34B44]">l&apos;essence</span> profonde de votre marque.
+                    {t.rich("bento.design.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
                 <div className="mt-12 flex items-center gap-6">
                   <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] flex items-center justify-center text-[#B34B44] group-hover:bg-[#B34B44] group-hover:text-white transition-all duration-500">
                     <UserFocus size={24} weight="duotone" />
                   </div>
-                  <p className="text-sm text-stone-400 font-medium tracking-tight">Raffinement & Clarte</p>
+                  <p className="text-sm text-stone-400 font-medium tracking-tight">{t("bento.design.footer")}</p>
                 </div>
               </div>
             </motion.div>
@@ -140,11 +151,11 @@ export default function WhyMeSection() {
                     <HardHat size={28} weight="duotone" />
                   </div>
                   <h3 className="text-4xl md:text-5xl font-bold text-[#2D2926] tracking-tighter leading-[0.95] mb-8">
-                    Votre Expertise <br />
-                    <span className="text-[#B34B44]">Metier.</span>
+                    {t("collaboration.client.title_part1")} <br />
+                    <span className="text-[#B34B44]">{t("collaboration.client.title_part2")}</span>
                   </h3>
                   <p className="text-lg text-[#2D2926]/60 leading-relaxed max-w-[320px] font-medium">
-                    Personne ne maitrise votre industrie mieux que vous. Vous apportez la connaissance terrain et les enjeux strategiques indispensables.
+                    {t("collaboration.client.description")}
                   </p>
                 </div>
                 <div className="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
@@ -174,11 +185,11 @@ export default function WhyMeSection() {
                     <Lightning size={28} weight="fill" />
                   </div>
                   <h3 className="text-4xl md:text-5xl font-bold tracking-tighter leading-[0.95] mb-8">
-                    Ma Vision <br />
-                    <span className="text-[#B34B44]">Digitale.</span>
+                    {t("collaboration.my.title_part1")} <br />
+                    <span className="text-[#B34B44]">{t("collaboration.my.title_part2")}</span>
                   </h3>
                   <p className="text-lg text-[#FAF8F5]/60 leading-relaxed max-w-[320px] font-medium">
-                    Je traduis vos ambitions en outils de haute precision, transformant votre savoir-faire en une experience numerique d&apos;exception.
+                    {t("collaboration.my.description")}
                   </p>
                 </div>
                 <div className="absolute -right-10 -bottom-10 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity duration-700 pointer-events-none">

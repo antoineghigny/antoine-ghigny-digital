@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "title": "Antoine Ghigny · Création digitale",
+    "description": "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
+  },
+  "hero": {
+    "availability": "Disponible pour nouveaux projets",
+    "title_part1": "Votre site web.",
+    "title_part2": "Enfin bien fait.",
+    "description": "Je conçois des sites web sur mesure, modernes et performants pour les indépendants et PME qui veulent un digital qui rapporte.",
+    "cta": "Lancer mon projet",
+    "trust": {
+      "satisfied": "Satisfait ou retravaillé",
+      "fixed_price": "Prix fixe",
+      "response_time": "Réponse sous 24h"
+    }
+  },
+  "whyMe": {
+    "badge": "Pourquoi faire appel à moi",
+    "title_part1": "Le digital devrait travailler",
+    "title_part2": "pour vous",
+    "title_part3": ", pas l'inverse.",
+    "bento": {
+      "professionalism": {
+        "label": "Première Impression",
+        "title": "Un site moderne et rapide qui <highlight>convertit</highlight> vos visiteurs en clients fidèles."
+      },
+      "trust": {
+        "label": "Autorité Digitale",
+        "title": "Une image à la hauteur de votre <highlight>expertise</highlight> réelle."
+      },
+      "performance": {
+        "label": "Performance & Vitesse",
+        "title": "Optimisé pour une <highlight>fluidité</highlight> sans compromis."
+      },
+      "design": {
+        "label": "Expérience Utilisateur",
+        "title": "Design sur mesure qui capture <highlight>l'essence</highlight> profonde de votre marque.",
+        "footer": "Raffinement & Clarté"
+      }
+    },
+    "collaboration": {
+      "client": {
+        "title_part1": "Votre Expertise",
+        "title_part2": "Métier.",
+        "description": "Personne ne maîtrise votre industrie mieux que vous. Vous apportez la connaissance terrain et les enjeux stratégiques indispensables."
+      },
+      "my": {
+        "title_part1": "Ma Vision",
+        "title_part2": "Digitale.",
+        "description": "Je traduis vos ambitions en outils de haute précision, transformant votre savoir-faire en une expérience numérique d'exception."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Premier pas",
+    "title": "Parlons de votre projet.",
+    "description": "Un premier échange gratuit de 30 minutes pour comprendre vos besoins et vous proposer une solution concrète.",
+    "cta": "Réserver mon appel gratuit",
+    "status": "Sans engagement — Disponible cette semaine"
+  },
+  "footer": {
+    "copyright": "© {year} Antoine Ghigny. Tous droits réservés.",
+    "links": {
+      "legal": "Mentions légales",
+      "privacy": "Politique de confidentialité"
+    },
+    "tva": "TVA BE0XXX.XXX.XXX"
+  }
+}
