@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Target, Lightning, UserFocus, Users, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
+import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -153,13 +153,13 @@ export default function WhyMeSection() {
               </motion.div>
 
               {/* Central Loop Connector */}
-              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-24 h-24 bg-[#FAF8F5] border-[10px] border-[#FAF8F5] rounded-full items-center justify-center shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
+              <div className="flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-20 h-20 md:w-24 md:h-24 bg-[#FAF8F5] border-[8px] md:border-[10px] border-[#FAF8F5] rounded-full items-center justify-center shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
                 <motion.div 
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="p-4 bg-white rounded-full border border-stone-100 text-[#B34B44]"
+                  className="p-3 md:p-4 bg-white rounded-full border border-stone-100 text-[#B34B44] flex items-center justify-center"
                 >
-                  <ArrowsClockwise size={32} weight="bold" />
+                  <ArrowsClockwise weight="bold" className="w-7 h-7 md:w-8 md:h-8" />
                 </motion.div>
               </div>
 

@@ -6,7 +6,7 @@ import {
   CheckCircle,
   ShieldCheck,
   Clock,
-  ArrowRight,
+  ArrowUpRight,
 } from "@phosphor-icons/react";
 
 const fadeInUp = {
@@ -43,23 +43,23 @@ const BrowserMockup = () => (
     </div>
     <div className="p-6 space-y-6">
       <div className="flex justify-between items-center">
-        <div className="w-20 h-3 bg-stone-100 rounded" />
+        <div className="w-20 h-3 bg-stone-100 rounded animate-pulse" />
         <div className="flex gap-4">
-          <div className="w-12 h-2 bg-stone-100 rounded" />
-          <div className="w-12 h-2 bg-stone-100 rounded" />
+          <div className="w-12 h-2 bg-stone-100 rounded animate-pulse" />
+          <div className="w-12 h-2 bg-stone-100 rounded animate-pulse" />
         </div>
       </div>
       <div className="space-y-3 pt-4">
-        <div className="w-3/4 h-8 bg-[#B34B44]/5 rounded" />
-        <div className="w-1/2 h-8 bg-[#B34B44]/5 rounded" />
+        <div className="w-3/4 h-8 bg-gradient-to-r from-[#B34B44]/10 via-[#B34B44]/5 to-[#B34B44]/10 rounded animate-pulse" />
+        <div className="w-1/2 h-8 bg-gradient-to-r from-[#B34B44]/10 via-[#B34B44]/5 to-[#B34B44]/10 rounded animate-pulse" />
       </div>
-      <div className="w-full h-32 bg-stone-50 rounded-lg flex items-center justify-center border border-dashed border-stone-200">
-        <div className="w-24 h-8 bg-[#B34B44] opacity-20 rounded-full" />
+      <div className="w-full h-32 bg-stone-50 rounded-lg flex items-center justify-center border border-dashed border-stone-200 animate-pulse">
+        <div className="w-24 h-8 bg-[#B34B44]/20 rounded-full" />
       </div>
       <div className="grid grid-cols-3 gap-4 pt-2">
-        <div className="h-16 bg-stone-50 rounded" />
-        <div className="h-16 bg-stone-50 rounded" />
-        <div className="h-16 bg-stone-50 rounded" />
+        <div className="h-16 bg-stone-50 rounded animate-pulse" />
+        <div className="h-16 bg-stone-50 rounded animate-pulse" />
+        <div className="h-16 bg-stone-50 rounded animate-pulse" />
       </div>
     </div>
   </div>
@@ -75,7 +75,13 @@ export default function HeroAndWhy() {
             <motion.div
               initial={{ opacity: 0, x: -50, rotate: 0 }}
               animate={{ opacity: 1, x: 0, rotate: 2 }}
-              transition={{ duration: 1.2, ease: [0.21, 0.45, 0.32, 0.9] }}
+              whileHover={{ scale: 1.02, rotate: 0 }}
+              transition={{ 
+                duration: 1.2, 
+                ease: [0.21, 0.45, 0.32, 0.9],
+                scale: { type: "spring", stiffness: 100, damping: 20 },
+                rotate: { type: "spring", stiffness: 100, damping: 20 }
+              }}
               className="hidden md:block md:col-span-5"
             >
               <BrowserMockup />
@@ -106,36 +112,51 @@ export default function HeroAndWhy() {
               </motion.div>
 
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                <a
+                <motion.a
                   href="#contact"
-                  className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden"
                 >
-                  Demander un audit gratuit
-                  <ArrowRight weight="bold" size={20} />
-                </a>
+                  <span>Demander un audit gratuit</span>
+                  <div className="relative h-5 w-5 overflow-hidden pointer-events-none">
+                    <motion.div
+                      variants={{
+                        initial: { x: 0, y: 0 },
+                        hover: { x: 25, y: -25 }
+                      }}
+                      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                      className="relative w-full h-full"
+                    >
+                      <ArrowUpRight weight="bold" size={20} className="absolute inset-0" />
+                      <ArrowUpRight weight="bold" size={20} className="absolute inset-0 -translate-x-[25px] translate-y-[25px]" />
+                    </motion.div>
+                  </div>
+                </motion.a>
               </motion.div>
 
               <motion.div
                 variants={fadeInUp}
-                className="pt-10 border-t border-stone-200/60 grid grid-cols-1 sm:grid-cols-3 gap-6"
+                className="mt-12 pt-12 border-t border-stone-200/60 flex flex-col sm:flex-row flex-wrap gap-x-12 gap-y-6"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44]">
+                <div className="flex items-center gap-4 group shrink-0">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                     <CheckCircle weight="fill" size={24} />
                   </div>
-                  <span className="text-sm font-medium text-[#2D2926]">Satisfait ou retravaille</span>
+                  <span className="text-[15px] font-medium text-[#2D2926] leading-tight">Satisfait ou retravaille</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44]">
+                <div className="flex items-center gap-4 group shrink-0">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                     <ShieldCheck weight="fill" size={24} />
                   </div>
-                  <span className="text-sm font-medium text-[#2D2926]">Prix fixe</span>
+                  <span className="text-[15px] font-medium text-[#2D2926] leading-tight">Prix fixe</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44]">
+                <div className="flex items-center gap-4 group shrink-0">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                     <Clock weight="fill" size={24} />
                   </div>
-                  <span className="text-sm font-medium text-[#2D2926]">Reponse sous 24h</span>
+                  <span className="text-[15px] font-medium text-[#2D2926] leading-tight">Reponse sous 24h</span>
                 </div>
               </motion.div>
             </motion.div>

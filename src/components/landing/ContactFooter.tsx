@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowUpRight } from "@phosphor-icons/react";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -54,13 +54,28 @@ export default function ContactFooter() {
               </motion.p>
               
               <motion.div variants={fadeUp} className="space-y-6">
-                <a
+                <motion.a
                   href="mailto:hello@antoineghigny.be?subject=Demande%20d%27audit%20gratuit"
-                  className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-10 py-6 rounded-full font-medium text-xl shadow-2xl shadow-[#B34B44]/30 hover:bg-[#963f39] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 group"
+                  initial="initial"
+                  whileHover="hover"
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-10 py-6 rounded-full font-medium text-xl shadow-2xl shadow-[#B34B44]/30 hover:bg-[#963f39] transition-all duration-300 group overflow-hidden"
                 >
-                  Reserver mon appel gratuit
-                  <ArrowRight weight="bold" size={24} className="group-hover:translate-x-1 transition-transform" />
-                </a>
+                  <span>Reserver mon appel gratuit</span>
+                  <div className="relative h-6 w-6 overflow-hidden pointer-events-none">
+                    <motion.div
+                      variants={{
+                        initial: { x: 0, y: 0 },
+                        hover: { x: 28, y: -28 }
+                      }}
+                      transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                      className="relative w-full h-full"
+                    >
+                      <ArrowUpRight weight="bold" size={24} className="absolute inset-0" />
+                      <ArrowUpRight weight="bold" size={24} className="absolute inset-0 -translate-x-[28px] translate-y-[28px]" />
+                    </motion.div>
+                  </div>
+                </motion.a>
                 
                 <div className="flex items-center gap-3 px-6">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
