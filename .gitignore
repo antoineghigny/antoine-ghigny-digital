@@ -54,3 +54,6 @@ claude-1000/
 node-compile-cache/
 tmp.Mm5TFawuYa/
 update-check/
+
+# Unix Temp Files
+.*-unix
