@@ -98,9 +98,9 @@ const BrowserMockup = () => {
               </defs>
             </svg>
             <motion.div 
-              animate={{ x: ["0%", "100%", "0%"] }}
+              animate={{ left: ["0%", "100%", "0%"] }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              className="absolute top-0 bottom-0 w-px bg-stone-100"
+              className="absolute top-0 bottom-0 w-px bg-[#2D2926]/10"
             />
           </div>
 
