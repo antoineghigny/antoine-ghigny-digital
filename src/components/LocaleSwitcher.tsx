@@ -23,7 +23,8 @@ export function LocaleSwitcher() {
 
   return (
     <div className="fixed top-8 right-8 z-[100]">
-      <div 
+      <motion.div 
+        initial={false}
         className="backdrop-blur-md bg-white/80 border border-white/20 p-1 rounded-full flex items-center gap-1 shadow-sm overflow-hidden"
         style={{ boxShadow: '0 8px 32px -4px rgba(45, 41, 38, 0.08)' }}
       >
