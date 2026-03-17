@@ -25,6 +25,16 @@ feature/xxx  →  PR  →  develop  →  PR  →  main
 - `develop` = integration branch
 - Feature branches: `feature/description`, `fix/description`, etc.
 
+**At the start of every session**, sync before doing anything:
+
+```bash
+git fetch origin
+git checkout develop
+git pull origin develop
+```
+
+Then create your feature branch from `develop`.
+
 ## Architecture
 
 Bilingual (FR/EN) static landing page for Antoine Ghigny's digital creation services. Deployed on Vercel.
