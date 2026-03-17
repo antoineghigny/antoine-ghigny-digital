@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ArrowUpRight, WhatsappLogo, Envelope, ChatCircleText } from "@phosphor-icons/react";
+import { WhatsappLogo, Envelope, ChatCircleText } from "@phosphor-icons/react";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
