@@ -3,7 +3,8 @@ import WhyMeSection from "@/components/landing/WhyMeSection";
 import ContactFooter from "@/components/landing/ContactFooter";
 import JsonLd from "@/components/JsonLd";
 
-export default function LandingPage({ params: { locale } }: { params: { locale: string } }) {
+export default async function LandingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   return (
     <>
       <JsonLd locale={locale} />

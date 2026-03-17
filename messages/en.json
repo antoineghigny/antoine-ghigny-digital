@@ -7,12 +7,18 @@
     "availability": "Available for new projects",
     "title_part1": "Your website.",
     "title_part2": "Finally done right.",
-    "description": "I design bespoke, modern and performant websites for freelancers and SMEs who want a digital presence that pays off.",
+    "description": "I design bespoke websites for freelancers and SMEs. Fast, search-optimised and built to inspire trust. Your future clients find you and reach out.",
     "cta": "Launch my project",
     "trust": {
       "satisfied": "Satisfied or reworked",
       "fixed_price": "Fixed price",
       "response_time": "Reply within 24h"
+    },
+    "dashboard": {
+      "speed": "Speed",
+      "seo": "SEO",
+      "uptime": "Uptime",
+      "revenue": "Revenue Growth"
     }
   },
   "whyMe": {
@@ -23,31 +29,31 @@
     "bento": {
       "professionalism": {
         "label": "First Impression",
-        "title": "A modern and fast site that <highlight>converts</highlight> your visitors into loyal customers."
+        "title": "A site that makes visitors want to <highlight>contact</highlight> you from the very first visit."
       },
       "trust": {
-        "label": "Digital Authority",
-        "title": "An image that matches your real <highlight>expertise</highlight>."
+        "label": "Credibility",
+        "title": "Visitors judge your professionalism in 3 seconds. Show an image that matches your real <highlight>expertise</highlight>."
       },
       "performance": {
-        "label": "Performance & Speed",
-        "title": "Optimized for uncompromising <highlight>fluidity</highlight>."
+        "label": "Visibility",
+        "title": "A fast, well-built site ranks higher on Google and AI engines. Your clients <highlight>find</highlight> you before your competitors."
       },
       "design": {
-        "label": "User Experience",
-        "title": "Bespoke design that captures the deep <highlight>essence</highlight> of your brand."
+        "label": "Your Identity",
+        "title": "A unique design that <highlight>sets you apart</highlight> and reflects exactly who you are."
       }
     },
     "collaboration": {
       "client": {
         "title_part1": "Your Industry",
         "title_part2": "Expertise.",
-        "description": "Nobody knows your industry better than you. You bring the field knowledge and indispensable strategic challenges."
+        "description": "Nobody knows your business better than you. You know what your clients are looking for and what convinces them."
       },
       "my": {
         "title_part1": "My Digital",
         "title_part2": "Vision.",
-        "description": "I translate your ambitions into high-precision tools, transforming your know-how into an exceptional digital experience."
+        "description": "I turn all of that into a site that works for you: visible on Google, clear for your visitors and designed to make them take the next step."
       }
     }
   },

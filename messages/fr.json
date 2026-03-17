@@ -7,12 +7,18 @@
     "availability": "Disponible pour nouveaux projets",
     "title_part1": "Votre site web.",
     "title_part2": "Enfin bien fait.",
-    "description": "Je conçois des sites web sur mesure, modernes et performants pour les indépendants et PME qui veulent un digital qui rapporte.",
+    "description": "Je conçois des sites web sur mesure pour indépendants et PME. Rapides, bien référencés et conçus pour inspirer confiance. Vos futurs clients vous trouvent et vous contactent.",
     "cta": "Lancer mon projet",
     "trust": {
       "satisfied": "Satisfait ou retravaillé",
       "fixed_price": "Prix fixe",
       "response_time": "Réponse sous 24h"
+    },
+    "dashboard": {
+      "speed": "Vitesse",
+      "seo": "SEO",
+      "uptime": "Disponibilité",
+      "revenue": "Croissance du chiffre d'affaires"
     }
   },
   "whyMe": {
@@ -23,31 +29,31 @@
     "bento": {
       "professionalism": {
         "label": "Première Impression",
-        "title": "Un site moderne et rapide qui <highlight>convertit</highlight> vos visiteurs en clients fidèles."
+        "title": "Un site qui donne envie de vous <highlight>contacter</highlight> dès la première visite."
       },
       "trust": {
-        "label": "Autorité Digitale",
-        "title": "Une image à la hauteur de votre <highlight>expertise</highlight> réelle."
+        "label": "Crédibilité",
+        "title": "Vos visiteurs jugent votre sérieux en 3 secondes. Affichez une image à la hauteur de votre vraie <highlight>expertise</highlight>."
       },
       "performance": {
-        "label": "Performance & Vitesse",
-        "title": "Optimisé pour une <highlight>fluidité</highlight> sans compromis."
+        "label": "Visibilité",
+        "title": "Un site rapide et bien construit remonte sur Google et les moteurs IA. Vos clients vous <highlight>trouvent</highlight> avant vos concurrents."
       },
       "design": {
-        "label": "Expérience Utilisateur",
-        "title": "Design sur mesure qui capture <highlight>l'essence</highlight> profonde de votre marque."
+        "label": "Votre Identité",
+        "title": "Un design unique qui vous <highlight>distingue</highlight> et reflète exactement qui vous êtes."
       }
     },
     "collaboration": {
       "client": {
         "title_part1": "Votre Expertise",
         "title_part2": "Métier.",
-        "description": "Personne ne maîtrise votre industrie mieux que vous. Vous apportez la connaissance terrain et les enjeux stratégiques indispensables."
+        "description": "Personne ne connaît votre métier mieux que vous. Vous savez ce que vos clients cherchent et ce qui les convainc."
       },
       "my": {
         "title_part1": "Ma Vision",
         "title_part2": "Digitale.",
-        "description": "Je traduis vos ambitions en outils de haute précision, transformant votre savoir-faire en une expérience numérique d'exception."
+        "description": "Je transforme tout ça en un site qui travaille pour vous : visible sur Google, clair pour vos visiteurs et qui donne envie d'aller plus loin."
       }
     }
   },

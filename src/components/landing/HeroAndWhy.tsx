@@ -28,6 +28,7 @@ const staggerContainer = {
 };
 
 const BrowserMockup = () => {
+  const t = useTranslations("hero");
   const [mounted, setMounted] = useState(false);
   const id = useId();
   const gradientId = `gradient-${id}`;
@@ -64,9 +65,9 @@ const BrowserMockup = () => {
         {/* Metric Cards */}
         <div className="grid grid-cols-3 gap-3 md:gap-4">
           {[
-            { icon: Lightning, label: "Speed", val: "0.8s", color: "text-amber-600" },
-            { icon: ChartLineUp, label: "SEO", val: "100", color: "text-[#B34B44]" },
-            { icon: Pulse, label: "Uptime", val: "99.9%", color: "text-emerald-600" }
+            { icon: Lightning, label: t("dashboard.speed"), val: "0.8s", color: "text-amber-600" },
+            { icon: ChartLineUp, label: t("dashboard.seo"), val: "100", color: "text-[#B34B44]" },
+            { icon: Pulse, label: t("dashboard.uptime"), val: "99.9%", color: "text-emerald-600" }
           ].map((item, i) => (
             <div key={i} className="bg-white p-3 md:p-4 rounded-xl border border-stone-200 shadow-sm flex flex-col gap-1.5">
               <item.icon size={16} weight="duotone" className={item.color} />
@@ -81,7 +82,7 @@ const BrowserMockup = () => {
         {/* Main Chart Section */}
         <div className="flex-1 bg-white rounded-2xl border border-stone-200 p-4 md:p-5 relative flex flex-col gap-4 overflow-hidden">
           <div className="flex justify-between items-center">
-            <h4 className="text-[10px] font-bold text-[#2D2926] uppercase tracking-widest">Revenue Growth</h4>
+            <h4 className="text-[10px] font-bold text-[#2D2926] uppercase tracking-widest">{t("dashboard.revenue")}</h4>
             <div className="flex gap-1">
               {[1, 2, 3].map(j => <div key={j} className="w-4 h-1 rounded-full bg-stone-100" />)}
             </div>
@@ -243,7 +244,7 @@ export default function HeroAndWhy() {
                 className="mt-6 md:mt-12 pt-8 md:pt-12 border-t border-stone-200/60 flex flex-col gap-10"
               >
                 {/* Trust Markers */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-6">
+                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-6">
                   <div className="flex items-center gap-4 group shrink-0">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                       <CheckCircle weight="fill" size={24} />
