@@ -208,7 +208,7 @@ export default function HeroAndWhy() {
                   </div>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] leading-[1.05] tracking-tighter">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] leading-[1.05] tracking-tighter min-h-[2.1em] md:min-h-[3.15em]">
                   {t("title_part1")}<br />
                   <span className="text-[#B34B44]">{t("title_part2")}</span>
                 </h1>
