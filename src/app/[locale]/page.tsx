@@ -8,7 +8,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
   return (
     <>
       <JsonLd locale={locale} />
-      <main className="bg-[#FAF8F5] text-[#2D2926] selection:bg-[#B34B44]/20 selection:text-[#B34B44] overflow-x-hidden">
+      <main className="bg-[#FAF8F5] dark:bg-[#1A1816] text-[#2D2926] dark:text-[#FAF8F5] selection:bg-[#B34B44]/20 selection:text-[#B34B44] overflow-x-hidden">
         <HeroAndWhy />
         <WhyMeSection />
         <ContactFooter />

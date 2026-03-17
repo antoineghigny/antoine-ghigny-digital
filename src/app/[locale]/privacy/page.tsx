@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
   const t = useTranslations("privacy");
 
   return (
-    <main className="min-h-[100dvh] bg-[#FAF8F5] text-[#2D2926] selection:bg-[#B34B44]/20 selection:text-[#B34B44] font-sans pb-32">
+    <main className="min-h-[100dvh] bg-[#FAF8F5] dark:bg-[#1A1816] text-[#2D2926] dark:text-[#FAF8F5] selection:bg-[#B34B44]/20 selection:text-[#B34B44] font-sans pb-32">
       {/* Navigation Layer */}
       <nav className="max-w-[1400px] mx-auto px-4 md:px-12 py-10">
         <m.div
@@ -26,9 +26,9 @@ export default function PrivacyPolicyPage() {
         >
           <Link
             href="/"
-            className="group inline-flex items-center gap-3 text-sm font-medium text-[#5C5652] hover:text-[#B34B44] transition-colors duration-300"
+            className="group inline-flex items-center gap-3 text-sm font-medium text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] transition-colors duration-300"
           >
-            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#2D2926]/10 group-hover:border-[#B34B44]/30 group-hover:bg-white transition-all duration-300 group-active:scale-[0.95]">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full border border-[#2D2926]/10 dark:border-white/10 group-hover:border-[#B34B44]/30 group-hover:bg-white dark:group-hover:bg-[#242220] transition-all duration-300 group-active:scale-[0.95]">
               <ArrowLeft size={18} weight="bold" />
             </div>
             {t("backToHome")}
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-12">
               {t("title")}
             </h1>
-            <p className="text-xl md:text-2xl text-[#5C5652] leading-relaxed font-light max-w-[65ch]">
+            <p className="text-xl md:text-2xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[65ch]">
               {t("intro")}
             </p>
           </m.div>
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
             label={t("sections.controller.label")}
             title={t("sections.controller.title")}
           >
-            <div className="space-y-4 text-lg md:text-xl text-[#5C5652] leading-relaxed font-light">
+            <div className="space-y-4 text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light">
               <p>{t("sections.controller.content")}</p>
               <p className="text-[#B34B44]">{t("sections.controller.email")}</p>
             </div>
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
             label={t("sections.data.label")}
             title={t("sections.data.title")}
           >
-            <p className="text-lg md:text-xl text-[#5C5652] leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light">
               {t("sections.data.content")}
             </p>
           </PrivacySection>
@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
             label={t("sections.rights.label")}
             title={t("sections.rights.title")}
           >
-            <p className="text-lg md:text-xl text-[#5C5652] leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light">
               {t("sections.rights.content")}
             </p>
           </PrivacySection>
@@ -95,19 +95,19 @@ export default function PrivacyPolicyPage() {
             label={t("sections.cookies.label")}
             title={t("sections.cookies.title")}
           >
-            <p className="text-lg md:text-xl text-[#5C5652] leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light">
               {t("sections.cookies.content")}
             </p>
           </PrivacySection>
 
           {/* Final CTA */}
           <m.footer 
-            className="pt-20 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-8"
+            className="pt-20 border-t border-stone-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <p className="text-sm font-medium text-[#5C5652] tracking-tight">
+            <p className="text-sm font-medium text-[#5C5652] dark:text-[#A8A29E] tracking-tight">
               © {new Date().getFullYear()} Antoine Ghigny — {t("allRightsReserved")}
             </p>
             <Link
@@ -142,7 +142,7 @@ function PrivacySection({ label, title, children }: PrivacySectionProps) {
         <span className="text-xs uppercase tracking-[0.2em] font-medium text-[#B34B44] mb-4">
           {label}
         </span>
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#2D2926]">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5]">
           {title}
         </h2>
         <div className="hidden md:block w-12 h-[1px] bg-[#B34B44]/30 mt-8" />
