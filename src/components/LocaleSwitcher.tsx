@@ -18,13 +18,14 @@ export function LocaleSwitcher() {
 
   const handleLocaleChange = (newLocale: "en" | "fr") => {
     if (newLocale === locale) return;
-    router.replace(pathname, { locale: newLocale });
+    router.replace(pathname, { locale: newLocale, scroll: false });
   };
 
   return (
     <div className="fixed top-8 right-8 z-[100]">
       <motion.div 
         initial={false}
+        animate={{ y: 0, opacity: 1 }}
         className="backdrop-blur-md bg-white/80 border border-white/20 p-1 rounded-full flex items-center gap-1 shadow-sm overflow-hidden"
         style={{ boxShadow: '0 8px 32px -4px rgba(45, 41, 38, 0.08)' }}
       >
