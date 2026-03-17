@@ -34,6 +34,7 @@ export function LocaleSwitcher() {
           return (
             <button
               key={l.id}
+              aria-label={`Switch to ${l.label === "FR" ? "French" : "English"}`}
               onClick={() => handleLocaleChange(l.id as "en" | "fr")}
               onMouseEnter={() => setHovered(l.id)}
               onMouseLeave={() => setHovered(null)}
