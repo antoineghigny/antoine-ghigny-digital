@@ -26,55 +26,55 @@ const staggerContainer = {
 
 const BrowserMockup = () => {
   return (
-    <div className="relative w-full aspect-[4/3] bg-[#FAF8F5] rounded-2xl border border-stone-200 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.15)] overflow-hidden flex flex-col">
+    <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-[#FAF8F5] rounded-3xl border border-stone-200 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] overflow-hidden flex flex-col">
       {/* Browser Header */}
-      <div className="h-12 border-b border-stone-200 bg-white flex items-center px-6 justify-between shrink-0">
-        <div className="flex gap-2">
-          <div className="w-3 h-3 rounded-full bg-stone-200" />
-          <div className="w-3 h-3 rounded-full bg-stone-200" />
-          <div className="w-3 h-3 rounded-full bg-stone-200" />
+      <div className="h-10 border-b border-stone-200 bg-white flex items-center px-5 justify-between shrink-0">
+        <div className="flex gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-stone-200" />
+          <div className="w-2.5 h-2.5 rounded-full bg-stone-200" />
+          <div className="w-2.5 h-2.5 rounded-full bg-stone-200" />
         </div>
-        <div className="flex items-center gap-2 bg-stone-100/80 px-4 py-1.5 rounded-full border border-stone-200/50">
-          <Pulse size={12} weight="bold" className="text-[#B34B44]" />
-          <span className="text-[11px] text-stone-500 font-medium tracking-tight">performance.dashboard</span>
+        <div className="flex items-center gap-2 bg-stone-100/80 px-3 py-1 rounded-full border border-stone-200/50">
+          <Pulse size={10} weight="bold" className="text-[#B34B44]" />
+          <span className="text-[10px] text-stone-500 font-medium tracking-tight">performance.live</span>
         </div>
-        <div className="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center border border-stone-200">
-          <Terminal size={14} weight="bold" className="text-stone-400" />
+        <div className="w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center border border-stone-200">
+          <Terminal size={12} weight="bold" className="text-stone-400" />
         </div>
       </div>
 
       {/* Dashboard Content */}
-      <div className="flex-1 p-6 flex flex-col gap-6 overflow-hidden">
+      <div className="flex-1 p-4 md:p-6 flex flex-col gap-4 md:gap-6 overflow-hidden">
         {/* Metric Cards */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-3 md:gap-4">
           {[
-            { icon: Lightning, label: "Vitesse", val: "0.8s", color: "text-amber-600" },
-            { icon: ChartLineUp, label: "SEO", val: "100/100", color: "text-[#B34B44]" },
+            { icon: Lightning, label: "Speed", val: "0.8s", color: "text-amber-600" },
+            { icon: ChartLineUp, label: "SEO", val: "100", color: "text-[#B34B44]" },
             { icon: Pulse, label: "Uptime", val: "99.9%", color: "text-emerald-600" }
           ].map((m, i) => (
-            <div key={i} className="bg-white p-4 rounded-xl border border-stone-200 shadow-sm flex flex-col gap-2">
-              <m.icon size={18} weight="duotone" className={m.color} />
+            <div key={i} className="bg-white p-3 md:p-4 rounded-xl border border-stone-200 shadow-sm flex flex-col gap-1.5">
+              <m.icon size={16} weight="duotone" className={m.color} />
               <div>
-                <p className="text-[10px] uppercase tracking-widest text-stone-400 font-bold">{m.label}</p>
-                <p className="text-lg font-bold text-[#2D2926] leading-none mt-0.5">{m.val}</p>
+                <p className="text-[8px] uppercase tracking-widest text-stone-400 font-bold">{m.label}</p>
+                <p className="text-sm md:text-base font-bold text-[#2D2926] leading-none mt-0.5">{m.val}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Main Chart Section */}
-        <div className="flex-1 bg-white rounded-xl border border-stone-200 p-5 relative flex flex-col gap-4">
+        <div className="flex-1 bg-white rounded-2xl border border-stone-200 p-4 md:p-5 relative flex flex-col gap-4 overflow-hidden">
           <div className="flex justify-between items-center">
-            <h4 className="text-xs font-bold text-[#2D2926] uppercase tracking-wider">Conversion Rate</h4>
-            <div className="flex gap-1.5">
-              {[1, 2, 3].map(j => <div key={j} className="w-6 h-1 rounded-full bg-stone-100" />)}
+            <h4 className="text-[10px] font-bold text-[#2D2926] uppercase tracking-widest">Revenue Growth</h4>
+            <div className="flex gap-1">
+              {[1, 2, 3].map(j => <div key={j} className="w-4 h-1 rounded-full bg-stone-100" />)}
             </div>
           </div>
           
-          <div className="flex-1 w-full relative group">
-            <svg viewBox="0 0 400 120" className="w-full h-full">
+          <div className="flex-1 w-full relative group min-h-[120px]">
+            <svg viewBox="0 0 400 150" className="w-full h-full" preserveAspectRatio="none">
               <motion.path
-                d="M 0 100 Q 50 80 100 90 T 200 40 T 300 60 T 400 20"
+                d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30"
                 fill="none"
                 stroke="#B34B44"
                 strokeWidth="4"
@@ -84,7 +84,7 @@ const BrowserMockup = () => {
                 transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
               />
               <motion.path
-                d="M 0 100 Q 50 80 100 90 T 200 40 T 300 60 T 400 20 L 400 120 L 0 120 Z"
+                d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30 L 400 150 L 0 150 Z"
                 fill="url(#gradient)"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.1 }}
@@ -100,28 +100,42 @@ const BrowserMockup = () => {
             <motion.div 
               animate={{ x: [0, 400, 0] }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              className="absolute top-0 bottom-0 w-px bg-stone-200"
+              className="absolute top-0 bottom-0 w-px bg-stone-100"
             />
           </div>
 
           <div className="h-px bg-stone-100 w-full" />
           
-          <div className="flex gap-4">
-            <div className="flex-1 h-3 bg-stone-100 rounded-full overflow-hidden">
-              <motion.div 
-                initial={{ width: 0 }}
-                animate={{ width: "85%" }}
-                transition={{ duration: 1.5, ease: "circOut" }}
-                className="h-full bg-[#B34B44]/20" 
-              />
+          <div className="space-y-3">
+            <div className="flex gap-4 items-center">
+              <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "85%" }}
+                  transition={{ duration: 1.5, ease: "circOut" }}
+                  className="h-full bg-[#B34B44]/30" 
+                />
+              </div>
+              <div className="w-8 h-2 bg-stone-100 rounded-full" />
             </div>
-            <div className="w-12 h-3 bg-stone-100 rounded-full" />
+            <div className="flex gap-4 items-center">
+              <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: "65%" }}
+                  transition={{ duration: 1.5, ease: "circOut", delay: 0.2 }}
+                  className="h-full bg-stone-200" 
+                />
+              </div>
+              <div className="w-12 h-2 bg-stone-100 rounded-full" />
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 
 export default function HeroAndWhy() {
   const t = useTranslations("hero");
