@@ -22,14 +22,13 @@ export function LocaleSwitcher() {
   };
 
   return (
-    <div className="fixed top-8 right-8 z-[100]">
-      <motion.div 
-        initial={false}
-        animate={{ y: 0, opacity: 1 }}
-        className="backdrop-blur-md bg-white/80 border border-white/20 p-1 rounded-full flex items-center gap-1 shadow-sm overflow-hidden"
-        style={{ boxShadow: '0 8px 32px -4px rgba(45, 41, 38, 0.08)' }}
-      >
-        {locales.map((l) => {
+    <motion.div 
+      initial={false}
+      animate={{ y: 0, opacity: 1 }}
+      className="backdrop-blur-md bg-white/80 border border-stone-200/60 p-0.5 md:p-1 rounded-full flex items-center gap-0.5 md:gap-1 shadow-sm overflow-hidden"
+      style={{ boxShadow: '0 4px 12px -2px rgba(45, 41, 38, 0.05)' }}
+    >
+      {locales.map((l) => {
           const isActive = locale === l.id;
           
           return (
@@ -38,7 +37,7 @@ export function LocaleSwitcher() {
               onClick={() => handleLocaleChange(l.id as "en" | "fr")}
               onMouseEnter={() => setHovered(l.id)}
               onMouseLeave={() => setHovered(null)}
-              className="relative px-3.5 py-1.5 rounded-full text-[10px] font-bold tracking-[0.15em] transition-colors duration-200 outline-none uppercase"
+              className="relative px-2.5 md:px-3.5 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.15em] transition-colors duration-200 outline-none uppercase"
               style={{ 
                 color: isActive ? '#FAF8F5' : '#5C5652',
               }}
@@ -71,6 +70,5 @@ export function LocaleSwitcher() {
           );
         })}
       </motion.div>
-    </div>
-  );
+    );
 }

@@ -45,7 +45,6 @@ export default async function LocaleLayout({
       >
         <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03] contrast-150 brightness-150 mix-blend-multiply bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         <Providers locale={locale} messages={messages}>
-          <LocaleSwitcher />
           {children}
         </Providers>
       </body>

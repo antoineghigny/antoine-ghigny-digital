@@ -35,8 +35,7 @@
       },
       "design": {
         "label": "Expérience Utilisateur",
-        "title": "Design sur mesure qui capture <highlight>l'essence</highlight> profonde de votre marque.",
-        "footer": "Raffinement & Clarté"
+        "title": "Design sur mesure qui capture <highlight>l'essence</highlight> profonde de votre marque."
       }
     },
     "collaboration": {
@@ -55,9 +54,14 @@
   "contact": {
     "badge": "Premier pas",
     "title": "Parlons de votre projet.",
-    "description": "Un premier échange gratuit de 30 minutes pour comprendre vos besoins et vous proposer une solution concrète.",
-    "cta": "Réserver mon appel gratuit",
-    "status": "Sans engagement — Disponible cette semaine"
+    "description": "Expliquez-moi votre projet en quelques mots. Je vous recontacte rapidement pour voir comment je peux vous aider.",
+    "cta_mail": "M'envoyer un mail",
+    "cta_whatsapp": "Discuter sur WhatsApp",
+    "status": "Réponse sous 24h — Disponible cette semaine",
+    "inquiry_label": "Demande de projet",
+    "email": "antoine@ghigny.be",
+    "phone": "+32 474 91 13 74",
+    "phone_url": "32474911374"
   },
   "footer": {
     "copyright": "© {year} Antoine Ghigny. Tous droits réservés.",

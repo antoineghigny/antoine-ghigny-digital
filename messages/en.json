@@ -35,8 +35,7 @@
       },
       "design": {
         "label": "User Experience",
-        "title": "Bespoke design that captures the deep <highlight>essence</highlight> of your brand.",
-        "footer": "Refinement & Clarity"
+        "title": "Bespoke design that captures the deep <highlight>essence</highlight> of your brand."
       }
     },
     "collaboration": {
@@ -55,9 +54,14 @@
   "contact": {
     "badge": "First step",
     "title": "Let's talk about your project.",
-    "description": "A free 30-minute introductory call to understand your needs and propose a concrete solution.",
-    "cta": "Book my free call",
-    "status": "No commitment — Available this week"
+    "description": "Tell me about your project in a few words. I'll get back to you quickly to see how I can help.",
+    "cta_mail": "Send me an email",
+    "cta_whatsapp": "Chat on WhatsApp",
+    "status": "Reply within 24h — Available this week",
+    "inquiry_label": "Project Inquiry",
+    "email": "antoine@ghigny.be",
+    "phone": "+32 474 91 13 74",
+    "phone_url": "32474911374"
   },
   "footer": {
     "copyright": "© {year} Antoine Ghigny. All rights reserved.",

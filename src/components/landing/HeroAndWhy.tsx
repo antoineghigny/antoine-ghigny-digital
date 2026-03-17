@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useId } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
@@ -11,6 +13,7 @@ import {
   Lightning,
   Terminal,
 } from "@phosphor-icons/react";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -25,6 +28,10 @@ const staggerContainer = {
 };
 
 const BrowserMockup = () => {
+  const id = useId();
+  const gradientId = `gradient-${id}`;
+  const glowId = `glow-${id}`;
+
   return (
     <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-[#FAF8F5] rounded-3xl border border-stone-200 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] overflow-hidden flex flex-col">
       {/* Browser Header */}
@@ -73,6 +80,18 @@ const BrowserMockup = () => {
           
           <div className="flex-1 w-full relative group min-h-[120px]">
             <svg viewBox="0 0 400 150" className="w-full h-full" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="150" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#B34B44" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#FAF8F5" stopOpacity="0" />
+                </linearGradient>
+                <filter id={glowId} x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              {/* Glowing animated line */}
               <motion.path
                 d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30"
                 fill="none"
@@ -80,22 +99,26 @@ const BrowserMockup = () => {
                 strokeWidth="4"
                 strokeLinecap="round"
                 initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
-                transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
+                animate={{ 
+                  pathLength: [0, 1, 1], 
+                  opacity: [0, 1, 0] 
+                }}
+                transition={{ 
+                  duration: 4,
+                  times: [0, 0.7, 1],
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               />
+
+              {/* Static background fill */}
               <motion.path
                 d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30 L 400 150 L 0 150 Z"
-                fill="url(#gradient)"
+                fill={`url(#${gradientId})`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.15 }}
                 transition={{ duration: 1 }}
               />
-              <defs>
-                <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="150" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#B34B44" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#FAF8F5" stopOpacity="0" />
-                </linearGradient>
-              </defs>
             </svg>
             <motion.div 
               animate={{ left: ["0%", "100%", "0%"] }}
@@ -166,11 +189,14 @@ export default function HeroAndWhy() {
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
               <motion.div variants={fadeInUp} className="space-y-6">
-                <div className="flex items-center space-x-2">
-                  <span className="flex items-center bg-white/70 backdrop-blur-md border border-stone-200 px-3 py-1.5 rounded-full text-[10px] md:text-xs font-medium tracking-widest uppercase text-[#B34B44]">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-2" />
+                <div className="flex items-center gap-1.5 md:gap-4 flex-nowrap">
+                  <div className="flex items-center bg-white/70 backdrop-blur-md border border-stone-200 px-2.5 min-[380px]:px-3 md:px-4 py-2 rounded-full text-[8.5px] min-[380px]:text-[10px] md:text-sm font-bold tracking-[0.05em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap shrink-0">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-3 shrink-0" />
                     {t("availability")}
-                  </span>
+                  </div>
+                  <div className="shrink-0">
+                    <LocaleSwitcher />
+                  </div>
                 </div>
 
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] leading-[1.05] tracking-tighter">
@@ -198,11 +224,9 @@ export default function HeroAndWhy() {
               {/* Mobile Mockup Display */}
               <motion.div 
                 variants={fadeInUp}
-                className="md:hidden pt-4 pb-8"
+                className="md:hidden pt-4 pb-8 px-1"
               >
-                <div className="scale-[1.02] origin-left">
-                  <BrowserMockup />
-                </div>
+                <BrowserMockup />
               </motion.div>
 
               <motion.div
@@ -238,4 +262,3 @@ export default function HeroAndWhy() {
     </>
   );
 }
-

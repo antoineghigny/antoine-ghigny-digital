@@ -29,7 +29,7 @@ export default function WhyMeSection() {
           <div className="max-w-3xl">
             <motion.p 
               variants={fadeUp}
-              className="text-xs uppercase tracking-widest font-medium text-[#B34B44] mb-6"
+              className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44] mb-6"
             >
               {t("badge")}
             </motion.p>
@@ -47,89 +47,88 @@ export default function WhyMeSection() {
             {/* Box 1: Professionalism - 7/12 */}
             <motion.div 
               variants={fadeUp}
-              className="md:col-span-7 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(179,75,68,0.06)] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="md:col-span-7 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] overflow-hidden"
             >
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-full justify-between relative z-10">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.professionalism.label")}</span>
+                  <span className="text-sm uppercase tracking-[0.2em] text-stone-400 font-bold block mb-8">{t("bento.professionalism.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight max-w-xl">
                     {t.rich("bento.professionalism.title", {
                       highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
                     })}
                   </h3>
                 </div>
-                <div className="mt-12 flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] flex items-center justify-center text-[#B34B44] group-hover:scale-110 transition-transform duration-500">
-                    <Target size={24} weight="duotone" />
-                  </div>
-                </div>
+              </div>
+              <div className="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
+                <Target size={280} weight="thin" />
               </div>
             </motion.div>
 
             {/* Box 2: Trust - 5/12 */}
             <motion.div 
               variants={fadeUp}
-              className="md:col-span-5 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(179,75,68,0.06)] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="md:col-span-5 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] overflow-hidden"
             >
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-full justify-between relative z-10">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.trust.label")}</span>
+                  <span className="text-sm uppercase tracking-[0.2em] text-stone-400 font-bold block mb-8">{t("bento.trust.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight">
                     {t.rich("bento.trust.title", {
                       highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
                     })}
                   </h3>
                 </div>
-                <div className="mt-12">
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] flex items-center justify-center text-[#B34B44] group-hover:rotate-12 transition-transform duration-500">
-                    <ShieldCheck size={24} weight="duotone" />
-                  </div>
-                </div>
+              </div>
+              <div className="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
+                <ShieldCheck size={280} weight="thin" />
               </div>
             </motion.div>
 
             {/* Box 3: Performance - 5/12 */}
             <motion.div 
               variants={fadeUp}
-              className="md:col-span-5 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(179,75,68,0.06)] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="md:col-span-5 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] overflow-hidden"
             >
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-full justify-between relative z-10">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.performance.label")}</span>
+                  <span className="text-sm uppercase tracking-[0.2em] text-stone-400 font-bold block mb-8">{t("bento.performance.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight">
                     {t.rich("bento.performance.title", {
                       highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
                     })}
                   </h3>
                 </div>
-                <div className="mt-12">
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] flex items-center justify-center text-[#B34B44] group-hover:scale-125 transition-transform duration-500">
-                    <Lightning size={24} weight="duotone" />
-                  </div>
-                </div>
+              </div>
+              <div className="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
+                <Lightning size={280} weight="thin" />
               </div>
             </motion.div>
 
             {/* Box 4: Design - 7/12 */}
             <motion.div 
               variants={fadeUp}
-              className="md:col-span-7 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_40px_80px_rgba(179,75,68,0.06)] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              className="md:col-span-7 group relative bg-white rounded-[3rem] border border-stone-200/60 p-10 md:p-14 shadow-[0_8px_30px_rgb(0,0,0,0.02)] overflow-hidden"
             >
-              <div className="flex flex-col h-full justify-between">
+              <div className="flex flex-col h-full justify-between relative z-10">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-stone-400 font-medium block mb-8">{t("bento.design.label")}</span>
+                  <span className="text-sm uppercase tracking-[0.2em] text-stone-400 font-bold block mb-8">{t("bento.design.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] tracking-tighter leading-tight max-w-xl">
                     {t.rich("bento.design.title", {
                       highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
                     })}
                   </h3>
                 </div>
-                <div className="mt-12 flex items-center gap-6">
-                  <div className="w-12 h-12 rounded-2xl bg-[#FAF8F5] flex items-center justify-center text-[#B34B44] group-hover:bg-[#B34B44] group-hover:text-white transition-all duration-500">
-                    <UserFocus size={24} weight="duotone" />
-                  </div>
-                  <p className="text-sm text-stone-400 font-medium tracking-tight">{t("bento.design.footer")}</p>
-                </div>
+              </div>
+              <div className="absolute -right-10 -bottom-10 opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
+                <UserFocus size={280} weight="thin" />
               </div>
             </motion.div>
           </div>

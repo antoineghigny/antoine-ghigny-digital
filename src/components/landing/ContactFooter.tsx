@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowUpRight, WhatsappLogo, Envelope, ChatCircleText } from "@phosphor-icons/react";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -36,7 +36,7 @@ export default function ContactFooter() {
             <div className="flex-1 space-y-8">
               <motion.span
                 variants={fadeUp}
-                className="text-xs uppercase tracking-widest font-medium text-[#B34B44]"
+                className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44]"
               >
                 {t("badge")}
               </motion.span>
@@ -49,39 +49,41 @@ export default function ContactFooter() {
             </div>
 
             {/* Right side: Action */}
-            <div className="flex-1 space-y-10 pt-4 md:pt-16">
-              <motion.p
-                variants={fadeUp}
-                className="text-xl md:text-2xl text-[#5C5652] leading-relaxed font-light max-w-[40ch]"
-              >
-                {t("description")}
-              </motion.p>
+            <div className="flex-1 space-y-12 pt-4 md:pt-16">
+              <motion.div variants={fadeUp} className="space-y-4">
+                <div className="flex items-center gap-2.5 text-[#B34B44]">
+                  <ChatCircleText size={20} weight="fill" />
+                  <span className="text-xs uppercase tracking-widest font-medium">{t("inquiry_label")}</span>
+                </div>
+                <p className="text-xl md:text-2xl text-[#5C5652] leading-relaxed font-light max-w-[40ch]">
+                  {t("description")}
+                </p>
+              </motion.div>
               
-              <motion.div variants={fadeUp} className="space-y-6">
-                <motion.a
-                  href="mailto:hello@antoineghigny.be?subject=Demande%20d%27audit%20gratuit"
-                  initial="initial"
-                  whileHover="hover"
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-10 py-6 rounded-full font-medium text-xl shadow-2xl shadow-[#B34B44]/30 hover:bg-[#963f39] transition-all duration-300 group overflow-hidden"
-                >
-                  <span>{t("cta")}</span>
-                  <div className="relative h-6 w-6 overflow-hidden pointer-events-none">
-                    <motion.div
-                      variants={{
-                        initial: { x: 0, y: 0 },
-                        hover: { x: 28, y: -28 }
-                      }}
-                      transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                      className="relative w-full h-full"
-                    >
-                      <ArrowUpRight weight="bold" size={24} className="absolute inset-0" />
-                      <ArrowUpRight weight="bold" size={24} className="absolute inset-0 -translate-x-[28px] translate-y-[28px]" />
-                    </motion.div>
-                  </div>
-                </motion.a>
+              <motion.div variants={fadeUp} className="space-y-8">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                  <motion.a
+                    href={`https://wa.me/${t("phone_url")}`}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-8 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 group"
+                  >
+                    <WhatsappLogo weight="fill" size={24} />
+                    <span>{t("cta_whatsapp")}</span>
+                  </motion.a>
+
+                  <motion.a
+                    href={`mailto:${t("email")}?subject=${t("inquiry_label")}`}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full font-medium text-lg border border-[#2D2926]/10 text-[#2D2926] hover:bg-[#2D2926] hover:text-white transition-all duration-300"
+                  >
+                    <Envelope weight="fill" size={24} />
+                    <span>{t("cta_mail")}</span>
+                  </motion.a>
+                </div>
                 
-                <div className="flex items-center gap-3 px-6">
+                <div className="flex items-center gap-3 px-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <p className="text-sm text-[#5C5652] font-medium tracking-wide">
                     {t("status")}
