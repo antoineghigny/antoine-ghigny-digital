@@ -87,12 +87,12 @@ const BrowserMockup = () => {
                 d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30 L 400 150 L 0 150 Z"
                 fill="url(#gradient)"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.1 }}
+                animate={{ opacity: 0.15 }}
                 transition={{ duration: 1 }}
               />
               <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#B34B44" stopOpacity="1" />
+                <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="150" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#B34B44" stopOpacity="0.8" />
                   <stop offset="100%" stopColor="#FAF8F5" stopOpacity="0" />
                 </linearGradient>
               </defs>
