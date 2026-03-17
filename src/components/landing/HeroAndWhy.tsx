@@ -14,6 +14,7 @@ import {
   Terminal,
 } from "@phosphor-icons/react";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -39,24 +40,24 @@ const BrowserMockup = () => {
   }, []);
 
   if (!mounted) {
-    return <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-stone-50 rounded-3xl border border-stone-200" />;
+    return <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-stone-50 dark:bg-[#1E1C1A] rounded-3xl border border-stone-200 dark:border-white/10" />;
   }
 
   return (
-    <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-[#FAF8F5] rounded-3xl border border-stone-200 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] overflow-hidden flex flex-col">
+    <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-[#FAF8F5] dark:bg-[#1A1816] rounded-3xl border border-stone-200 dark:border-white/10 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] dark:shadow-[0_30px_80px_-15px_rgba(179,75,68,0.25)] overflow-hidden flex flex-col">
       {/* Browser Header */}
-      <div className="h-10 border-b border-stone-200 bg-white flex items-center px-5 justify-between shrink-0">
+      <div className="h-10 border-b border-stone-200 dark:border-white/10 bg-white dark:bg-[#242220] flex items-center px-5 justify-between shrink-0">
         <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-stone-200" />
-          <div className="w-2.5 h-2.5 rounded-full bg-stone-200" />
-          <div className="w-2.5 h-2.5 rounded-full bg-stone-200" />
+          <div className="w-2.5 h-2.5 rounded-full bg-stone-200 dark:bg-white/10" />
+          <div className="w-2.5 h-2.5 rounded-full bg-stone-200 dark:bg-white/10" />
+          <div className="w-2.5 h-2.5 rounded-full bg-stone-200 dark:bg-white/10" />
         </div>
-        <div className="flex items-center gap-2 bg-stone-100/80 px-3 py-1 rounded-full border border-stone-200/50">
+        <div className="flex items-center gap-2 bg-stone-100/80 dark:bg-white/[0.06] px-3 py-1 rounded-full border border-stone-200/50 dark:border-white/[0.07]">
           <Pulse size={10} weight="bold" className="text-[#B34B44]" />
-          <span className="text-[10px] text-stone-500 font-medium tracking-tight">performance.live</span>
+          <span className="text-[10px] text-stone-500 dark:text-stone-400 font-medium tracking-tight">performance.live</span>
         </div>
-        <div className="w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center border border-stone-200">
-          <Terminal size={12} weight="bold" className="text-stone-400" />
+        <div className="w-6 h-6 rounded-full bg-stone-100 dark:bg-white/[0.06] flex items-center justify-center border border-stone-200 dark:border-white/10">
+          <Terminal size={12} weight="bold" className="text-stone-400 dark:text-stone-500" />
         </div>
       </div>
 
@@ -69,22 +70,22 @@ const BrowserMockup = () => {
             { icon: ChartLineUp, label: t("dashboard.seo"), val: "100", color: "text-[#B34B44]" },
             { icon: Pulse, label: t("dashboard.uptime"), val: "99.9%", color: "text-emerald-600" }
           ].map((item, i) => (
-            <div key={i} className="bg-white p-3 md:p-4 rounded-xl border border-stone-200 shadow-sm flex flex-col gap-1.5">
+            <div key={i} className="bg-white dark:bg-[#242220] p-3 md:p-4 rounded-xl border border-stone-200 dark:border-white/10 shadow-sm flex flex-col gap-1.5">
               <item.icon size={16} weight="duotone" className={item.color} />
               <div>
-                <p className="text-[8px] uppercase tracking-widest text-stone-400 font-bold">{item.label}</p>
-                <p className="text-sm md:text-base font-bold text-[#2D2926] leading-none mt-0.5">{item.val}</p>
+                <p className="text-[8px] uppercase tracking-widest text-stone-400 dark:text-stone-500 font-bold">{item.label}</p>
+                <p className="text-sm md:text-base font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-none mt-0.5">{item.val}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Main Chart Section */}
-        <div className="flex-1 bg-white rounded-2xl border border-stone-200 p-4 md:p-5 relative flex flex-col gap-4 overflow-hidden">
+        <div className="flex-1 bg-white dark:bg-[#242220] rounded-2xl border border-stone-200 dark:border-white/10 p-4 md:p-5 relative flex flex-col gap-4 overflow-hidden">
           <div className="flex justify-between items-center">
-            <h4 className="text-[10px] font-bold text-[#2D2926] uppercase tracking-widest">{t("dashboard.revenue")}</h4>
+            <h4 className="text-[10px] font-bold text-[#2D2926] dark:text-[#FAF8F5] uppercase tracking-widest">{t("dashboard.revenue")}</h4>
             <div className="flex gap-1">
-              {[1, 2, 3].map(j => <div key={j} className="w-4 h-1 rounded-full bg-stone-100" />)}
+              {[1, 2, 3].map(j => <div key={j} className="w-4 h-1 rounded-full bg-stone-100 dark:bg-white/[0.06]" />)}
             </div>
           </div>
           
@@ -137,30 +138,30 @@ const BrowserMockup = () => {
             />
           </div>
 
-          <div className="h-px bg-stone-100 w-full" />
+          <div className="h-px bg-stone-100 dark:bg-white/[0.06] w-full" />
           
           <div className="space-y-3">
             <div className="flex gap-4 items-center">
-              <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                <m.div 
+              <div className="flex-1 h-2 bg-stone-100 dark:bg-white/[0.06] rounded-full overflow-hidden">
+                <m.div
                   initial={{ width: 0 }}
                   animate={{ width: "85%" }}
                   transition={{ duration: 1.5, ease: "circOut" }}
-                  className="h-full bg-[#B34B44]/30" 
+                  className="h-full bg-[#B34B44]/30"
                 />
               </div>
-              <div className="w-8 h-2 bg-stone-100 rounded-full" />
+              <div className="w-8 h-2 bg-stone-100 dark:bg-white/[0.06] rounded-full" />
             </div>
             <div className="flex gap-4 items-center">
-              <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                <m.div 
+              <div className="flex-1 h-2 bg-stone-100 dark:bg-white/[0.06] rounded-full overflow-hidden">
+                <m.div
                   initial={{ width: 0 }}
                   animate={{ width: "65%" }}
                   transition={{ duration: 1.5, ease: "circOut", delay: 0.2 }}
-                  className="h-full bg-stone-200" 
+                  className="h-full bg-stone-200 dark:bg-white/10"
                 />
               </div>
-              <div className="w-12 h-2 bg-stone-100 rounded-full" />
+              <div className="w-12 h-2 bg-stone-100 dark:bg-white/[0.06] rounded-full" />
             </div>
           </div>
         </div>
@@ -199,22 +200,23 @@ export default function HeroAndWhy() {
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
               <m.div variants={fadeInUp} className="space-y-6">
-                <div className="flex items-center gap-1.5 md:gap-4 flex-nowrap">
-                  <div className="flex items-center bg-white/70 backdrop-blur-md border border-stone-200 px-2.5 min-[380px]:px-3 md:px-4 py-2 rounded-full text-[8.5px] min-[380px]:text-[10px] md:text-sm font-bold tracking-[0.05em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap shrink-0">
+                <div className="flex items-center gap-1.5 md:gap-4 flex-wrap">
+                  <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 min-[380px]:px-3 md:px-4 py-2 rounded-full text-[8.5px] min-[380px]:text-[10px] md:text-sm font-bold tracking-[0.05em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-3 shrink-0" />
                     {t("availability")}
                   </div>
-                  <div className="shrink-0">
+                  <div className="flex items-center gap-1.5">
                     <LocaleSwitcher />
+                    <ThemeToggle />
                   </div>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] leading-[1.05] tracking-tighter">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
                   {t("title_part1")}<br />
                   <span className="text-[#B34B44]">{t("title_part2")}</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-[#5C5652] leading-relaxed font-light max-w-[60ch]">
+                <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
               </m.div>
@@ -241,7 +243,7 @@ export default function HeroAndWhy() {
 
               <m.div
                 variants={fadeInUp}
-                className="mt-6 md:mt-12 pt-8 md:pt-12 border-t border-stone-200/60 flex flex-col gap-10"
+                className="mt-6 md:mt-12 pt-8 md:pt-12 border-t border-stone-200/60 dark:border-white/[0.07] flex flex-col gap-10"
               >
                 {/* Trust Markers */}
                 <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-6">
@@ -249,19 +251,19 @@ export default function HeroAndWhy() {
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                       <CheckCircle weight="fill" size={24} />
                     </div>
-                    <span className="text-[15px] font-medium text-[#2D2926] leading-tight">{t("trust.satisfied")}</span>
+                    <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t("trust.satisfied")}</span>
                   </div>
                   <div className="flex items-center gap-4 group shrink-0">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                       <ShieldCheck weight="fill" size={24} />
                     </div>
-                    <span className="text-[15px] font-medium text-[#2D2926] leading-tight">{t("trust.fixed_price")}</span>
+                    <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t("trust.fixed_price")}</span>
                   </div>
                   <div className="flex items-center gap-4 group shrink-0">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
                       <Clock weight="fill" size={24} />
                     </div>
-                    <span className="text-[15px] font-medium text-[#2D2926] leading-tight">{t("trust.response_time")}</span>
+                    <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t("trust.response_time")}</span>
                   </div>
                 </div>
               </m.div>
