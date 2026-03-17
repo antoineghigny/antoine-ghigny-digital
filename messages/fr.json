@@ -23,7 +23,7 @@
   },
   "whyMe": {
     "badge": "Pourquoi faire appel à moi",
-    "title_part1": "Le digital devrait travailler",
+    "title_part1": "Votre site devrait travailler",
     "title_part2": "pour vous",
     "title_part3": ", pas l'inverse.",
     "bento": {
@@ -44,6 +44,35 @@
         "title": "Un design unique qui vous <highlight>distingue</highlight> et reflète exactement qui vous êtes."
       }
     },
+    "mockup": {
+      "url": "votre-business.be",
+      "tasks": {
+        "review": {
+          "title": "Nouvel avis 5 étoiles sur Google",
+          "time": "Votre note passe à 4.9"
+        },
+        "seo": {
+          "title": "Page 1 sur Google",
+          "time": "\"Plombier Nivelles\" en position 3"
+        },
+        "client": {
+          "title": "Nouveau client via votre site",
+          "time": "\"Je vous ai trouvé sur Google\""
+        },
+        "quote": {
+          "title": "Demande de devis reçue",
+          "time": "Via le formulaire de contact"
+        },
+        "aisearch": {
+          "title": "Cité par ChatGPT",
+          "time": "\"Recommandé dans votre région\""
+        },
+        "booking": {
+          "title": "Rendez-vous pris en ligne",
+          "time": "Lundi 24 mars à 10h00"
+        }
+      }
+    },
     "collaboration": {
       "client": {
         "title_part1": "Votre Expertise",
@@ -52,7 +81,7 @@
       },
       "my": {
         "title_part1": "Ma Vision",
-        "title_part2": "Digitale.",
+        "title_part2": "Web.",
         "description": "Je transforme tout ça en un site qui travaille pour vous : visible sur Google, clair pour vos visiteurs et qui donne envie d'aller plus loin."
       }
     }

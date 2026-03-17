@@ -4,6 +4,7 @@ import React from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
+import WhyMeMockup from "./WhyMeMockup";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -25,21 +26,26 @@ export default function WhyMeSection() {
           transition={{ staggerChildren: 0.1, ...SPRING }}
           className="space-y-16 md:space-y-32"
         >
-          {/* Header */}
-          <div className="max-w-3xl">
-            <m.p 
-              variants={fadeUp}
-              className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44] mb-6"
-            >
-              {t("badge")}
-            </m.p>
-            <m.h2 
-              variants={fadeUp}
-              className="text-5xl md:text-7xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.9] lg:leading-[1.1]"
-            >
-              {t("title_part1")}<br />
-              <span className="text-[#B34B44]">{t("title_part2")}</span>{t("title_part3")}
-            </m.h2>
+          {/* Header + Mockup */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div className="md:col-span-6">
+              <m.p
+                variants={fadeUp}
+                className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44] mb-6"
+              >
+                {t("badge")}
+              </m.p>
+              <m.h2
+                variants={fadeUp}
+                className="text-5xl md:text-7xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.9] lg:leading-[1.1]"
+              >
+                {t("title_part1")}<br />
+                <span className="text-[#B34B44]">{t("title_part2")}</span>{t("title_part3")}
+              </m.h2>
+            </div>
+            <m.div variants={fadeUp} className="md:col-span-6">
+              <WhyMeMockup />
+            </m.div>
           </div>
 
           {/* Asymmetric Bento Grid */}

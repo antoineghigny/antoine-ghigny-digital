@@ -23,7 +23,7 @@
   },
   "whyMe": {
     "badge": "Why work with me",
-    "title_part1": "Digital should work",
+    "title_part1": "Your site should work",
     "title_part2": "for you",
     "title_part3": ", not the other way around.",
     "bento": {
@@ -44,6 +44,35 @@
         "title": "A unique design that <highlight>sets you apart</highlight> and reflects exactly who you are."
       }
     },
+    "mockup": {
+      "url": "your-business.com",
+      "tasks": {
+        "review": {
+          "title": "New 5-star Google review",
+          "time": "Your rating is now 4.9"
+        },
+        "seo": {
+          "title": "Page 1 on Google",
+          "time": "\"Plumber Nivelles\" ranked #3"
+        },
+        "client": {
+          "title": "New client from your website",
+          "time": "\"I found you on Google\""
+        },
+        "quote": {
+          "title": "Quote request received",
+          "time": "Via your contact form"
+        },
+        "aisearch": {
+          "title": "Mentioned by ChatGPT",
+          "time": "\"Recommended in your area\""
+        },
+        "booking": {
+          "title": "Appointment booked online",
+          "time": "Monday March 24 at 10:00 AM"
+        }
+      }
+    },
     "collaboration": {
       "client": {
         "title_part1": "Your Industry",
@@ -51,7 +80,7 @@
         "description": "Nobody knows your business better than you. You know what your clients are looking for and what convinces them."
       },
       "my": {
-        "title_part1": "My Digital",
+        "title_part1": "My Web",
         "title_part2": "Vision.",
         "description": "I turn all of that into a site that works for you: visible on Google, clear for your visitors and designed to make them take the next step."
       }
