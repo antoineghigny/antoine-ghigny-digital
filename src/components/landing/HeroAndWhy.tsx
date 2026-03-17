@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useId } from "react";
+import React, { useId, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
@@ -28,9 +28,18 @@ const staggerContainer = {
 };
 
 const BrowserMockup = () => {
+  const [mounted, setMounted] = useState(false);
   const id = useId();
   const gradientId = `gradient-${id}`;
   const glowId = `glow-${id}`;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-stone-50 rounded-3xl border border-stone-200" />;
+  }
 
   return (
     <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-[#FAF8F5] rounded-3xl border border-stone-200 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] overflow-hidden flex flex-col">

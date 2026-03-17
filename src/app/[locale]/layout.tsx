@@ -2,7 +2,8 @@ import { getMessages, getTranslations } from "next-intl/server";
 import localFont from "next/font/local";
 import "../globals.css";
 import Providers from "@/components/Providers";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -16,6 +17,15 @@ const geistMono = localFont({
   weight: "100 900",
   display: 'swap',
 });
+
+// A simple client-only component for the noise background to prevent hydration issues
+function ClientNoise() {
+  return (
+    <div 
+      className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03] contrast-150 brightness-150 mix-blend-multiply bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')]" 
+    />
+  );
+}
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: "metadata" });
@@ -93,10 +103,13 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-[#B34B44]/20 selection:text-[#B34B44]`}
+        suppressHydrationWarning
       >
-        <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03] contrast-150 brightness-150 mix-blend-multiply bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')]" />
+        <ClientNoise />
         <Providers locale={locale} messages={messages}>
           {children}
+          <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
