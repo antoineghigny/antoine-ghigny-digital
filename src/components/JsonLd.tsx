@@ -1,22 +1,36 @@
-import { getTranslations } from "next-intl/server";
+export default function JsonLd({ 
+  locale, 
+  type = "ProfessionalService" 
+}: { 
+  locale: string;
+  type?: "ProfessionalService" | "WebPage"
+}) {
+  const baseUrl = "https://antoine-ghigny-digital.vercel.app";
+  const currentUrl = `${baseUrl}/${locale}`;
 
-export default async function JsonLd({ locale }: { locale: string }) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
-  const tc = await getTranslations({ locale, namespace: "contact" });
-  
-  const baseUrl = "https://votre-domaine.be";
+  // Direct descriptions to avoid async issues in components
+  const description = locale === 'fr' 
+    ? "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
+    : "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium.";
 
-  const schema = {
+  const baseSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Antoine Ghigny · Digital Creation",
+    "@type": type,
+    "name": type === "ProfessionalService" ? "Antoine Ghigny · Digital Creation" : undefined,
     "image": `${baseUrl}/og-image.jpg`,
-    "@id": `${baseUrl}/${locale}`,
-    "url": `${baseUrl}/${locale}`,
-    "telephone": tc("phone"),
+    "@id": currentUrl,
+    "url": currentUrl,
+    "description": description,
+    "inLanguage": locale,
+  };
+
+  const professionalSchema = type === "ProfessionalService" ? {
+    "telephone": "+32 475 91 13 74",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Chaussée de Braine le Comte, 70",
       "addressLocality": "Nivelles",
+      "postalCode": "1400",
       "addressCountry": "BE"
     },
     "geo": {
@@ -24,25 +38,24 @@ export default async function JsonLd({ locale }: { locale: string }) {
       "latitude": 50.5977,
       "longitude": 4.3232
     },
-    "description": t("description"),
     "priceRange": "$$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "18:00"
     },
-    "sameAs": [
-      "https://www.linkedin.com/in/antoineghigny"
-      // Ajoutez vos autres réseaux ici
-    ]
-  };
+    "sameAs": ["https://www.linkedin.com/in/antoineghigny"]
+  } : {};
+
+  const pageSchema = type === "WebPage" ? {
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    }
+  } : {};
+
+  const schema = { ...baseSchema, ...professionalSchema, ...pageSchema };
 
   return (
     <script

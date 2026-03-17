@@ -69,6 +69,78 @@
       "legal": "Mentions légales",
       "privacy": "Politique de confidentialité"
     },
-    "tva": "TVA BE0XXX.XXX.XXX"
+    "tva": "TVA BE 1033.932.403"
+  },
+  "legal": {
+    "title": "Mentions Légales",
+    "label": "Informations Officielles",
+    "backToHome": "Retour à l'accueil",
+    "last_updated": "Mars 2026",
+    "allRightsReserved": "Tous droits réservés.",
+    "returnCTA": "Lancer mon projet",
+    "sections": {
+      "identity": {
+        "label": "Éditeur",
+        "title": "Identification",
+        "content": "Le site web est édité par Antoine Ghigny, agissant en tant qu'indépendant en Belgique.",
+        "name": "Antoine Ghigny",
+        "address": "Siège social : Chaussée de Braine le Comte, 70, 1400 Nivelles, Belgique",
+        "vat": "Numéro d'entreprise / TVA : BE 1033.932.403",
+        "email": "antoine@ghigny.be"
+      },
+      "hosting": {
+        "label": "Infrastructure",
+        "title": "Hébergement",
+        "content": "L'infrastructure technique est assurée par un leader mondial de l'hébergement cloud, garantissant performance et sécurité.",
+        "provider": "Vercel Inc.",
+        "address": "Covina, CA 91723, États-Unis"
+      },
+      "property": {
+        "label": "Copyright",
+        "title": "Propriété Intellectuelle",
+        "content": "L'ensemble du contenu (textes, images, codes) est la propriété exclusive de Antoine Ghigny. Toute reproduction sans accord écrit est strictement interdite."
+      },
+      "privacy": {
+        "label": "Sécurité",
+        "title": "Confidentialité & Cookies",
+        "content": "Nous respectons votre vie privée. Pour plus de détails, consultez notre politique de confidentialité dédiée."
+      },
+      "accessibility": {
+        "label": "Inclusion",
+        "title": "Accessibilité Numérique",
+        "content": "Conformément à l'European Accessibility Act de 2025-2026, nous nous engageons à rendre ce site accessible à tous. Si vous rencontrez une difficulté, contactez-nous."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "label": "Données Personnelles",
+    "backToHome": "Retour à l'accueil",
+    "allRightsReserved": "Tous droits réservés.",
+    "returnCTA": "Lancer mon projet",
+    "intro": "La protection de vos données personnelles est une priorité absolue. Nous traitons vos informations conformément au RGPD en vigueur en Belgique.",
+    "sections": {
+      "controller": {
+        "label": "Responsabilité",
+        "title": "Responsable du Traitement",
+        "content": "Antoine Ghigny est le seul responsable du traitement de vos données collectées sur ce site.",
+        "email": "antoine@ghigny.be"
+      },
+      "data": {
+        "label": "Collecte",
+        "title": "Données Collectées",
+        "content": "Ce site ne comporte aucun formulaire de contact et ne collecte aucune donnée personnelle de manière active. Lorsque vous nous contactez via WhatsApp ou E-mail, nous traitons uniquement les informations que vous choisissez de nous communiquer pour répondre à votre demande."
+      },
+      "rights": {
+        "label": "Vos Droits",
+        "title": "Accès & Rectification",
+        "content": "Vous disposez d'un droit d'accès, de rectification et d'effacement de vos données. Contactez-nous pour toute demande à antoine@ghigny.be."
+      },
+      "cookies": {
+        "label": "Cookies",
+        "title": "Gestion des Cookies",
+        "content": "Nous utilisons des cookies techniques essentiels. Aucun cookie publicitaire n'est déposé sans votre consentement explicite."
+      }
+    }
   }
 }

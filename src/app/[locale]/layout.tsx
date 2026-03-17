@@ -10,12 +10,14 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
   display: 'swap',
+  preload: false,
 });
 const geistMono = localFont({
   src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
   display: 'swap',
+  preload: false,
 });
 
 // A simple client-only component for the noise background to prevent hydration issues
@@ -29,7 +31,7 @@ function ClientNoise() {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: "metadata" });
-  const baseUrl = "https://votre-domaine.be"; // À remplacer par votre vrai domaine
+  const baseUrl = "https://antoine-ghigny-digital.vercel.app";
 
   return {
     metadataBase: new URL(baseUrl),
@@ -89,6 +91,13 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fr" }];
 }
 
+export const viewport = {
+  themeColor: "#FAF8F5",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -96,13 +105,13 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // We explicitly fetch messages for the current locale
+  // Pre-load critical translations for the whole layout
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-[#B34B44]/20 selection:text-[#B34B44]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-[#B34B44]/20 selection:text-[#B34B44] bg-[#FAF8F5]`}
         suppressHydrationWarning
       >
         <ClientNoise />

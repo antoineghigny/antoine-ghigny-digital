@@ -59,7 +59,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { CheckCircle } from "@phosphor-icons/react";
 
 const fadeInUp = {
@@ -79,7 +79,7 @@ export default function VibeDWarmAsymmetric() {
     <section className="min-h-[100dvh] bg-[#FAF8F5] flex items-center overflow-hidden selection:bg-[#B34B44]/20 selection:text-[#B34B44]">
       <div className="max-w-[1400px] mx-auto px-4 md:px-12 py-12 md:py-24 w-full">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.21, 0.45, 0.32, 0.9] }}
@@ -95,14 +95,14 @@ export default function VibeDWarmAsymmetric() {
               />
               <div className="absolute inset-0 bg-[#B34B44]/5 mix-blend-multiply" />
             </div>
-          </motion.div>
-          <motion.div
+          </m.div>
+          <m.div
             variants={staggerContainer}
             initial="initial"
             animate="animate"
             className="md:col-span-7 flex flex-col space-y-8"
           >
-            <motion.div {...fadeInUp} className="flex flex-col space-y-4">
+            <m.div {...fadeInUp} className="flex flex-col space-y-4">
               <span className="text-[#B34B44] font-medium tracking-widest text-xs uppercase">
                 Creation digitale — Bruxelles
               </span>
@@ -110,22 +110,22 @@ export default function VibeDWarmAsymmetric() {
                 Votre site web.<br />
                 <span className="font-light">Enfin bien fait.</span>
               </h1>
-            </motion.div>
-            <motion.p
+            </m.div>
+            <m.p
               {...fadeInUp}
               className="text-lg md:text-xl text-[#5C5652] max-w-2xl leading-relaxed font-light"
             >
               Je concois des experiences numeriques qui allient esthetique editoriale et performance technique.
-            </motion.p>
-            <motion.div {...fadeInUp} className="flex flex-col sm:flex-row gap-4 pt-4">
+            </m.p>
+            <m.div {...fadeInUp} className="flex flex-col sm:flex-row gap-4 pt-4">
               <button className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto">
                 Demander un audit gratuit
               </button>
               <button className="px-10 py-5 rounded-full font-medium text-lg border border-[#2D2926]/10 text-[#2D2926] hover:bg-[#2D2926] hover:text-white active:scale-[0.98] transition-all duration-300 w-full sm:w-auto">
                 Voir les projets
               </button>
-            </motion.div>
-            <motion.div
+            </m.div>
+            <m.div
               {...fadeInUp}
               className="pt-8 border-t border-[#2D2926]/5 flex flex-wrap gap-x-10 gap-y-4"
             >
@@ -135,8 +135,8 @@ export default function VibeDWarmAsymmetric() {
                   <span className="text-sm font-medium text-[#5C5652] tracking-tight">{text}</span>
                 </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </section>

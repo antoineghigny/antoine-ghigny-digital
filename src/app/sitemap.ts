@@ -1,15 +1,16 @@
 import { MetadataRoute } from 'next';
 
-const defaultUrl = 'https://votre-domaine.be';
+const baseUrl = 'https://antoine-ghigny-digital.vercel.app';
 const locales = ['fr', 'en'];
+const pages = ['', '/legal', '/privacy'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [''].flatMap((route) =>
+  const routes = pages.flatMap((page) =>
     locales.map((locale) => ({
-      url: `${defaultUrl}/${locale}${route}`,
+      url: `${baseUrl}/${locale}${page}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: route === '' ? 1 : 0.8,
+      priority: page === '' ? 1 : 0.5,
     }))
   );
 

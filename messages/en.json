@@ -69,6 +69,78 @@
       "legal": "Legal mentions",
       "privacy": "Privacy policy"
     },
-    "tva": "VAT BE0XXX.XXX.XXX"
+    "tva": "VAT BE 1033.932.403"
+  },
+  "legal": {
+    "title": "Legal Mentions",
+    "label": "Official Information",
+    "backToHome": "Back to home",
+    "last_updated": "March 2026",
+    "allRightsReserved": "All rights reserved.",
+    "returnCTA": "Launch my project",
+    "sections": {
+      "identity": {
+        "label": "Publisher",
+        "title": "Identification",
+        "content": "The website is published by Antoine Ghigny, acting as a freelancer in Belgium.",
+        "name": "Antoine Ghigny",
+        "address": "Registered Office: Chaussée de Braine le Comte, 70, 1400 Nivelles, Belgium",
+        "vat": "Enterprise Number / VAT: BE 1033.932.403",
+        "email": "antoine@ghigny.be"
+      },
+      "hosting": {
+        "label": "Infrastructure",
+        "title": "Hosting",
+        "content": "The technical infrastructure is provided by a global leader in cloud hosting, ensuring performance and security.",
+        "provider": "Vercel Inc.",
+        "address": "Covina, CA 91723, United States"
+      },
+      "property": {
+        "label": "Copyright",
+        "title": "Intellectual Property",
+        "content": "All content (text, images, codes) is the exclusive property of Antoine Ghigny. Any reproduction without written consent is strictly prohibited."
+      },
+      "privacy": {
+        "label": "Security",
+        "title": "Privacy & Cookies",
+        "content": "We respect your privacy. For more details, see our dedicated privacy policy."
+      },
+      "accessibility": {
+        "label": "Inclusion",
+        "title": "Digital Accessibility",
+        "content": "In accordance with the European Accessibility Act of 2025-2026, we are committed to making this site accessible to everyone. If you encounter any difficulty, please contact us."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy",
+    "label": "Personal Data",
+    "backToHome": "Back to home",
+    "allRightsReserved": "All rights reserved.",
+    "returnCTA": "Launch my project",
+    "intro": "Protecting your personal data is an absolute priority. We process your information in accordance with the GDPR in force in Belgium.",
+    "sections": {
+      "controller": {
+        "label": "Responsibility",
+        "title": "Data Controller",
+        "content": "Antoine Ghigny is the sole controller for the processing of your data collected on this site.",
+        "email": "antoine@ghigny.be"
+      },
+      "data": {
+        "label": "Collection",
+        "title": "Collected Data",
+        "content": "This website does not have a contact form and does not actively collect any personal data. When you contact us via WhatsApp or Email, we only process the information you choose to provide to respond to your inquiry."
+      },
+      "rights": {
+        "label": "Your Rights",
+        "title": "Access & Rectification",
+        "content": "You have the right to access, rectify, and erase your data. Contact us for any request at antoine@ghigny.be."
+      },
+      "cookies": {
+        "label": "Cookies",
+        "title": "Cookie Management",
+        "content": "We use essential technical cookies. No advertising cookies are placed without your explicit consent."
+      }
+    }
   }
 }

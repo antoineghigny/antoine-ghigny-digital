@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useId, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
   CheckCircle,
@@ -67,12 +67,12 @@ const BrowserMockup = () => {
             { icon: Lightning, label: "Speed", val: "0.8s", color: "text-amber-600" },
             { icon: ChartLineUp, label: "SEO", val: "100", color: "text-[#B34B44]" },
             { icon: Pulse, label: "Uptime", val: "99.9%", color: "text-emerald-600" }
-          ].map((m, i) => (
+          ].map((item, i) => (
             <div key={i} className="bg-white p-3 md:p-4 rounded-xl border border-stone-200 shadow-sm flex flex-col gap-1.5">
-              <m.icon size={16} weight="duotone" className={m.color} />
+              <item.icon size={16} weight="duotone" className={item.color} />
               <div>
-                <p className="text-[8px] uppercase tracking-widest text-stone-400 font-bold">{m.label}</p>
-                <p className="text-sm md:text-base font-bold text-[#2D2926] leading-none mt-0.5">{m.val}</p>
+                <p className="text-[8px] uppercase tracking-widest text-stone-400 font-bold">{item.label}</p>
+                <p className="text-sm md:text-base font-bold text-[#2D2926] leading-none mt-0.5">{item.val}</p>
               </div>
             </div>
           ))}
@@ -101,7 +101,7 @@ const BrowserMockup = () => {
               </defs>
 
               {/* Glowing animated line */}
-              <motion.path
+              <m.path
                 d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30"
                 fill="none"
                 stroke="#B34B44"
@@ -121,7 +121,7 @@ const BrowserMockup = () => {
               />
 
               {/* Static background fill */}
-              <motion.path
+              <m.path
                 d="M 0 130 Q 50 110 100 120 T 200 60 T 300 80 T 400 30 L 400 150 L 0 150 Z"
                 fill={`url(#${gradientId})`}
                 initial={{ opacity: 0 }}
@@ -129,7 +129,7 @@ const BrowserMockup = () => {
                 transition={{ duration: 1 }}
               />
             </svg>
-            <motion.div 
+            <m.div 
               animate={{ left: ["0%", "100%", "0%"] }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
               className="absolute top-0 bottom-0 w-px bg-[#2D2926]/10"
@@ -141,7 +141,7 @@ const BrowserMockup = () => {
           <div className="space-y-3">
             <div className="flex gap-4 items-center">
               <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                <motion.div 
+                <m.div 
                   initial={{ width: 0 }}
                   animate={{ width: "85%" }}
                   transition={{ duration: 1.5, ease: "circOut" }}
@@ -152,7 +152,7 @@ const BrowserMockup = () => {
             </div>
             <div className="flex gap-4 items-center">
               <div className="flex-1 h-2 bg-stone-100 rounded-full overflow-hidden">
-                <motion.div 
+                <m.div 
                   initial={{ width: 0 }}
                   animate={{ width: "65%" }}
                   transition={{ duration: 1.5, ease: "circOut", delay: 0.2 }}
@@ -177,7 +177,7 @@ export default function HeroAndWhy() {
       <section className="min-h-[100dvh] flex items-center relative py-12 lg:py-0 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -50, rotate: 2 }}
               animate={{ opacity: 1, x: 0, rotate: -2 }}
               whileHover={{ scale: 1.02, rotate: 0 }}
@@ -189,15 +189,15 @@ export default function HeroAndWhy() {
               className="hidden md:block md:col-span-5 order-2 md:order-1"
             >
               <BrowserMockup />
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               variants={staggerContainer}
               initial="initial"
               animate="animate"
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
-              <motion.div variants={fadeInUp} className="space-y-6">
+              <m.div variants={fadeInUp} className="space-y-6">
                 <div className="flex items-center gap-1.5 md:gap-4 flex-nowrap">
                   <div className="flex items-center bg-white/70 backdrop-blur-md border border-stone-200 px-2.5 min-[380px]:px-3 md:px-4 py-2 rounded-full text-[8.5px] min-[380px]:text-[10px] md:text-sm font-bold tracking-[0.05em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap shrink-0">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-3 shrink-0" />
@@ -216,10 +216,10 @@ export default function HeroAndWhy() {
                 <p className="text-lg md:text-xl text-[#5C5652] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
-              </motion.div>
+              </m.div>
 
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                <motion.a
+              <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
+                <m.a
                   href="#contact"
                   whileHover="hover"
                   whileTap={{ scale: 0.98 }}
@@ -227,18 +227,18 @@ export default function HeroAndWhy() {
                 >
                   <span>{t("cta")}</span>
                   <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </motion.a>
-              </motion.div>
+                </m.a>
+              </m.div>
 
               {/* Mobile Mockup Display */}
-              <motion.div 
+              <m.div 
                 variants={fadeInUp}
                 className="md:hidden pt-4 pb-8 px-1"
               >
                 <BrowserMockup />
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 variants={fadeInUp}
                 className="mt-6 md:mt-12 pt-8 md:pt-12 border-t border-stone-200/60 flex flex-col gap-10"
               >
@@ -263,8 +263,8 @@ export default function HeroAndWhy() {
                     <span className="text-[15px] font-medium text-[#2D2926] leading-tight">{t("trust.response_time")}</span>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </div>
         </div>
       </section>

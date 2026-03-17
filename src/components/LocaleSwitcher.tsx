@@ -2,7 +2,7 @@
 
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 export function LocaleSwitcher() {
@@ -22,7 +22,7 @@ export function LocaleSwitcher() {
   };
 
   return (
-    <motion.div 
+    <m.div 
       initial={false}
       animate={{ y: 0, opacity: 1 }}
       className="backdrop-blur-md bg-white/80 border border-stone-200/60 p-0.5 md:p-1 rounded-full flex items-center gap-0.5 md:gap-1 shadow-sm overflow-hidden"
@@ -45,7 +45,7 @@ export function LocaleSwitcher() {
             >
               {/* Active Background Pill */}
               {isActive && (
-                <motion.div
+                <m.div
                   layoutId="activeLocale"
                   initial={false}
                   className="absolute inset-0 z-0 rounded-full"
@@ -57,7 +57,7 @@ export function LocaleSwitcher() {
               {/* Hover Indicator */}
               <AnimatePresence>
                 {hovered === l.id && !isActive && (
-                  <motion.div
+                  <m.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -70,6 +70,6 @@ export function LocaleSwitcher() {
             </button>
           );
         })}
-      </motion.div>
+      </m.div>
     );
 }

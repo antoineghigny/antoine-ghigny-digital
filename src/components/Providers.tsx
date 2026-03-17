@@ -1,6 +1,7 @@
 "use client";
 
 import { AbstractIntlMessages, NextIntlClientProvider } from "next-intl";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 export default function Providers({
   children,
@@ -17,7 +18,9 @@ export default function Providers({
       messages={messages}
       timeZone="Europe/Brussels"
     >
-      {children}
+      <LazyMotion features={domAnimation} strict>
+        {children}
+      </LazyMotion>
     </NextIntlClientProvider>
   );
 }

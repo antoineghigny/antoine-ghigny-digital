@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { WhatsappLogo, Envelope, ChatCircleText } from "@phosphor-icons/react";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
@@ -25,7 +26,7 @@ export default function ContactFooter() {
         className="py-24 md:py-40 bg-white rounded-t-[3rem] md:rounded-t-[5rem] shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.03)]"
       >
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full">
-          <motion.div
+          <m.div
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-100px" }}
@@ -34,23 +35,23 @@ export default function ContactFooter() {
           >
             {/* Left side: Heading */}
             <div className="flex-1 space-y-8">
-              <motion.span
+              <m.span
                 variants={fadeUp}
                 className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44]"
               >
                 {t("badge")}
-              </motion.span>
-              <motion.h2
+              </m.span>
+              <m.h2
                 variants={fadeUp}
                 className="text-5xl md:text-8xl font-bold tracking-tight text-[#2D2926] leading-[0.95] lg:leading-[1.1] max-w-[12ch]"
               >
                 {t("title")}
-              </motion.h2>
+              </m.h2>
             </div>
 
             {/* Right side: Action */}
             <div className="flex-1 space-y-12 pt-4 md:pt-16">
-              <motion.div variants={fadeUp} className="space-y-4">
+              <m.div variants={fadeUp} className="space-y-4">
                 <div className="flex items-center gap-2.5 text-[#B34B44]">
                   <ChatCircleText size={20} weight="fill" />
                   <span className="text-xs uppercase tracking-widest font-medium">{t("inquiry_label")}</span>
@@ -58,11 +59,11 @@ export default function ContactFooter() {
                 <p className="text-xl md:text-2xl text-[#5C5652] leading-relaxed font-light max-w-[40ch]">
                   {t("description")}
                 </p>
-              </motion.div>
+              </m.div>
               
-              <motion.div variants={fadeUp} className="space-y-8">
+              <m.div variants={fadeUp} className="space-y-8">
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                  <motion.a
+                  <m.a
                     href={`https://wa.me/${t("phone_url")}`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -70,9 +71,9 @@ export default function ContactFooter() {
                   >
                     <WhatsappLogo weight="fill" size={24} />
                     <span>{t("cta_whatsapp")}</span>
-                  </motion.a>
+                  </m.a>
 
-                  <motion.a
+                  <m.a
                     href={`mailto:${t("email")}?subject=${t("inquiry_label")}`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -80,7 +81,7 @@ export default function ContactFooter() {
                   >
                     <Envelope weight="fill" size={24} />
                     <span>{t("cta_mail")}</span>
-                  </motion.a>
+                  </m.a>
                 </div>
                 
                 <div className="flex items-center gap-3 px-2">
@@ -89,40 +90,40 @@ export default function ContactFooter() {
                     {t("status")}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Legal Footer */}
-      <div className="bg-white py-12 border-t border-stone-100">
+      <footer className="relative z-50 bg-[#FAF8F5] py-16 border-t border-[#2D2926]/5">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-            <p className="text-xs text-stone-500 tracking-wide font-medium">
+            <p className="text-xs text-[#5C5652] tracking-widest font-medium uppercase opacity-80">
               {tf("copyright", { year: currentYear })}
             </p>
             <div className="flex items-center gap-10">
-              <a
-                href="#"
-                className="text-xs text-stone-500 hover:text-[#B34B44] transition-colors duration-300 tracking-wide font-medium uppercase"
+              <Link
+                href="/legal"
+                className="text-xs text-[#5C5652] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
               >
                 {tf("links.legal")}
-              </a>
-              <span className="w-px h-3 bg-stone-200 hidden md:block" />
-              <a
-                href="#"
-                className="text-xs text-stone-500 hover:text-[#B34B44] transition-colors duration-300 tracking-wide font-medium uppercase"
+              </Link>
+              <span className="w-px h-3 bg-[#2D2926]/10 hidden md:block" />
+              <Link
+                href="/privacy"
+                className="text-xs text-[#5C5652] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
               >
                 {tf("links.privacy")}
-              </a>
+              </Link>
             </div>
-            <p className="text-xs text-stone-400 font-[family-name:var(--font-geist-mono)] tracking-wider">
+            <p className="text-[10px] text-[#5C5652] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
               {tf("tva")}
             </p>
           </div>
         </div>
-      </div>
+      </footer>
     </footer>
   );
 }

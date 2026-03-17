@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html, body {
+    @apply bg-[#FAF8F5] text-[#2D2926];
+    scroll-behavior: smooth;
+  }
 }
 
 body {
