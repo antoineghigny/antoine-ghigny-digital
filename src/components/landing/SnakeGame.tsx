@@ -20,7 +20,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
 
   const [status, setStatus] = useState<GameStatus>("IDLE");
   const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
+  const highScoreRef = useRef(0);
 
   const snakeRef = useRef<Point[]>([{ x: 10, y: 10 }, { x: 10, y: 11 }, { x: 10, y: 12 }]);
   const foodRef = useRef<Point>({ x: 5, y: 5 });
@@ -158,7 +158,8 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     }
   }, [status, resetGame]);
 
-  useEffect(() => { if (score > highScore) setHighScore(score); }, [score, highScore]);
+  if (score > highScoreRef.current) highScoreRef.current = score;
+  const highScore = highScoreRef.current;
 
   useEffect(() => {
     if (!active) return;
@@ -178,8 +179,6 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     ro.observe(container);
     return () => ro.disconnect();
   }, [active, draw]);
-
-  useEffect(() => { if (!active) { setStatus("IDLE"); setScore(0); } }, [active]);
 
   return (
     <div
