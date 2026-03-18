@@ -200,9 +200,9 @@ export default function HeroAndWhy() {
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
               <m.div variants={fadeInUp} className="space-y-6">
-                <div className="flex items-center gap-1.5 md:gap-4 flex-wrap">
-                  <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 min-[380px]:px-3 md:px-4 py-2 rounded-full text-[8.5px] min-[380px]:text-[10px] md:text-sm font-bold tracking-[0.05em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-3 shrink-0" />
+                <div className="flex items-center justify-between gap-2 md:justify-start md:gap-4">
+                  <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
                     {t("availability")}
                   </div>
                   <div className="flex items-center gap-1.5">
