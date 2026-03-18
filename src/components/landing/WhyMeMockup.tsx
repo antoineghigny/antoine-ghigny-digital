@@ -195,8 +195,18 @@ export default function WhyMeMockup() {
 
   const toggleExpand = useCallback(() => setExpanded((v) => !v), []);
 
+  // Lock body scroll when snake modal is open (prevents mobile viewport shift)
+  useEffect(() => {
+    if (expanded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [expanded]);
+
   const containerVariants = {
-    initial: { opacity: 0, x: 40, rotate: 0 },
+    initial: { opacity: 0, x: isDesktop ? 40 : 0, rotate: 0 },
     animate: {
       opacity: 1, x: 0, rotate: isDesktop && !expanded ? 2 : 0,
       transition: { type: "spring" as const, stiffness: 50, damping: 20, staggerChildren: 0.12, delayChildren: 0.2 },
@@ -242,6 +252,11 @@ export default function WhyMeMockup() {
             </div>
           </div>
         </div>
+        {/* Decorative glow — inside the relative container so it's positioned relative to the card,
+            hidden on mobile to avoid overflowing the viewport (-right-20 = 80px beyond card edge) */}
+        {!expanded && (
+          <div className="hidden md:block absolute -z-10 -top-20 -right-20 w-64 h-64 bg-[#B34B44]/5 blur-[100px] rounded-full pointer-events-none" />
+        )}
       </m.div>
 
       {/* Expanded snake window */}
@@ -253,6 +268,7 @@ export default function WhyMeMockup() {
             exit={{ opacity: 0, scale: 0.85 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+            onClick={(e) => { if (e.target === e.currentTarget) setExpanded(false); }}
           >
             <div className="bg-[#FAF8F5] dark:bg-[#1A1816] rounded-3xl border border-stone-200 dark:border-white/10 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] dark:shadow-[0_30px_80px_-15px_rgba(179,75,68,0.25)] overflow-hidden flex flex-col w-full max-w-[700px]">
               <BrowserChrome expanded={true} onToggle={toggleExpand} urlText={t("url")} />
@@ -262,10 +278,6 @@ export default function WhyMeMockup() {
         )}
       </AnimatePresence>
 
-      {/* Decorative glow (only when not expanded) */}
-      {!expanded && (
-        <div className="absolute -z-10 -top-20 -right-20 w-64 h-64 bg-[#B34B44]/5 blur-[100px] rounded-full pointer-events-none" />
-      )}
     </>
   );
 }

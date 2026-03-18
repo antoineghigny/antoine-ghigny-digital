@@ -96,7 +96,8 @@ export const viewport = {
   themeColor: "#FAF8F5",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default async function LocaleLayout({
@@ -124,7 +125,10 @@ export default async function LocaleLayout({
       >
         <ClientNoise />
         <Providers locale={locale} messages={messages}>
-          {children}
+          {/* overflow-x-hidden on a div (not body/html) — the only reliable iOS Safari fix */}
+          <div className="overflow-x-hidden">
+            {children}
+          </div>
           <Analytics />
           <SpeedInsights />
         </Providers>

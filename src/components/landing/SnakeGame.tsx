@@ -28,6 +28,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
   const nextDirectionRef = useRef<Point>({ x: 0, y: -1 });
   const lastRenderTimeRef = useRef<number>(0);
   const requestRef = useRef<number>();
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
   const generateFood = useCallback((snake: Point[]): Point => {
     let p: Point;
@@ -112,20 +113,50 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     if (!active) return;
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") { onRequestClose(); return; }
+      const key = e.key.toLowerCase();
+      const isArrow = key === "arrowup" || key === "arrowdown" || key === "arrowleft" || key === "arrowright";
+      if (isArrow || key === " ") e.preventDefault();
       if (status === "IDLE" || status === "GAME_OVER") {
-        if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight","w","a","s","d"," "].includes(e.key)) resetGame();
+        if (isArrow || ["z","q","s","d"," "].includes(key)) resetGame();
         return;
       }
       const dir = directionRef.current;
-      const key = e.key.toLowerCase();
-      if ((key === "arrowup" || key === "w") && dir.y === 0) { nextDirectionRef.current = { x: 0, y: -1 }; e.preventDefault(); }
-      if ((key === "arrowdown" || key === "s") && dir.y === 0) { nextDirectionRef.current = { x: 0, y: 1 }; e.preventDefault(); }
-      if ((key === "arrowleft" || key === "a") && dir.x === 0) { nextDirectionRef.current = { x: -1, y: 0 }; e.preventDefault(); }
-      if ((key === "arrowright" || key === "d") && dir.x === 0) { nextDirectionRef.current = { x: 1, y: 0 }; e.preventDefault(); }
+      if ((key === "arrowup"    || key === "z") && dir.y === 0) nextDirectionRef.current = { x: 0, y: -1 };
+      if ((key === "arrowdown"  || key === "s") && dir.y === 0) nextDirectionRef.current = { x: 0, y:  1 };
+      if ((key === "arrowleft"  || key === "q") && dir.x === 0) nextDirectionRef.current = { x: -1, y: 0 };
+      if ((key === "arrowright" || key === "d") && dir.x === 0) nextDirectionRef.current = { x:  1, y: 0 };
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [active, status, resetGame, onRequestClose]);
+
+  // Touch / swipe controls
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (!touchStartRef.current) return;
+    const dx = e.changedTouches[0].clientX - touchStartRef.current.x;
+    const dy = e.changedTouches[0].clientY - touchStartRef.current.y;
+    touchStartRef.current = null;
+
+    if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return;
+
+    if (status === "IDLE" || status === "GAME_OVER") {
+      resetGame();
+      return;
+    }
+
+    const dir = directionRef.current;
+    if (Math.abs(dx) > Math.abs(dy)) {
+      if (dx > 0 && dir.x === 0) nextDirectionRef.current = { x: 1, y: 0 };
+      else if (dx < 0 && dir.x === 0) nextDirectionRef.current = { x: -1, y: 0 };
+    } else {
+      if (dy > 0 && dir.y === 0) nextDirectionRef.current = { x: 0, y: 1 };
+      else if (dy < 0 && dir.y === 0) nextDirectionRef.current = { x: 0, y: -1 };
+    }
+  }, [status, resetGame]);
 
   useEffect(() => { if (score > highScore) setHighScore(score); }, [score, highScore]);
 
@@ -147,16 +178,25 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
   useEffect(() => { if (!active) { setStatus("IDLE"); setScore(0); } }, [active]);
 
   return (
-    <div ref={containerRef} className="flex-1 relative flex items-center justify-center p-4 select-none touch-none min-h-[350px]">
+    <div
+      ref={containerRef}
+      className="flex-1 relative flex items-center justify-center p-4 select-none touch-none min-h-[350px]"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <canvas ref={canvasRef} className="rounded-lg" />
 
       <AnimatePresence mode="wait">
         {status === "IDLE" && (
           <m.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-[#FAF8F5]/50 dark:bg-[#1A1816]/50 backdrop-blur-[2px]">
-            <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#B34B44] animate-pulse">Appuyez sur une touche</span>
+            <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#B34B44] animate-pulse">
+              <span className="hidden sm:inline">Appuyez sur une touche</span>
+              <span className="sm:hidden">Swipez pour jouer</span>
+            </span>
             <div className="flex gap-4">
-              <kbd className="px-2 py-1 rounded-md bg-white dark:bg-[#242220] border border-stone-200 dark:border-white/10 text-[10px] font-mono text-stone-500">WASD</kbd>
+              <kbd className="hidden sm:inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-[#242220] border border-stone-200 dark:border-white/10 text-[10px] font-mono text-stone-500">ZQSD</kbd>
+              <kbd className="hidden sm:inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-[#242220] border border-stone-200 dark:border-white/10 text-[10px] font-mono text-stone-500">↑↓←→</kbd>
               <kbd className="px-2 py-1 rounded-md bg-white dark:bg-[#242220] border border-stone-200 dark:border-white/10 text-[10px] font-mono text-stone-500">ESC</kbd>
             </div>
           </m.div>
@@ -172,7 +212,8 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
               </m.div>
             )}
             <button onClick={resetGame} className="bg-[#B34B44] text-white px-8 py-4 rounded-full font-medium text-base shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300">Rejouer</button>
-            <div className="mt-8 text-[10px] uppercase tracking-widest text-stone-400 font-mono">Record : {highScore}</div>
+            <div className="mt-3 text-[10px] uppercase tracking-widest text-stone-400 font-mono sm:hidden">ou swipez</div>
+            <div className="mt-6 text-[10px] uppercase tracking-widest text-stone-400 font-mono">Record : {highScore}</div>
           </m.div>
         )}
       </AnimatePresence>
