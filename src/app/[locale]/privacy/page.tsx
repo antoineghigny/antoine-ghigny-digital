@@ -4,6 +4,7 @@ import React from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import ContactCTALink from "@/components/ContactCTALink";
 import { ArrowLeft } from "@phosphor-icons/react";
 
 const SPRING_TRANSITION = { type: "spring" as const, stiffness: 100, damping: 20 };
@@ -110,12 +111,11 @@ export default function PrivacyPolicyPage() {
             <p className="text-sm font-medium text-[#5C5652] dark:text-[#A8A29E] tracking-tight">
               © {new Date().getFullYear()} Antoine Ghigny — {t("allRightsReserved")}
             </p>
-            <Link
-              href="/#contact"
+            <ContactCTALink
               className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto text-center"
             >
               {t("returnCTA")}
-            </Link>
+            </ContactCTALink>
           </m.footer>
         </div>
       </section>

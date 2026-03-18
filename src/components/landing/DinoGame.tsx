@@ -184,6 +184,16 @@ export default function DinoGame({ className = "" }: { className?: string }) {
   const [state,     setState]     = useState<"idle" | "playing" | "over">("idle");
   const [milestone, setMilestone] = useState(false);
 
+  // Load persisted high score
+  useEffect(() => {
+    const saved = localStorage.getItem("dino-high-score");
+    if (saved) {
+      const val = parseInt(saved, 10);
+      g.current.hiScore = val;
+      setHiScore(val);
+    }
+  }, []);
+
   /* ── world seeding ─────────────────────────────────────────── */
   const seedWorld = useCallback(() => {
     const r = g.current;
@@ -359,7 +369,7 @@ export default function DinoGame({ className = "" }: { className?: string }) {
           ) {
             r.over = true; r.active = false;
             const finalScore = Math.floor(r.dist);
-            if (finalScore > r.hiScore) { r.hiScore = finalScore; setHiScore(finalScore); }
+            if (finalScore > r.hiScore) { r.hiScore = finalScore; setHiScore(finalScore); localStorage.setItem("dino-high-score", String(finalScore)); }
             setState("over");
           }
           if (o.x < -100) r.obstacles.splice(i, 1);

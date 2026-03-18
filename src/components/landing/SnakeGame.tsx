@@ -24,6 +24,12 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
   const [score, setScore] = useState(0);
   const highScoreRef = useRef(0);
 
+  // Load persisted high score
+  useEffect(() => {
+    const saved = localStorage.getItem("snake-high-score");
+    if (saved) highScoreRef.current = parseInt(saved, 10);
+  }, []);
+
   const snakeRef = useRef<Point[]>([{ x: 10, y: 10 }, { x: 10, y: 11 }, { x: 10, y: 12 }]);
   const foodRef = useRef<Point>({ x: 5, y: 5 });
   const directionRef = useRef<Point>({ x: 0, y: -1 });
@@ -160,7 +166,10 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     }
   }, [status, resetGame]);
 
-  if (score > highScoreRef.current) highScoreRef.current = score;
+  if (score > highScoreRef.current) {
+    highScoreRef.current = score;
+    localStorage.setItem("snake-high-score", String(score));
+  }
   const highScore = highScoreRef.current;
 
   useEffect(() => {
