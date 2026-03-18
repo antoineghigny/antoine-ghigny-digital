@@ -86,6 +86,30 @@
       }
     }
   },
+  "games": {
+    "dino": {
+      "title": "404 — Page introuvable",
+      "subtitle": "Perdu dans le temps. Restez un peu et courez.",
+      "start": "Appuyez sur Espace ou Tapez",
+      "start_mobile": "Tapez pour jouer",
+      "jump": "Espace / Tap = Sauter",
+      "duck": "Bas = S'accroupir",
+      "game_over": "Partie terminée",
+      "score": "SCORE",
+      "best": "RECORD",
+      "restart": "Espace pour recommencer",
+      "restart_mobile": "Tapez pour recommencer"
+    },
+    "snake": {
+      "start": "Appuyez sur une touche",
+      "start_mobile": "Swipez pour jouer",
+      "game_over": "Partie terminée",
+      "new_record": "Nouveau Record",
+      "replay": "Rejouer",
+      "or_swipe": "ou swipez",
+      "record": "Record"
+    }
+  },
   "contact": {
     "badge": "Premier pas",
     "title": "Parlons de votre projet.",

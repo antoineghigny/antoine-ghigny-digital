@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { m, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 type Point = { x: number; y: number };
 type GameStatus = "IDLE" | "PLAYING" | "GAME_OVER";
@@ -15,6 +16,7 @@ interface SnakeGameContentProps {
 }
 
 export default function SnakeGameContent({ active, onRequestClose }: SnakeGameContentProps) {
+  const t = useTranslations("games.snake");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -194,8 +196,8 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
           <m.div key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-[#FAF8F5]/50 dark:bg-[#1A1816]/50 backdrop-blur-[2px]">
             <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#B34B44] animate-pulse">
-              <span className="hidden sm:inline">Appuyez sur une touche</span>
-              <span className="sm:hidden">Swipez pour jouer</span>
+              <span className="hidden sm:inline">{t("start")}</span>
+              <span className="sm:hidden">{t("start_mobile")}</span>
             </span>
             <div className="flex gap-4">
               <kbd className="hidden sm:inline-flex items-center px-2 py-1 rounded-md bg-white dark:bg-[#242220] border border-stone-200 dark:border-white/10 text-[10px] font-mono text-stone-500">ZQSD</kbd>
@@ -207,16 +209,16 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
         {status === "GAME_OVER" && (
           <m.div key="gameover" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ opacity: 0 }}
             className="absolute inset-0 flex flex-col items-center justify-center bg-[#FAF8F5]/80 dark:bg-[#1A1816]/90 backdrop-blur-md">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#B34B44] mb-2">Game Over</span>
+            <span className="text-xs uppercase tracking-widest font-bold text-[#B34B44] mb-2">{t("game_over")}</span>
             <div className="text-5xl font-mono font-bold text-[#2D2926] dark:text-[#FAF8F5] mb-8 tabular-nums">{score}</div>
             {score === highScore && score > 0 && (
               <m.div initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="mb-6 px-3 py-1 bg-[#B34B44]/10 border border-[#B34B44]/20 rounded-full">
-                <span className="text-[10px] uppercase tracking-widest text-[#B34B44] font-bold">Nouveau Record</span>
+                <span className="text-[10px] uppercase tracking-widest text-[#B34B44] font-bold">{t("new_record")}</span>
               </m.div>
             )}
-            <button onClick={resetGame} className="bg-[#B34B44] text-white px-8 py-4 rounded-full font-medium text-base shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300">Rejouer</button>
-            <div className="mt-3 text-[10px] uppercase tracking-widest text-stone-400 font-mono sm:hidden">ou swipez</div>
-            <div className="mt-6 text-[10px] uppercase tracking-widest text-stone-400 font-mono">Record : {highScore}</div>
+            <button onClick={resetGame} className="bg-[#B34B44] text-white px-8 py-4 rounded-full font-medium text-base shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300">{t("replay")}</button>
+            <div className="mt-3 text-[10px] uppercase tracking-widest text-stone-400 font-mono sm:hidden">{t("or_swipe")}</div>
+            <div className="mt-6 text-[10px] uppercase tracking-widest text-stone-400 font-mono">{t("record")} : {highScore}</div>
           </m.div>
         )}
       </AnimatePresence>
