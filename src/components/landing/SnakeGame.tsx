@@ -58,7 +58,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     ctx.fillStyle = dark ? "#1A1816" : "#FAF8F5";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.strokeStyle = dark ? "rgba(255,255,255,0.04)" : "rgba(231,229,228,0.5)";
+    ctx.strokeStyle = dark ? "rgba(255,255,255,0.1)" : "rgba(180,175,170,0.55)";
     ctx.lineWidth = 0.5;
     for (let i = 0; i <= GRID_SIZE; i++) {
       ctx.beginPath(); ctx.moveTo(i * tile, 0); ctx.lineTo(i * tile, canvas.height); ctx.stroke();
