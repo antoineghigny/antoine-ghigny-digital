@@ -195,6 +195,16 @@ export default function WhyMeMockup() {
 
   const toggleExpand = useCallback(() => setExpanded((v) => !v), []);
 
+  // Lock body scroll when snake modal is open (prevents mobile viewport shift)
+  useEffect(() => {
+    if (expanded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [expanded]);
+
   const containerVariants = {
     initial: { opacity: 0, x: 40, rotate: 0 },
     animate: {
@@ -253,6 +263,7 @@ export default function WhyMeMockup() {
             exit={{ opacity: 0, scale: 0.85 }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+            onClick={(e) => { if (e.target === e.currentTarget) setExpanded(false); }}
           >
             <div className="bg-[#FAF8F5] dark:bg-[#1A1816] rounded-3xl border border-stone-200 dark:border-white/10 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] dark:shadow-[0_30px_80px_-15px_rgba(179,75,68,0.25)] overflow-hidden flex flex-col w-full max-w-[700px]">
               <BrowserChrome expanded={true} onToggle={toggleExpand} urlText={t("url")} />
