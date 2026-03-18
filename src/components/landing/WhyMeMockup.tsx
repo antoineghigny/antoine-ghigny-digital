@@ -165,6 +165,15 @@ export default function WhyMeMockup() {
 
   const toggleExpand = useCallback(() => setExpanded((v) => !v), []);
 
+  useEffect(() => {
+    if (!expanded) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setExpanded(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [expanded]);
+
   return (
     <div className="relative">
       <m.div

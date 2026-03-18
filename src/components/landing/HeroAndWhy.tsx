@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useId, useEffect, useState, useRef } from "react";
+import React, { useId, useEffect, useState, useRef, useCallback } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
@@ -60,11 +60,20 @@ const BrowserMockup = () => {
     }
   };
 
-  const handleCloseDino = () => {
+  const handleCloseDino = useCallback(() => {
     setShowDino(false);
     setUrlValue("performance.live");
     setUrlEditing(false);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (!showDino) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleCloseDino();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [showDino, handleCloseDino]);
 
   if (!mounted) {
     return <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-stone-50 dark:bg-[#1E1C1A] rounded-3xl border border-stone-200 dark:border-white/10" />;
