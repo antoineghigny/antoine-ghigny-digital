@@ -6,6 +6,7 @@
   html, body {
     @apply bg-[#FAF8F5] text-[#2D2926];
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   html.dark, html.dark body {

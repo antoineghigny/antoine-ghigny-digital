@@ -96,7 +96,8 @@ export const viewport = {
   themeColor: "#FAF8F5",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default async function LocaleLayout({
