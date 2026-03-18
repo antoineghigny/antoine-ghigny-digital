@@ -1,7 +1,7 @@
 "use client";
 
 import { AbstractIntlMessages, NextIntlClientProvider } from "next-intl";
-import { LazyMotion, domAnimation } from "framer-motion";
+import { LazyMotion, domMax } from "framer-motion";
 import { ThemeProvider } from "./ThemeProvider";
 
 export default function Providers({
@@ -20,7 +20,7 @@ export default function Providers({
       timeZone="Europe/Brussels"
     >
       <ThemeProvider>
-        <LazyMotion features={domAnimation} strict>
+        <LazyMotion features={domMax} strict>
           {children}
         </LazyMotion>
       </ThemeProvider>
