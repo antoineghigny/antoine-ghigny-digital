@@ -20,7 +20,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
 
   const [status, setStatus] = useState<GameStatus>("IDLE");
   const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
+  const highScoreRef = useRef(0);
 
   const snakeRef = useRef<Point[]>([{ x: 10, y: 10 }, { x: 10, y: 11 }, { x: 10, y: 12 }]);
   const foodRef = useRef<Point>({ x: 5, y: 5 });
@@ -158,29 +158,32 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     }
   }, [status, resetGame]);
 
-  useEffect(() => { if (score > highScore) setHighScore(score); }, [score, highScore]);
+  if (score > highScoreRef.current) highScoreRef.current = score;
+  const highScore = highScoreRef.current;
 
   useEffect(() => {
     if (!active) return;
+    const container = containerRef.current;
+    if (!container) return;
     const resize = () => {
       const canvas = canvasRef.current;
-      if (!canvas || !containerRef.current) return;
-      const size = Math.min(containerRef.current.clientWidth - 32, containerRef.current.clientHeight - 32, 500);
-      canvas.width = size;
-      canvas.height = size;
-      draw();
+      if (!canvas || !container) return;
+      const size = Math.min(container.clientWidth, container.clientHeight);
+      if (size > 0) {
+        canvas.width = size;
+        canvas.height = size;
+        draw();
+      }
     };
-    resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
+    const ro = new ResizeObserver(resize);
+    ro.observe(container);
+    return () => ro.disconnect();
   }, [active, draw]);
-
-  useEffect(() => { if (!active) { setStatus("IDLE"); setScore(0); } }, [active]);
 
   return (
     <div
       ref={containerRef}
-      className="flex-1 relative flex items-center justify-center p-4 select-none touch-none min-h-[350px]"
+      className="flex-1 relative flex items-center justify-center select-none touch-none"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
