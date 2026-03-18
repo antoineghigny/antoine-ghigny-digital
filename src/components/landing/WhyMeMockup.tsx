@@ -252,6 +252,11 @@ export default function WhyMeMockup() {
             </div>
           </div>
         </div>
+        {/* Decorative glow — inside the relative container so it's positioned relative to the card,
+            hidden on mobile to avoid overflowing the viewport (-right-20 = 80px beyond card edge) */}
+        {!expanded && (
+          <div className="hidden md:block absolute -z-10 -top-20 -right-20 w-64 h-64 bg-[#B34B44]/5 blur-[100px] rounded-full pointer-events-none" />
+        )}
       </m.div>
 
       {/* Expanded snake window */}
@@ -273,10 +278,6 @@ export default function WhyMeMockup() {
         )}
       </AnimatePresence>
 
-      {/* Decorative glow (only when not expanded) */}
-      {!expanded && (
-        <div className="absolute -z-10 -top-20 -right-20 w-64 h-64 bg-[#B34B44]/5 blur-[100px] rounded-full pointer-events-none" />
-      )}
     </>
   );
 }
