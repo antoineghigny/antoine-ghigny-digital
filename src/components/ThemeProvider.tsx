@@ -24,6 +24,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
+  // Keep the dark class in sync — fixes locale switching removing it
+  // when React re-renders the <html> element from the server
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark]);
+
   const toggle = useCallback(() => {
     setIsDark((prev) => {
       const next = !prev;

@@ -86,6 +86,30 @@
       }
     }
   },
+  "games": {
+    "dino": {
+      "title": "404 — Page introuvable",
+      "subtitle": "Perdu dans le temps. Restez un peu et courez.",
+      "start": "Appuyez sur Espace ou Tapez",
+      "start_mobile": "Tapez pour jouer",
+      "jump": "Espace / Tap = Sauter",
+      "duck": "Bas = S'accroupir",
+      "game_over": "Partie terminée",
+      "score": "SCORE",
+      "best": "RECORD",
+      "restart": "Espace pour recommencer",
+      "restart_mobile": "Tapez pour recommencer"
+    },
+    "snake": {
+      "start": "Appuyez sur une touche",
+      "start_mobile": "Swipez pour jouer",
+      "game_over": "Partie terminée",
+      "new_record": "Nouveau Record",
+      "replay": "Rejouer",
+      "or_swipe": "ou swipez",
+      "record": "Record"
+    }
+  },
   "contact": {
     "badge": "Premier pas",
     "title": "Parlons de votre projet.",
@@ -208,7 +232,7 @@
           "date": "Fév. 2024 — Aujourd'hui",
           "role": "Software Engineer",
           "company": "Accenture — Commission Européenne (Projet CBAM)",
-          "details": "Promu développeur principal sur le projet CBAM de la Commission européenne. Ingénierie et optimisation de services backend pour des systèmes réglementaires à haute disponibilité déployés sur Kubernetes. Intégration d'Apache Kafka pour l'architecture orientée événements et gestion de l'orchestration des conteneurs en production."
+          "details": "Software Engineer sur le projet CBAM de la Commission européenne. Ingénierie et optimisation de services backend pour des systèmes réglementaires à haute disponibilité déployés sur Kubernetes. Intégration d'Apache Kafka pour l'architecture orientée événements et gestion de l'orchestration des conteneurs en production."
         },
         "proximus": {
           "date": "Fév. 2023 — Fév. 2024",

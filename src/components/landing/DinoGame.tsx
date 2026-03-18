@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { WarningCircle, ArrowClockwise } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 
 /* ── Chromium-faithful constants ─────────────────────────────── */
 const SPEED_START = 6;
@@ -162,6 +163,7 @@ function drawDino(ctx: CanvasRenderingContext2D, r: GameState) {
 /* ── Component ────────────────────────────────────────────────── */
 
 export default function DinoGame({ className = "" }: { className?: string }) {
+  const t = useTranslations("games.dino");
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef    = useRef<HTMLCanvasElement>(null);
   const rafRef       = useRef(0);
@@ -181,6 +183,16 @@ export default function DinoGame({ className = "" }: { className?: string }) {
   const [hiScore,   setHiScore]   = useState(0);
   const [state,     setState]     = useState<"idle" | "playing" | "over">("idle");
   const [milestone, setMilestone] = useState(false);
+
+  // Load persisted high score
+  useEffect(() => {
+    const saved = localStorage.getItem("dino-high-score");
+    if (saved) {
+      const val = parseInt(saved, 10);
+      g.current.hiScore = val;
+      setHiScore(val);
+    }
+  }, []);
 
   /* ── world seeding ─────────────────────────────────────────── */
   const seedWorld = useCallback(() => {
@@ -357,7 +369,7 @@ export default function DinoGame({ className = "" }: { className?: string }) {
           ) {
             r.over = true; r.active = false;
             const finalScore = Math.floor(r.dist);
-            if (finalScore > r.hiScore) { r.hiScore = finalScore; setHiScore(finalScore); }
+            if (finalScore > r.hiScore) { r.hiScore = finalScore; setHiScore(finalScore); localStorage.setItem("dino-high-score", String(finalScore)); }
             setState("over");
           }
           if (o.x < -100) r.obstacles.splice(i, 1);
@@ -398,11 +410,11 @@ export default function DinoGame({ className = "" }: { className?: string }) {
         <div className="flex items-center gap-2 mb-1">
           <WarningCircle size={16} weight="fill" className="text-[#B34B44]" />
           <span className="text-[11px] uppercase tracking-[0.15em] font-bold text-[#B34B44]">
-            404 — Page not found
+            {t("title")}
           </span>
         </div>
         <p className="text-[12px] text-[#5C5652] dark:text-[#A8A29E] font-light max-w-[220px] leading-tight">
-          Lost in time. Stay a while and run.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -436,13 +448,14 @@ export default function DinoGame({ className = "" }: { className?: string }) {
               <div className="flex gap-2 items-center">
                 <div className="w-8 h-0.5 rounded-full bg-[#B34B44]/20" />
                 <span className="text-[10px] uppercase tracking-[0.15em] font-bold text-[#2D2926] dark:text-[#FAF8F5]">
-                  Press Space or Tap
+                  <span className="hidden sm:inline">{t("start")}</span>
+                  <span className="sm:hidden">{t("start_mobile")}</span>
                 </span>
                 <div className="w-8 h-0.5 rounded-full bg-[#B34B44]/20" />
               </div>
               <div className="flex gap-3 text-[9px] text-[#5C5652] dark:text-[#A8A29E] uppercase font-medium tracking-wide">
-                <span>Space / Tap = Jump</span>
-                <span>Down = Duck</span>
+                <span>{t("jump")}</span>
+                <span className="hidden sm:inline">{t("duck")}</span>
               </div>
             </div>
           </m.div>
@@ -458,15 +471,15 @@ export default function DinoGame({ className = "" }: { className?: string }) {
               className="flex flex-col items-center gap-3"
             >
               <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#2D2926] dark:text-[#FAF8F5]">
-                Game Over
+                {t("game_over")}
               </span>
               <div className="flex gap-4 font-mono text-[11px] tracking-wider">
                 <span className="text-[#2D2926]/50 dark:text-white/30">
-                  SCORE <span className="text-[#2D2926]/80 dark:text-white/60 font-bold">{fmt(score)}</span>
+                  {t("score")} <span className="text-[#2D2926]/80 dark:text-white/60 font-bold">{fmt(score)}</span>
                 </span>
                 {hiScore > 0 && (
                   <span className="text-[#2D2926]/50 dark:text-white/30">
-                    BEST <span className="text-[#B34B44] font-bold">{fmt(hiScore)}</span>
+                    {t("best")} <span className="text-[#B34B44] font-bold">{fmt(hiScore)}</span>
                   </span>
                 )}
               </div>
@@ -477,7 +490,8 @@ export default function DinoGame({ className = "" }: { className?: string }) {
                 <ArrowClockwise size={18} weight="bold" />
               </button>
               <span className="text-[9px] uppercase tracking-wide font-medium text-[#5C5652] dark:text-[#A8A29E]">
-                Press Space to Restart
+                <span className="hidden sm:inline">{t("restart")}</span>
+                <span className="sm:hidden">{t("restart_mobile")}</span>
               </span>
             </m.div>
           </m.div>

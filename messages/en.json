@@ -86,6 +86,30 @@
       }
     }
   },
+  "games": {
+    "dino": {
+      "title": "404 — Page not found",
+      "subtitle": "Lost in time. Stay a while and run.",
+      "start": "Press Space or Tap",
+      "start_mobile": "Tap to play",
+      "jump": "Space / Tap = Jump",
+      "duck": "Down = Duck",
+      "game_over": "Game Over",
+      "score": "SCORE",
+      "best": "BEST",
+      "restart": "Press Space to Restart",
+      "restart_mobile": "Tap to Restart"
+    },
+    "snake": {
+      "start": "Press any key",
+      "start_mobile": "Swipe to play",
+      "game_over": "Game Over",
+      "new_record": "New Record",
+      "replay": "Play Again",
+      "or_swipe": "or swipe",
+      "record": "Record"
+    }
+  },
   "contact": {
     "badge": "First step",
     "title": "Let's talk about your project.",
@@ -208,7 +232,7 @@
           "date": "Feb. 2024 — Present",
           "role": "Software Engineer",
           "company": "Accenture — European Commission (CBAM Project)",
-          "details": "Promoted to lead developer on the European Commission's CBAM project. Engineering and optimizing backend services for high-availability regulatory systems deployed on Kubernetes. Integrating Apache Kafka for event-driven architecture and managing container orchestration in production."
+          "details": "Software Engineer on the European Commission's CBAM project. Engineering and optimizing backend services for high-availability regulatory systems deployed on Kubernetes. Integrating Apache Kafka for event-driven architecture and managing container orchestration in production."
         },
         "proximus": {
           "date": "Feb. 2023 — Feb. 2024",
