@@ -206,7 +206,7 @@ export default function WhyMeMockup() {
   }, [expanded]);
 
   const containerVariants = {
-    initial: { opacity: 0, x: 40, rotate: 0 },
+    initial: { opacity: 0, x: isDesktop ? 40 : 0, rotate: 0 },
     animate: {
       opacity: 1, x: 0, rotate: isDesktop && !expanded ? 2 : 0,
       transition: { type: "spring" as const, stiffness: 50, damping: 20, staggerChildren: 0.12, delayChildren: 0.2 },

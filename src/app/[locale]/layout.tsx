@@ -125,7 +125,10 @@ export default async function LocaleLayout({
       >
         <ClientNoise />
         <Providers locale={locale} messages={messages}>
-          {children}
+          {/* overflow-x-hidden on a div (not body/html) — the only reliable iOS Safari fix */}
+          <div className="overflow-x-hidden">
+            {children}
+          </div>
           <Analytics />
           <SpeedInsights />
         </Providers>
