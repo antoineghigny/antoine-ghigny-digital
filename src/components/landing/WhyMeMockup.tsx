@@ -167,14 +167,14 @@ export default function WhyMeMockup() {
   const [visibleKeys, setVisibleKeys] = useState<TaskKey[]>(INITIAL_KEYS);
   const [isDesktop, setIsDesktop] = useState(false);
   const [expanded, setExpanded] = useState(false);
-  const [snakeScore, setSnakeScore] = useState(0);
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 768);
     check();
     window.addEventListener("resize", check);
-    return () => { window.removeEventListener("resize", check); timersRef.current.forEach(clearTimeout); };
+    const timers = timersRef.current;
+    return () => { window.removeEventListener("resize", check); timers.forEach(clearTimeout); };
   }, []);
 
   const dismiss = useCallback((key: TaskKey) => {
