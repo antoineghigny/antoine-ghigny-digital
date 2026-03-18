@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Création digitale",
+    "title": "Antoine Ghigny · Création de sites web sur mesure | Nivelles",
     "description": "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
   },
   "hero": {
@@ -67,7 +67,9 @@
     "copyright": "© {year} Antoine Ghigny. Tous droits réservés.",
     "links": {
       "legal": "Mentions légales",
-      "privacy": "Politique de confidentialité"
+      "privacy": "Politique de confidentialité",
+      "faq": "FAQ",
+      "about": "À propos"
     },
     "tva": "TVA BE 1033.932.403"
   },
@@ -110,6 +112,105 @@
         "title": "Accessibilité Numérique",
         "content": "Conformément à l'European Accessibility Act de 2025-2026, nous nous engageons à rendre ce site accessible à tous. Si vous rencontrez une difficulté, contactez-nous."
       }
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "label": "FAQ",
+    "backToHome": "Retour à l'accueil",
+    "description": "Retrouvez les réponses aux questions les plus courantes sur mes services, mon processus de travail et mes tarifs.",
+    "sectionLabel": "Questions",
+    "sectionTitle": "Ce que vous devez savoir",
+    "items": {
+      "q1": {
+        "question": "Quels types de services proposez-vous ?",
+        "answer": "Je conçois des sites web sur mesure, des landing pages et des applications web modernes pour les indépendants et PME. Chaque projet est développé de zéro avec les technologies les plus performantes (Next.js, React, Tailwind CSS) pour garantir rapidité, référencement optimal et une expérience utilisateur irréprochable."
+      },
+      "q2": {
+        "question": "Combien coûte un site web ?",
+        "answer": "Chaque projet est unique. Je propose des tarifs fixes définis après un premier échange gratuit. Un site vitrine démarre généralement à partir de 1 500€, tandis qu'une landing page optimisée peut démarrer à partir de 800€. Vous recevez un devis détaillé sans engagement avant le début des travaux."
+      },
+      "q3": {
+        "question": "Quel est le délai de réalisation ?",
+        "answer": "Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Ces délais incluent les phases de conception, développement, révisions et mise en ligne. Je m'engage sur des dates précises dès le lancement du projet."
+      },
+      "q4": {
+        "question": "Proposez-vous un service de maintenance ?",
+        "answer": "Oui. Après la livraison, je propose un accompagnement pour les mises à jour de contenu, les ajustements techniques et l'optimisation continue des performances. La maintenance est optionnelle et peut être souscrite sous forme de forfait mensuel adapté à vos besoins."
+      },
+      "q5": {
+        "question": "Mon site sera-t-il optimisé pour Google ?",
+        "answer": "Absolument. Chaque site est construit avec les meilleures pratiques SEO : structure HTML sémantique, métadonnées optimisées, performances maximales (Core Web Vitals), compatibilité mobile parfaite et données structurées. Votre site est conçu pour être visible sur Google et les moteurs de recherche IA."
+      },
+      "q6": {
+        "question": "Comment se déroule la collaboration ?",
+        "answer": "Le processus est simple : un premier échange gratuit pour comprendre vos besoins, puis une proposition détaillée avec maquettes. Après validation, je développe le site avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
+      }
+    },
+    "returnCTA": "Contactez-moi",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "about": {
+    "title": "À propos",
+    "label": "Qui suis-je",
+    "backToHome": "Retour à l'accueil",
+    "allRightsReserved": "Tous droits réservés.",
+    "returnCTA": "Lancer mon projet",
+    "sections": {
+      "summary": {
+        "label": "Profil",
+        "title": "Antoine Ghigny",
+        "content": "Ingénieur logiciel spécialisé dans la conception, le développement et le déploiement de systèmes distribués et d'architectures microservices. Basé à Nivelles, en Belgique, je combine mon expertise en ingénierie backend avec une passion pour la création digitale au service des indépendants et PME."
+      },
+      "expertise": {
+        "label": "Compétences",
+        "title": "Stack Technique"
+      },
+      "experience": {
+        "label": "Parcours",
+        "title": "Expérience Professionnelle",
+        "accenture": {
+          "date": "Fév. 2024 — Aujourd'hui",
+          "role": "Software Engineer",
+          "company": "Accenture — Commission Européenne (Projet CBAM)",
+          "details": "Promu développeur principal sur le projet CBAM de la Commission européenne. Ingénierie et optimisation de services backend pour des systèmes réglementaires à haute disponibilité déployés sur Kubernetes. Intégration d'Apache Kafka pour l'architecture orientée événements et gestion de l'orchestration des conteneurs en production."
+        },
+        "proximus": {
+          "date": "Fév. 2023 — Fév. 2024",
+          "role": "Junior Software Engineer & Stagiaire",
+          "company": "Proximus — E-commerce / Webshop",
+          "details": "Développeur Full-stack sur la plateforme Webshop. Développement et mise à l'échelle de microservices réactifs en Node.js, conception de fonctionnalités avec Angular et intégration de services RESTful et GraphQL en environnement distribué."
+        }
+      },
+      "education": {
+        "label": "Formation",
+        "title": "Diplôme",
+        "date": "2020 — 2023",
+        "degree": "Bachelier en Informatique de Gestion",
+        "school": "École Supérieure d'Informatique (ESI), Bruxelles",
+        "details": "Formation couvrant le développement logiciel, le développement web, l'analyse et la gestion de projets, les bases de données, la sécurité informatique, l'architecture réseau et les systèmes ERP."
+      },
+      "languages": {
+        "label": "Langues",
+        "title": "Communication",
+        "french": {
+          "label": "Français",
+          "level": "Langue natale"
+        },
+        "english": {
+          "label": "Anglais",
+          "level": "Professionnel complet"
+        },
+        "dutch": {
+          "label": "Néerlandais",
+          "level": "Notions professionnelles"
+        }
+      }
+    },
+    "linkedin_cta": {
+      "title": "Connectons-nous.",
+      "subtitle": "Retrouvez mon parcours complet et mes recommandations sur LinkedIn.",
+      "button": "Voir mon profil LinkedIn"
     }
   },
   "privacy": {

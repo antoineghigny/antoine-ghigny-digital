@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Digital Creation",
+    "title": "Antoine Ghigny · Bespoke Web Design for Freelancers & SMEs",
     "description": "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium."
   },
   "hero": {
@@ -67,7 +67,9 @@
     "copyright": "© {year} Antoine Ghigny. All rights reserved.",
     "links": {
       "legal": "Legal mentions",
-      "privacy": "Privacy policy"
+      "privacy": "Privacy policy",
+      "faq": "FAQ",
+      "about": "About"
     },
     "tva": "VAT BE 1033.932.403"
   },
@@ -110,6 +112,105 @@
         "title": "Digital Accessibility",
         "content": "In accordance with the European Accessibility Act of 2025-2026, we are committed to making this site accessible to everyone. If you encounter any difficulty, please contact us."
       }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "label": "FAQ",
+    "backToHome": "Back to home",
+    "description": "Find answers to the most common questions about my services, workflow and pricing.",
+    "sectionLabel": "Questions",
+    "sectionTitle": "What you need to know",
+    "items": {
+      "q1": {
+        "question": "What types of services do you offer?",
+        "answer": "I design bespoke websites, landing pages and modern web applications for freelancers and SMEs. Every project is built from scratch using top-performing technologies (Next.js, React, Tailwind CSS) to ensure speed, optimal SEO and a flawless user experience."
+      },
+      "q2": {
+        "question": "How much does a website cost?",
+        "answer": "Every project is unique. I offer fixed-price quotes defined after a free initial consultation. A showcase website typically starts from €1,500, while an optimized landing page can start from €800. You receive a detailed, no-commitment quote before any work begins."
+      },
+      "q3": {
+        "question": "What is the delivery timeline?",
+        "answer": "A standard showcase website is delivered within 2 to 4 weeks. A landing page can be ready in 1 to 2 weeks. These timelines include design, development, revisions and deployment phases. I commit to precise dates from the project kickoff."
+      },
+      "q4": {
+        "question": "Do you offer maintenance services?",
+        "answer": "Yes. After delivery, I provide support for content updates, technical adjustments and ongoing performance optimization. Maintenance is optional and can be subscribed as a monthly package tailored to your needs."
+      },
+      "q5": {
+        "question": "Will my site be optimized for Google?",
+        "answer": "Absolutely. Every site is built following SEO best practices: semantic HTML structure, optimized metadata, maximum performance (Core Web Vitals), perfect mobile compatibility and structured data. Your site is designed to be visible on Google and AI search engines."
+      },
+      "q6": {
+        "question": "How does the collaboration work?",
+        "answer": "The process is straightforward: a free initial call to understand your needs, then a detailed proposal with mockups. After approval, I develop the site with regular checkpoints. You get revisions until full satisfaction before the final launch."
+      }
+    },
+    "returnCTA": "Contact me",
+    "allRightsReserved": "All rights reserved."
+  },
+  "about": {
+    "title": "About",
+    "label": "Who am I",
+    "backToHome": "Back to home",
+    "allRightsReserved": "All rights reserved.",
+    "returnCTA": "Launch my project",
+    "sections": {
+      "summary": {
+        "label": "Profile",
+        "title": "Antoine Ghigny",
+        "content": "Software Engineer specializing in the design, development and deployment of distributed systems and microservices architectures. Based in Nivelles, Belgium, I combine my backend engineering expertise with a passion for digital creation serving freelancers and SMEs."
+      },
+      "expertise": {
+        "label": "Skills",
+        "title": "Tech Stack"
+      },
+      "experience": {
+        "label": "Career",
+        "title": "Professional Experience",
+        "accenture": {
+          "date": "Feb. 2024 — Present",
+          "role": "Software Engineer",
+          "company": "Accenture — European Commission (CBAM Project)",
+          "details": "Promoted to lead developer on the European Commission's CBAM project. Engineering and optimizing backend services for high-availability regulatory systems deployed on Kubernetes. Integrating Apache Kafka for event-driven architecture and managing container orchestration in production."
+        },
+        "proximus": {
+          "date": "Feb. 2023 — Feb. 2024",
+          "role": "Junior Software Engineer & Intern",
+          "company": "Proximus — E-commerce / Webshop",
+          "details": "Full-stack developer on the Webshop platform. Developing and scaling reactive microservices in Node.js, designing features with Angular and integrating RESTful and GraphQL services in a distributed environment."
+        }
+      },
+      "education": {
+        "label": "Education",
+        "title": "Degree",
+        "date": "2020 — 2023",
+        "degree": "Bachelor in Computer Science & Management",
+        "school": "École Supérieure d'Informatique (ESI), Brussels",
+        "details": "Curriculum covering software development, web development, project analysis and management, databases, computer security, network architecture and ERP systems."
+      },
+      "languages": {
+        "label": "Languages",
+        "title": "Communication",
+        "french": {
+          "label": "French",
+          "level": "Native"
+        },
+        "english": {
+          "label": "English",
+          "level": "Full Professional"
+        },
+        "dutch": {
+          "label": "Dutch",
+          "level": "Limited Professional"
+        }
+      }
+    },
+    "linkedin_cta": {
+      "title": "Let's connect.",
+      "subtitle": "Find my full career path and recommendations on LinkedIn.",
+      "button": "View my LinkedIn profile"
     }
   },
   "privacy": {
