@@ -116,39 +116,48 @@ export default function AboutPage() {
             title={t("sections.experience.title")}
             icon={<Briefcase size={20} weight="fill" className="text-[#B34B44]" />}
           >
-            <div className="relative border-l border-stone-200 pl-8 ml-2 flex flex-col gap-16 py-4">
+            <div className="flex flex-col">
               {/* Accenture */}
-              <div className="relative">
-                <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-[#B34B44] border-4 border-[#FAF8F5]" />
-                <span className="text-sm font-medium text-[#B34B44] block mb-2">
-                  {t("sections.experience.accenture.date")}
-                </span>
-                <h3 className="text-xl font-bold text-[#2D2926] mb-1">
-                  {t("sections.experience.accenture.role")}
-                </h3>
-                <p className="text-base text-[#5C5652] font-medium mb-4">
-                  {t("sections.experience.accenture.company")}
-                </p>
-                <p className="text-lg text-[#5C5652] leading-relaxed font-light max-w-[60ch]">
-                  {t("sections.experience.accenture.details")}
-                </p>
+              <div className="grid grid-cols-[20px_1fr] gap-x-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-4 h-4 rounded-full bg-[#B34B44] border-4 border-[#FAF8F5] ring-1 ring-[#B34B44] mt-1 flex-shrink-0" />
+                  <div className="w-px flex-1 bg-stone-200 mt-2" />
+                </div>
+                <div className="pb-16">
+                  <span className="text-sm font-medium text-[#B34B44] block mb-2">
+                    {t("sections.experience.accenture.date")}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#2D2926] mb-1">
+                    {t("sections.experience.accenture.role")}
+                  </h3>
+                  <p className="text-base text-[#5C5652] font-medium mb-4">
+                    {t("sections.experience.accenture.company")}
+                  </p>
+                  <p className="text-lg text-[#5C5652] leading-relaxed font-light max-w-[60ch]">
+                    {t("sections.experience.accenture.details")}
+                  </p>
+                </div>
               </div>
 
               {/* Proximus */}
-              <div className="relative">
-                <div className="absolute -left-[37px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#FAF8F5]" />
-                <span className="text-sm font-medium text-[#5C5652] block mb-2">
-                  {t("sections.experience.proximus.date")}
-                </span>
-                <h3 className="text-xl font-bold text-[#2D2926] mb-1">
-                  {t("sections.experience.proximus.role")}
-                </h3>
-                <p className="text-base text-[#5C5652] font-medium mb-4">
-                  {t("sections.experience.proximus.company")}
-                </p>
-                <p className="text-lg text-[#5C5652] leading-relaxed font-light max-w-[60ch]">
-                  {t("sections.experience.proximus.details")}
-                </p>
+              <div className="grid grid-cols-[20px_1fr] gap-x-6">
+                <div className="flex flex-col items-center">
+                  <div className="w-4 h-4 rounded-full bg-stone-300 border-4 border-[#FAF8F5] ring-1 ring-stone-300 mt-1 flex-shrink-0" />
+                </div>
+                <div>
+                  <span className="text-sm font-medium text-[#5C5652] block mb-2">
+                    {t("sections.experience.proximus.date")}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#2D2926] mb-1">
+                    {t("sections.experience.proximus.role")}
+                  </h3>
+                  <p className="text-base text-[#5C5652] font-medium mb-4">
+                    {t("sections.experience.proximus.company")}
+                  </p>
+                  <p className="text-lg text-[#5C5652] leading-relaxed font-light max-w-[60ch]">
+                    {t("sections.experience.proximus.details")}
+                  </p>
+                </div>
               </div>
             </div>
           </AboutSection>
