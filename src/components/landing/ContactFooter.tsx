@@ -105,6 +105,20 @@ export default function ContactFooter() {
             </p>
             <div className="flex items-center gap-10">
               <Link
+                href="/about"
+                className="text-xs text-[#5C5652] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
+              >
+                {tf("links.about")}
+              </Link>
+              <span className="w-px h-3 bg-[#2D2926]/10 hidden md:block" />
+              <Link
+                href="/faq"
+                className="text-xs text-[#5C5652] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
+              >
+                {tf("links.faq")}
+              </Link>
+              <span className="w-px h-3 bg-[#2D2926]/10 hidden md:block" />
+              <Link
                 href="/legal"
                 className="text-xs text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
               >

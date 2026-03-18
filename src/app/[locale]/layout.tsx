@@ -74,6 +74,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         en: `${baseUrl}/en`,
       },
     },
+    verification: {
+      google: "6u__m6RbbQ7KptTxLp8UfXzZYZLRwU0G03hO7xLWnUk",
+    },
     robots: {
       index: true,
       follow: true,
