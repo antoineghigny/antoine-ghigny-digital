@@ -71,7 +71,7 @@ const BrowserMockup = () => {
   }
 
   return (
-    <div className="relative w-full aspect-[3/4] md:aspect-[4/5] bg-[#FAF8F5] dark:bg-[#1A1816] rounded-3xl border border-stone-200 dark:border-white/10 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] dark:shadow-[0_30px_80px_-15px_rgba(179,75,68,0.25)] overflow-hidden flex flex-col">
+    <div className={`relative w-full ${showDino ? "aspect-[4/3] md:aspect-[3/2]" : "aspect-[3/4] md:aspect-[4/5]"} bg-[#FAF8F5] dark:bg-[#1A1816] rounded-3xl border border-stone-200 dark:border-white/10 shadow-[0_30px_80px_-15px_rgba(179,75,68,0.12)] dark:shadow-[0_30px_80px_-15px_rgba(179,75,68,0.25)] overflow-hidden flex flex-col transition-[aspect-ratio] duration-500 ease-in-out`}>
       {/* Browser Header */}
       <div className="h-10 border-b border-stone-200 dark:border-white/10 bg-white dark:bg-[#242220] flex items-center px-5 justify-between shrink-0">
         <div className="flex gap-1.5">

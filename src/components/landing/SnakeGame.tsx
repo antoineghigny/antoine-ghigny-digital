@@ -162,17 +162,21 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
 
   useEffect(() => {
     if (!active) return;
+    const container = containerRef.current;
+    if (!container) return;
     const resize = () => {
       const canvas = canvasRef.current;
-      if (!canvas || !containerRef.current) return;
-      const size = Math.min(containerRef.current.clientWidth - 32, containerRef.current.clientHeight - 32, 500);
-      canvas.width = size;
-      canvas.height = size;
-      draw();
+      if (!canvas || !container) return;
+      const size = Math.min(container.clientWidth, container.clientHeight);
+      if (size > 0) {
+        canvas.width = size;
+        canvas.height = size;
+        draw();
+      }
     };
-    resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
+    const ro = new ResizeObserver(resize);
+    ro.observe(container);
+    return () => ro.disconnect();
   }, [active, draw]);
 
   useEffect(() => { if (!active) { setStatus("IDLE"); setScore(0); } }, [active]);
@@ -180,7 +184,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
   return (
     <div
       ref={containerRef}
-      className="flex-1 relative flex items-center justify-center p-4 select-none touch-none min-h-[350px]"
+      className="flex-1 relative flex items-center justify-center select-none touch-none"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
