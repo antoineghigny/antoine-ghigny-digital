@@ -113,16 +113,18 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     if (!active) return;
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") { onRequestClose(); return; }
+      const key = e.key.toLowerCase();
+      const isArrow = key === "arrowup" || key === "arrowdown" || key === "arrowleft" || key === "arrowright";
+      if (isArrow || key === " ") e.preventDefault();
       if (status === "IDLE" || status === "GAME_OVER") {
-        if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight","z","q","s","d"," "].includes(e.key.toLowerCase())) resetGame();
+        if (isArrow || ["z","q","s","d"," "].includes(key)) resetGame();
         return;
       }
       const dir = directionRef.current;
-      const key = e.key.toLowerCase();
-      if ((key === "arrowup"    || key === "z") && dir.y === 0) { nextDirectionRef.current = { x: 0, y: -1 }; e.preventDefault(); }
-      if ((key === "arrowdown"  || key === "s") && dir.y === 0) { nextDirectionRef.current = { x: 0, y:  1 }; e.preventDefault(); }
-      if ((key === "arrowleft"  || key === "q") && dir.x === 0) { nextDirectionRef.current = { x: -1, y: 0 }; e.preventDefault(); }
-      if ((key === "arrowright" || key === "d") && dir.x === 0) { nextDirectionRef.current = { x:  1, y: 0 }; e.preventDefault(); }
+      if ((key === "arrowup"    || key === "z") && dir.y === 0) nextDirectionRef.current = { x: 0, y: -1 };
+      if ((key === "arrowdown"  || key === "s") && dir.y === 0) nextDirectionRef.current = { x: 0, y:  1 };
+      if ((key === "arrowleft"  || key === "q") && dir.x === 0) nextDirectionRef.current = { x: -1, y: 0 };
+      if ((key === "arrowright" || key === "d") && dir.x === 0) nextDirectionRef.current = { x:  1, y: 0 };
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
