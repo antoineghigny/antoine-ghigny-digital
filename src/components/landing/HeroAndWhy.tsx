@@ -271,10 +271,9 @@ export default function HeroAndWhy() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-[100dvh] flex items-center relative py-12 lg:py-0 overflow-hidden bg-[#FAF8F5] dark:bg-[#1A1816] selection:bg-[#B34B44]/20 selection:text-[#B34B44]">
+      <section className="min-h-[100dvh] flex items-center relative py-12 lg:py-0 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
-            
             <m.div
               initial={{ opacity: 0, x: -50, rotate: 2 }}
               animate={{ opacity: 1, x: 0, rotate: -2 }}
@@ -315,20 +314,10 @@ export default function HeroAndWhy() {
                 <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
-              </m.div>
 
-              <m.div 
-                variants={fadeInUp}
-                className="bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border-l-4 border-[#B34B44] p-5 rounded-r-2xl max-w-[55ch]"
-              >
-                <div className="flex gap-4 items-start">
-                  <div className="mt-1 text-[#B34B44]">
-                    <Lightning size={24} weight="fill" />
-                  </div>
-                  <p className="text-sm md:text-base font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-relaxed italic">
-                    {t("tech_argument")}
-                  </p>
-                </div>
+                <p className="text-sm md:text-base text-[#B34B44] font-medium tracking-tight opacity-90">
+                  {t("tech_argument")}
+                </p>
               </m.div>
 
               <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
@@ -338,7 +327,18 @@ export default function HeroAndWhy() {
                   className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden group"
                 >
                   <span>{t("cta")}</span>
-                  <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <div className="relative w-5 h-5 overflow-hidden">
+                    <ArrowUpRight 
+                      weight="bold" 
+                      size={20} 
+                      className="absolute inset-0 transition-transform duration-500 group-hover:translate-x-full group-hover:-translate-y-full" 
+                    />
+                    <ArrowUpRight 
+                      weight="bold" 
+                      size={20} 
+                      className="absolute inset-0 -translate-x-full translate-y-full transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0" 
+                    />
+                  </div>
                 </m.a>
               </m.div>
 

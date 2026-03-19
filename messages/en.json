@@ -9,9 +9,9 @@
     "title_part2": "Finally, results.",
     "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
     "tech_argument": "Speed: +20% potential conversions. Savings: ~€600/year vs agency fees.",
-    "cta": "Entrust me with a project ↗",
+    "cta": "Entrust me with a project",
     "trust": {
-      "satisfied": "Performance guarantee",
+      "satisfied": "Satisfied or reworked",
       "fixed_price": "Fixed price",
       "response_time": "Reply within 24h"
     },
@@ -25,11 +25,11 @@
   "artisan": {
     "badge": "The Digital Craftsman",
     "title": "One dedicated expert for your project.",
-    "content": "I'm Antoine Ghigny. Not an impersonal agency — your dedicated tech partner. I transform your business needs into high-performance tools, with a craftsman's attention to detail and the power of AI.",
+    "content": "I'm Antoine Ghigny. Not an impersonal agency — your dedicated tech partner. My role is to turn your business needs into high-performance tools, built to measure to grow your activity.",
     "experience": "Software engineering experience",
     "location": "Based in Nivelles, Belgium",
     "roi_stat": "A site that loads in 0.8s means up to 20% more forms filled — and ~€600/year saved vs. agency maintenance fees.",
-    "guarantee": "Performance guaranteed or reworked",
+    "guarantee": "Satisfied or reworked at no cost",
     "seo": "SEO support included"
   },
   "whyMe": {
@@ -43,16 +43,16 @@
         "title": "A site that reassures your clients and reflects your expertise. <highlight>Stop letting</highlight> a poor image lose you contracts."
       },
       "trust": {
-        "label": "Guaranteed Efficiency",
-        "title": "Bespoke tools to automate your tasks. <highlight>Stop wasting hours</highlight> on what a machine can do for you."
+        "label": "Save Time",
+        "title": "Automate your repetitive tasks with <highlight>bespoke tools</highlight>. Focus on your business, I'll take care of optimizing your daily life."
       },
       "performance": {
-        "label": "Dedicated Expert",
-        "title": "A single agile partner for <highlight>fast</highlight> solutions without technical jargon."
+        "label": "Zero Intermediaries",
+        "title": "A single <highlight>agile expert</highlight> for fast solutions, without jargon or time wasted. The responsiveness of a partner who understands your business."
       },
       "design": {
-        "label": "Craftsmanship",
-        "title": "A craft approach where every detail matters. <highlight>Your project</highlight> deserves special attention."
+        "label": "Digital Craftsmanship",
+        "title": "Every detail is cared for to guarantee <highlight>performance and aesthetics</highlight>. Bespoke support, far from industrial standards."
       }
     },
     "mockup": {
@@ -97,6 +97,96 @@
       }
     }
   },
+  "about": {
+    "backToHome": "Back to home",
+    "label": "My Journey",
+    "title": "Technical expertise serving your vision.",
+    "sections": {
+      "summary": {
+        "label": "Profile",
+        "title": "Antoine Ghigny",
+        "content": "Software Engineer specializing in the design, development and deployment of distributed systems and microservices architectures. Based in Nivelles, Belgium, I combine my backend engineering expertise with a passion for digital creation serving freelancers and SMEs."
+      },
+      "expertise": {
+        "label": "Skills",
+        "title": "Tech Stack"
+      },
+      "experience": {
+        "label": "Career",
+        "title": "Professional Experience",
+        "accenture": {
+          "date": "Feb. 2024 — Present",
+          "role": "Software Engineer",
+          "company": "Accenture — European Commission (CBAM Project)",
+          "details": "Software Engineer on the European Commission's CBAM project. Engineering and optimizing backend services for high-availability regulatory systems deployed on Kubernetes. Integrating Apache Kafka for event-driven architecture and managing container orchestration in production."
+        },
+        "proximus": {
+          "date": "Feb. 2023 — Feb. 2024",
+          "role": "Junior Software Engineer & Intern",
+          "company": "Proximus — E-commerce / Webshop",
+          "details": "Full-stack developer on the Webshop platform. Developing and scaling reactive microservices in Node.js, designing features with Angular and integrating RESTful and GraphQL services in a distributed environment."
+        }
+      },
+      "education": {
+        "label": "Education",
+        "title": "Degree",
+        "date": "2020 — 2023",
+        "degree": "Bachelor in Computer Science & Management",
+        "school": "École Supérieure d'Informatique (ESI), Brussels",
+        "details": "Curriculum covering software development, web development, project analysis and management, databases, computer security, network architecture and ERP systems."
+      },
+      "languages": {
+        "label": "Languages",
+        "title": "Communication",
+        "french": { "label": "French", "level": "Native" },
+        "english": { "label": "English", "level": "Full Professional" },
+        "dutch": { "label": "Dutch", "level": "Limited Professional" }
+      }
+    },
+    "linkedin_cta": {
+      "title": "Let's connect.",
+      "subtitle": "Find my full career path and recommendations on LinkedIn.",
+      "button": "View my LinkedIn profile"
+    },
+    "allRightsReserved": "All rights reserved.",
+    "returnCTA": "Entrust me with a project"
+  },
+  "faq": {
+    "backToHome": "Back to home",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions.",
+    "description": "Everything you need to know to launch your project with peace of mind.",
+    "sectionLabel": "Help",
+    "sectionTitle": "Common Questions",
+    "items": {
+      "q1": {
+        "question": "Why choose a freelancer over an agency?",
+        "answer": "Responsiveness and price. By working with me, you have a single point of contact who knows your project by heart. No agency overhead costs passed on to your bill, and direct communication without intermediaries."
+      },
+      "q2": {
+        "question": "How much does it cost to create a website?",
+        "answer": "Every project is unique, but I always work on a fixed-price basis defined in advance. No bad surprises. A professional showcase site usually starts around €1500, including design, development, and SEO optimization."
+      },
+      "q3": {
+        "question": "What are the typical lead times?",
+        "answer": "For a classic showcase site, expect between 2 and 4 weeks after design validation. For a more complex business tool, the lead time is evaluated on a bespoke basis during the quote."
+      },
+      "q4": {
+        "question": "Will my site rank well on Google?",
+        "answer": "Yes. I don't use heavy 'page builders' (like Elementor/Divi). I code your site with Next.js to guarantee perfect technical performance (Core Web Vitals), which Google prioritizes for SEO."
+      },
+      "q5": {
+        "question": "Do you offer maintenance after launch?",
+        "answer": "Absolutely. Although my sites are designed to be very stable, I offer maintenance packages including hosting, security, and minor updates for about €20/month."
+      },
+      "q6": {
+        "question": "Will I really own the site?",
+        "answer": "100%. You own your domain name and the source code. You're not 'held hostage' by a proprietary subscription."
+      }
+    },
+    "allRightsReserved": "All rights reserved.",
+    "returnCTA": "Launch my project"
+  },
   "games": {
     "dino": {
       "title": "404 — Page not found",
@@ -137,6 +227,8 @@
     "copyright": "© {year} Antoine Ghigny. All rights reserved.",
     "easter_egg": "Passionate about details, I've hidden two small secrets in these pages... Will you find them?",
     "links": {
+      "about": "About",
+      "faq": "FAQ",
       "legal": "Legal mentions",
       "privacy": "Privacy policy"
     },

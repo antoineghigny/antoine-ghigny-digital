@@ -3,7 +3,7 @@
 import React from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ShieldCheck, Lightning, UserFocus, Sparkle, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
+import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
 import WhyMeMockup from "./WhyMeMockup";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
@@ -68,7 +68,7 @@ export default function WhyMeSection() {
                 </div>
               </div>
               <div className="absolute -right-10 -bottom-10 opacity-[0.03] dark:opacity-[0.06] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
-                <ShieldCheck size={280} weight="thin" />
+                <Target size={280} weight="thin" />
               </div>
             </m.div>
 
@@ -90,7 +90,7 @@ export default function WhyMeSection() {
                 </div>
               </div>
               <div className="absolute -right-10 -bottom-10 opacity-[0.03] dark:opacity-[0.06] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
-                <Lightning size={280} weight="thin" />
+                <ShieldCheck size={280} weight="thin" />
               </div>
             </m.div>
 
@@ -112,7 +112,7 @@ export default function WhyMeSection() {
                 </div>
               </div>
               <div className="absolute -right-10 -bottom-10 opacity-[0.03] dark:opacity-[0.06] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
-                <UserFocus size={280} weight="thin" />
+                <Lightning size={280} weight="thin" />
               </div>
             </m.div>
 
@@ -134,7 +134,7 @@ export default function WhyMeSection() {
                 </div>
               </div>
               <div className="absolute -right-10 -bottom-10 opacity-[0.03] dark:opacity-[0.06] group-hover:opacity-[0.06] transition-opacity duration-700 pointer-events-none">
-                <Sparkle size={280} weight="thin" />
+                <UserFocus size={280} weight="thin" />
               </div>
             </m.div>
           </div>

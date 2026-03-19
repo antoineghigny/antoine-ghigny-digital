@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 const baseUrl = 'https://antoine-ghigny-digital.vercel.app';
 const locales = ['fr', 'en'];
-const pages = ['', '/legal', '/privacy'];
+const pages = ['', '/legal', '/privacy', '/faq', '/about'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = pages.flatMap((page) =>

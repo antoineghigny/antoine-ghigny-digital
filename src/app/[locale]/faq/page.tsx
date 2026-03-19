@@ -5,7 +5,7 @@ import { m, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import ContactCTALink from "@/components/ContactCTALink";
-import { ArrowLeft, CaretDown } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowUpRight, CaretDown } from "@phosphor-icons/react";
 
 const SPRING_TRANSITION = { type: "spring" as const, stiffness: 100, damping: 20 };
 const FADE_UP_VARIANTS = {
@@ -159,9 +159,21 @@ export default function FAQPage() {
               © {new Date().getFullYear()} Antoine Ghigny — {t("allRightsReserved")}
             </p>
             <ContactCTALink
-              className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto text-center"
+              className="group bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden"
             >
-              {t("returnCTA")}
+              <span>{t("returnCTA")}</span>
+              <div className="relative w-5 h-5 overflow-hidden">
+                <ArrowUpRight 
+                  weight="bold" 
+                  size={20} 
+                  className="absolute inset-0 transition-transform duration-500 group-hover:translate-x-full group-hover:-translate-y-full" 
+                />
+                <ArrowUpRight 
+                  weight="bold" 
+                  size={20} 
+                  className="absolute inset-0 -translate-x-full translate-y-full transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0" 
+                />
+              </div>
             </ContactCTALink>
           </m.footer>
         </div>

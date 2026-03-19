@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Sites Web & Outils sur mesure",
-    "description": "Conception de sites web et solutions informatiques sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
+    "title": "Antoine Ghigny · Création de sites web sur mesure | Nivelles",
+    "description": "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
   },
   "hero": {
     "availability": "Disponible pour nouveaux projets",
@@ -9,9 +9,9 @@
     "title_part2": "Enfin du résultat.",
     "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
     "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
-    "cta": "Me confier un projet ↗",
+    "cta": "Me confier un projet",
     "trust": {
-      "satisfied": "Garantie de performance",
+      "satisfied": "Satisfait ou retravaillé",
       "fixed_price": "Prix fixe",
       "response_time": "Réponse sous 24h"
     },
@@ -25,11 +25,11 @@
   "artisan": {
     "badge": "L'Artisan Numérique",
     "title": "Un interlocuteur unique pour vos projets.",
-    "content": "Je suis Antoine Ghigny. Je ne suis pas une agence impersonnelle : je suis votre partenaire tech dédié. Mon rôle est de transformer vos besoins métier en outils performants, avec le soin du détail d'un artisan et la puissance de l'IA.",
+    "content": "Je suis Antoine Ghigny. Je ne suis pas une agence impersonnelle : je suis votre partenaire tech dédié. Mon rôle est de transformer vos besoins métier en outils performants, conçus sur mesure pour faire grandir votre activité.",
     "experience": "Expérience en ingénierie logicielle",
     "location": "Basé à Nivelles, Belgique",
     "roi_stat": "Un site qui charge en 0.8s, c'est jusqu'à 20% de formulaires remplis en plus — et ~600€/an d'économie par rapport aux frais de maintenance d'agence.",
-    "guarantee": "Garantie de performance ou retravaillé",
+    "guarantee": "Satisfait ou retravaillé sans frais",
     "seo": "Accompagnement SEO inclus"
   },
   "whyMe": {
@@ -47,11 +47,11 @@
         "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
       },
       "performance": {
-        "label": "Expert dédié",
+        "label": "Zéro intermédiaire",
         "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
       },
       "design": {
-        "label": "Soin du détail",
+        "label": "L'artisanat numérique",
         "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
       }
     },
@@ -97,27 +97,117 @@
       }
     }
   },
+  "about": {
+    "backToHome": "Retour à l'accueil",
+    "label": "Mon Parcours",
+    "title": "L'expertise technique au service de votre vision.",
+    "sections": {
+      "summary": {
+        "label": "Profil",
+        "title": "Antoine Ghigny",
+        "content": "Ingénieur logiciel spécialisé dans la conception, le développement et le déploiement de systèmes distribués et d'architectures microservices. Basé à Nivelles, en Belgique, je combine mon expertise en ingénierie backend avec une passion pour la création digitale au service des indépendants et PME."
+      },
+      "expertise": {
+        "label": "Compétences",
+        "title": "Stack Technique"
+      },
+      "experience": {
+        "label": "Parcours",
+        "title": "Expérience Professionnelle",
+        "accenture": {
+          "date": "Fév. 2024 — Aujourd'hui",
+          "role": "Software Engineer",
+          "company": "Accenture — Commission Européenne (Projet CBAM)",
+          "details": "Software Engineer sur le projet CBAM de la Commission européenne. Ingénierie et optimisation de services backend pour des systèmes réglementaires à haute disponibilité déployés sur Kubernetes. Intégration d'Apache Kafka pour l'architecture orientée événements et gestion de l'orchestration des conteneurs en production."
+        },
+        "proximus": {
+          "date": "Fév. 2023 — Fév. 2024",
+          "role": "Junior Software Engineer & Stagiaire",
+          "company": "Proximus — E-commerce / Webshop",
+          "details": "Développeur Full-stack sur la plateforme Webshop. Développement et mise à l'échelle de microservices réactifs en Node.js, conception de fonctionnalités avec Angular et intégration de services RESTful et GraphQL en environnement distribué."
+        }
+      },
+      "education": {
+        "label": "Formation",
+        "title": "Diplôme",
+        "date": "2020 — 2023",
+        "degree": "Bachelier en Informatique de Gestion",
+        "school": "École Supérieure d'Informatique (ESI), Bruxelles",
+        "details": "Formation couvrant le développement logiciel, le développement web, l'analyse et la gestion de projets, les bases de données, la sécurité informatique, l'architecture réseau et les systèmes ERP."
+      },
+      "languages": {
+        "label": "Langues",
+        "title": "Communication",
+        "french": { "label": "Français", "level": "Langue natale" },
+        "english": { "label": "Anglais", "level": "Professionnel complet" },
+        "dutch": { "label": "Néerlandais", "level": "Notions professionnelles" }
+      }
+    },
+    "linkedin_cta": {
+      "title": "Connectons-nous.",
+      "subtitle": "Retrouvez mon parcours complet et mes recommandations sur LinkedIn.",
+      "button": "Voir mon profil LinkedIn"
+    },
+    "allRightsReserved": "Tous droits réservés.",
+    "returnCTA": "Me confier un projet"
+  },
+  "faq": {
+    "backToHome": "Retour à l'accueil",
+    "label": "FAQ",
+    "title": "Questions Fréquentes.",
+    "description": "Tout ce que vous devez savoir pour lancer votre projet en toute sérénité.",
+    "sectionLabel": "Questions",
+    "sectionTitle": "Ce que vous devez savoir",
+    "items": {
+      "q1": {
+        "question": "Pourquoi choisir un indépendant plutôt qu'une agence ?",
+        "answer": "La réactivité et le prix. En travaillant avec moi, vous avez un interlocuteur unique qui connaît votre projet par cœur. Pas de frais de structure d'agence répercutés sur votre facture, et une communication directe sans intermédiaire."
+      },
+      "q2": {
+        "question": "Combien coûte la création d'un site web ?",
+        "answer": "Chaque projet est unique — tout dépend de vos besoins, de la complexité et du périmètre. Je ne donne pas de tarifs fixes à l'aveugle : le prix est défini après un premier échange gratuit où l'on comprend ensemble ce que vous cherchez vraiment."
+      },
+      "q3": {
+        "question": "Quels sont les délais de réalisation ?",
+        "answer": "Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Je m'engage sur des dates précises dès le lancement du projet."
+      },
+      "q4": {
+        "question": "Mon site sera-t-il bien positionné sur Google ?",
+        "answer": "Oui. Je n'utilise pas de 'page builders' lourds (type Elementor/Divi). Je code votre site avec Next.js pour garantir des performances techniques parfaites (Core Web Vitals), ce que Google privilégie pour le référencement."
+      },
+      "q5": {
+        "question": "Proposez-vous une maintenance après la mise en ligne ?",
+        "answer": "Oui. Après la livraison, je propose un accompagnement pour les mises à jour de contenu, les ajustements techniques et l'optimisation continue des performances."
+      },
+      "q6": {
+        "question": "Le site m'appartiendra-t-il vraiment ?",
+        "answer": "À 100%. Vous êtes propriétaire de votre nom de domaine et du code source. Vous n'êtes pas 'prisonnier' d'un abonnement propriétaire."
+      }
+    },
+    "allRightsReserved": "Tous droits réservés.",
+    "returnCTA": "Lancer mon projet"
+  },
   "games": {
     "dino": {
-      "title": "404 — Page non trouvée",
+      "title": "404 — Page introuvable",
       "subtitle": "Perdu dans le temps. Restez un peu et courez.",
-      "start": "Espace ou Touchez pour jouer",
-      "start_mobile": "Touchez pour jouer",
-      "jump": "Espace / Touche = Sauter",
+      "start": "Appuyez sur Espace ou Tapez",
+      "start_mobile": "Tapez pour jouer",
+      "jump": "Espace / Tap = Sauter",
       "duck": "Bas = S'accroupir",
-      "game_over": "Game Over",
+      "game_over": "Partie terminée",
       "score": "SCORE",
-      "best": "BEST",
+      "best": "RECORD",
       "restart": "Espace pour recommencer",
-      "restart_mobile": "Touchez pour recommencer"
+      "restart_mobile": "Tapez pour recommencer"
     },
     "snake": {
       "start": "Appuyez sur une touche",
-      "start_mobile": "Glissez pour jouer",
-      "game_over": "Game Over",
+      "start_mobile": "Swipez pour jouer",
+      "game_over": "Partie terminée",
       "new_record": "Nouveau Record",
       "replay": "Rejouer",
-      "or_swipe": "ou glissez",
+      "or_swipe": "ou swipez",
       "record": "Record"
     }
   },
@@ -137,6 +227,8 @@
     "copyright": "© {year} Antoine Ghigny. Tous droits réservés.",
     "easter_egg": "Passionné par les détails, j'ai caché deux petits secrets dans ces pages... Saurez-vous les trouver ?",
     "links": {
+      "about": "À propos",
+      "faq": "FAQ",
       "legal": "Mentions légales",
       "privacy": "Politique de confidentialité"
     },

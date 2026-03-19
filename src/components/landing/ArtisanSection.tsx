@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { m } from "framer-motion";
-import { ChartLineUp, MapPin } from "@phosphor-icons/react";
+import { MapPin } from "@phosphor-icons/react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -75,15 +75,6 @@ export default function ArtisanSection() {
               {t("content")}
             </m.p>
 
-            {/* ROI stat card */}
-            <m.div variants={fadeInUp} className="w-full mb-10">
-              <div className="p-6 rounded-2xl bg-white dark:bg-[#242220] border border-stone-200/60 dark:border-white/[0.07] shadow-sm">
-                <ChartLineUp size={28} weight="fill" className="text-[#B34B44] mb-3" />
-                <p className="text-[#5C5652] dark:text-[#A8A29E] text-sm font-medium leading-relaxed">
-                  {t("roi_stat")}
-                </p>
-              </div>
-            </m.div>
 
           </m.div>
 

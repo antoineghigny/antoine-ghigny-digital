@@ -45,7 +45,7 @@ export default function JsonLd({
       "opens": "09:00",
       "closes": "18:00"
     },
-    "sameAs": ["https://www.linkedin.com/in/antoineghigny"]
+    "sameAs": ["https://www.linkedin.com/in/antoine-ghigny-9b88a9252"]
   } : {};
 
   const pageSchema = type === "WebPage" ? {

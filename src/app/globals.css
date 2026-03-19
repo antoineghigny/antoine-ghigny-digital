@@ -6,6 +6,12 @@
   html, body {
     @apply bg-[#FAF8F5] text-[#2D2926];
     scroll-behavior: smooth;
+    overflow-x: hidden; /* fallback for non-Safari browsers */
+    max-width: 100%;
+  }
+
+  html.dark, html.dark body {
+    @apply bg-[#1A1816] text-[#FAF8F5];
   }
 }
 

@@ -97,38 +97,50 @@ export default function ContactFooter() {
       </section>
 
       {/* Legal Footer */}
-      <footer className="relative z-50 bg-[#FAF8F5] dark:bg-[#1A1816] py-16 border-t border-[#2D2926]/5 dark:border-white/[0.05]">
+      <footer className="relative z-50 bg-[#FAF8F5] dark:bg-[#1A1816] py-12 border-t border-[#2D2926]/5 dark:border-white/[0.05]">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12">
-          <div className="flex flex-col gap-10">
-            {/* Easter Egg / Secret mention - Subtle */}
-            <div className="flex justify-center md:justify-start">
-              <p className="text-[10px] italic text-stone-400 dark:text-stone-500 tracking-tight opacity-70 hover:opacity-100 transition-opacity cursor-default selection:bg-transparent">
-                {tf("easter_egg")}
+          {/* Secret message placement */}
+          <div className="flex justify-center mb-8">
+            <p className="text-[10px] italic text-stone-400 dark:text-stone-500/40 tracking-tight opacity-50 hover:opacity-100 transition-opacity cursor-default select-none">
+              {tf("easter_egg")}
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-4">
+            <div className="flex flex-col gap-2 items-center md:items-start">
+              <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] tracking-widest font-medium uppercase opacity-80">
+                {tf("copyright", { year: currentYear })}
+              </p>
+              <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] font-[family-name:var(--font-geist-mono)] tracking-[0.15em] uppercase opacity-60">
+                {tf("tva")}
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 pt-4">
-              <p className="text-xs text-[#5C5652] dark:text-[#A8A29E] tracking-widest font-medium uppercase opacity-80">
-                {tf("copyright", { year: currentYear })}
-              </p>
-              <div className="flex items-center gap-10">
-                <Link
-                  href="/legal"
-                  className="text-xs text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
-                >
-                  {tf("links.legal")}
-                </Link>
-                <span className="w-px h-3 bg-[#2D2926]/10 dark:bg-white/10 hidden md:block" />
-                <Link
-                  href="/privacy"
-                  className="text-xs text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
-                >
-                  {tf("links.privacy")}
-                </Link>
-              </div>
-              <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
-                {tf("tva")}
-              </p>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+              <Link
+                href="/about"
+                className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] transition-colors tracking-widest font-bold uppercase"
+              >
+                {tf("links.about")}
+              </Link>
+              <Link
+                href="/faq"
+                className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] transition-colors tracking-widest font-bold uppercase"
+              >
+                {tf("links.faq")}
+              </Link>
+              <Link
+                href="/legal"
+                className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] transition-colors tracking-widest font-bold uppercase"
+              >
+                {tf("links.legal")}
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] transition-colors tracking-widest font-bold uppercase"
+              >
+                {tf("links.privacy")}
+              </Link>
             </div>
           </div>
         </div>
