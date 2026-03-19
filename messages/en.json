@@ -1,14 +1,16 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Bespoke Web Design for Freelancers & SMEs",
-    "description": "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium."
+    "title": "Antoine Ghigny · Bespoke Web Design & Tech Solutions",
+    "description": "Bespoke website and tech solutions for freelancers and SMEs. Based in Nivelles, Belgium."
   },
   "hero": {
     "availability": "Available for new projects",
-    "title_part1": "Your website.",
-    "title_part2": "Finally done right.",
-    "description": "I design bespoke websites for freelancers and SMEs. Fast, search-optimised and built to inspire trust. Your future clients find you and reach out.",
-    "cta": "Launch my project",
+    "title_part1": "Bespoke sites & tools.",
+    "title_part2": "Finally, results.",
+    "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
+    "tech_argument": "Speed: +20% potential conversions. Savings: ~€600/year vs agency fees.",
+    "cta": "Entrust me with a project",
+    "experience_at": "Experience at",
     "trust": {
       "satisfied": "Satisfied or reworked",
       "fixed_price": "Fixed price",
@@ -21,6 +23,13 @@
       "revenue": "Revenue Growth"
     }
   },
+  "artisan": {
+    "badge": "The Digital Craftsman",
+    "title": "One dedicated expert for your project.",
+    "content": "One expert, zero intermediaries. I translate your business needs into high-performance tech tools with an agility that traditional agencies can't match. I listen, I simplify, and I build: you keep full control of your vision, while I ensure it's technically flawless.",
+    "experience": "Software engineering experience",
+    "location": "Based in Nivelles, Belgium"
+  },
   "whyMe": {
     "badge": "Why work with me",
     "title_part1": "Your site should work",
@@ -28,20 +37,20 @@
     "title_part3": ", not the other way around.",
     "bento": {
       "professionalism": {
-        "label": "First Impression",
-        "title": "A site that makes visitors want to <highlight>contact</highlight> you from the very first visit."
+        "label": "Immediate Credibility",
+        "title": "A site that reassures your clients and reflects your expertise. <highlight>Stop letting</highlight> a poor image lose you contracts."
       },
       "trust": {
-        "label": "Credibility",
-        "title": "Visitors judge your professionalism in 3 seconds. Show an image that matches your real <highlight>expertise</highlight>."
+        "label": "Save Time",
+        "title": "Automate your repetitive tasks with <highlight>bespoke tools</highlight>. Focus on your business, I'll take care of optimizing your daily life."
       },
       "performance": {
-        "label": "Visibility",
-        "title": "A fast, well-built site ranks higher on Google and AI engines. Your clients <highlight>find</highlight> you before your competitors."
+        "label": "Zero Intermediaries",
+        "title": "A single <highlight>agile expert</highlight> for fast solutions, without jargon or time wasted. The responsiveness of a partner who understands your business."
       },
       "design": {
-        "label": "Your Identity",
-        "title": "A unique design that <highlight>sets you apart</highlight> and reflects exactly who you are."
+        "label": "Digital Craftsmanship",
+        "title": "Every detail is cared for to guarantee <highlight>performance and aesthetics</highlight>. Bespoke support, far from industrial standards."
       }
     },
     "mockup": {
@@ -112,8 +121,13 @@
   },
   "contact": {
     "badge": "First step",
+    "process": {
+      "step1": "Discovery (30 min)",
+      "step2": "Design & Strategy",
+      "step3": "Going Live & SEO"
+    },
     "title": "Let's talk about your project.",
-    "description": "Tell me about your project in a few words. I'll get back to you quickly to see how I can help.",
+    "description": "Briefly describe your project. I'll get back to you quickly to see how I can help.",
     "cta_mail": "Send me an email",
     "cta_whatsapp": "Chat on WhatsApp",
     "status": "Reply within 24h — Available this week",
@@ -130,7 +144,8 @@
       "faq": "FAQ",
       "about": "About"
     },
-    "tva": "VAT BE 1033.932.403"
+    "tva": "VAT BE 1033.932.403",
+    "easter_egg": "Passionate about details, I've hidden two small secrets in these pages... Will you find them?"
   },
   "legal": {
     "title": "Legal Mentions",
@@ -182,19 +197,19 @@
     "sectionTitle": "What you need to know",
     "items": {
       "q1": {
-        "question": "What types of services do you offer?",
-        "answer": "I design bespoke websites, landing pages and modern web applications for freelancers and SMEs. Every project is built from scratch using top-performing technologies (Next.js, React, Tailwind CSS) to ensure speed, optimal SEO and a flawless user experience."
+        "question": "Why choose a freelancer over an agency",
+        "answer": "Responsiveness and price. By working with me, you have a single point of contact who knows your project by heart. No agency overhead costs passed on to your bill, and direct communication without intermediaries."
       },
       "q2": {
-        "question": "How much does a website cost?",
-        "answer": "Every project is unique — it all depends on your needs, complexity and scope. I don't give blind price estimates: the cost is defined after a free initial call where we figure out together what you really need. You then receive a detailed, personalised quote with no commitment."
+        "question": "How much does it cost to create a website",
+        "answer": "Every project is unique, but I always work on a fixed-price basis defined in advance. No bad surprises. A professional showcase site usually starts around €1500, including design, development, and SEO optimization."
       },
       "q3": {
         "question": "What is the delivery timeline?",
         "answer": "A standard showcase website is delivered within 2 to 4 weeks. A landing page can be ready in 1 to 2 weeks. These timelines include design, development, revisions and deployment phases. I commit to precise dates from the project kickoff."
       },
       "q4": {
-        "question": "Do you offer maintenance services?",
+        "question": "Do you offer maintenance after launch",
         "answer": "Yes. After delivery, I provide support for content updates, technical adjustments and ongoing performance optimization. Maintenance is optional and can be subscribed as a monthly package tailored to your needs."
       },
       "q5": {

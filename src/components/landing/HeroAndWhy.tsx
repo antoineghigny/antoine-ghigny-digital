@@ -306,7 +306,7 @@ export default function HeroAndWhy() {
                   </div>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
                   {t("title_part1")}<br />
                   <span className="text-[#B34B44]">{t("title_part2")}</span>
                 </h1>
@@ -314,6 +314,13 @@ export default function HeroAndWhy() {
                 <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
+
+                <div className="flex items-center gap-3 py-1 px-4 bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border border-[#B34B44]/10 rounded-xl w-fit">
+                  <Lightning size={16} weight="fill" className="text-[#B34B44]" />
+                  <p className="text-sm font-bold text-[#B34B44] tracking-tight">
+                    {t("tech_argument")}
+                  </p>
+                </div>
               </m.div>
 
               <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
@@ -326,6 +333,26 @@ export default function HeroAndWhy() {
                   <span>{t("cta")}</span>
                   <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </m.a>
+              </m.div>
+
+              <m.div variants={fadeInUp} className="pt-2 flex flex-col gap-4">
+                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 dark:text-stone-500">
+                  {t("experience_at")}
+                </p>
+                <div className="flex flex-wrap items-center gap-x-8 gap-y-4 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
+                   <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">EC</div>
+                      <span className="text-xs font-bold tracking-tight">Commission Européenne</span>
+                   </div>
+                   <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">PR</div>
+                      <span className="text-xs font-bold tracking-tight text-[#003399] dark:text-blue-400">Proximus</span>
+                   </div>
+                   <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">AC</div>
+                      <span className="text-xs font-bold tracking-tight text-[#A100FF]">Accenture</span>
+                   </div>
+                </div>
               </m.div>
 
               {/* Mobile Mockup Display */}

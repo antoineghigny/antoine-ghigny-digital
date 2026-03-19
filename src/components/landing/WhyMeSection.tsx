@@ -3,7 +3,7 @@
 import React from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
+import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat, CheckCircle, X } from "@phosphor-icons/react";
 import WhyMeMockup from "./WhyMeMockup";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
@@ -43,7 +43,15 @@ export default function WhyMeSection() {
                 <span className="text-[#B34B44]">{t("title_part2")}</span>{t("title_part3")}
               </m.h2>
             </div>
-            <m.div variants={fadeUp} className="md:col-span-6">
+            <m.div 
+              variants={fadeUp}
+              whileHover={{ scale: 1.02 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                scale: { type: "spring", stiffness: 60, damping: 25 }
+              }}
+              className="md:col-span-6"
+            >
               <WhyMeMockup />
             </m.div>
           </div>
