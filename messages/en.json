@@ -10,6 +10,7 @@
     "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
     "tech_argument": "Speed: +20% potential conversions. Savings: ~€600/year vs agency fees.",
     "cta": "Entrust me with a project",
+    "experience_at": "Experience at",
     "trust": {
       "satisfied": "Satisfied or reworked",
       "fixed_price": "Fixed price",
@@ -120,8 +121,13 @@
   },
   "contact": {
     "badge": "First step",
+    "process": {
+      "step1": "Discovery (30 min)",
+      "step2": "Design & Strategy",
+      "step3": "Going Live & SEO"
+    },
     "title": "Let's talk about your project.",
-    "description": "Tell me about your project in a few words. I'll get back to you quickly to see how I can help.",
+    "description": "Briefly describe your project. I'll get back to you quickly to see how I can help.",
     "cta_mail": "Send me an email",
     "cta_whatsapp": "Chat on WhatsApp",
     "status": "Reply within 24h — Available this week",

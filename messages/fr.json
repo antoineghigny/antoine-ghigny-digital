@@ -10,6 +10,7 @@
     "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
     "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
     "cta": "Me confier un projet",
+    "experience_at": "Expérience chez",
     "trust": {
       "satisfied": "Satisfait ou retravaillé",
       "fixed_price": "Prix fixe",
@@ -120,6 +121,11 @@
   },
   "contact": {
     "badge": "Premier pas",
+    "process": {
+      "step1": "Échange (30 min)",
+      "step2": "Design & Stratégie",
+      "step3": "Mise en ligne & SEO"
+    },
     "title": "Parlons de votre projet.",
     "description": "Expliquez-moi votre projet en quelques mots. Je vous recontacte rapidement pour voir comment je peux vous aider.",
     "cta_mail": "M'envoyer un mail",
@@ -220,13 +226,13 @@
   },
   "about": {
     "title": "À propos",
-    "label": "Qui suis-je",
+    "label": "Who am I",
     "backToHome": "Retour à l'accueil",
     "allRightsReserved": "Tous droits réservés.",
     "returnCTA": "Lancer mon projet",
     "sections": {
       "summary": {
-        "label": "Profil",
+        "label": "Profile",
         "title": "Antoine Ghigny",
         "content": "Ingénieur logiciel spécialisé dans la conception, le développement et le déploiement de systèmes distribués et d'architectures microservices. Basé à Nivelles, en Belgique, je combine mon expertise en ingénierie backend avec une passion pour la création digitale au service des indépendants et PME."
       },

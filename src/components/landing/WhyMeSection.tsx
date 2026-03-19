@@ -3,7 +3,7 @@
 import React from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat } from "@phosphor-icons/react";
+import { ShieldCheck, Target, Lightning, UserFocus, ArrowsClockwise, HardHat, CheckCircle, X } from "@phosphor-icons/react";
 import WhyMeMockup from "./WhyMeMockup";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
