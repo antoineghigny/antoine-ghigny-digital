@@ -17,6 +17,7 @@ import {
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
@@ -341,15 +342,15 @@ export default function HeroAndWhy() {
                 </p>
                 <div className="flex flex-wrap items-center gap-x-8 gap-y-4 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">EC</div>
+                      <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={24} height={24} className="h-5 w-auto object-contain" />
                       <span className="text-xs font-bold tracking-tight">Commission Européenne</span>
                    </div>
                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">PR</div>
+                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={24} height={24} className="h-5 w-auto object-contain" />
                       <span className="text-xs font-bold tracking-tight text-[#003399] dark:text-blue-400">Proximus</span>
                    </div>
                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">AC</div>
+                      <Image src="/images/logos/accenture.svg" alt="Accenture" width={24} height={24} className="h-5 w-auto object-contain" />
                       <span className="text-xs font-bold tracking-tight text-[#A100FF]">Accenture</span>
                    </div>
                 </div>
