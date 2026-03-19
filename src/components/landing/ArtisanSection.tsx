@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { UserCircle, Briefcase, MapPin } from "@phosphor-icons/react";
@@ -15,6 +15,14 @@ const textFadeUp = {
 
 export default function ArtisanSection() {
   const t = useTranslations("artisan");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <section className="bg-[#FAF8F5] dark:bg-[#1A1816] py-24 md:py-40 overflow-hidden relative">
@@ -75,8 +83,8 @@ export default function ArtisanSection() {
 
           {/* Visual Side */}
           <m.div 
-            initial={{ opacity: 0, y: 30, rotate: -2 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 2 }}
+            initial={{ opacity: 0, y: 30, rotate: isMobile ? 0 : -2 }}
+            whileInView={{ opacity: 1, y: 0, rotate: isMobile ? 0 : 2 }}
             whileHover={{ rotate: 0, scale: 1.02 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ 
