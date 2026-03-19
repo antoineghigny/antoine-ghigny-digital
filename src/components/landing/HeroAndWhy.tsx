@@ -340,18 +340,18 @@ export default function HeroAndWhy() {
                 <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 dark:text-stone-500">
                   {t("experience_at")}
                 </p>
-                <div className="flex flex-wrap items-center gap-x-8 gap-y-4 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
-                   <div className="flex items-center gap-2">
-                      <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={24} height={24} className="h-5 w-auto object-contain" />
-                      <span className="text-xs font-bold tracking-tight">Commission Européenne</span>
+                <div className="flex flex-wrap items-center gap-x-10 gap-y-6 transition-all duration-500">
+                   <div className="flex items-center gap-3">
+                      <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={32} height={32} className="h-8 w-auto object-contain" />
+                      <span className="text-sm font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5]">Commission Européenne</span>
                    </div>
-                   <div className="flex items-center gap-2">
-                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={24} height={24} className="h-5 w-auto object-contain" />
-                      <span className="text-xs font-bold tracking-tight text-[#003399] dark:text-blue-400">Proximus</span>
+                   <div className="flex items-center gap-3">
+                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={32} height={32} className="h-8 w-auto object-contain" />
+                      <span className="text-sm font-bold tracking-tight text-[#5C2D91] dark:text-[#A188E6]">Proximus</span>
                    </div>
-                   <div className="flex items-center gap-2">
-                      <Image src="/images/logos/accenture.svg" alt="Accenture" width={24} height={24} className="h-5 w-auto object-contain" />
-                      <span className="text-xs font-bold tracking-tight text-[#A100FF]">Accenture</span>
+                   <div className="flex items-center gap-3">
+                      <Image src="/images/logos/accenture.svg" alt="Accenture" width={32} height={32} className="h-8 w-auto object-contain" />
+                      <span className="text-sm font-bold tracking-tight text-[#A100FF]">Accenture</span>
                    </div>
                 </div>
               </m.div>

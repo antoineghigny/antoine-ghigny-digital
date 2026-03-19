@@ -132,16 +132,16 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-[#2D2926] dark:text-[#FAF8F5] mb-1">
                     {t("sections.experience.accenture.role")}
                   </h3>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="flex -space-x-2">
-                       <div className="relative w-7 h-7 rounded-lg overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-sm flex items-center justify-center p-1">
-                          <Image src="/images/logos/accenture.svg" alt="Accenture" fill className="object-contain p-1" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex -space-x-3">
+                       <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-md flex items-center justify-center p-2">
+                          <Image src="/images/logos/accenture.svg" alt="Accenture" fill className="object-contain p-2" />
                        </div>
-                       <div className="relative w-7 h-7 rounded-lg overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-sm flex items-center justify-center p-1">
-                          <Image src="/images/logos/ec.svg" alt="Commission Européenne" fill className="object-contain p-1" />
+                       <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-md flex items-center justify-center p-2">
+                          <Image src="/images/logos/ec.svg" alt="Commission Européenne" fill className="object-contain p-2" />
                        </div>
                     </div>
-                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium">
+                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium ml-2">
                       {t("sections.experience.accenture.company")}
                     </p>
                   </div>
@@ -164,10 +164,10 @@ export default function AboutPage() {
                     {t("sections.experience.proximus.role")}
                   </h3>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="relative w-7 h-7 rounded-lg overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-sm flex items-center justify-center p-1">
-                       <Image src="/images/logos/proximus.svg" alt="Proximus" fill className="object-contain p-1" />
+                    <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-md flex items-center justify-center p-2">
+                       <Image src="/images/logos/proximus.svg" alt="Proximus" fill className="object-contain p-2" />
                     </div>
-                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium">
+                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium ml-2">
                       {t("sections.experience.proximus.company")}
                     </p>
                   </div>
