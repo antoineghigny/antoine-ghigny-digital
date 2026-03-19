@@ -1,16 +1,17 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Digital Creation",
-    "description": "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium."
+    "title": "Antoine Ghigny · Bespoke Web Design & Tech Solutions",
+    "description": "Bespoke website and tech solutions for freelancers and SMEs. Based in Nivelles, Belgium."
   },
   "hero": {
     "availability": "Available for new projects",
-    "title_part1": "Your website.",
-    "title_part2": "Finally done right.",
-    "description": "I design bespoke websites for freelancers and SMEs. Fast, search-optimised and built to inspire trust. Your future clients find you and reach out.",
-    "cta": "Launch my project",
+    "title_part1": "Bespoke sites & tools.",
+    "title_part2": "Finally, results.",
+    "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
+    "tech_argument": "Powered by Next.js: 3x faster than a standard site. Better SEO, more clients.",
+    "cta": "Entrust me with a project ↗",
     "trust": {
-      "satisfied": "Satisfied or reworked",
+      "satisfied": "Performance guarantee",
       "fixed_price": "Fixed price",
       "response_time": "Reply within 24h"
     },
@@ -21,27 +22,66 @@
       "revenue": "Revenue Growth"
     }
   },
+  "artisan": {
+    "badge": "The Digital Craftsman",
+    "title": "One dedicated expert for your project.",
+    "content": "I'm Antoine Ghigny. Not an impersonal agency — your dedicated tech partner. I transform your business needs into high-performance tools, with a craftsman's attention to detail and the power of AI.",
+    "experience": "Software engineering experience",
+    "location": "Based in Nivelles, Belgium",
+    "roi_stat": "A site that loads in 0.8s means up to 20% more forms filled — and ~€600/year saved vs. agency maintenance fees.",
+    "guarantee": "Performance guaranteed or reworked",
+    "seo": "SEO support included"
+  },
   "whyMe": {
     "badge": "Why work with me",
-    "title_part1": "Digital should work",
+    "title_part1": "IT should work",
     "title_part2": "for you",
     "title_part3": ", not the other way around.",
     "bento": {
       "professionalism": {
-        "label": "First Impression",
-        "title": "A site that makes visitors want to <highlight>contact</highlight> you from the very first visit."
+        "label": "Immediate Credibility",
+        "title": "A site that reassures your clients and reflects your expertise. <highlight>Stop letting</highlight> a poor image lose you contracts."
       },
       "trust": {
-        "label": "Credibility",
-        "title": "Visitors judge your professionalism in 3 seconds. Show an image that matches your real <highlight>expertise</highlight>."
+        "label": "Guaranteed Efficiency",
+        "title": "Bespoke tools to automate your tasks. <highlight>Stop wasting hours</highlight> on what a machine can do for you."
       },
       "performance": {
-        "label": "Visibility",
-        "title": "A fast, well-built site ranks higher on Google and AI engines. Your clients <highlight>find</highlight> you before your competitors."
+        "label": "Direct Expertise",
+        "title": "A single agile partner for <highlight>fast</highlight> solutions without technical jargon."
       },
       "design": {
-        "label": "Your Identity",
-        "title": "A unique design that <highlight>sets you apart</highlight> and reflects exactly who you are."
+        "label": "Trust",
+        "title": "A craft approach where every detail matters. <highlight>Your project</highlight> deserves special attention."
+      }
+    },
+    "mockup": {
+      "url": "your-business.be",
+      "tasks": {
+        "review": {
+          "title": "New 5-star Google review",
+          "time": "Your rating reaches 4.9/5"
+        },
+        "seo": {
+          "title": "Page 1 on Google",
+          "time": "\"Plumber Nivelles\" — position 3"
+        },
+        "client": {
+          "title": "New client via the site",
+          "time": "\"I found you on Google\""
+        },
+        "quote": {
+          "title": "Quote request received",
+          "time": "Via your contact form"
+        },
+        "aisearch": {
+          "title": "Cited by ChatGPT",
+          "time": "\"Recommended in your area\""
+        },
+        "booking": {
+          "title": "Appointment booked online",
+          "time": "Monday 24 March at 10:00"
+        }
       }
     },
     "collaboration": {
@@ -51,10 +91,34 @@
         "description": "Nobody knows your business better than you. You know what your clients are looking for and what convinces them."
       },
       "my": {
-        "title_part1": "My Digital",
+        "title_part1": "My Tech",
         "title_part2": "Vision.",
-        "description": "I turn all of that into a site that works for you: visible on Google, clear for your visitors and designed to make them take the next step."
+        "description": "I turn all of that into a site or a tool that works for you: visible on Google, clear for your visitors and simplifying your daily life."
       }
+    }
+  },
+  "games": {
+    "dino": {
+      "title": "404 — Page not found",
+      "subtitle": "Lost in time. Stay a while and run.",
+      "start": "Space or Tap to play",
+      "start_mobile": "Tap to play",
+      "jump": "Space / Up = Jump",
+      "duck": "Down = Duck",
+      "game_over": "Game Over",
+      "score": "SCORE",
+      "best": "BEST",
+      "restart": "Space to restart",
+      "restart_mobile": "Tap to restart"
+    },
+    "snake": {
+      "start": "Press any key",
+      "start_mobile": "Swipe to play",
+      "game_over": "Game Over",
+      "new_record": "New Record",
+      "replay": "Play again",
+      "or_swipe": "or swipe",
+      "record": "Record"
     }
   },
   "contact": {
@@ -71,6 +135,7 @@
   },
   "footer": {
     "copyright": "© {year} Antoine Ghigny. All rights reserved.",
+    "easter_egg": "Passionate about details, I've hidden two small secrets in these pages... Will you find them?",
     "links": {
       "legal": "Legal mentions",
       "privacy": "Privacy policy"

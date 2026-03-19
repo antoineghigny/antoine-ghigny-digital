@@ -19,11 +19,11 @@ export default function ContactFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#FAF8F5] selection:bg-[#B34B44] selection:text-white">
+    <footer className="bg-[#FAF8F5] dark:bg-[#1A1816] selection:bg-[#B34B44] selection:text-white">
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-24 md:py-40 bg-white rounded-t-[3rem] md:rounded-t-[5rem] shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.03)]"
+        className="py-24 md:py-40 bg-white dark:bg-[#242220] rounded-t-[3rem] md:rounded-t-[5rem] shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.03)] dark:shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.2)]"
       >
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full">
           <m.div
@@ -43,7 +43,7 @@ export default function ContactFooter() {
               </m.span>
               <m.h2
                 variants={fadeUp}
-                className="text-5xl md:text-8xl font-bold tracking-tight text-[#2D2926] leading-[0.95] lg:leading-[1.1] max-w-[12ch]"
+                className="text-5xl md:text-8xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.95] lg:leading-[1.1] max-w-[12ch]"
               >
                 {t("title")}
               </m.h2>
@@ -56,7 +56,7 @@ export default function ContactFooter() {
                   <ChatCircleText size={20} weight="fill" />
                   <span className="text-xs uppercase tracking-widest font-medium">{t("inquiry_label")}</span>
                 </div>
-                <p className="text-xl md:text-2xl text-[#5C5652] leading-relaxed font-light max-w-[40ch]">
+                <p className="text-xl md:text-2xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[40ch]">
                   {t("description")}
                 </p>
               </m.div>
@@ -77,7 +77,7 @@ export default function ContactFooter() {
                     href={`mailto:${t("email")}?subject=${t("inquiry_label")}`}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full font-medium text-lg border border-[#2D2926]/10 text-[#2D2926] hover:bg-[#2D2926] hover:text-white transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full font-medium text-lg border border-[#2D2926]/10 dark:border-white/10 text-[#2D2926] dark:text-[#FAF8F5] hover:bg-[#2D2926] hover:text-white transition-all duration-300"
                   >
                     <Envelope weight="fill" size={24} />
                     <span>{t("cta_mail")}</span>
@@ -86,7 +86,7 @@ export default function ContactFooter() {
                 
                 <div className="flex items-center gap-3 px-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <p className="text-sm text-[#5C5652] font-medium tracking-wide">
+                  <p className="text-sm text-[#5C5652] dark:text-[#A8A29E] font-medium tracking-wide">
                     {t("status")}
                   </p>
                 </div>
@@ -97,30 +97,39 @@ export default function ContactFooter() {
       </section>
 
       {/* Legal Footer */}
-      <footer className="relative z-50 bg-[#FAF8F5] py-16 border-t border-[#2D2926]/5">
+      <footer className="relative z-50 bg-[#FAF8F5] dark:bg-[#1A1816] py-16 border-t border-[#2D2926]/5 dark:border-white/[0.05]">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-            <p className="text-xs text-[#5C5652] tracking-widest font-medium uppercase opacity-80">
-              {tf("copyright", { year: currentYear })}
-            </p>
-            <div className="flex items-center gap-10">
-              <Link
-                href="/legal"
-                className="text-xs text-[#5C5652] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
-              >
-                {tf("links.legal")}
-              </Link>
-              <span className="w-px h-3 bg-[#2D2926]/10 hidden md:block" />
-              <Link
-                href="/privacy"
-                className="text-xs text-[#5C5652] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
-              >
-                {tf("links.privacy")}
-              </Link>
+          <div className="flex flex-col gap-10">
+            {/* Easter Egg / Secret mention - Subtle */}
+            <div className="flex justify-center md:justify-start">
+              <p className="text-[10px] italic text-stone-400 dark:text-stone-500 tracking-tight opacity-70 hover:opacity-100 transition-opacity cursor-default selection:bg-transparent">
+                {tf("easter_egg")}
+              </p>
             </div>
-            <p className="text-[10px] text-[#5C5652] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
-              {tf("tva")}
-            </p>
+
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 pt-4">
+              <p className="text-xs text-[#5C5652] dark:text-[#A8A29E] tracking-widest font-medium uppercase opacity-80">
+                {tf("copyright", { year: currentYear })}
+              </p>
+              <div className="flex items-center gap-10">
+                <Link
+                  href="/legal"
+                  className="text-xs text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
+                >
+                  {tf("links.legal")}
+                </Link>
+                <span className="w-px h-3 bg-[#2D2926]/10 dark:bg-white/10 hidden md:block" />
+                <Link
+                  href="/privacy"
+                  className="text-xs text-[#5C5652] dark:text-[#A8A29E] hover:text-[#B34B44] hover:-translate-y-0.5 active:scale-95 transition-all duration-300 tracking-widest font-medium uppercase inline-block"
+                >
+                  {tf("links.privacy")}
+                </Link>
+              </div>
+              <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
+                {tf("tva")}
+              </p>
+            </div>
           </div>
         </div>
       </footer>

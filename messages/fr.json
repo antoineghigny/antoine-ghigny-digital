@@ -1,16 +1,17 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Création digitale",
-    "description": "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
+    "title": "Antoine Ghigny · Sites Web & Outils sur mesure",
+    "description": "Conception de sites web et solutions informatiques sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
   },
   "hero": {
     "availability": "Disponible pour nouveaux projets",
-    "title_part1": "Votre site web.",
-    "title_part2": "Enfin bien fait.",
-    "description": "Je conçois des sites web sur mesure pour indépendants et PME. Rapides, bien référencés et conçus pour inspirer confiance. Vos futurs clients vous trouvent et vous contactent.",
-    "cta": "Lancer mon projet",
+    "title_part1": "Sites & outils sur mesure.",
+    "title_part2": "Enfin du résultat.",
+    "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
+    "tech_argument": "Propulsé par Next.js : 3x plus rapide qu'un site standard. Meilleur SEO, plus de clients.",
+    "cta": "Me confier un projet ↗",
     "trust": {
-      "satisfied": "Satisfait ou retravaillé",
+      "satisfied": "Garantie de performance",
       "fixed_price": "Prix fixe",
       "response_time": "Réponse sous 24h"
     },
@@ -21,40 +22,103 @@
       "revenue": "Croissance du chiffre d'affaires"
     }
   },
+  "artisan": {
+    "badge": "L'Artisan Numérique",
+    "title": "Un interlocuteur unique pour vos projets.",
+    "content": "Je suis Antoine Ghigny. Je ne suis pas une agence impersonnelle : je suis votre partenaire tech dédié. Mon rôle est de transformer vos besoins métier en outils performants, avec le soin du détail d'un artisan et la puissance de l'IA.",
+    "experience": "Expérience en ingénierie logicielle",
+    "location": "Basé à Nivelles, Belgique",
+    "roi_stat": "Un site qui charge en 0.8s, c'est jusqu'à 20% de formulaires remplis en plus — et ~600€/an d'économie par rapport aux frais de maintenance d'agence.",
+    "guarantee": "Garantie de performance ou retravaillé",
+    "seo": "Accompagnement SEO inclus"
+  },
   "whyMe": {
     "badge": "Pourquoi faire appel à moi",
-    "title_part1": "Le digital devrait travailler",
+    "title_part1": "L'informatique devrait travailler",
     "title_part2": "pour vous",
     "title_part3": ", pas l'inverse.",
     "bento": {
       "professionalism": {
-        "label": "Première Impression",
-        "title": "Un site qui donne envie de vous <highlight>contacter</highlight> dès la première visite."
+        "label": "Crédibilité Immédiate",
+        "title": "Un site qui rassure vos clients et reflète votre expertise. <highlight>Ne laissez plus</highlight> une mauvaise image vous faire perdre des contrats."
       },
       "trust": {
-        "label": "Crédibilité",
-        "title": "Vos visiteurs jugent votre sérieux en 3 secondes. Affichez une image à la hauteur de votre vraie <highlight>expertise</highlight>."
+        "label": "Gagnez du temps",
+        "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
       },
       "performance": {
-        "label": "Visibilité",
-        "title": "Un site rapide et bien construit remonte sur Google et les moteurs IA. Vos clients vous <highlight>trouvent</highlight> avant vos concurrents."
+        "label": "Zéro intermédiaire",
+        "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
       },
       "design": {
-        "label": "Votre Identité",
-        "title": "Un design unique qui vous <highlight>distingue</highlight> et reflète exactement qui vous êtes."
+        "label": "L'artisanat numérique",
+        "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
+      }
+    },
+    "mockup": {
+      "url": "votre-business.be",
+      "tasks": {
+        "review": {
+          "title": "Nouvel avis Google 5 étoiles",
+          "time": "Votre note passe à 4.9/5"
+        },
+        "seo": {
+          "title": "Page 1 sur Google",
+          "time": "\"Plombier Nivelles\" en position 3"
+        },
+        "client": {
+          "title": "Nouveau client via le site",
+          "time": "\"Je vous ai trouvé sur Google\""
+        },
+        "quote": {
+          "title": "Demande de devis reçue",
+          "time": "Via votre formulaire de contact"
+        },
+        "aisearch": {
+          "title": "Cité par ChatGPT",
+          "time": "\"Recommandé dans votre région\""
+        },
+        "booking": {
+          "title": "RDV pris en ligne",
+          "time": "Lundi 24 mars à 10h00"
+        }
       }
     },
     "collaboration": {
       "client": {
         "title_part1": "Votre Expertise",
         "title_part2": "Métier.",
-        "description": "Personne ne connaît votre métier mieux que vous. Vous savez ce que vos clients cherchent et ce qui les convainc."
+        "description": "Personne ne connaît votre métier mieux que vous. Vous savez ce que vos clients cherchent. Mon rôle est de traduire votre savoir-faire en une machine à convaincre."
       },
       "my": {
         "title_part1": "Ma Vision",
         "title_part2": "Digitale.",
-        "description": "Je transforme tout ça en un site qui travaille pour vous : visible sur Google, clair pour vos visiteurs et qui donne envie d'aller plus loin."
+        "description": "Je transforme votre expertise en un outil qui travaille pour vous : visible, rapide et conçu pour convertir. Moins de gestion technique, plus de résultats concrets."
       }
+    }
+  },
+  "games": {
+    "dino": {
+      "title": "404 — Page non trouvée",
+      "subtitle": "Perdu dans le temps. Restez un peu et courez.",
+      "start": "Espace ou Touchez pour jouer",
+      "start_mobile": "Touchez pour jouer",
+      "jump": "Espace / Touche = Sauter",
+      "duck": "Bas = S'accroupir",
+      "game_over": "Game Over",
+      "score": "SCORE",
+      "best": "BEST",
+      "restart": "Espace pour recommencer",
+      "restart_mobile": "Touchez pour recommencer"
+    },
+    "snake": {
+      "start": "Appuyez sur une touche",
+      "start_mobile": "Glissez pour jouer",
+      "game_over": "Game Over",
+      "new_record": "Nouveau Record",
+      "replay": "Rejouer",
+      "or_swipe": "ou glissez",
+      "record": "Record"
     }
   },
   "contact": {
@@ -71,6 +135,7 @@
   },
   "footer": {
     "copyright": "© {year} Antoine Ghigny. Tous droits réservés.",
+    "easter_egg": "Passionné par les détails, j'ai caché deux petits secrets dans ces pages... Saurez-vous les trouver ?",
     "links": {
       "legal": "Mentions légales",
       "privacy": "Politique de confidentialité"
@@ -123,7 +188,7 @@
     "label": "Données Personnelles",
     "backToHome": "Retour à l'accueil",
     "allRightsReserved": "Tous droits réservés.",
-    "returnCTA": "Lancer mon projet",
+    "returnCTA": "Me confier un projet",
     "intro": "La protection de vos données personnelles est une priorité absolue. Nous traitons vos informations conformément au RGPD en vigueur en Belgique.",
     "sections": {
       "controller": {
