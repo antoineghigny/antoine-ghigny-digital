@@ -136,7 +136,7 @@ export default function AboutPage() {
                     <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-xl h-16 min-w-[140px] px-6 flex items-center justify-center shadow-sm">
                        <Image src="/images/logos/accenture.svg" alt="Accenture" width={100} height={28} className="h-7 w-auto object-contain" />
                     </div>
-                    <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-xl h-16 min-w-[140px] px-6 flex items-center justify-center shadow-sm">
+                    <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-xl h-16 min-w-[140px] px-6 flex items-center justify-center shadow-sm text-[#2D2926] dark:text-[#FAF8F5]">
                        <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={100} height={36} className="h-9 w-auto object-contain" />
                     </div>
                     <div className="w-px h-6 bg-stone-200 dark:bg-white/10 mx-2 hidden sm:block" />
@@ -164,7 +164,7 @@ export default function AboutPage() {
                   </h3>
                   <div className="flex flex-wrap items-center gap-4 mb-6">
                     <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-xl h-16 min-w-[140px] px-6 flex items-center justify-center shadow-sm">
-                       <Image src="/images/logos/proximus.svg" alt="Proximus" width={120} height={40} className="h-10 w-auto object-contain" />
+                       <Image src="/images/logos/proximus.svg" alt="Proximus" width={140} height={48} className="h-12 w-auto object-contain" />
                     </div>
                     <div className="w-px h-6 bg-stone-200 dark:bg-white/10 mx-2 hidden sm:block" />
                     <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium">
