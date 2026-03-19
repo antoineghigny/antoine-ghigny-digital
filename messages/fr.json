@@ -8,7 +8,7 @@
     "title_part1": "Sites & outils sur mesure.",
     "title_part2": "Enfin du résultat.",
     "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
-    "tech_argument": "Propulsé par Next.js : 3x plus rapide qu'un site standard. Meilleur SEO, plus de clients.",
+    "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
     "cta": "Me confier un projet ↗",
     "trust": {
       "satisfied": "Garantie de performance",
@@ -47,11 +47,11 @@
         "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
       },
       "performance": {
-        "label": "Zéro intermédiaire",
+        "label": "Expert dédié",
         "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
       },
       "design": {
-        "label": "L'artisanat numérique",
+        "label": "Soin du détail",
         "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
       }
     },

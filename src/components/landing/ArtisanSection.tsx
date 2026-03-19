@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { m } from "framer-motion";
-import { CheckCircle, ChartLineUp, MapPin } from "@phosphor-icons/react";
+import { ChartLineUp, MapPin } from "@phosphor-icons/react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -85,21 +85,6 @@ export default function ArtisanSection() {
               </div>
             </m.div>
 
-            {/* Trust markers */}
-            <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-y-4 sm:gap-x-10 pt-8 border-t border-stone-200/60 dark:border-white/[0.07] w-full">
-              <div className="flex items-center gap-3">
-                <CheckCircle size={22} weight="fill" className="text-[#B34B44]" />
-                <span className="text-sm font-medium text-[#2D2926] dark:text-[#FAF8F5] tracking-tight">
-                  {t("guarantee")}
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle size={22} weight="fill" className="text-[#B34B44]" />
-                <span className="text-sm font-medium text-[#2D2926] dark:text-[#FAF8F5] tracking-tight">
-                  {t("seo")}
-                </span>
-              </div>
-            </m.div>
           </m.div>
 
         </div>
