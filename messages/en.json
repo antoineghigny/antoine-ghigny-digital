@@ -121,11 +121,6 @@
   },
   "contact": {
     "badge": "First step",
-    "process": {
-      "step1": "Discovery (30 min)",
-      "step2": "Design & Strategy",
-      "step3": "Going Live & SEO"
-    },
     "title": "Let's talk about your project.",
     "description": "Briefly describe your project. I'll get back to you quickly to see how I can help.",
     "cta_mail": "Send me an email",
