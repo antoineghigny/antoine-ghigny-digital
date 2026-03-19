@@ -91,11 +91,11 @@ export default function ArtisanSection() {
                  </div>
                  {/* Proximus Card */}
                  <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-2xl h-16 min-w-[140px] px-6 flex items-center justify-center hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#5C2D91]/20 transition-all duration-300 group shadow-sm">
-                    <Image src="/images/logos/proximus.svg" alt="Proximus" width={140} height={48} className="h-12 w-auto object-contain" />
+                    <Image src="/images/logos/proximus.svg" alt="Proximus" width={140} height={56} className="h-14 w-auto object-contain" />
                  </div>
                  {/* Accenture Card */}
                  <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-2xl h-16 min-w-[140px] px-6 flex items-center justify-center hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#A100FF]/20 transition-all duration-300 group shadow-sm">
-                    <Image src="/images/logos/accenture.svg" alt="Accenture" width={110} height={28} className="h-7 w-auto object-contain" />
+                    <Image src="/images/logos/accenture.svg" alt="Accenture" width={110} height={24} className="h-6 w-auto object-contain" />
                  </div>
               </div>
             </m.div>
