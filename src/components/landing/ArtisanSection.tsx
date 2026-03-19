@@ -121,9 +121,8 @@ export default function ArtisanSection() {
                    </div>
                    {/* Proximus Card */}
                    <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-xl md:rounded-2xl h-12 md:h-16 min-w-[100px] md:min-w-[140px] px-4 md:px-6 flex items-center justify-center shrink-0 hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#5C2D91]/20 transition-all duration-300 group shadow-sm">
-                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={140} height={56} className="h-8 md:h-14 w-auto object-contain" />
-                   </div>
-                   {/* Accenture Card */}
+                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={140} height={56} className="h-9 md:h-16 w-auto object-contain" />
+                   </div>                   {/* Accenture Card */}
                    <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-xl md:rounded-2xl h-12 md:h-16 min-w-[100px] md:min-w-[140px] px-4 md:px-6 flex items-center justify-center shrink-0 hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#A100FF]/20 transition-all duration-300 group shadow-sm">
                       <Image src="/images/logos/accenture.svg" alt="Accenture" width={110} height={24} className="h-4 md:h-6 w-auto object-contain" />
                    </div>
