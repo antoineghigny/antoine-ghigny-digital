@@ -17,6 +17,7 @@ import {
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
@@ -333,26 +334,6 @@ export default function HeroAndWhy() {
                   <span>{t("cta")}</span>
                   <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </m.a>
-              </m.div>
-
-              <m.div variants={fadeInUp} className="pt-2 flex flex-col gap-4">
-                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 dark:text-stone-500">
-                  {t("experience_at")}
-                </p>
-                <div className="flex flex-wrap items-center gap-x-8 gap-y-4 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-500">
-                   <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">EC</div>
-                      <span className="text-xs font-bold tracking-tight">Commission Européenne</span>
-                   </div>
-                   <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">PR</div>
-                      <span className="text-xs font-bold tracking-tight text-[#003399] dark:text-blue-400">Proximus</span>
-                   </div>
-                   <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center justify-center text-[8px] font-bold">AC</div>
-                      <span className="text-xs font-bold tracking-tight text-[#A100FF]">Accenture</span>
-                   </div>
-                </div>
               </m.div>
 
               {/* Mobile Mockup Display */}

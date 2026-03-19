@@ -26,26 +26,6 @@ export default function ContactFooter() {
         className="py-24 md:py-40 bg-white dark:bg-[#242220] rounded-t-[3rem] md:rounded-t-[5rem] shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.03)] dark:shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.2)]"
       >
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full">
-          {/* Process Section: Ultra-compact line */}
-          <m.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col md:flex-row justify-between gap-8 pb-20 mb-20 border-b border-stone-100 dark:border-white/[0.05]"
-          >
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="flex items-center gap-6 group">
-                <div className="w-12 h-12 shrink-0 rounded-2xl bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border border-[#B34B44]/10 flex items-center justify-center text-[#B34B44] font-bold group-hover:bg-[#B34B44] group-hover:text-white transition-all duration-500">
-                  {i}
-                </div>
-                <div className="space-y-1">
-                  <p className="text-[10px] uppercase tracking-widest font-bold text-stone-400 dark:text-stone-500">Étape {i}</p>
-                  <p className="text-sm font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t(`process.step${i}`)}</p>
-                </div>
-              </div>
-            ))}
-          </m.div>
-
           <m.div
             initial="initial"
             whileInView="whileInView"
@@ -157,7 +137,7 @@ export default function ContactFooter() {
             </p>
           </div>
           <div className="mt-8 pt-8 border-t border-[#2D2926]/5 dark:border-white/[0.05] flex justify-center">
-            <p className="text-[9px] text-stone-400 dark:text-stone-600 font-medium tracking-[0.15em] uppercase text-center opacity-40 hover:opacity-100 transition-opacity duration-700 cursor-default">
+            <p className="text-[10px] text-stone-500 dark:text-stone-400 font-medium tracking-[0.15em] uppercase text-center opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-default">
               {tf("easter_egg")}
             </p>
           </div>
