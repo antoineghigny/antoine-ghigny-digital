@@ -306,7 +306,7 @@ export default function HeroAndWhy() {
                   </div>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
                   {t("title_part1")}<br />
                   <span className="text-[#B34B44]">{t("title_part2")}</span>
                 </h1>
@@ -314,6 +314,13 @@ export default function HeroAndWhy() {
                 <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
+
+                <div className="flex items-center gap-3 py-1 px-4 bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border border-[#B34B44]/10 rounded-xl w-fit">
+                  <Lightning size={16} weight="fill" className="text-[#B34B44]" />
+                  <p className="text-sm font-bold text-[#B34B44] tracking-tight">
+                    {t("tech_argument")}
+                  </p>
+                </div>
               </m.div>
 
               <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">

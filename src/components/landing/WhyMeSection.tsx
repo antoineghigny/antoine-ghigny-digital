@@ -43,7 +43,15 @@ export default function WhyMeSection() {
                 <span className="text-[#B34B44]">{t("title_part2")}</span>{t("title_part3")}
               </m.h2>
             </div>
-            <m.div variants={fadeUp} className="md:col-span-6">
+            <m.div 
+              variants={fadeUp}
+              whileHover={{ scale: 1.02 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                scale: { type: "spring", stiffness: 60, damping: 25 }
+              }}
+              className="md:col-span-6"
+            >
               <WhyMeMockup />
             </m.div>
           </div>
