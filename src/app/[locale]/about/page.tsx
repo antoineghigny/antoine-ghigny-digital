@@ -132,17 +132,18 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-[#2D2926] dark:text-[#FAF8F5] mb-1">
                     {t("sections.experience.accenture.role")}
                   </h3>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex -space-x-3">
-                       <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-md flex items-center justify-center p-2">
-                          <Image src="/images/logos/accenture.svg" alt="Accenture" fill className="object-contain p-2" />
+                  <div className="flex items-center gap-6 mb-6">
+                    <div className="flex -space-x-4 items-center">
+                       <div className="relative opacity-80 saturate-[0.8] hover:opacity-100 hover:saturate-100 transition-all duration-500">
+                          <Image src="/images/logos/accenture.svg" alt="Accenture" width={100} height={40} className="h-10 w-auto object-contain" />
                        </div>
-                       <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-md flex items-center justify-center p-2">
-                          <Image src="/images/logos/ec.svg" alt="Commission Européenne" fill className="object-contain p-2" />
+                       <div className="relative opacity-80 saturate-[0.8] hover:opacity-100 hover:saturate-100 transition-all duration-500">
+                          <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={100} height={40} className="h-10 w-auto object-contain" />
                        </div>
                     </div>
-                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium ml-2">
-                      {t("sections.experience.accenture.company")}
+                    <div className="w-px h-8 bg-stone-200 dark:bg-white/10" />
+                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium">
+                      Commission Européenne (Projet CBAM)
                     </p>
                   </div>
                   <p className="text-lg text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
@@ -163,12 +164,13 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-[#2D2926] dark:text-[#FAF8F5] mb-1">
                     {t("sections.experience.proximus.role")}
                   </h3>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="relative w-12 h-12 rounded-xl overflow-hidden border-2 border-[#FAF8F5] dark:border-[#1A1816] bg-white shadow-md flex items-center justify-center p-2">
-                       <Image src="/images/logos/proximus.svg" alt="Proximus" fill className="object-contain p-2" />
+                  <div className="flex items-center gap-6 mb-6">
+                    <div className="relative opacity-80 saturate-[0.8] hover:opacity-100 hover:saturate-100 transition-all duration-500">
+                       <Image src="/images/logos/proximus.svg" alt="Proximus" width={140} height={50} className="h-12 w-auto object-contain" />
                     </div>
-                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium ml-2">
-                      {t("sections.experience.proximus.company")}
+                    <div className="w-px h-8 bg-stone-200 dark:bg-white/10" />
+                    <p className="text-base text-[#5C5652] dark:text-[#A8A29E] font-medium">
+                      E-commerce / Webshop
                     </p>
                   </div>
                   <p className="text-lg text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">

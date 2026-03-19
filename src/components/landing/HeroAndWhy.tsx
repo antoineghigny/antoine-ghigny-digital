@@ -336,22 +336,19 @@ export default function HeroAndWhy() {
                 </m.a>
               </m.div>
 
-              <m.div variants={fadeInUp} className="pt-2 flex flex-col gap-4">
+              <m.div variants={fadeInUp} className="pt-2 flex flex-col gap-6">
                 <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 dark:text-stone-500">
                   {t("experience_at")}
                 </p>
-                <div className="flex flex-wrap items-center gap-x-10 gap-y-6 transition-all duration-500">
-                   <div className="flex items-center gap-3">
-                      <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={32} height={32} className="h-8 w-auto object-contain" />
-                      <span className="text-sm font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5]">Commission Européenne</span>
+                <div className="flex flex-wrap items-center gap-x-12 gap-y-8">
+                   <div className="flex items-center opacity-70 saturate-[0.8] hover:opacity-100 hover:saturate-100 transition-all duration-500">
+                      <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={120} height={40} className="h-10 w-auto object-contain" />
                    </div>
-                   <div className="flex items-center gap-3">
-                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={32} height={32} className="h-8 w-auto object-contain" />
-                      <span className="text-sm font-bold tracking-tight text-[#5C2D91] dark:text-[#A188E6]">Proximus</span>
+                   <div className="flex items-center opacity-70 saturate-[0.8] hover:opacity-100 hover:saturate-100 transition-all duration-500">
+                      <Image src="/images/logos/proximus.svg" alt="Proximus" width={160} height={56} className="h-14 w-auto object-contain" />
                    </div>
-                   <div className="flex items-center gap-3">
-                      <Image src="/images/logos/accenture.svg" alt="Accenture" width={32} height={32} className="h-8 w-auto object-contain" />
-                      <span className="text-sm font-bold tracking-tight text-[#A100FF]">Accenture</span>
+                   <div className="flex items-center opacity-70 saturate-[0.8] hover:opacity-100 hover:saturate-100 transition-all duration-500">
+                      <Image src="/images/logos/accenture.svg" alt="Accenture" width={140} height={56} className="h-14 w-auto object-contain" />
                    </div>
                 </div>
               </m.div>
