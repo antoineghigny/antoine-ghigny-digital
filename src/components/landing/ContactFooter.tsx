@@ -137,7 +137,7 @@ export default function ContactFooter() {
             </p>
           </div>
           <div className="mt-8 pt-8 border-t border-[#2D2926]/5 dark:border-white/[0.05] flex justify-center">
-            <p className="text-[9px] text-stone-400 dark:text-stone-600 font-medium tracking-[0.15em] uppercase text-center opacity-40 hover:opacity-100 transition-opacity duration-700 cursor-default">
+            <p className="text-[10px] text-stone-500 dark:text-stone-400 font-medium tracking-[0.15em] uppercase text-center opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-default">
               {tf("easter_egg")}
             </p>
           </div>
