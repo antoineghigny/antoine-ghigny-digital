@@ -79,6 +79,26 @@ export default function ArtisanSection() {
                 </div>
               </div>
             </m.div>
+
+            <m.div variants={textFadeUp} className="pt-8 space-y-6">
+              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-stone-400 dark:text-stone-500">
+                {t("experience_at")}
+              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                 {/* EC Card */}
+                 <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-2xl h-16 min-w-[140px] px-6 flex items-center justify-center hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#B34B44]/20 transition-all duration-300 group shadow-sm">
+                    <Image src="/images/logos/ec.svg" alt="Commission Européenne" width={100} height={36} className="h-9 w-auto object-contain" />
+                 </div>
+                 {/* Proximus Card */}
+                 <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-2xl h-16 min-w-[140px] px-6 flex items-center justify-center hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#5C2D91]/20 transition-all duration-300 group shadow-sm">
+                    <Image src="/images/logos/proximus.svg" alt="Proximus" width={120} height={40} className="h-10 w-auto object-contain" />
+                 </div>
+                 {/* Accenture Card */}
+                 <div className="bg-white/50 dark:bg-white/[0.03] border border-stone-200/50 dark:border-white/[0.05] rounded-2xl h-16 min-w-[140px] px-6 flex items-center justify-center hover:bg-white dark:hover:bg-white/[0.06] hover:border-[#A100FF]/20 transition-all duration-300 group shadow-sm">
+                    <Image src="/images/logos/accenture.svg" alt="Accenture" width={110} height={28} className="h-7 w-auto object-contain" />
+                 </div>
+              </div>
+            </m.div>
           </div>
 
           {/* Visual Side */}
