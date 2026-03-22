@@ -37,38 +37,57 @@
     "bento": {
       "professionalism": {
         "label": "Immediate Credibility",
-        "title": "Your site is your best salesperson.",
-        "description": "I design interfaces that radiate professionalism and build trust from the very first second."
+        "title": "Your site's aesthetic is your first salesperson. I design interfaces that radiate professionalism and build trust from the very first second."
       },
       "trust": {
         "label": "Save Time",
-        "title": "Fast to build. Built right.",
-        "description": "Short development cycles and direct communication. We move fast and we move smart."
+        "title": "Short development cycles and direct communication. We move fast and we move right."
       },
       "performance": {
         "label": "Zero Intermediaries",
-        "title": "You talk directly to the engineer.",
-        "description": "No information loss, no superfluous project manager. Far from the industrial standard."
+        "title": "You talk directly to the engineer. No information loss. Far from the industrial standard."
       },
       "design": {
         "label": "Digital Craftsmanship",
-        "title": "Every line of code is written with intent.",
-        "description": "No bloated templates — only bespoke work optimized for SEO and conversion."
+        "title": "Every line of code is written with intent. No bloated templates — only bespoke work optimized for SEO and conversion."
       }
     },
     "mockup": {
       "url": "your-business.com",
       "google": {
         "label": "Google Position",
-        "keyword": "Your sector · Your city"
+        "rank": "PAGE #1"
       },
-      "stars": {
-        "label": "Google rating · 12 reviews"
-      },
-      "testimonial": {
-        "quote": "A seamless experience, a fast site and a design that truly reflects who we are.",
-        "author": "Happy client"
+      "tasks": {
+        "review": {
+          "title": "New 5-star Google review",
+          "time": "Your rating is now 4.9"
+        },
+        "seo": {
+          "title": "Page 1 on Google",
+          "time": "\"Plumber Nivelles\" ranked #1"
+        },
+        "client": {
+          "title": "New client from your website",
+          "time": "\"I found you on Google\""
+        },
+        "quote": {
+          "title": "Quote request received",
+          "time": "Via your contact form"
+        },
+        "aisearch": {
+          "title": "Mentioned by ChatGPT",
+          "time": "\"Recommended in your area\""
+        },
+        "booking": {
+          "title": "Appointment booked online",
+          "time": "Monday March 24 at 10:00 AM"
+        }
       }
+    },
+    "success": {
+      "title": "What will your success look like?",
+      "description": "An online presence that works for you, 24/7."
     },
     "collaboration": {
       "client": {

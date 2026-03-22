@@ -37,38 +37,57 @@
     "bento": {
       "professionalism": {
         "label": "Crédibilité Immédiate",
-        "title": "Votre premier commercial, c'est votre site.",
-        "description": "Je conçois des interfaces qui respirent le professionnalisme et installent la confiance dès la première seconde."
+        "title": "L'esthétique de votre site est votre premier commercial. Je conçois des interfaces qui respirent le professionnalisme et installent la confiance dès la première seconde."
       },
       "trust": {
         "label": "Gagnez du temps",
-        "title": "Vite fait, bien fait.",
-        "description": "Des cycles de développement courts et une communication directe. On avance vite, on avance juste."
+        "title": "Des cycles de développement courts et une communication directe. On avance vite, on avance juste."
       },
       "performance": {
         "label": "Zéro intermédiaire",
-        "title": "Vous parlez directement au technicien.",
-        "description": "Pas de perte d'information, pas de chef de projet superflu. Loin des standards industriels."
+        "title": "Vous parlez directement au technicien. Pas de perte d'information. Loin des standards industriels."
       },
       "design": {
         "label": "L'artisanat numérique",
-        "title": "Chaque ligne de code est écrite avec intention.",
-        "description": "Pas de templates surchargés — uniquement du sur-mesure optimisé pour le SEO et la conversion."
+        "title": "Chaque ligne de code est écrite avec intention. Pas de templates surchargés, uniquement du sur-mesure optimisé pour le SEO et la conversion."
       }
     },
     "mockup": {
       "url": "votre-business.be",
       "google": {
         "label": "Position Google",
-        "keyword": "Votre secteur · Votre ville"
+        "rank": "PAGE #1"
       },
-      "stars": {
-        "label": "Note Google · 12 avis"
-      },
-      "testimonial": {
-        "quote": "Une expérience fluide, un site rapide et un design qui nous ressemble vraiment.",
-        "author": "Client satisfait"
+      "tasks": {
+        "review": {
+          "title": "Nouvel avis 5 étoiles sur Google",
+          "time": "Votre note passe à 4.9"
+        },
+        "seo": {
+          "title": "Page 1 sur Google",
+          "time": "\"Plombier Nivelles\" en position 1"
+        },
+        "client": {
+          "title": "Nouveau client via votre site",
+          "time": "\"Je vous ai trouvé sur Google\""
+        },
+        "quote": {
+          "title": "Demande de devis reçue",
+          "time": "Via le formulaire de contact"
+        },
+        "aisearch": {
+          "title": "Cité par ChatGPT",
+          "time": "\"Recommandé dans votre région\""
+        },
+        "booking": {
+          "title": "Rendez-vous pris en ligne",
+          "time": "Lundi 24 mars à 10h00"
+        }
       }
+    },
+    "success": {
+      "title": "À quoi ressemblera votre succès ?",
+      "description": "Une présence en ligne qui travaille pour vous, 24h/24."
     },
     "collaboration": {
       "client": {
