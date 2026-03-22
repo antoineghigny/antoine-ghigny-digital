@@ -34,19 +34,19 @@
     "bento": {
       "professionalism": {
         "label": "Crédibilité Immédiate",
-        "title": "Votre site est<br/>votre premier commercial."
+        "title": "Votre site est votre <highlight>premier commercial.</highlight> Des interfaces qui inspirent confiance dès la première seconde."
       },
       "trust": {
         "label": "Gagnez du temps",
-        "title": "On avance vite,<br/>on avance juste."
+        "title": "Des cycles courts, <highlight>une communication directe.</highlight> On avance vite, on avance juste."
       },
       "performance": {
         "label": "Zéro intermédiaire",
-        "title": "Vous parlez directement<br/>au technicien."
+        "title": "Vous parlez directement <highlight>au technicien.</highlight> Pas de perte d'information."
       },
       "design": {
         "label": "L'artisanat numérique",
-        "title": "Du sur-mesure,<br/>optimisé pour la conversion."
+        "title": "Chaque ligne de code <highlight>écrite avec intention.</highlight> Du sur-mesure, pas des templates."
       }
     },
     "mockup": {

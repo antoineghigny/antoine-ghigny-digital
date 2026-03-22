@@ -49,7 +49,9 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.professionalism.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight max-w-xl">
-                    {t.rich("bento.professionalism.title", { br: () => <br /> })}
+                    {t.rich("bento.professionalism.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
               </div>
@@ -69,7 +71,9 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.trust.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight">
-                    {t.rich("bento.trust.title", { br: () => <br /> })}
+                    {t.rich("bento.trust.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
               </div>
@@ -89,7 +93,9 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.performance.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight">
-                    {t.rich("bento.performance.title", { br: () => <br /> })}
+                    {t.rich("bento.performance.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
               </div>
@@ -109,7 +115,9 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.design.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight max-w-xl">
-                    {t.rich("bento.design.title", { br: () => <br /> })}
+                    {t.rich("bento.design.title", {
+                      highlight: (chunks) => <span className="text-[#B34B44]">{chunks}</span>
+                    })}
                   </h3>
                 </div>
               </div>

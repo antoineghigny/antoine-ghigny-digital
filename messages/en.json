@@ -34,19 +34,19 @@
     "bento": {
       "professionalism": {
         "label": "Immediate Credibility",
-        "title": "Your site is<br/>your first salesperson."
+        "title": "Your site is your <highlight>first salesperson.</highlight> Interfaces that build trust from the very first second."
       },
       "trust": {
         "label": "Save Time",
-        "title": "We move fast,<br/>we move right."
+        "title": "Short cycles, <highlight>direct communication.</highlight> We move fast, we move right."
       },
       "performance": {
         "label": "Zero Intermediaries",
-        "title": "You talk directly<br/>to the engineer."
+        "title": "You talk directly <highlight>to the engineer.</highlight> No information lost."
       },
       "design": {
         "label": "Digital Craftsmanship",
-        "title": "Bespoke work,<br/>built for conversion."
+        "title": "Every line of code <highlight>written with intent.</highlight> Bespoke work, not templates."
       }
     },
     "mockup": {
