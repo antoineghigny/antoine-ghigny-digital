@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { UserCircle, Briefcase, MapPin } from "@phosphor-icons/react";
@@ -13,16 +13,13 @@ const textFadeUp = {
   whileInView: { opacity: 1, y: 0 },
 };
 
+const imageFadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+};
+
 export default function ArtisanSection() {
   const t = useTranslations("artisan");
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   return (
     <section className="bg-[#FAF8F5] dark:bg-[#1A1816] py-24 md:py-40 overflow-hidden relative">
@@ -60,21 +57,13 @@ export default function ArtisanSection() {
             </div>
 
             {/* 2. Visual Side (Mobile only position) */}
-            <m.div 
-              initial={{ opacity: 0, y: 30, rotate: isMobile ? 0 : -2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: isMobile ? 0 : 2 }}
-              whileHover={{ rotate: 0, scale: 1.02 }}
+            <m.div
+              variants={imageFadeUp}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
-                duration: 1.2,
-                ease: [0.21, 0.45, 0.32, 0.9],
-                rotate: { type: "spring", stiffness: 60, damping: 25 },
-                scale: { type: "spring", stiffness: 60, damping: 25 }
-              }}
-              className="lg:hidden order-2 relative group"
+              className="lg:hidden order-2 relative"
             >
               <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-stone-200 dark:border-white/10 relative shadow-2xl shadow-[#B34B44]/10">
-                 <Image 
+                 <Image
                     src="/images/antoine.jpg"
                     alt="Antoine Ghigny"
                     fill

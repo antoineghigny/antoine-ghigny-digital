@@ -8,7 +8,6 @@
     "title_part1": "Bespoke sites & tools.",
     "title_part2": "Finally, results.",
     "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
-    "tech_argument": "Speed: +20% potential conversions. Savings: ~€600/year vs agency fees.",
     "cta": "Entrust me with a project",
     "trust": {
       "satisfied": "Satisfied or reworked",
@@ -38,48 +37,37 @@
     "bento": {
       "professionalism": {
         "label": "Immediate Credibility",
-        "title": "A site that reassures your clients and reflects your expertise. <highlight>Stop letting</highlight> a poor image lose you contracts."
+        "title": "Your site is your best salesperson.",
+        "description": "I design interfaces that radiate professionalism and build trust from the very first second."
       },
       "trust": {
         "label": "Save Time",
-        "title": "Automate your repetitive tasks with <highlight>bespoke tools</highlight>. Focus on your business, I'll take care of optimizing your daily life."
+        "title": "Fast to build. Built right.",
+        "description": "Short development cycles and direct communication. We move fast and we move smart."
       },
       "performance": {
         "label": "Zero Intermediaries",
-        "title": "A single <highlight>agile expert</highlight> for fast solutions, without jargon or time wasted. The responsiveness of a partner who understands your business."
+        "title": "You talk directly to the engineer.",
+        "description": "No information loss, no superfluous project manager. Far from the industrial standard."
       },
       "design": {
         "label": "Digital Craftsmanship",
-        "title": "Every detail is cared for to guarantee <highlight>performance and aesthetics</highlight>. Bespoke support, far from industrial standards."
+        "title": "Every line of code is written with intent.",
+        "description": "No bloated templates — only bespoke work optimized for SEO and conversion."
       }
     },
     "mockup": {
       "url": "your-business.com",
-      "tasks": {
-        "review": {
-          "title": "New 5-star Google review",
-          "time": "Your rating is now 4.9"
-        },
-        "seo": {
-          "title": "Page 1 on Google",
-          "time": "\"Plumber Nivelles\" ranked #3"
-        },
-        "client": {
-          "title": "New client from your website",
-          "time": "\"I found you on Google\""
-        },
-        "quote": {
-          "title": "Quote request received",
-          "time": "Via your contact form"
-        },
-        "aisearch": {
-          "title": "Mentioned by ChatGPT",
-          "time": "\"Recommended in your area\""
-        },
-        "booking": {
-          "title": "Appointment booked online",
-          "time": "Monday March 24 at 10:00 AM"
-        }
+      "google": {
+        "label": "Google Position",
+        "keyword": "Your sector · Your city"
+      },
+      "stars": {
+        "label": "Google rating · 12 reviews"
+      },
+      "testimonial": {
+        "quote": "A seamless experience, a fast site and a design that truly reflects who we are.",
+        "author": "Happy client"
       }
     },
     "collaboration": {

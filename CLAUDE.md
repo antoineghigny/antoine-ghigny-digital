@@ -15,25 +15,24 @@ No test framework is configured.
 
 ## Git Workflow
 
-Never commit directly to `main`. Always create a feature branch from `develop`, then open a PR targeting `develop`.
+Feature branches are created from `main` and merged back into `main` via PR.
 
 ```
-feature/xxx  →  PR  →  develop  →  PR  →  main
+feature/xxx  →  PR  →  main
 ```
 
 - `main` = production (deployed on Vercel)
-- `develop` = integration branch
-- Feature branches: `feature/description`, `fix/description`, etc.
+- Feature branches: `feature/description`, `fix/description`, `claude/description`, etc.
 
 **At the start of every session**, sync before doing anything:
 
 ```bash
 git fetch origin
-git checkout develop
-git pull origin develop
+git checkout main
+git pull origin main
 ```
 
-Then create your feature branch from `develop`.
+Then create your feature branch from `main`.
 
 ## Architecture
 

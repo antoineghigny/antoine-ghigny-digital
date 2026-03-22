@@ -8,7 +8,6 @@
     "title_part1": "Sites & outils sur mesure.",
     "title_part2": "Enfin du résultat.",
     "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
-    "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
     "cta": "Me confier un projet",
     "trust": {
       "satisfied": "Satisfait ou retravaillé",
@@ -38,48 +37,37 @@
     "bento": {
       "professionalism": {
         "label": "Crédibilité Immédiate",
-        "title": "Un site qui rassure vos clients et reflète votre expertise. <highlight>Ne laissez plus</highlight> une mauvaise image vous faire perdre des contrats."
+        "title": "Votre premier commercial, c'est votre site.",
+        "description": "Je conçois des interfaces qui respirent le professionnalisme et installent la confiance dès la première seconde."
       },
       "trust": {
         "label": "Gagnez du temps",
-        "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
+        "title": "Vite fait, bien fait.",
+        "description": "Des cycles de développement courts et une communication directe. On avance vite, on avance juste."
       },
       "performance": {
         "label": "Zéro intermédiaire",
-        "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
+        "title": "Vous parlez directement au technicien.",
+        "description": "Pas de perte d'information, pas de chef de projet superflu. Loin des standards industriels."
       },
       "design": {
         "label": "L'artisanat numérique",
-        "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
+        "title": "Chaque ligne de code est écrite avec intention.",
+        "description": "Pas de templates surchargés — uniquement du sur-mesure optimisé pour le SEO et la conversion."
       }
     },
     "mockup": {
       "url": "votre-business.be",
-      "tasks": {
-        "review": {
-          "title": "Nouvel avis 5 étoiles sur Google",
-          "time": "Votre note passe à 4.9"
-        },
-        "seo": {
-          "title": "Page 1 sur Google",
-          "time": "\"Plombier Nivelles\" en position 3"
-        },
-        "client": {
-          "title": "Nouveau client via votre site",
-          "time": "\"Je vous ai trouvé sur Google\""
-        },
-        "quote": {
-          "title": "Demande de devis reçue",
-          "time": "Via le formulaire de contact"
-        },
-        "aisearch": {
-          "title": "Cité par ChatGPT",
-          "time": "\"Recommandé dans votre région\""
-        },
-        "booking": {
-          "title": "Rendez-vous pris en ligne",
-          "time": "Lundi 24 mars à 10h00"
-        }
+      "google": {
+        "label": "Position Google",
+        "keyword": "Votre secteur · Votre ville"
+      },
+      "stars": {
+        "label": "Note Google · 12 avis"
+      },
+      "testimonial": {
+        "quote": "Une expérience fluide, un site rapide et un design qui nous ressemble vraiment.",
+        "author": "Client satisfait"
       }
     },
     "collaboration": {

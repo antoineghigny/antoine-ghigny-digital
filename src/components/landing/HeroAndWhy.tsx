@@ -316,12 +316,6 @@ export default function HeroAndWhy() {
                   {t("description")}
                 </p>
 
-                <div className="flex items-center gap-3 py-1 px-4 bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border border-[#B34B44]/10 rounded-xl w-fit">
-                  <Lightning size={16} weight="fill" className="text-[#B34B44]" />
-                  <p className="text-sm font-bold text-[#B34B44] tracking-tight">
-                    {t("tech_argument")}
-                  </p>
-                </div>
               </m.div>
 
               <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
