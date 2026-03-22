@@ -1,6 +1,7 @@
 import HeroAndWhy from "@/components/landing/HeroAndWhy";
 import ArtisanSection from "@/components/landing/ArtisanSection";
 import WhyMeSection from "@/components/landing/WhyMeSection";
+import SocialProofSection from "@/components/landing/SocialProofSection";
 import ContactFooter from "@/components/landing/ContactFooter";
 import JsonLd from "@/components/JsonLd";
 
@@ -13,6 +14,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
         <HeroAndWhy />
         <ArtisanSection />
         <WhyMeSection />
+        <SocialProofSection />
         <ContactFooter />
       </main>
     </>

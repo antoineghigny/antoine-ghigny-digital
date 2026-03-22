@@ -5,10 +5,9 @@
   },
   "hero": {
     "availability": "Available for new projects",
-    "title_part1": "Bespoke sites & tools.",
-    "title_part2": "Finally, results.",
-    "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
-    "tech_argument": "Speed: +20% potential conversions. Savings: ~€600/year vs agency fees.",
+    "title_part1": "Your website.",
+    "title_part2": "Finally done right.",
+    "description": "I design sites that turn visitors into clients — fast, visible on Google and built for your business. No intermediary, no dragging timelines.",
     "cta": "Entrust me with a project",
     "trust": {
       "satisfied": "Satisfied or reworked",
@@ -25,32 +24,36 @@
   "artisan": {
     "badge": "The Digital Craftsman",
     "experience_at": "Experience at",
-    "title": "One dedicated expert for your project.",
-    "content": "One expert, zero intermediaries. I translate your business needs into high-performance tech tools with an agility that traditional agencies can't match. I listen, I simplify, and I build: you keep full control of your vision, while I ensure it's technically flawless.",
+    "title": "One expert, not an agency.",
+    "content": "Zero intermediaries. You talk directly to the engineer who designs, codes and delivers. A responsiveness and precision no agency can match — because your project deserves better than a template.",
     "experience": "Software engineering experience",
     "location": "Based in Nivelles, Belgium"
   },
   "whyMe": {
     "badge": "Why work with me",
-    "title_part1": "Your site should work",
-    "title_part2": "for you",
-    "title_part3": ", not the other way around.",
+    "title_part1": "Agency-level expertise,",
+    "title_part2": "craftsman",
+    "title_part3": " responsiveness.",
     "bento": {
       "professionalism": {
         "label": "Immediate Credibility",
-        "title": "A site that reassures your clients and reflects your expertise. <highlight>Stop letting</highlight> a poor image lose you contracts."
+        "title": "Your site, your best <highlight>salesperson</highlight>.",
+        "description": "Your site's aesthetics are your first salesperson. I design interfaces that radiate professionalism and build trust from the very first second."
       },
       "trust": {
         "label": "Save Time",
-        "title": "Automate your repetitive tasks with <highlight>bespoke tools</highlight>. Focus on your business, I'll take care of optimizing your daily life."
+        "title": "Move fast, move <highlight>right</highlight>.",
+        "description": "Short development cycles and direct communication. No pointless meetings, no dragging timelines."
       },
       "performance": {
         "label": "Zero Intermediaries",
-        "title": "A single <highlight>agile expert</highlight> for fast solutions, without jargon or time wasted. The responsiveness of a partner who understands your business."
+        "title": "You talk directly to the <highlight>engineer</highlight>.",
+        "description": "No information lost. You talk to the person who codes — far from agency standards."
       },
       "design": {
         "label": "Digital Craftsmanship",
-        "title": "Every detail is cared for to guarantee <highlight>performance and aesthetics</highlight>. Bespoke support, far from industrial standards."
+        "title": "Every line of code has an <highlight>intention</highlight>.",
+        "description": "No bloated templates. Bespoke work optimised for SEO and built to convert."
       }
     },
     "mockup": {
@@ -81,19 +84,18 @@
           "time": "Monday March 24 at 10:00 AM"
         }
       }
-    },
-    "collaboration": {
-      "client": {
-        "title_part1": "Your Industry",
-        "title_part2": "Expertise.",
-        "description": "Nobody knows your business better than you. You know what your clients are looking for and what convinces them."
-      },
-      "my": {
-        "title_part1": "My Web",
-        "title_part2": "Vision.",
-        "description": "I turn all of that into a site that works for you: visible on Google, clear for your visitors and designed to make them take the next step."
-      }
     }
+  },
+  "success": {
+    "badge": "Your results",
+    "title": "What will your success look like?",
+    "subtitle": "An online presence that works for you, 24/7.",
+    "testimonial": "A smooth experience, a fast site and a design that truly reflects who we are.",
+    "attribution": "Satisfied client",
+    "attribution_sub": "Belgian SME",
+    "google_badge": "PAGE #1",
+    "google_label": "Google Position",
+    "cta": "I want this"
   },
   "games": {
     "dino": {

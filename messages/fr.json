@@ -5,10 +5,9 @@
   },
   "hero": {
     "availability": "Disponible pour nouveaux projets",
-    "title_part1": "Sites & outils sur mesure.",
-    "title_part2": "Enfin du résultat.",
-    "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
-    "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
+    "title_part1": "Votre site web.",
+    "title_part2": "Enfin bien fait.",
+    "description": "Je conçois des sites qui transforment vos visiteurs en clients — rapides, visibles sur Google et taillés pour votre activité. Sans intermédiaire, sans délai qui traîne.",
     "cta": "Me confier un projet",
     "trust": {
       "satisfied": "Satisfait ou retravaillé",
@@ -25,32 +24,36 @@
   "artisan": {
     "badge": "L'Artisan Numérique",
     "experience_at": "Expérience chez",
-    "title": "Un interlocuteur unique pour vos projets.",
-    "content": "Un expert, zéro intermédiaire. Je traduis vos besoins business en outils technologiques performants avec une agilité que les agences ne peuvent pas offrir. J'écoute, je simplifie et je construis : vous restez maître de votre vision, je m'occupe de la rendre techniquement impeccable.",
+    "title": "Un expert, pas une agence.",
+    "content": "Zéro intermédiaire. Vous parlez directement au technicien qui code, conçoit et livre. Une réactivité et une précision qu'aucune agence ne peut offrir — parce que votre projet mérite mieux qu'un template.",
     "experience": "Expérience en ingénierie logicielle",
     "location": "Basé à Nivelles, Belgique"
   },
   "whyMe": {
-    "badge": "Pourquoi faire appel à moi",
-    "title_part1": "Votre site devrait travailler",
-    "title_part2": "pour vous",
-    "title_part3": ", pas l'inverse.",
+    "badge": "Pourquoi travailler avec moi",
+    "title_part1": "L'expertise d'une agence,",
+    "title_part2": "la réactivité",
+    "title_part3": " d'un artisan.",
     "bento": {
       "professionalism": {
         "label": "Crédibilité Immédiate",
-        "title": "Un site qui rassure vos clients et reflète votre expertise. <highlight>Ne laissez plus</highlight> une mauvaise image vous faire perdre des contrats."
+        "title": "Votre site, votre meilleur <highlight>commercial</highlight>.",
+        "description": "L'esthétique de votre site est votre premier commercial. Je conçois des interfaces qui respirent le professionnalisme et installent la confiance dès la première seconde."
       },
       "trust": {
         "label": "Gagnez du temps",
-        "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
+        "title": "On avance vite, on avance <highlight>juste</highlight>.",
+        "description": "Des cycles de développement courts et une communication directe. Pas de réunion inutile, pas de délai qui traîne."
       },
       "performance": {
         "label": "Zéro intermédiaire",
-        "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
+        "title": "Vous parlez directement au <highlight>technicien</highlight>.",
+        "description": "Pas de perte d'information. Vous parlez à celui qui code — loin des standards des agences."
       },
       "design": {
         "label": "L'artisanat numérique",
-        "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
+        "title": "Chaque ligne de code a une <highlight>intention</highlight>.",
+        "description": "Pas de templates surchargés. Du sur-mesure optimisé pour le SEO et conçu pour convertir."
       }
     },
     "mockup": {
@@ -81,19 +84,18 @@
           "time": "Lundi 24 mars à 10h00"
         }
       }
-    },
-    "collaboration": {
-      "client": {
-        "title_part1": "Votre Expertise",
-        "title_part2": "Métier.",
-        "description": "Personne ne connaît votre métier mieux que vous. Vous savez ce que vos clients cherchent et ce qui les convainc."
-      },
-      "my": {
-        "title_part1": "Ma Vision",
-        "title_part2": "Web.",
-        "description": "Je transforme tout ça en un site qui travaille pour vous : visible sur Google, clair pour vos visiteurs et qui donne envie d'aller plus loin."
-      }
     }
+  },
+  "success": {
+    "badge": "Vos résultats",
+    "title": "À quoi ressemblera votre succès ?",
+    "subtitle": "Une présence en ligne qui travaille pour vous, 24h/24.",
+    "testimonial": "Une expérience fluide, un site rapide et un design qui nous ressemble vraiment.",
+    "attribution": "Client satisfait",
+    "attribution_sub": "TPE belge",
+    "google_badge": "PAGE #1",
+    "google_label": "Position Google",
+    "cta": "Je veux ça"
   },
   "games": {
     "dino": {
