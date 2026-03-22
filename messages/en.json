@@ -30,26 +30,23 @@
     "location": "Based in Nivelles, Belgium"
   },
   "whyMe": {
-    "badge": "Why work with me",
-    "title_part1": "Your site should work",
-    "title_part2": "for you",
-    "title_part3": ", not the other way around.",
+    "title": "Why work with me?",
     "bento": {
       "professionalism": {
         "label": "Immediate Credibility",
-        "title": "Your site's aesthetic is your first salesperson. I design interfaces that radiate professionalism and build trust from the very first second."
+        "title": "Your site is<br/>your first salesperson."
       },
       "trust": {
         "label": "Save Time",
-        "title": "Short development cycles and direct communication. We move fast and we move right."
+        "title": "We move fast,<br/>we move right."
       },
       "performance": {
         "label": "Zero Intermediaries",
-        "title": "You talk directly to the engineer. No information loss. Far from the industrial standard."
+        "title": "You talk directly<br/>to the engineer."
       },
       "design": {
         "label": "Digital Craftsmanship",
-        "title": "Every line of code is written with intent. No bloated templates — only bespoke work optimized for SEO and conversion."
+        "title": "Bespoke work,<br/>built for conversion."
       }
     },
     "mockup": {

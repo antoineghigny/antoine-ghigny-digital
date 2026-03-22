@@ -30,26 +30,23 @@
     "location": "Basé à Nivelles, Belgique"
   },
   "whyMe": {
-    "badge": "Pourquoi faire appel à moi",
-    "title_part1": "Votre site devrait travailler",
-    "title_part2": "pour vous",
-    "title_part3": ", pas l'inverse.",
+    "title": "Pourquoi travailler avec moi ?",
     "bento": {
       "professionalism": {
         "label": "Crédibilité Immédiate",
-        "title": "L'esthétique de votre site est votre premier commercial. Je conçois des interfaces qui respirent le professionnalisme et installent la confiance dès la première seconde."
+        "title": "Votre site est<br/>votre premier commercial."
       },
       "trust": {
         "label": "Gagnez du temps",
-        "title": "Des cycles de développement courts et une communication directe. On avance vite, on avance juste."
+        "title": "On avance vite,<br/>on avance juste."
       },
       "performance": {
         "label": "Zéro intermédiaire",
-        "title": "Vous parlez directement au technicien. Pas de perte d'information. Loin des standards industriels."
+        "title": "Vous parlez directement<br/>au technicien."
       },
       "design": {
         "label": "L'artisanat numérique",
-        "title": "Chaque ligne de code est écrite avec intention. Pas de templates surchargés, uniquement du sur-mesure optimisé pour le SEO et la conversion."
+        "title": "Du sur-mesure,<br/>optimisé pour la conversion."
       }
     },
     "mockup": {

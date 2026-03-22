@@ -27,19 +27,12 @@ export default function WhyMeSection() {
           className="space-y-16 md:space-y-32"
         >
           {/* Section Header */}
-          <div className="max-w-3xl">
-            <m.p
-              variants={fadeUp}
-              className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44] mb-6"
-            >
-              {t("badge")}
-            </m.p>
+          <div>
             <m.h2
               variants={fadeUp}
-              className="text-5xl md:text-7xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.9] lg:leading-[1.1]"
+              className="text-5xl md:text-7xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.95]"
             >
-              {t("title_part1")}<br />
-              <span className="text-[#B34B44]">{t("title_part2")}</span>{t("title_part3")}
+              {t("title")}
             </m.h2>
           </div>
 
@@ -56,7 +49,7 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.professionalism.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight max-w-xl">
-                    {t("bento.professionalism.title")}
+                    {t.rich("bento.professionalism.title", { br: () => <br /> })}
                   </h3>
                 </div>
               </div>
@@ -76,7 +69,7 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.trust.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight">
-                    {t("bento.trust.title")}
+                    {t.rich("bento.trust.title", { br: () => <br /> })}
                   </h3>
                 </div>
               </div>
@@ -96,7 +89,7 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.performance.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight">
-                    {t("bento.performance.title")}
+                    {t.rich("bento.performance.title", { br: () => <br /> })}
                   </h3>
                 </div>
               </div>
@@ -116,7 +109,7 @@ export default function WhyMeSection() {
                 <div>
                   <span className="text-sm uppercase tracking-[0.2em] text-stone-400 dark:text-stone-500 font-bold block mb-8">{t("bento.design.label")}</span>
                   <h3 className="text-3xl md:text-4xl font-bold text-[#2D2926] dark:text-[#FAF8F5] tracking-tighter leading-tight max-w-xl">
-                    {t("bento.design.title")}
+                    {t.rich("bento.design.title", { br: () => <br /> })}
                   </h3>
                 </div>
               </div>
@@ -127,8 +120,8 @@ export default function WhyMeSection() {
           </div>
 
           {/* Success Sub-header + Mockup */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
-            <div className="md:col-span-5 flex flex-col gap-6">
+          <div className="flex flex-col items-center gap-10 md:gap-14">
+            <div className="text-center flex flex-col gap-4">
               <m.h3
                 variants={fadeUp}
                 className="text-4xl md:text-5xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[1.1]"
@@ -137,14 +130,14 @@ export default function WhyMeSection() {
               </m.h3>
               <m.p
                 variants={fadeUp}
-                className="text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light"
+                className="text-xl text-[#5C5652] dark:text-[#A8A29E] font-light"
               >
                 {t("success.description")}
               </m.p>
             </div>
             <m.div
               variants={fadeUp}
-              className="md:col-span-7"
+              className="w-full max-w-2xl"
             >
               <WhyMeMockup />
             </m.div>
