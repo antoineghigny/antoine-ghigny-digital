@@ -17,6 +17,7 @@ import {
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
+import { analytics } from "@/lib/analytics";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
@@ -319,6 +320,7 @@ export default function HeroAndWhy() {
                 <m.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center gap-6">
                 <m.a
                   href="#contact"
+                  onClick={() => analytics.heroCTAClicked()}
                   whileHover="hover"
                   whileTap={{ scale: 0.98 }}
                   className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden group"

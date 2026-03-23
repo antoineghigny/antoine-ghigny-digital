@@ -5,6 +5,7 @@ import { m } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WhatsappLogo, Envelope, ChatCircleText } from "@phosphor-icons/react";
+import { analytics } from "@/lib/analytics";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -65,6 +66,7 @@ export default function ContactFooter() {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                   <m.a
                     href={`https://wa.me/${t("phone_url")}`}
+                    onClick={() => analytics.whatsappClicked("footer")}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-8 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 group"
@@ -75,6 +77,7 @@ export default function ContactFooter() {
 
                   <m.a
                     href={`mailto:${t("email")}?subject=${t("inquiry_label")}`}
+                    onClick={() => analytics.emailClicked("footer")}
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     className="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full font-medium text-lg border border-[#2D2926]/10 dark:border-white/10 text-[#2D2926] dark:text-[#FAF8F5] hover:bg-[#2D2926] hover:text-white transition-all duration-300"
@@ -137,7 +140,10 @@ export default function ContactFooter() {
             </p>
           </div>
           <div className="mt-8 pt-8 border-t border-[#2D2926]/5 dark:border-white/[0.05] flex justify-center">
-            <p className="text-[10px] text-stone-500 dark:text-stone-400 font-medium tracking-[0.15em] uppercase text-center opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-default">
+            <p
+              onClick={() => analytics.easterEggClicked()}
+              className="text-[10px] text-stone-500 dark:text-stone-400 font-medium tracking-[0.15em] uppercase text-center opacity-70 hover:opacity-100 transition-opacity duration-500 cursor-default"
+            >
               {tf("easter_egg")}
             </p>
           </div>

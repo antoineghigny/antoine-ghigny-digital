@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { m, AnimatePresence } from 'framer-motion';
 import { useState, useTransition, useEffect } from 'react';
+import { analytics } from '@/lib/analytics';
 
 export function LocaleSwitcher() {
   const locale = useLocale();
@@ -33,6 +34,7 @@ export function LocaleSwitcher() {
 
   const handleLocaleChange = (newLocale: "en" | "fr") => {
     if (newLocale === optimisticLocale) return;
+    analytics.localeSwitched(newLocale);
     // Instant visual feedback
     setOptimisticLocale(newLocale);
     // Non-blocking navigation — UI stays interactive while route loads

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import ContactCTALink from "@/components/ContactCTALink";
 import { ArrowLeft, CaretDown } from "@phosphor-icons/react";
+import { analytics } from "@/lib/analytics";
 
 const SPRING_TRANSITION = { type: "spring" as const, stiffness: 100, damping: 20 };
 const FADE_UP_VARIANTS = {
@@ -138,7 +139,10 @@ export default function FAQContent() {
                     question={t(`items.${key}.question`)}
                     answer={t(`items.${key}.answer`)}
                     isOpen={openIndex === index}
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    onClick={() => {
+                      if (openIndex !== index) analytics.faqOpened(key);
+                      setOpenIndex(openIndex === index ? null : index);
+                    }}
                   />
                 ))}
               </div>
