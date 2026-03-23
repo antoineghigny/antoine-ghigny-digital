@@ -1,4 +1,5 @@
 const BASE_URL = "https://antoine-ghigny-digital.vercel.app";
+const DATE_MODIFIED = new Date().toISOString().split("T")[0]; // build-time date
 
 function getProfessionalServiceSchema(locale: string) {
   const url = `${BASE_URL}/${locale}`;
@@ -138,12 +139,39 @@ function getWebSiteSchema(locale: string) {
     name: "Antoine Ghigny · Digital Creation",
     description,
     inLanguage: ["fr", "en"],
+    dateModified: DATE_MODIFIED,
     author: { "@id": `${BASE_URL}/#person` },
     potentialAction: {
       "@type": "ContactAction",
       target: "mailto:antoine@ghigny.be",
       name: locale === "fr" ? "Contacter Antoine Ghigny" : "Contact Antoine Ghigny",
     },
+  };
+}
+
+function getBreadcrumbSchema(locale: string) {
+  const pages =
+    locale === "fr"
+      ? [
+          { name: "Accueil", url: `${BASE_URL}/fr` },
+          { name: "FAQ", url: `${BASE_URL}/fr/faq` },
+          { name: "À propos", url: `${BASE_URL}/fr/about` },
+        ]
+      : [
+          { name: "Home", url: `${BASE_URL}/en` },
+          { name: "FAQ", url: `${BASE_URL}/en/faq` },
+          { name: "About", url: `${BASE_URL}/en/about` },
+        ];
+
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${BASE_URL}/${locale}/#breadcrumb`,
+    itemListElement: pages.map((page, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: page.name,
+      item: page.url,
+    })),
   };
 }
 
@@ -162,6 +190,7 @@ export default function JsonLd({
             getProfessionalServiceSchema(locale),
             getPersonSchema(),
             getWebSiteSchema(locale),
+            getBreadcrumbSchema(locale),
           ],
         }
       : {

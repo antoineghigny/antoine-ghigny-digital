@@ -210,27 +210,51 @@
     "items": {
       "q1": {
         "question": "Why choose a freelancer over an agency?",
-        "answer": "Responsiveness and price. By working with me, you have a single point of contact who knows your project by heart. No agency overhead costs passed on to your bill, and direct communication without intermediaries."
+        "answer": "With a freelancer, you have a single point of contact who knows your project from first call to launch — no project manager, no anonymous developer. Rates are typically 30 to 50% lower than an agency, timelines are shorter, and you communicate directly with the person building your site."
       },
       "q2": {
         "question": "How much does it cost to create a website?",
-        "answer": "Every project is unique, but I always work on a fixed-price basis defined in advance. No bad surprises. A professional showcase site usually starts around €1500, including design, development, and SEO optimization."
+        "answer": "The price depends on the project, its complexity and the features required. I always work on a fixed-price basis defined after a free initial call. You know the total cost before starting — no overruns, no bad surprises."
       },
       "q3": {
         "question": "What is the delivery timeline?",
-        "answer": "A standard showcase website is delivered within 2 to 4 weeks. A landing page can be ready in 1 to 2 weeks. These timelines include design, development, revisions and deployment phases. I commit to precise dates from the project kickoff."
+        "answer": "A standard showcase website is delivered within 2 to 4 weeks. A landing page can be ready in 1 to 2 weeks. These timelines include design, development, revisions and deployment. Precise dates are set from the project kickoff — no vague 'soon'."
       },
       "q4": {
         "question": "Do you offer maintenance after launch?",
-        "answer": "Yes. After delivery, I provide support for content updates, technical adjustments and ongoing performance optimization. Maintenance is optional and can be subscribed as a monthly package tailored to your needs."
+        "answer": "Yes. After delivery, I offer monthly maintenance packages covering content updates, technical adjustments and ongoing SEO performance optimisation. Maintenance is optional but ensures your site stays fast, secure and well-ranked over time."
       },
       "q5": {
-        "question": "Will my site be optimized for Google?",
-        "answer": "Absolutely. Every site is built following SEO best practices: semantic HTML structure, optimized metadata, maximum performance (Core Web Vitals), perfect mobile compatibility and structured data. Your site is designed to be visible on Google and AI search engines."
+        "question": "Will my site be optimised for Google?",
+        "answer": "Yes. Every site is built to SEO best practices: semantic HTML, optimised metadata, Core Web Vitals score above 90, perfect mobile compatibility and Schema.org structured data. The site is also configured to be cited by AI search engines like ChatGPT and Google AI Overviews."
       },
       "q6": {
         "question": "How does the collaboration work?",
-        "answer": "The process is straightforward: a free initial call to understand your needs, then a detailed proposal with mockups. After approval, I develop the site with regular checkpoints. You get revisions until full satisfaction before the final launch."
+        "answer": "Three steps: a free initial call to understand your needs and goals, a detailed proposal with mockups after quote approval, then development with regular checkpoints. You get revisions until full satisfaction before the final launch."
+      },
+      "q7": {
+        "question": "Can my website appear in ChatGPT and AI search engines?",
+        "answer": "Yes, and this is a key advantage since 2024. ChatGPT, Google AI Overviews and Gemini directly cite websites in their answers. Every site I build includes the necessary optimisations: Schema.org structured data, an llms.txt file for AI robots, and content structured for automatic extraction. Your clients find you regardless of the tool they use."
+      },
+      "q8": {
+        "question": "Is WordPress or a custom-built website better?",
+        "answer": "WordPress suits simple blogs or very small budgets. For a professional showcase site, a custom build with Next.js outperforms on every metric: speed (Lighthouse score 95+), security without vulnerable plugins, advanced technical SEO and complete customisation. The cost is comparable but the performance and longevity are incomparable."
+      },
+      "q9": {
+        "question": "How do I know if my current website needs to be rebuilt?",
+        "answer": "Concrete warning signs: Google PageSpeed score below 70, not mobile-responsive, no update in over 2 years, no clients contacting you through the site, or difficult to modify. If two or more apply to you, a redesign would deliver a fast return on investment."
+      },
+      "q10": {
+        "question": "Why isn't my website appearing on Google?",
+        "answer": "The most common causes: site too slow (poor Core Web Vitals), content not indexed by Google, keywords missing from title and description tags, no inbound links (backlinks), or a technical crawlability issue. A quick audit during the free initial call identifies the exact cause and defines the action plan."
+      },
+      "q11": {
+        "question": "Do you work only in Nivelles or across Belgium?",
+        "answer": "I work with clients across Belgium — Brussels, Liège, Namur, Charleroi, Mons, Louvain-la-Neuve and beyond. Distance is not an obstacle: the process is structured to work efficiently regardless of location, with regular checkpoints throughout the project."
+      },
+      "q12": {
+        "question": "Do you offer packages or only one-off projects?",
+        "answer": "Both. For a one-off project (showcase site, landing page), I work on a fixed quote defined upfront. For ongoing support, I offer monthly maintenance packages covering updates, SEO optimisations and technical support. We define the right formula together during the free initial call."
       }
     },
     "returnCTA": "Contact me",

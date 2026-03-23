@@ -70,7 +70,7 @@ function FAQItem({
 export default function FAQContent() {
   const t = useTranslations("faq");
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6"];
+  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12"];
 
   return (
     <main className="min-h-[100dvh] bg-[#FAF8F5] dark:bg-[#1A1816] text-[#2D2926] dark:text-[#FAF8F5] selection:bg-[#B34B44]/20 selection:text-[#B34B44] font-sans pb-32">

@@ -210,27 +210,51 @@
     "items": {
       "q1": {
         "question": "Pourquoi choisir un freelance plutôt qu'une agence ?",
-        "answer": "La réactivité et le prix. En travaillant avec moi, vous avez un interlocuteur unique qui connaît votre projet par cœur. Pas de frais de structure d'agence répercutés sur votre facture, et une communication directe sans intermédiaire."
+        "answer": "Avec un freelance, vous avez un interlocuteur unique qui connaît votre projet du premier échange à la mise en ligne — pas de chef de projet, pas de développeur anonyme. Les tarifs sont généralement 30 à 50 % inférieurs à ceux d'une agence, les délais plus courts, et la communication directe avec la personne qui construit votre site."
       },
       "q2": {
         "question": "Combien coûte la création d'un site web ?",
-        "answer": "Chaque projet est unique, mais je travaille toujours sur la base d'un forfait défini à l'avance. Pas de mauvaise surprise. Un site vitrine professionnel commence généralement autour de 1500€, incluant design, développement et optimisation SEO."
+        "answer": "Le tarif dépend du projet, de sa complexité et des fonctionnalités souhaitées. Je travaille toujours sur la base d'un forfait fixe défini à l'avance, après un premier échange gratuit. Vous connaissez le prix total avant de commencer — sans dépassement possible et sans mauvaise surprise."
       },
       "q3": {
         "question": "Quel est le délai de réalisation ?",
-        "answer": "Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Ces délais incluent les phases de conception, développement, révisions et mise en ligne. Je m'engage sur des dates précises dès le lancement du projet."
+        "answer": "Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Ces délais incluent la conception, le développement, les révisions et la mise en ligne. Des dates précises sont fixées dès le lancement du projet — pas de 'bientôt' vague."
       },
       "q4": {
         "question": "Proposez-vous un service de maintenance après le lancement ?",
-        "answer": "Oui. Après la livraison, je propose un accompagnement pour les mises à jour de contenu, les ajustements techniques et l'optimisation continue des performances. La maintenance est optionnelle et peut être souscrite sous forme de forfait mensuel adapté à vos besoins."
+        "answer": "Oui. Après la livraison, je propose des forfaits de maintenance mensuelle incluant mises à jour de contenu, ajustements techniques et optimisation continue des performances SEO. La maintenance est optionnelle. Elle assure que votre site reste rapide, sécurisé et bien référencé sur la durée."
       },
       "q5": {
         "question": "Mon site sera-t-il optimisé pour Google ?",
-        "answer": "Absolument. Chaque site est construit avec les meilleures pratiques SEO : structure HTML sémantique, métadonnées optimisées, performances maximales (Core Web Vitals), compatibilité mobile parfaite et données structurées. Votre site est conçu pour être visible sur Google et les moteurs de recherche IA."
+        "answer": "Oui. Chaque site est construit selon les meilleures pratiques SEO : HTML sémantique, métadonnées optimisées, score Core Web Vitals supérieur à 90, compatibilité mobile parfaite et données structurées Schema.org. Le site est également configuré pour être cité par les moteurs de recherche IA comme ChatGPT et Google AI Overviews."
       },
       "q6": {
         "question": "Comment se déroule la collaboration ?",
-        "answer": "Le processus est simple : un premier échange gratuit pour comprendre vos besoins, puis une proposition détaillée avec maquettes. Après validation, je développe le site avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
+        "answer": "En trois étapes : un premier échange gratuit pour comprendre vos besoins et objectifs, une proposition détaillée avec maquettes après validation du devis, puis le développement avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
+      },
+      "q7": {
+        "question": "Mon site peut-il apparaître sur ChatGPT et les moteurs de recherche IA ?",
+        "answer": "Oui, et c'est un avantage clé depuis 2024. ChatGPT, Google AI Overviews et Gemini citent directement des sites dans leurs réponses. Chaque site que je développe intègre les optimisations nécessaires : données structurées Schema.org, fichier llms.txt pour les robots IA, et contenu structuré pour l'extraction automatique. Vos clients vous trouvent peu importe l'outil qu'ils utilisent."
+      },
+      "q8": {
+        "question": "Vaut-il mieux un site WordPress ou un site développé sur mesure ?",
+        "answer": "WordPress convient aux blogs simples ou aux très petits budgets. Pour un site vitrine professionnel, un développement sur mesure avec Next.js est supérieur sur tous les points : vitesse (score Lighthouse 95+), sécurité sans plugins vulnérables, SEO technique avancé et personnalisation totale. Le coût est comparable mais les performances et la durabilité sont incomparables."
+      },
+      "q9": {
+        "question": "Comment savoir si mon site actuel a besoin d'être refait ?",
+        "answer": "Voici les signaux d'alarme concrets : score de vitesse Google PageSpeed sous 70, site non adapté aux mobiles, aucune mise à jour depuis plus de 2 ans, aucun client ne vous contacte via le site, ou il est difficile à modifier. Si vous répondez oui à au moins deux de ces points, une refonte vous apporterait un retour sur investissement rapide."
+      },
+      "q10": {
+        "question": "Pourquoi mon site n'apparaît-il pas sur Google ?",
+        "answer": "Les causes les plus fréquentes sont : un site trop lent (Core Web Vitals insuffisants), un contenu non indexé par Google, des mots-clés absents des balises title et description, aucun lien entrant (backlinks), ou un problème technique de crawlabilité. Un audit rapide lors du premier échange gratuit permet d'identifier la cause exacte et de définir le plan d'action."
+      },
+      "q11": {
+        "question": "Travaillez-vous uniquement à Nivelles ou dans toute la Belgique ?",
+        "answer": "Je travaille avec des clients dans toute la Belgique — Bruxelles, Liège, Namur, Charleroi, Mons, Louvain-la-Neuve et au-delà. La distance n'est pas un obstacle : le processus est structuré pour fonctionner efficacement peu importe la localisation, avec des points d'étape réguliers tout au long du projet."
+      },
+      "q12": {
+        "question": "Proposez-vous des forfaits ou uniquement des projets ponctuels ?",
+        "answer": "Les deux. Pour un projet ponctuel (site vitrine, landing page), je travaille sur devis fixe défini à l'avance. Pour un accompagnement continu, je propose des forfaits de maintenance mensuelle incluant mises à jour, optimisations SEO et support technique. On définit ensemble la formule la plus adaptée lors du premier échange gratuit."
       }
     },
     "returnCTA": "Contactez-moi",

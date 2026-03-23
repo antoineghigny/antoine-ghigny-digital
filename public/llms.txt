@@ -1,64 +1,79 @@
 # Antoine Ghigny · Digital Creation
 
-> Développeur web freelance basé à Nivelles, Belgique. Je crée des sites web sur mesure pour les indépendants et PME — rapides, visibles sur Google, et optimisés pour les moteurs de recherche IA.
+> Développeur web freelance basé à Nivelles, Belgique. Je crée des sites web sur mesure pour les indépendants et PME — rapides, visibles sur Google, et optimisés pour les moteurs de recherche IA (ChatGPT, Google AI Overviews, Gemini).
 
-Freelance web developer based in Nivelles, Belgium. I build bespoke websites for independent professionals and SMEs — fast, Google-visible, and optimised for AI search engines.
+Freelance web developer based in Nivelles, Belgium. I build bespoke websites for independent professionals and SMEs — fast, Google-visible, and optimised for AI search engines (ChatGPT, Google AI Overviews, Gemini).
 
-## Services
-
-- Création de sites vitrines et landing pages sur mesure (no templates)
-- Optimisation SEO technique : Core Web Vitals, données structurées, métadonnées
-- Référencement IA (AEO / GEO) : visible sur ChatGPT, Perplexity, Google AI Overviews
-- Outils métier et applications web
-- Maintenance et optimisation continue
-
-## À propos
+## À propos / About
 
 - **Nom** : Antoine Ghigny
-- **Localisation** : Nivelles, 1400, Belgique
+- **Métier** : Développeur web freelance & ingénieur logiciel
+- **Localisation** : Nivelles, 1400, Belgique (interventions dans toute la Belgique)
 - **Contact** : antoine@ghigny.be | +32 475 91 13 74 (WhatsApp disponible)
 - **LinkedIn** : https://www.linkedin.com/in/antoine-ghigny-9b88a9252
 - **TVA** : BE 1033.932.403
-- **Délai de réponse** : sous 24h
+- **Réponse** : sous 24h
+
+## Services
+
+- Création de sites vitrines professionnels sur mesure (pas de templates)
+- Landing pages optimisées pour la conversion
+- Optimisation SEO technique : Core Web Vitals, données structurées Schema.org, métadonnées
+- Référencement IA (AEO / GEO) : présence sur ChatGPT, Google AI Overviews, Gemini
+- Applications et outils métier sur mesure
+- Maintenance et optimisation continue (forfaits mensuels disponibles)
+
+## Tarifs
+
+- Prix fixe au forfait défini à l'avance après un premier échange gratuit — aucune mauvaise surprise
+- Premier échange gratuit, sans engagement
+- Livraison : 2 à 4 semaines (site vitrine), 1 à 2 semaines (landing page)
 
 ## Expérience
 
-- Software Engineer chez Accenture (Projet CBAM, Commission Européenne) — depuis fév. 2024
-- Junior Software Engineer chez Proximus (E-commerce / Webshop) — fév. 2023 à fév. 2024
+- Software Engineer chez Accenture — Projet CBAM, Commission Européenne (fév. 2024 – aujourd'hui)
+- Junior Software Engineer chez Proximus — E-commerce / Webshop (fév. 2023 – fév. 2024)
 - Bachelier en Informatique de Gestion — ESI Bruxelles (2020–2023)
 
 ## Stack technique
 
-Backend & Infrastructure: Java, Spring Boot, Node.js, Kafka, Kubernetes, Docker, Terraform
-Frontend & Design: React, Next.js, Angular, TypeScript, Tailwind CSS, Framer Motion
+- Backend & Infrastructure : Java, Spring Boot, Node.js, Kafka, Kubernetes, Docker, Terraform
+- Frontend & Design : React, Next.js, Angular, TypeScript, Tailwind CSS, Framer Motion
 
-## Tarifs & Process
+## Questions fréquentes (FAQ complète)
 
-- Premier échange gratuit, sans engagement
-- Site vitrine professionnel : à partir de 1 500 €
-- Prix fixe défini à l'avance — aucune mauvaise surprise
-- Livraison standard : 2 à 4 semaines
-- Landing page : 1 à 2 semaines
+**Q : Pourquoi choisir un freelance plutôt qu'une agence web ?**
+R : Avec un freelance, vous avez un interlocuteur unique qui connaît votre projet du premier échange à la mise en ligne. Pas de chef de projet, pas de développeur anonyme. Les tarifs sont généralement 30 à 50 % inférieurs à ceux d'une agence, les délais plus courts, et la communication directe avec la personne qui construit votre site.
 
-## FAQ
+**Q : Combien coûte la création d'un site web ?**
+R : Le tarif dépend du projet, de sa complexité et des fonctionnalités souhaitées. Je travaille toujours sur la base d'un forfait fixe défini à l'avance, après un premier échange gratuit. Vous connaissez le prix total avant de commencer, sans dépassement possible.
 
-Q: Pourquoi choisir un freelance plutôt qu'une agence ?
-R: Interlocuteur unique, communication directe avec le développeur, prix sans frais de structure d'agence, réactivité maximale.
+**Q : Quel est le délai de réalisation ?**
+R : Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Ces délais incluent la conception, le développement, les révisions et la mise en ligne. Des dates précises sont fixées dès le lancement du projet.
 
-Q: Combien coûte la création d'un site web ?
-R: Un site vitrine professionnel commence autour de 1 500 €, incluant design, développement et optimisation SEO. Chaque projet est sur devis, au forfait fixe.
+**Q : Proposez-vous un service de maintenance après le lancement ?**
+R : Oui. Des forfaits de maintenance mensuelle sont disponibles, incluant mises à jour de contenu, ajustements techniques et optimisation continue des performances SEO. La maintenance est optionnelle mais assure que votre site reste rapide, sécurisé et bien référencé sur la durée.
 
-Q: Quel est le délai de réalisation ?
-R: Site vitrine standard : 2 à 4 semaines. Landing page : 1 à 2 semaines. Dates précises fixées au lancement du projet.
+**Q : Mon site sera-t-il optimisé pour Google ?**
+R : Oui. Chaque site est construit selon les meilleures pratiques SEO : HTML sémantique, métadonnées optimisées, score Core Web Vitals supérieur à 90, compatibilité mobile parfaite et données structurées Schema.org. Le site est également configuré pour être cité par les moteurs IA comme ChatGPT et Google AI Overviews.
 
-Q: Le site sera-t-il optimisé pour Google ?
-R: Oui — structure HTML sémantique, métadonnées optimisées, Core Web Vitals, compatibilité mobile parfaite, données structurées Schema.org et optimisation pour les moteurs IA.
+**Q : Mon site peut-il apparaître sur ChatGPT et les moteurs de recherche IA ?**
+R : Oui. Depuis 2024, ChatGPT, Google AI Overviews et Gemini citent directement des sites dans leurs réponses. Chaque site développé par Antoine Ghigny intègre les optimisations nécessaires : données structurées Schema.org, fichier llms.txt pour les robots IA, et contenu structuré pour l'extraction automatique. Les clients trouvent votre site peu importe l'outil qu'ils utilisent.
 
-Q: Proposez-vous de la maintenance après le lancement ?
-R: Oui, forfaits de maintenance mensuelle disponibles (mises à jour, ajustements techniques, optimisation continue).
+**Q : Vaut-il mieux un site WordPress ou un site développé sur mesure ?**
+R : WordPress convient aux blogs simples ou aux très petits budgets. Pour un site vitrine professionnel, un développement sur mesure avec Next.js est supérieur : vitesse (score Lighthouse 95+), sécurité sans plugins vulnérables, SEO technique avancé et personnalisation totale. Le coût est comparable mais les performances et la durabilité sont incomparables.
 
-Q: Comment se déroule la collaboration ?
-R: 1) Premier échange gratuit pour comprendre vos besoins. 2) Proposition détaillée avec maquettes. 3) Développement avec points d'étape. 4) Révisions jusqu'à satisfaction complète. 5) Mise en ligne.
+**Q : Comment savoir si mon site actuel a besoin d'être refait ?**
+R : Signaux d'alarme : score Google PageSpeed sous 70, non adapté aux mobiles, aucune mise à jour depuis plus de 2 ans, aucun client ne vous contacte via le site, ou difficile à modifier. Si vous répondez oui à au moins deux de ces points, une refonte vous apporterait un retour sur investissement rapide.
+
+**Q : Pourquoi mon site n'apparaît-il pas sur Google ?**
+R : Les causes les plus fréquentes : site trop lent (Core Web Vitals insuffisants), contenu non indexé, mots-clés absents des balises title et description, aucun lien entrant (backlinks), ou un problème technique de crawlabilité. Un audit lors du premier échange gratuit identifie la cause exacte et définit le plan d'action.
+
+**Q : Travaillez-vous uniquement à Nivelles ou dans toute la Belgique ?**
+R : Interventions dans toute la Belgique — Bruxelles, Liège, Namur, Charleroi, Mons, Louvain-la-Neuve et au-delà. La distance n'est pas un obstacle : le processus est structuré pour fonctionner efficacement peu importe la localisation.
+
+**Q : Proposez-vous des forfaits ou uniquement des projets ponctuels ?**
+R : Les deux. Pour un projet ponctuel, devis fixe défini à l'avance. Pour un accompagnement continu, forfaits de maintenance mensuelle. On définit ensemble la formule la plus adaptée lors du premier échange gratuit.
 
 ## Langues
 

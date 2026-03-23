@@ -31,7 +31,7 @@ export default async function FAQPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "faq" });
-  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6"] as const;
+  const faqKeys = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12"] as const;
 
   const faqSchema = {
     "@context": "https://schema.org",
