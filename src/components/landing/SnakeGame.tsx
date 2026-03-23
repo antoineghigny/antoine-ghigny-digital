@@ -35,7 +35,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
   const directionRef = useRef<Point>({ x: 0, y: -1 });
   const nextDirectionRef = useRef<Point>({ x: 0, y: -1 });
   const lastRenderTimeRef = useRef<number>(0);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(undefined);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
   const generateFood = useCallback((snake: Point[]): Point => {

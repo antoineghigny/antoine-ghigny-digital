@@ -272,7 +272,7 @@ export default function DinoGame({ className = "" }: { className?: string }) {
   }, [seedWorld]);
 
   /* ── game loop ─────────────────────────────────────────────── */
-  const loopRef = useRef<(now: number) => void>();
+  const loopRef = useRef<(now: number) => void>(undefined);
   loopRef.current = (now: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;

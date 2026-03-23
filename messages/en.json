@@ -4,15 +4,15 @@
     "description": "Bespoke website and tech solutions for freelancers and SMEs. Based in Nivelles, Belgium."
   },
   "hero": {
-    "availability": "Available for new projects",
-    "title_part1": "Bespoke sites & tools.",
-    "title_part2": "Finally, results.",
-    "description": "From an optimized professional showcase to a personalized application. I develop the solution you need, without complexity.",
-    "tech_argument": "Speed: +20% potential conversions. Savings: ~€600/year vs agency fees.",
-    "cta": "Entrust me with a project",
+    "availability": "Available now",
+    "title_part1": "Your clients are searching.",
+    "title_part2": "Help them find you.",
+    "description": "I create your bespoke website. Fast, visible on Google, and designed so your future clients find and contact you.",
+    "cta": "Let's talk about my project",
+    "cta_secondary": "or discover how it works >",
     "trust": {
       "satisfied": "Satisfied or reworked",
-      "fixed_price": "Fixed price",
+      "fixed_price": "Fixed price, no surprises",
       "response_time": "Reply within 24h"
     },
     "dashboard": {
@@ -25,32 +25,32 @@
   "artisan": {
     "badge": "The Digital Craftsman",
     "experience_at": "Experience at",
-    "title": "One dedicated expert for your project.",
-    "content": "One expert, zero intermediaries. I translate your business needs into high-performance tech tools with an agility that traditional agencies can't match. I listen, I simplify, and I build: you keep full control of your vision, while I ensure it's technically flawless.",
+    "title": "Behind every project, there's me.",
+    "content": "One dedicated expert, zero intermediaries. From your website to a bespoke business tool, I develop what you need. More agile than an agency, more accessible than a large firm. I listen, I simplify, I build.",
     "experience": "Software engineering experience",
     "location": "Based in Nivelles, Belgium"
   },
   "whyMe": {
-    "badge": "Why work with me",
-    "title_part1": "Your site should work",
-    "title_part2": "for you",
-    "title_part3": ", not the other way around.",
+    "badge": "What it changes for you",
+    "title_part1": "Your site should bring you",
+    "title_part2": "customers",
+    "title_part3": ", not worries.",
     "bento": {
       "professionalism": {
-        "label": "Immediate Credibility",
-        "title": "A site that reassures your clients and reflects your expertise. <highlight>Stop letting</highlight> a poor image lose you contracts."
+        "label": "First Impression",
+        "title": "A visitor judges your site in <highlight>3 seconds</highlight>. Better make them want to call you."
       },
       "trust": {
-        "label": "Save Time",
-        "title": "Automate your repetitive tasks with <highlight>bespoke tools</highlight>. Focus on your business, I'll take care of optimizing your daily life."
+        "label": "One dedicated contact",
+        "title": "No salespeople, no project managers, no back-and-forth. You speak directly to <highlight>the one building</highlight> your site."
       },
       "performance": {
-        "label": "Zero Intermediaries",
-        "title": "A single <highlight>agile expert</highlight> for fast solutions, without jargon or time wasted. The responsiveness of a partner who understands your business."
+        "label": "Visible on Google",
+        "title": "First on Google, first in your clients' minds. They <highlight>find you</highlight> before your competitors."
       },
       "design": {
-        "label": "Digital Craftsmanship",
-        "title": "Every detail is cared for to guarantee <highlight>performance and aesthetics</highlight>. Bespoke support, far from industrial standards."
+        "label": "Made for you",
+        "title": "No templates. A site that looks like you and <highlight>sets you apart</highlight> from the competition."
       }
     },
     "mockup": {
@@ -95,6 +95,23 @@
       }
     }
   },
+  "process": {
+    "badge": "How it works",
+    "title_part1": "From first chat",
+    "title_part2": "to going live.",
+    "step1_number": "01",
+    "step1_label": "Let's talk",
+    "step1_desc": "You explain your business and your needs. Free, no obligation.",
+    "step2_number": "02",
+    "step2_label": "I build your site",
+    "step2_desc": "Design, content, SEO. You validate every step.",
+    "step3_number": "03",
+    "step3_label": "You get customers",
+    "step3_desc": "Your site is live. Visible on Google. Your clients find you.",
+    "marker1": "Free initial consultation",
+    "marker2": "Delivered in 2 to 4 weeks",
+    "marker3": "Post-launch support"
+  },
   "games": {
     "dino": {
       "title": "404 — Page not found",
@@ -120,12 +137,12 @@
     }
   },
   "contact": {
-    "badge": "First step",
-    "title": "Let's talk about your project.",
-    "description": "Briefly describe your project. I'll get back to you quickly to see how I can help.",
+    "badge": "Next step",
+    "title": "Ready to be found?",
+    "description": "Describe your project in 2 lines. I'll get back to you personally within 24h.",
     "cta_mail": "Send me an email",
     "cta_whatsapp": "Chat on WhatsApp",
-    "status": "Reply within 24h — Available this week",
+    "status": "Antoine replies within 24h — Available this week",
     "inquiry_label": "Project Inquiry",
     "email": "antoine@ghigny.be",
     "phone": "+32 475 91 13 74",

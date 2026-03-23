@@ -17,7 +17,6 @@ import {
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
@@ -315,16 +314,9 @@ export default function HeroAndWhy() {
                 <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
+                </m.div>
 
-                <div className="flex items-center gap-3 py-1 px-4 bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border border-[#B34B44]/10 rounded-xl w-fit">
-                  <Lightning size={16} weight="fill" className="text-[#B34B44]" />
-                  <p className="text-sm font-bold text-[#B34B44] tracking-tight">
-                    {t("tech_argument")}
-                  </p>
-                </div>
-              </m.div>
-
-              <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
+                <m.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center gap-6">
                 <m.a
                   href="#contact"
                   whileHover="hover"
@@ -334,8 +326,14 @@ export default function HeroAndWhy() {
                   <span>{t("cta")}</span>
                   <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </m.a>
-              </m.div>
 
+                <m.a
+                  href="#process"
+                  className="text-stone-500 dark:text-stone-400 hover:text-[#B34B44] dark:hover:text-[#B34B44] transition-colors font-medium text-sm md:text-base group"
+                >
+                  {t("cta_secondary")}
+                </m.a>
+                </m.div>
               {/* Mobile Mockup Display */}
               <m.div
                 variants={fadeInUp}

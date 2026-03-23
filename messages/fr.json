@@ -4,15 +4,15 @@
     "description": "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
   },
   "hero": {
-    "availability": "Disponible pour nouveaux projets",
-    "title_part1": "Sites & outils sur mesure.",
-    "title_part2": "Enfin du résultat.",
-    "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
-    "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
-    "cta": "Me confier un projet",
+    "availability": "Disponible maintenant",
+    "title_part1": "Vos clients vous cherchent.",
+    "title_part2": "Aidez-les à vous trouver.",
+    "description": "Je crée votre site sur mesure. Rapide, visible sur Google et conçu pour que vos futurs clients vous trouvent et vous contactent.",
+    "cta": "Discutons de mon projet",
+    "cta_secondary": "ou découvrez comment ça marche >",
     "trust": {
       "satisfied": "Satisfait ou retravaillé",
-      "fixed_price": "Prix fixe",
+      "fixed_price": "Prix fixe, sans surprise",
       "response_time": "Réponse sous 24h"
     },
     "dashboard": {
@@ -25,32 +25,32 @@
   "artisan": {
     "badge": "L'Artisan Numérique",
     "experience_at": "Expérience chez",
-    "title": "Un interlocuteur unique pour vos projets.",
-    "content": "Un expert, zéro intermédiaire. Je traduis vos besoins business en outils technologiques performants avec une agilité que les agences ne peuvent pas offrir. J'écoute, je simplifie et je construis : vous restez maître de votre vision, je m'occupe de la rendre techniquement impeccable.",
+    "title": "Derrière chaque projet, il y a moi.",
+    "content": "Un seul interlocuteur, zéro intermédiaire. De votre site web à un outil métier sur mesure, je développe ce dont vous avez besoin. Plus agile qu'une agence, plus accessible qu'un grand cabinet. J'écoute, je simplifie, je construis.",
     "experience": "Expérience en ingénierie logicielle",
     "location": "Basé à Nivelles, Belgique"
   },
   "whyMe": {
-    "badge": "Pourquoi faire appel à moi",
-    "title_part1": "Votre site devrait travailler",
-    "title_part2": "pour vous",
-    "title_part3": ", pas l'inverse.",
+    "badge": "Ce que ça change pour vous",
+    "title_part1": "Votre site devrait vous rapporter",
+    "title_part2": "des clients",
+    "title_part3": ", pas des soucis.",
     "bento": {
       "professionalism": {
-        "label": "Crédibilité Immédiate",
-        "title": "Un site qui rassure vos clients et reflète votre expertise. <highlight>Ne laissez plus</highlight> une mauvaise image vous faire perdre des contrats."
+        "label": "Première Impression",
+        "title": "Un visiteur juge votre site en <highlight>3 secondes</highlight>. Autant que ça donne envie de vous appeler."
       },
       "trust": {
-        "label": "Gagnez du temps",
-        "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
+        "label": "Un seul contact",
+        "title": "Pas de commercial, pas de chef de projet, pas de va-et-vient. Vous parlez directement à <highlight>celui qui construit</highlight> votre site."
       },
       "performance": {
-        "label": "Zéro intermédiaire",
-        "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
+        "label": "Visible sur Google",
+        "title": "Premier sur Google, premier dans la tête de vos clients. Ils vous <highlight>trouvent</highlight> avant vos concurrents."
       },
       "design": {
-        "label": "L'artisanat numérique",
-        "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
+        "label": "Fait pour vous",
+        "title": "Pas de template. Un site qui vous ressemble et qui <highlight>vous distingue</highlight> de la concurrence."
       }
     },
     "mockup": {
@@ -95,6 +95,23 @@
       }
     }
   },
+  "process": {
+    "badge": "Comment ça marche",
+    "title_part1": "Du premier échange",
+    "title_part2": "à la mise en ligne.",
+    "step1_number": "01",
+    "step1_label": "On en parle",
+    "step1_desc": "Vous m'expliquez votre activité et vos besoins. Gratuit, sans engagement.",
+    "step2_number": "02",
+    "step2_label": "Je crée votre site",
+    "step2_desc": "Design, contenu, référencement. Vous validez chaque étape.",
+    "step3_number": "03",
+    "step3_label": "Vous recevez des clients",
+    "step3_desc": "Votre site est en ligne. Visible sur Google. Vos clients vous trouvent.",
+    "marker1": "Premier échange gratuit",
+    "marker2": "Livré en 2 à 4 semaines",
+    "marker3": "Accompagnement après mise en ligne"
+  },
   "games": {
     "dino": {
       "title": "404 — Page introuvable",
@@ -120,12 +137,12 @@
     }
   },
   "contact": {
-    "badge": "Premier pas",
-    "title": "Parlons de votre projet.",
-    "description": "Expliquez-moi votre projet en quelques mots. Je vous recontacte rapidement pour voir comment je peux vous aider.",
+    "badge": "Prochain pas",
+    "title": "Prêt à être visible ?",
+    "description": "Décrivez votre projet en 2 lignes. Je vous réponds personnellement sous 24h.",
     "cta_mail": "M'envoyer un mail",
     "cta_whatsapp": "Discuter sur WhatsApp",
-    "status": "Réponse sous 24h — Disponible cette semaine",
+    "status": "Antoine répond sous 24h — Disponible cette semaine",
     "inquiry_label": "Demande de projet",
     "email": "antoine@ghigny.be",
     "phone": "+32 475 91 13 74",
