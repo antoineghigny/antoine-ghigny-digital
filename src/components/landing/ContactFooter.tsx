@@ -106,11 +106,11 @@ export default function ContactFooter() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
             <div className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo-transparent.png"
                 alt="Antoine Ghigny Digital"
                 width={28}
                 height={28}
-                className="rounded-md opacity-80"
+                className="opacity-60"
               />
               <p className="text-xs text-[#5C5652] dark:text-[#A8A29E] tracking-widest font-medium uppercase opacity-80">
                 {tf("copyright", { year: currentYear })}

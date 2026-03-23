@@ -273,7 +273,38 @@ export default function HeroAndWhy() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-[100dvh] flex items-center relative py-12 lg:py-0 overflow-hidden">
+      <section className="min-h-[100dvh] flex flex-col relative overflow-hidden">
+        {/* Navbar */}
+        <m.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.21, 0.45, 0.32, 0.9] }}
+          className="relative z-10 w-full pt-8 md:pt-10 pb-2"
+        >
+          <div className="max-w-[1400px] mx-auto px-4 md:px-12 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo-transparent.png"
+                alt="Antoine Ghigny Digital"
+                width={36}
+                height={36}
+                className="shrink-0"
+                priority
+              />
+              <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
+                {t("availability")}
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <LocaleSwitcher />
+              <ThemeToggle />
+            </div>
+          </div>
+        </m.div>
+
+        {/* Hero content */}
+        <div className="flex-1 flex items-center py-8 md:py-12">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
             <m.div
@@ -297,27 +328,6 @@ export default function HeroAndWhy() {
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
               <m.div variants={fadeInUp} className="space-y-6">
-                <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-3">
-                    <Image
-                      src="/logo.png"
-                      alt="Antoine Ghigny Digital"
-                      width={36}
-                      height={36}
-                      className="rounded-lg shrink-0"
-                      priority
-                    />
-                    <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
-                      {t("availability")}
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <LocaleSwitcher />
-                    <ThemeToggle />
-                  </div>
-                </div>
-
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
                   {t("title_part1")}<br />
                   <span className="text-[#B34B44]">{t("title_part2")}</span>
@@ -376,6 +386,7 @@ export default function HeroAndWhy() {
               </m.div>
             </m.div>
           </div>
+        </div>
         </div>
       </section>
     </>
