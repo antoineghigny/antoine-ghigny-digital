@@ -326,13 +326,6 @@ export default function HeroAndWhy() {
                   <span>{t("cta")}</span>
                   <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </m.a>
-
-                <m.a
-                  href="#process"
-                  className="text-stone-500 dark:text-stone-400 hover:text-[#B34B44] dark:hover:text-[#B34B44] transition-colors font-medium text-sm md:text-base group"
-                >
-                  {t("cta_secondary")}
-                </m.a>
                 </m.div>
               {/* Mobile Mockup Display */}
               <m.div

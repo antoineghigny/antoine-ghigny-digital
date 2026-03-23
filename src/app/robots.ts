@@ -8,10 +8,39 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
       {
-        // Optimisation spécifique pour les IA (ChatGPT, etc.)
-        userAgent: ['GPTBot', 'ChatGPT-User', 'CCBot'],
+        // AI search engines & LLM crawlers — explicit opt-in for indexing and citation
+        userAgent: [
+          // OpenAI / ChatGPT
+          'GPTBot',
+          'ChatGPT-User',
+          'OAI-SearchBot',
+          // Anthropic / Claude
+          'ClaudeBot',
+          'anthropic-ai',
+          'Claude-Web',
+          // Google AI
+          'Google-Extended',
+          'Googlebot',
+          // Perplexity
+          'PerplexityBot',
+          // Microsoft / Bing AI
+          'Bingbot',
+          // Apple / Siri
+          'Applebot',
+          'Applebot-Extended',
+          // Meta AI
+          'FacebookBot',
+          // Common Crawl (training datasets)
+          'CCBot',
+          // Cohere
+          'cohere-ai',
+          // You.com
+          'YouBot',
+          // Mistral
+          'MistralBot',
+        ],
         allow: '/',
-      }
+      },
     ],
     sitemap: 'https://antoine-ghigny-digital.vercel.app/sitemap.xml',
   };

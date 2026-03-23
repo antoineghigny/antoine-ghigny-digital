@@ -17,7 +17,7 @@ export default function WhyMeSection() {
   const t = useTranslations("whyMe");
   
   return (
-    <section className="bg-[#FAF8F5] dark:bg-[#1A1816] pt-12 md:pt-20 pb-24 md:pb-40 overflow-hidden">
+    <section className="bg-[#FAF8F5] dark:bg-[#1A1816] py-12 md:py-20 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 md:px-12">
         <m.div
           initial="initial"

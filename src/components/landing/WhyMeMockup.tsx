@@ -43,7 +43,7 @@ const ALL_TASKS: TaskDef[] = [
   { key: "booking", icon: CalendarCheck, statusType: "check" },
 ];
 
-const INITIAL_KEYS: TaskKey[] = ["review", "seo", "client"];
+const INITIAL_KEYS: TaskKey[] = ["aisearch", "seo", "client"];
 const SWIPE_THRESHOLD = 80;
 const MAX_VISIBLE = 3;
 

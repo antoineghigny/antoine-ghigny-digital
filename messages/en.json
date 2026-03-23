@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Bespoke Web Design & Tech Solutions",
-    "description": "Bespoke website and tech solutions for freelancers and SMEs. Based in Nivelles, Belgium."
+    "title": "Antoine Ghigny · Freelance Web Developer | Nivelles, Belgium",
+    "description": "Freelance web developer in Nivelles, Belgium. Bespoke websites for freelancers and SMEs — fast, Google-visible, and cited by AI search engines. Free quote."
   },
   "hero": {
     "availability": "Available now",
@@ -57,28 +57,28 @@
       "url": "your-business.com",
       "tasks": {
         "review": {
-          "title": "New 5-star Google review",
-          "time": "Your rating is now 4.9"
+          "title": "5-star Google review received",
+          "time": "4.9 rating · 47 reviews · Max credibility"
         },
         "seo": {
-          "title": "Page 1 on Google",
-          "time": "\"Plumber Nivelles\" ranked #3"
+          "title": "Ranked #1 on Google",
+          "time": "\"Plumber Nivelles\" — above all competitors"
         },
         "client": {
           "title": "New client from your website",
-          "time": "\"I found you on Google\""
+          "time": "\"Found you on Google this morning\""
         },
         "quote": {
-          "title": "Quote request received",
-          "time": "Via your contact form"
+          "title": "Quote request at 11:47 PM",
+          "time": "Your site works while you sleep"
         },
         "aisearch": {
-          "title": "Mentioned by ChatGPT",
-          "time": "\"Recommended in your area\""
+          "title": "Recommended by ChatGPT & Google AI",
+          "time": "\"Best tradesperson in Nivelles?\" → Your name"
         },
         "booking": {
           "title": "Appointment booked online",
-          "time": "Monday March 24 at 10:00 AM"
+          "time": "No calls, no back-and-forth emails"
         }
       }
     },
@@ -204,16 +204,16 @@
     "title": "Frequently Asked Questions",
     "label": "FAQ",
     "backToHome": "Back to home",
-    "description": "Find answers to the most common questions about my services, workflow and pricing.",
+    "description": "Pricing, timelines, SEO, maintenance: all the answers to common questions about my freelance web development services in Belgium.",
     "sectionLabel": "Questions",
     "sectionTitle": "What you need to know",
     "items": {
       "q1": {
-        "question": "Why choose a freelancer over an agency",
+        "question": "Why choose a freelancer over an agency?",
         "answer": "Responsiveness and price. By working with me, you have a single point of contact who knows your project by heart. No agency overhead costs passed on to your bill, and direct communication without intermediaries."
       },
       "q2": {
-        "question": "How much does it cost to create a website",
+        "question": "How much does it cost to create a website?",
         "answer": "Every project is unique, but I always work on a fixed-price basis defined in advance. No bad surprises. A professional showcase site usually starts around €1500, including design, development, and SEO optimization."
       },
       "q3": {
@@ -221,7 +221,7 @@
         "answer": "A standard showcase website is delivered within 2 to 4 weeks. A landing page can be ready in 1 to 2 weeks. These timelines include design, development, revisions and deployment phases. I commit to precise dates from the project kickoff."
       },
       "q4": {
-        "question": "Do you offer maintenance after launch",
+        "question": "Do you offer maintenance after launch?",
         "answer": "Yes. After delivery, I provide support for content updates, technical adjustments and ongoing performance optimization. Maintenance is optional and can be subscribed as a monthly package tailored to your needs."
       },
       "q5": {

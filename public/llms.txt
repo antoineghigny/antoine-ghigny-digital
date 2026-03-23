@@ -1,0 +1,67 @@
+# Antoine Ghigny · Digital Creation
+
+> Développeur web freelance basé à Nivelles, Belgique. Je crée des sites web sur mesure pour les indépendants et PME — rapides, visibles sur Google, et optimisés pour les moteurs de recherche IA.
+
+Freelance web developer based in Nivelles, Belgium. I build bespoke websites for independent professionals and SMEs — fast, Google-visible, and optimised for AI search engines.
+
+## Services
+
+- Création de sites vitrines et landing pages sur mesure (no templates)
+- Optimisation SEO technique : Core Web Vitals, données structurées, métadonnées
+- Référencement IA (AEO / GEO) : visible sur ChatGPT, Perplexity, Google AI Overviews
+- Outils métier et applications web
+- Maintenance et optimisation continue
+
+## À propos
+
+- **Nom** : Antoine Ghigny
+- **Localisation** : Nivelles, 1400, Belgique
+- **Contact** : antoine@ghigny.be | +32 475 91 13 74 (WhatsApp disponible)
+- **LinkedIn** : https://www.linkedin.com/in/antoine-ghigny-9b88a9252
+- **TVA** : BE 1033.932.403
+- **Délai de réponse** : sous 24h
+
+## Expérience
+
+- Software Engineer chez Accenture (Projet CBAM, Commission Européenne) — depuis fév. 2024
+- Junior Software Engineer chez Proximus (E-commerce / Webshop) — fév. 2023 à fév. 2024
+- Bachelier en Informatique de Gestion — ESI Bruxelles (2020–2023)
+
+## Stack technique
+
+Backend & Infrastructure: Java, Spring Boot, Node.js, Kafka, Kubernetes, Docker, Terraform
+Frontend & Design: React, Next.js, Angular, TypeScript, Tailwind CSS, Framer Motion
+
+## Tarifs & Process
+
+- Premier échange gratuit, sans engagement
+- Site vitrine professionnel : à partir de 1 500 €
+- Prix fixe défini à l'avance — aucune mauvaise surprise
+- Livraison standard : 2 à 4 semaines
+- Landing page : 1 à 2 semaines
+
+## FAQ
+
+Q: Pourquoi choisir un freelance plutôt qu'une agence ?
+R: Interlocuteur unique, communication directe avec le développeur, prix sans frais de structure d'agence, réactivité maximale.
+
+Q: Combien coûte la création d'un site web ?
+R: Un site vitrine professionnel commence autour de 1 500 €, incluant design, développement et optimisation SEO. Chaque projet est sur devis, au forfait fixe.
+
+Q: Quel est le délai de réalisation ?
+R: Site vitrine standard : 2 à 4 semaines. Landing page : 1 à 2 semaines. Dates précises fixées au lancement du projet.
+
+Q: Le site sera-t-il optimisé pour Google ?
+R: Oui — structure HTML sémantique, métadonnées optimisées, Core Web Vitals, compatibilité mobile parfaite, données structurées Schema.org et optimisation pour les moteurs IA.
+
+Q: Proposez-vous de la maintenance après le lancement ?
+R: Oui, forfaits de maintenance mensuelle disponibles (mises à jour, ajustements techniques, optimisation continue).
+
+Q: Comment se déroule la collaboration ?
+R: 1) Premier échange gratuit pour comprendre vos besoins. 2) Proposition détaillée avec maquettes. 3) Développement avec points d'étape. 4) Révisions jusqu'à satisfaction complète. 5) Mise en ligne.
+
+## Langues
+
+- Français (langue natale)
+- Anglais (professionnel complet)
+- Néerlandais (notions professionnelles)
