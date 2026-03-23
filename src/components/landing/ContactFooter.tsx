@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { WhatsappLogo, Envelope, ChatCircleText } from "@phosphor-icons/react";
 import { analytics } from "@/lib/analytics";
+import Image from "next/image";
 
 const SPRING = { type: "spring" as const, stiffness: 100, damping: 20 };
 
@@ -103,9 +104,18 @@ export default function ContactFooter() {
       <footer className="relative z-50 bg-[#FAF8F5] dark:bg-[#1A1816] py-16 border-t border-[#2D2926]/5 dark:border-white/[0.05]">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4">
-            <p className="text-xs text-[#5C5652] dark:text-[#A8A29E] tracking-widest font-medium uppercase opacity-80">
-              {tf("copyright", { year: currentYear })}
-            </p>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="Antoine Ghigny Digital"
+                width={28}
+                height={28}
+                className="rounded-md opacity-80"
+              />
+              <p className="text-xs text-[#5C5652] dark:text-[#A8A29E] tracking-widest font-medium uppercase opacity-80">
+                {tf("copyright", { year: currentYear })}
+              </p>
+            </div>
             <div className="flex items-center gap-10">
               <Link
                 href="/about"

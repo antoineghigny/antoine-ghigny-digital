@@ -17,6 +17,7 @@ import {
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { analytics } from "@/lib/analytics";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
@@ -296,10 +297,20 @@ export default function HeroAndWhy() {
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
               <m.div variants={fadeInUp} className="space-y-6">
-                <div className="flex items-center justify-between gap-2 md:justify-start md:gap-4">
-                  <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
-                    {t("availability")}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src="/logo.png"
+                      alt="Antoine Ghigny Digital"
+                      width={36}
+                      height={36}
+                      className="rounded-lg shrink-0"
+                      priority
+                    />
+                    <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
+                      {t("availability")}
+                    </div>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <LocaleSwitcher />
