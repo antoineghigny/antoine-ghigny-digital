@@ -55,7 +55,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     setStatus("PLAYING");
   }, [generateFood]);
 
-  const draw = useCallback((time: number, progress: number) => {
+  const draw = useCallback((time: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -88,23 +88,8 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
 
     // Snake
     snakeRef.current.forEach((seg, i) => {
-      let vx = seg.x;
-      let vy = seg.y;
-
-      // Interpolation for smooth motion
-      if (status === "PLAYING") {
-        if (i === 0) {
-          vx += directionRef.current.x * progress;
-          vy += directionRef.current.y * progress;
-        } else {
-          const prev = snakeRef.current[i - 1];
-          // Determine if wrapping occurred logically to prevent visual wrapping glitch
-          if (Math.abs(prev.x - seg.x) <= 1 && Math.abs(prev.y - seg.y) <= 1) {
-            vx += (prev.x - seg.x) * progress;
-            vy += (prev.y - seg.y) * progress;
-          }
-        }
-      }
+      const vx = seg.x;
+      const vy = seg.y;
 
       ctx.fillStyle = i === 0 ? "#B34B44" : "#B34B44EE";
       const p = 1.5;
@@ -113,15 +98,6 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
       const sSize = tile - p * 2;
 
       ctx.save();
-      // Squash & Stretch on head
-      if (i === 0 && status === "PLAYING") {
-        ctx.translate(xPx + sSize / 2, yPx + sSize / 2);
-        const stretch = 1 + Math.sin(progress * Math.PI) * 0.15;
-        const squash = 1 - Math.sin(progress * Math.PI) * 0.05;
-        if (directionRef.current.x !== 0) ctx.scale(stretch, squash);
-        else ctx.scale(squash, stretch);
-        ctx.translate(-(xPx + sSize / 2), -(yPx + sSize / 2));
-      }
 
       ctx.beginPath();
       ctx.roundRect(xPx, yPx, sSize, sSize, 6);
@@ -157,7 +133,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
 
   const update = useCallback((time: number) => {
     if (status !== "PLAYING") {
-      draw(time, 0);
+      draw(time);
       requestRef.current = requestAnimationFrame(update);
       return;
     }
@@ -185,8 +161,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
       snakeRef.current = ns;
     }
 
-    const progress = Math.min(1, Math.max(0, (time - lastRenderTimeRef.current) / currentSpeed));
-    draw(time, progress);
+    draw(time);
     requestRef.current = requestAnimationFrame(update);
   }, [status, draw, generateFood, score]);
 
@@ -261,7 +236,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
       if (size > 0) {
         canvas.width = size;
         canvas.height = size;
-        draw(performance.now(), 0);
+        draw(performance.now());
       }
     };
     const ro = new ResizeObserver(resize);
