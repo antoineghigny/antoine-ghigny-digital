@@ -261,7 +261,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
       if (size > 0) {
         canvas.width = size;
         canvas.height = size;
-        draw();
+        draw(performance.now(), 0);
       }
     };
     const ro = new ResizeObserver(resize);
