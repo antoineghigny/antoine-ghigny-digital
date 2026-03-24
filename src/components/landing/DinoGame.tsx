@@ -442,7 +442,9 @@ export default function DinoGame({ className = "" }: { className?: string }) {
           <m.div
             key="idle"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-[#FAF8F5]/30 dark:bg-[#1A1816]/30 backdrop-blur-[1px] flex items-center justify-center z-20"
+            className="absolute inset-0 bg-[#FAF8F5]/30 dark:bg-[#1A1816]/30 backdrop-blur-[1px] flex items-center justify-center z-20 cursor-pointer"
+            onClick={actionJump}
+            onTouchStart={(e) => { e.preventDefault(); actionJump(); }}
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex gap-2 items-center">
@@ -464,7 +466,9 @@ export default function DinoGame({ className = "" }: { className?: string }) {
           <m.div
             key="over"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-[#FAF8F5]/50 dark:bg-[#1A1816]/50 backdrop-blur-[2px] flex items-center justify-center z-20"
+            className="absolute inset-0 bg-[#FAF8F5]/50 dark:bg-[#1A1816]/50 backdrop-blur-[2px] flex items-center justify-center z-20 cursor-pointer"
+            onClick={actionJump}
+            onTouchStart={(e) => { e.preventDefault(); actionJump(); }}
           >
             <m.div
               initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
