@@ -37,7 +37,7 @@ const FIXED_DT = 1000 / 60;
 const OBS_CFG = {
   cactus_s: { w: 17, h: 35, minGap: 120, minSpeed: 0, multipleSpeed: 4, maxGroup: 3 },
   cactus_l: { w: 25, h: 50, minGap: 120, minSpeed: 0, multipleSpeed: 7, maxGroup: 2 },
-  ptero:    { w: 46, h: 30, minGap: 150, minSpeed: 8.5, multipleSpeed: 999, maxGroup: 1 },
+  ptero: { w: 46, h: 30, minGap: 150, minSpeed: 8.5, multipleSpeed: 999, maxGroup: 1 },
 } as const;
 
 type ObsKind = keyof typeof OBS_CFG;
@@ -47,7 +47,7 @@ interface Obs {
   kind: ObsKind; count: number; gap: number;
 }
 interface Cloud { x: number; y: number; w: number }
-interface Bump  { x: number; w: number }
+interface Bump { x: number; w: number }
 
 interface GameState {
   active: boolean; over: boolean;
@@ -131,33 +131,99 @@ function drawObstacles(ctx: CanvasRenderingContext2D, obstacles: Obs[]) {
 
 function drawDino(ctx: CanvasRenderingContext2D, r: GameState) {
   const duck = r.ducking && !r.jumping;
-  const dY   = duck ? GROUND_Y - DINO_DUCK_H : r.dY;
+  const dW = duck ? DINO_DUCK_W : DINO_W;
+  const dH = duck ? DINO_DUCK_H : DINO_H;
+  const dY = duck ? GROUND_Y - DINO_DUCK_H : r.dY;
+
+  ctx.save();
+
+  // Transform from dino's center for smooth scaling/rotation
+  ctx.translate(DINO_X + dW / 2, dY + dH / 2);
+
+  if (r.jumping) {
+    // Rotation mapping: rotate slightly up when jumping, down when falling
+    ctx.rotate(r.dVel * 0.015);
+    // Squash & Stretch: stretch vertically when moving fast
+    const stretch = 1 + Math.abs(r.dVel) * 0.008;
+    ctx.scale(1 / stretch, stretch);
+  } else if (r.active && !r.over) {
+    // Dynamic bobbing when running
+    const bounce = Math.abs(Math.sin(r.frame * 0.3)) * 2;
+    ctx.translate(0, -bounce);
+    ctx.rotate(Math.sin(r.frame * 0.2) * 0.01);
+  }
+
+  // Revert center offset to use standard local drawing coordinates
+  ctx.translate(-(DINO_X + dW / 2), -(dY + dH / 2));
+
   ctx.fillStyle = "#B34B44";
   if (duck) {
     ctx.beginPath(); ctx.roundRect(DINO_X, dY + 4, DINO_DUCK_W - 10, 18, 6); ctx.fill();
     ctx.beginPath(); ctx.roundRect(DINO_X + DINO_DUCK_W - 18, dY, 22, 14, 4); ctx.fill();
+
+    // Duck Eye
     ctx.fillStyle = "#FAF8F5";
-    ctx.beginPath(); ctx.arc(DINO_X + DINO_DUCK_W - 1, dY + 5, 2, 0, Math.PI * 2); ctx.fill();
+    if (r.over) {
+      ctx.fillRect(DINO_X + DINO_DUCK_W - 3, dY + 4, 3, 3);
+    } else {
+      ctx.beginPath(); ctx.arc(DINO_X + DINO_DUCK_W - 1, dY + 5, 2, 0, Math.PI * 2); ctx.fill();
+    }
+
     ctx.fillStyle = "#B34B44";
     const lf = Math.floor(r.frame / 4) % 2;
-    ctx.fillRect(DINO_X + 6,  dY + 20, 6, lf === 0 ? 5 : 3);
-    ctx.fillRect(DINO_X + 18, dY + 20, 6, lf === 1 ? 5 : 3);
+    ctx.fillRect(DINO_X + 6, dY + 20, 6, (!r.active || lf === 0) ? 5 : 3);
+    ctx.fillRect(DINO_X + 18, dY + 20, 6, (!r.active || lf === 1) ? 5 : 3);
   } else {
-    ctx.beginPath(); ctx.roundRect(DINO_X, dY + 12, 28, 28, 6); ctx.fill();
-    ctx.beginPath(); ctx.roundRect(DINO_X + 12, dY, 30, 20, 5); ctx.fill();
-    ctx.fillStyle = "#FAF8F5";
-    ctx.beginPath(); ctx.arc(DINO_X + 34, dY + 7, 2.5, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = "#B34B44";
-    ctx.beginPath(); ctx.roundRect(DINO_X - 6, dY + 16, 10, 8, 3); ctx.fill();
+    // Dynamic part offsets
+    let headY = dY;
+    let armY = dY + 16;
+    let armR = 0;
+
     if (r.jumping) {
-      ctx.fillRect(DINO_X + 5,  dY + 38, 7, 6);
+      headY += r.dVel < 0 ? -1 : 1.5; // Look up when ascending, down when descending
+      armY += r.dVel < 0 ? 3 : -3;    // Arm drag
+      armR = r.dVel * -0.05;          // Arm swings up on jump
+    } else if (r.active && !r.over) {
+      headY += Math.sin(r.frame * 0.4) * 1.5;
+      armY += Math.cos(r.frame * 0.4) * 1.5;
+      armR = Math.sin(r.frame * 0.4) * 0.1;
+    }
+
+    // Body
+    ctx.beginPath(); ctx.roundRect(DINO_X, dY + 12, 28, 28, 6); ctx.fill();
+
+    // Head With dynamic Y limit
+    ctx.beginPath(); ctx.roundRect(DINO_X + 12, headY, 30, 20, 5); ctx.fill();
+
+    // Eye
+    ctx.fillStyle = "#FAF8F5";
+    if (r.over) {
+      // Dead eye: drawn as a small line
+      ctx.fillRect(DINO_X + 33, headY + 6, 4, 2);
+    } else {
+      ctx.beginPath(); ctx.arc(DINO_X + 34, headY + 7, 2.5, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // Arm
+    ctx.fillStyle = "#B34B44";
+    ctx.save();
+    ctx.translate(DINO_X - 1, armY + 4);
+    ctx.rotate(armR);
+    ctx.beginPath(); ctx.roundRect(-5, -4, 10, 8, 3); ctx.fill();
+    ctx.restore();
+
+    // Legs
+    if (r.jumping) {
+      ctx.fillRect(DINO_X + 5, dY + 38, 7, 6);
       ctx.fillRect(DINO_X + 17, dY + 38, 7, 6);
     } else {
       const lf = Math.floor(r.frame / 4) % 2;
-      ctx.fillRect(DINO_X + 5,  dY + 38, 7, lf === 0 ? 12 : 6);
-      ctx.fillRect(DINO_X + 17, dY + 38, 7, lf === 1 ? 12 : 6);
+      ctx.fillRect(DINO_X + 5, dY + 38, 7, (!r.active || lf === 0) ? 12 : 6);
+      ctx.fillRect(DINO_X + 17, dY + 38, 7, (!r.active || lf === 1) ? 12 : 6);
     }
   }
+
+  ctx.restore();
 }
 
 /* ── Component ────────────────────────────────────────────────── */
@@ -165,10 +231,10 @@ function drawDino(ctx: CanvasRenderingContext2D, r: GameState) {
 export default function DinoGame({ className = "" }: { className?: string }) {
   const t = useTranslations("games.dino");
   const containerRef = useRef<HTMLDivElement>(null);
-  const canvasRef    = useRef<HTMLCanvasElement>(null);
-  const rafRef       = useRef(0);
-  const lastTimeRef  = useRef(0);
-  const accRef       = useRef(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const rafRef = useRef(0);
+  const lastTimeRef = useRef(0);
+  const accRef = useRef(0);
 
   const g = useRef<GameState>({
     active: false, over: false,
@@ -179,9 +245,9 @@ export default function DinoGame({ className = "" }: { className?: string }) {
     scale: 1,
   });
 
-  const [score,     setScore]     = useState(0);
-  const [hiScore,   setHiScore]   = useState(0);
-  const [state,     setState]     = useState<"idle" | "playing" | "over">("idle");
+  const [score, setScore] = useState(0);
+  const [hiScore, setHiScore] = useState(0);
+  const [state, setState] = useState<"idle" | "playing" | "over">("idle");
   const [milestone, setMilestone] = useState(false);
 
   // Load persisted high score
@@ -253,14 +319,14 @@ export default function DinoGame({ className = "" }: { className?: string }) {
   /* ── canvas sizing ─────────────────────────────────────────── */
   useEffect(() => {
     const resize = () => {
-      const canvas    = canvasRef.current;
+      const canvas = canvasRef.current;
       const container = containerRef.current;
       if (!canvas || !container) return;
-      const dpr  = window.devicePixelRatio || 1;
+      const dpr = window.devicePixelRatio || 1;
       const rect = container.getBoundingClientRect();
-      canvas.width  = rect.width  * dpr;
+      canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
-      canvas.style.width  = `${rect.width}px`;
+      canvas.style.width = `${rect.width}px`;
       canvas.style.height = `${rect.height}px`;
       g.current.scale = (rect.width * dpr) / CANVAS_W;
       if (!g.current.jumping) g.current.dY = GROUND_Y - DINO_H;
@@ -280,100 +346,97 @@ export default function DinoGame({ className = "" }: { className?: string }) {
     if (!ctx) return;
     const r = g.current;
 
-    // Fixed timestep accumulator — game runs at 60 ups regardless of refresh rate
+    // Measure exact delta to run smoothly on any display (60Hz, 144Hz, etc.)
     if (lastTimeRef.current === 0) lastTimeRef.current = now;
-    const delta = Math.min(now - lastTimeRef.current, 50); // cap to avoid spiral
+    const delta = Math.min(now - lastTimeRef.current, 50); // cap to avoid spiral if tab is asleep
     lastTimeRef.current = now;
-    accRef.current += delta;
 
-    while (accRef.current >= FIXED_DT) {
-      accRef.current -= FIXED_DT;
+    // timeScale is 1.0 at 60fps
+    const timeScale = delta / FIXED_DT;
 
-      /* ── one fixed update step ──────────────────────────────── */
-      if (r.active && !r.over) {
-        if (r.speed < SPEED_MAX) r.speed += ACCELERATION;
+    if (r.active && !r.over) {
+      if (r.speed < SPEED_MAX) r.speed += ACCELERATION * timeScale;
 
-        r.dist += r.speed * 0.025;
-        const s = Math.floor(r.dist);
-        if (s !== r.lastScore) {
-          r.lastScore = s;
-          setScore(s);
-          if (s > 0 && s % 100 === 0) { setMilestone(true); setTimeout(() => setMilestone(false), 600); }
+      r.dist += r.speed * 0.025 * timeScale;
+      const s = Math.floor(r.dist);
+      if (s !== r.lastScore) {
+        r.lastScore = s;
+        setScore(s);
+        if (s > 0 && s % 100 === 0) { setMilestone(true); setTimeout(() => setMilestone(false), 600); }
+      }
+
+      // Dino physics
+      if (r.jumping) {
+        r.dVel += GRAVITY * timeScale;
+        r.dY += r.dVel * timeScale;
+        if (r.dY >= GROUND_Y - DINO_H) { r.dY = GROUND_Y - DINO_H; r.dVel = 0; r.jumping = false; }
+      }
+      r.frame += timeScale;
+
+      // Scenery scroll
+      for (const c of r.clouds) {
+        c.x -= r.speed * 0.15 * timeScale;
+        if (c.x < -80) {
+          c.x = CANVAS_W + 40 + Math.random() * 80;
+          c.y = GROUND_Y * 0.1 + Math.random() * (GROUND_Y * 0.25);
         }
+      }
+      for (const b of r.bumps) {
+        b.x -= r.speed * timeScale;
+        if (b.x < -30) { b.x = CANVAS_W + 20 + Math.random() * 40; b.w = 10 + Math.random() * 18; }
+      }
 
-        // Dino physics
-        if (r.jumping) {
-          r.dVel += GRAVITY;
-          r.dY   += r.dVel;
-          if (r.dY >= GROUND_Y - DINO_H) { r.dY = GROUND_Y - DINO_H; r.dVel = 0; r.jumping = false; }
-        }
-        r.frame++;
+      // Obstacle spawning (Chromium logic)
+      if (r.frame > CLEAR_FRAMES) {
+        const last = r.obstacles[r.obstacles.length - 1];
+        const canSpawn = !last || (CANVAS_W - (last.x + last.w)) >= last.gap;
+        if (canSpawn) {
+          let kind: ObsKind;
+          const rand = Math.random();
+          if (rand > 0.8 && r.speed >= PTERO_MIN_SPEED) kind = "ptero";
+          else if (rand > 0.45) kind = "cactus_l";
+          else kind = "cactus_s";
 
-        // Scenery scroll
-        for (const c of r.clouds) {
-          c.x -= r.speed * 0.15;
-          if (c.x < -80) {
-            c.x = CANVAS_W + 40 + Math.random() * 80;
-            c.y = GROUND_Y * 0.1 + Math.random() * (GROUND_Y * 0.25);
+          // Prevent too many consecutive duplicates
+          if (kind === r.lastKind && r.lastKindCount >= MAX_OBSTACLE_DUPLICATION) {
+            kind = kind === "cactus_s" ? "cactus_l" : "cactus_s";
           }
-        }
-        for (const b of r.bumps) {
-          b.x -= r.speed;
-          if (b.x < -30) { b.x = CANVAS_W + 20 + Math.random() * 40; b.w = 10 + Math.random() * 18; }
-        }
+          if (kind === r.lastKind) { r.lastKindCount++; } else { r.lastKind = kind; r.lastKindCount = 1; }
 
-        // Obstacle spawning (Chromium logic)
-        if (r.frame > CLEAR_FRAMES) {
-          const last      = r.obstacles[r.obstacles.length - 1];
-          const canSpawn  = !last || (CANVAS_W - (last.x + last.w)) >= last.gap;
-          if (canSpawn) {
-            let kind: ObsKind;
-            const rand = Math.random();
-            if (rand > 0.8 && r.speed >= PTERO_MIN_SPEED) kind = "ptero";
-            else if (rand > 0.45) kind = "cactus_l";
-            else kind = "cactus_s";
-
-            // Prevent too many consecutive duplicates
-            if (kind === r.lastKind && r.lastKindCount >= MAX_OBSTACLE_DUPLICATION) {
-              kind = kind === "cactus_s" ? "cactus_l" : "cactus_s";
-            }
-            if (kind === r.lastKind) { r.lastKindCount++; } else { r.lastKind = kind; r.lastKindCount = 1; }
-
-            const cfg   = OBS_CFG[kind];
-            const count = kind === "ptero" ? 0 : (r.speed > cfg.multipleSpeed ? Math.floor(Math.random() * cfg.maxGroup) + 1 : 1);
-            const w     = kind === "ptero" ? cfg.w : cfg.w * count;
-            const h     = cfg.h;
-            const pteroY = [GROUND_Y - 50, GROUND_Y - 70, GROUND_Y - 90];
-            const y     = kind === "ptero" ? pteroY[Math.floor(Math.random() * 3)] : GROUND_Y - h;
-            const gap   = calcGap(w, r.speed, cfg.minGap);
-            r.obstacles.push({ x: CANVAS_W + 20, y, w, h, kind, count, gap });
-          }
+          const cfg = OBS_CFG[kind];
+          const count = kind === "ptero" ? 0 : (r.speed > cfg.multipleSpeed ? Math.floor(Math.random() * cfg.maxGroup) + 1 : 1);
+          const w = kind === "ptero" ? cfg.w : cfg.w * count;
+          const h = cfg.h;
+          const pteroY = [GROUND_Y - 50, GROUND_Y - 70, GROUND_Y - 90];
+          const y = kind === "ptero" ? pteroY[Math.floor(Math.random() * 3)] : GROUND_Y - h;
+          const gap = calcGap(w, r.speed, cfg.minGap);
+          r.obstacles.push({ x: CANVAS_W + 20, y, w, h, kind, count, gap });
         }
+      }
 
-        // Move obstacles + collision detection
-        const duck = r.ducking && !r.jumping;
-        const dW   = duck ? DINO_DUCK_W : DINO_W;
-        const dH   = duck ? DINO_DUCK_H : DINO_H;
-        const dY   = duck ? GROUND_Y - DINO_DUCK_H : r.dY;
-        const pad  = 6;
-        for (let i = r.obstacles.length - 1; i >= 0; i--) {
-          const o = r.obstacles[i];
-          o.x -= r.speed;
-          if (o.kind === "ptero") o.count = Math.floor(r.dist / 3) % 2;
-          // AABB collision with hitbox padding
-          if (
-            DINO_X + pad < o.x + o.w - pad &&
-            DINO_X + dW - pad > o.x + pad &&
-            dY + pad < o.y + o.h &&
-            dY + dH  > o.y + pad
-          ) {
-            r.over = true; r.active = false;
-            const finalScore = Math.floor(r.dist);
-            if (finalScore > r.hiScore) { r.hiScore = finalScore; setHiScore(finalScore); localStorage.setItem("dino-high-score", String(finalScore)); }
-            setState("over");
-          }
-          if (o.x < -100) r.obstacles.splice(i, 1);
+      // Move obstacles + collision detection
+      const duck = r.ducking && !r.jumping;
+      const dW = duck ? DINO_DUCK_W : DINO_W;
+      const dH = duck ? DINO_DUCK_H : DINO_H;
+      const dY = duck ? GROUND_Y - DINO_DUCK_H : r.dY;
+      const pad = 6;
+      for (let i = r.obstacles.length - 1; i >= 0; i--) {
+        const o = r.obstacles[i];
+        o.x -= r.speed * timeScale;
+        if (o.kind === "ptero") o.count = Math.floor(r.dist / 3) % 2;
+        // AABB collision with hitbox padding
+        if (
+          DINO_X + pad < o.x + o.w - pad &&
+          DINO_X + dW - pad > o.x + pad &&
+          dY + pad < o.y + o.h &&
+          dY + dH > o.y + pad
+        ) {
+          r.over = true; r.active = false;
+          const finalScore = Math.floor(r.dist);
+          if (finalScore > r.hiScore) { r.hiScore = finalScore; setHiScore(finalScore); localStorage.setItem("dino-high-score", String(finalScore)); }
+          setState("over");
         }
+        if (o.x < -100) r.obstacles.splice(i, 1);
       }
     }
 
