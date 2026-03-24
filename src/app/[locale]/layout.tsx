@@ -10,7 +10,6 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
   display: 'swap',
-  preload: false,
 });
 const geistMono = localFont({
   src: "../fonts/GeistMonoVF.woff",
@@ -41,7 +40,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: `%s | Antoine Ghigny`,
     },
     description: t("description"),
-    keywords: ["web design", "Nivelles", "Belgique", "freelance", "PME", "site web sur mesure", "landing page"],
+    keywords: locale === "fr"
+      ? [
+          "développeur web freelance",
+          "création site web sur mesure",
+          "Nivelles",
+          "Belgique",
+          "développeur web indépendant belgique",
+          "site web PME",
+          "freelance web belgique",
+          "landing page",
+          "SEO Belgique",
+          "site web rapide",
+        ]
+      : [
+          "freelance web developer Belgium",
+          "bespoke website",
+          "web design Nivelles",
+          "custom website SME",
+          "SEO Belgium",
+          "landing page Belgium",
+          "web developer Wallonia",
+        ],
     authors: [{ name: "Antoine Ghigny", url: baseUrl }],
     creator: "Antoine Ghigny",
     openGraph: {
@@ -53,9 +73,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "Antoine Ghigny · Digital Creation",
       images: [
         {
-          url: "/og-image.jpg", // Créer cette image dans /public
-          width: 1200,
-          height: 630,
+          url: "/og-image.png",
+          width: 1243,
+          height: 745,
           alt: t("title"),
         },
       ],
@@ -64,8 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      creator: "@antoineghigny", // Votre handle Twitter si existant
-      images: ["/og-image.jpg"],
+      images: ["/og-image.png"],
     },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
@@ -99,8 +118,6 @@ export const viewport = {
   themeColor: "#FAF8F5",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default async function LocaleLayout({

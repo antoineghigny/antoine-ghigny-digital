@@ -18,6 +18,7 @@ import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { analytics } from "@/lib/analytics";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
@@ -272,7 +273,38 @@ export default function HeroAndWhy() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-[100dvh] flex items-center relative py-12 lg:py-0 overflow-hidden">
+      <section className="min-h-[100dvh] flex flex-col relative overflow-hidden">
+        {/* Navbar */}
+        <m.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.21, 0.45, 0.32, 0.9] }}
+          className="relative z-10 w-full pt-8 md:pt-10 pb-2"
+        >
+          <div className="max-w-[1400px] mx-auto px-4 md:px-12 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo-transparent.png"
+                alt="Antoine Ghigny Digital"
+                width={36}
+                height={36}
+                className="shrink-0"
+                priority
+              />
+              <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
+                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
+                {t("availability")}
+              </div>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <LocaleSwitcher />
+              <ThemeToggle />
+            </div>
+          </div>
+        </m.div>
+
+        {/* Hero content */}
+        <div className="flex-1 flex items-center py-8 md:py-12">
         <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
             <m.div
@@ -296,17 +328,6 @@ export default function HeroAndWhy() {
               className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
             >
               <m.div variants={fadeInUp} className="space-y-6">
-                <div className="flex items-center justify-between gap-2 md:justify-start md:gap-4">
-                  <div className="flex items-center bg-white/70 dark:bg-[#242220]/70 backdrop-blur-md border border-stone-200 dark:border-white/10 px-2.5 md:px-4 py-1.5 rounded-full text-[9px] md:text-[10px] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[#B34B44] whitespace-nowrap">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5 md:mr-2 shrink-0" />
-                    {t("availability")}
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <LocaleSwitcher />
-                    <ThemeToggle />
-                  </div>
-                </div>
-
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
                   {t("title_part1")}<br />
                   <span className="text-[#B34B44]">{t("title_part2")}</span>
@@ -315,18 +336,12 @@ export default function HeroAndWhy() {
                 <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
                   {t("description")}
                 </p>
+                </m.div>
 
-                <div className="flex items-center gap-3 py-1 px-4 bg-[#B34B44]/5 dark:bg-[#B34B44]/10 border border-[#B34B44]/10 rounded-xl w-fit">
-                  <Lightning size={16} weight="fill" className="text-[#B34B44]" />
-                  <p className="text-sm font-bold text-[#B34B44] tracking-tight">
-                    {t("tech_argument")}
-                  </p>
-                </div>
-              </m.div>
-
-              <m.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
+                <m.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center gap-6">
                 <m.a
                   href="#contact"
+                  onClick={() => analytics.heroCTAClicked()}
                   whileHover="hover"
                   whileTap={{ scale: 0.98 }}
                   className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden group"
@@ -334,8 +349,7 @@ export default function HeroAndWhy() {
                   <span>{t("cta")}</span>
                   <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </m.a>
-              </m.div>
-
+                </m.div>
               {/* Mobile Mockup Display */}
               <m.div
                 variants={fadeInUp}
@@ -372,6 +386,7 @@ export default function HeroAndWhy() {
               </m.div>
             </m.div>
           </div>
+        </div>
         </div>
       </section>
     </>

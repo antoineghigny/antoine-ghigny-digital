@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "title": "Antoine Ghigny · Création de sites web sur mesure | Nivelles",
-    "description": "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
+    "title": "Antoine Ghigny · Développeur Web Freelance | Nivelles, Belgique",
+    "description": "Développeur web freelance à Nivelles, Belgique. Je crée votre site web sur mesure : rapide, visible sur Google et cité par les IA. Premier échange gratuit."
   },
   "hero": {
-    "availability": "Disponible pour nouveaux projets",
-    "title_part1": "Sites & outils sur mesure.",
-    "title_part2": "Enfin du résultat.",
-    "description": "D'une vitrine professionnelle optimisée à une application personnalisée. Je développe la solution dont vous avez besoin, sans complexité.",
-    "tech_argument": "Vitesse : +20% de conversions potentiels. Économies : ~600€/an vs frais d'agence.",
-    "cta": "Me confier un projet",
+    "availability": "Disponible maintenant",
+    "title_part1": "Vos clients vous cherchent.",
+    "title_part2": "Aidez-les à vous trouver.",
+    "description": "Je crée votre site sur mesure. Rapide, visible sur Google et conçu pour que vos futurs clients vous trouvent et vous contactent.",
+    "cta": "Discutons de votre projet",
+    "cta_secondary": "En savoir plus",
     "trust": {
       "satisfied": "Satisfait ou retravaillé",
-      "fixed_price": "Prix fixe",
+      "fixed_price": "Prix fixe, sans surprise",
       "response_time": "Réponse sous 24h"
     },
     "dashboard": {
@@ -25,60 +25,60 @@
   "artisan": {
     "badge": "L'Artisan Numérique",
     "experience_at": "Expérience chez",
-    "title": "Un interlocuteur unique pour vos projets.",
-    "content": "Un expert, zéro intermédiaire. Je traduis vos besoins business en outils technologiques performants avec une agilité que les agences ne peuvent pas offrir. J'écoute, je simplifie et je construis : vous restez maître de votre vision, je m'occupe de la rendre techniquement impeccable.",
+    "title": "L'expertise d'un ingénieur, l'agilité d'un indépendant.",
+    "content": "Un seul interlocuteur pour tout votre projet. De votre site vitrine à un outil métier complexe, je développe des solutions performantes sans le jargon ni les délais d'une agence. J'écoute, je simplifie, je construis.",
     "experience": "Expérience en ingénierie logicielle",
     "location": "Basé à Nivelles, Belgique"
   },
   "whyMe": {
-    "badge": "Pourquoi faire appel à moi",
-    "title_part1": "Votre site devrait travailler",
-    "title_part2": "pour vous",
-    "title_part3": ", pas l'inverse.",
+    "badge": "Ce que ça change pour vous",
+    "title_part1": "Votre site devrait vous rapporter",
+    "title_part2": "des clients",
+    "title_part3": ", pas des soucis.",
     "bento": {
       "professionalism": {
-        "label": "Crédibilité Immédiate",
-        "title": "Un site qui rassure vos clients et reflète votre expertise. <highlight>Ne laissez plus</highlight> une mauvaise image vous faire perdre des contrats."
+        "label": "Première Impression",
+        "title": "Un site qui rassure et qui <highlight>convertit</highlight>. Soyez impeccable dès le premier coup d'œil."
       },
       "trust": {
-        "label": "Gagnez du temps",
-        "title": "Automatisez vos tâches répétitives avec des <highlight>outils sur mesure</highlight>. Concentrez-vous sur votre métier, je m'occupe d'optimiser votre quotidien."
+        "label": "Direct & Expert",
+        "title": "Oubliez les intermédiaires. Vous échangez en direct avec <highlight>l'ingénieur qui construit</highlight> votre site."
       },
       "performance": {
-        "label": "Zéro intermédiaire",
-        "title": "Un seul <highlight>expert agile</highlight> pour des solutions rapides, sans jargon ni perte de temps. La réactivité d'un partenaire qui comprend votre business."
+        "label": "SEO & IA",
+        "title": "Premier sur Google et <highlight>cité par les IA</highlight>. Vos clients vous trouvent, peu importe leur outil."
       },
       "design": {
-        "label": "L'artisanat numérique",
-        "title": "Chaque détail est soigné pour garantir <highlight>performance et esthétique</highlight>. Un accompagnement sur mesure, loin des standards industriels."
+        "label": "Vraiment sur-mesure",
+        "title": "Pas de templates, pas de compromis. Un site <highlight>unique</highlight> pensé exclusivement pour votre activité."
       }
     },
     "mockup": {
       "url": "votre-business.be",
       "tasks": {
         "review": {
-          "title": "Nouvel avis 5 étoiles sur Google",
-          "time": "Votre note passe à 4.9"
+          "title": "Avis 5 étoiles Google reçu",
+          "time": "Note 4.9 · 47 avis · Crédibilité maximale"
         },
         "seo": {
-          "title": "Page 1 sur Google",
-          "time": "\"Plombier Nivelles\" en position 3"
+          "title": "Position 1 sur Google",
+          "time": "\"Plombier Nivelles\" — devant vos concurrents"
         },
         "client": {
           "title": "Nouveau client via votre site",
-          "time": "\"Je vous ai trouvé sur Google\""
+          "time": "\"Je vous ai trouvé sur Google ce matin\""
         },
         "quote": {
-          "title": "Demande de devis reçue",
-          "time": "Via le formulaire de contact"
+          "title": "Demande de devis reçue à 23h47",
+          "time": "Votre site travaille pendant que vous dormez"
         },
         "aisearch": {
-          "title": "Cité par ChatGPT",
-          "time": "\"Recommandé dans votre région\""
+          "title": "Recommandé par ChatGPT & Google AI",
+          "time": "\"Quel artisan à Nivelles ?\" → Votre nom"
         },
         "booking": {
           "title": "Rendez-vous pris en ligne",
-          "time": "Lundi 24 mars à 10h00"
+          "time": "Sans appel, sans échanges de mails"
         }
       }
     },
@@ -94,6 +94,23 @@
         "description": "Je transforme tout ça en un site qui travaille pour vous : visible sur Google, clair pour vos visiteurs et qui donne envie d'aller plus loin."
       }
     }
+  },
+  "process": {
+    "badge": "Votre projet sur-mesure",
+    "title_part1": "De la stratégie",
+    "title_part2": "à la mise en ligne.",
+    "step1_number": "01",
+    "step1_label": "Analyse & Stratégie",
+    "step1_desc": "On définit vos objectifs et ce qui rend votre activité unique. Premier échange gratuit.",
+    "step2_number": "02",
+    "step2_label": "Création Artisanale",
+    "step2_desc": "Je code votre site de A à Z. Pas de templates, que du sur-mesure validé par vos soins.",
+    "step3_number": "03",
+    "step3_label": "Lancement & Impact",
+    "step3_desc": "Mise en ligne, SEO et référencement IA. Votre site commence à travailler pour vous.",
+    "marker1": "Diagnostic gratuit",
+    "marker2": "Livré en 3 à 5 semaines",
+    "marker3": "Accompagnement haute performance"
   },
   "games": {
     "dino": {
@@ -120,12 +137,12 @@
     }
   },
   "contact": {
-    "badge": "Premier pas",
-    "title": "Parlons de votre projet.",
-    "description": "Expliquez-moi votre projet en quelques mots. Je vous recontacte rapidement pour voir comment je peux vous aider.",
+    "badge": "Prochain pas",
+    "title": "Prêt à être visible ?",
+    "description": "Décrivez votre projet en 2 lignes. Je vous réponds personnellement sous 24h.",
     "cta_mail": "M'envoyer un mail",
     "cta_whatsapp": "Discuter sur WhatsApp",
-    "status": "Réponse sous 24h — Disponible cette semaine",
+    "status": "Antoine répond sous 24h — Disponible cette semaine",
     "inquiry_label": "Demande de projet",
     "email": "antoine@ghigny.be",
     "phone": "+32 475 91 13 74",
@@ -187,33 +204,57 @@
     "title": "Questions Fréquentes",
     "label": "FAQ",
     "backToHome": "Retour à l'accueil",
-    "description": "Retrouvez les réponses aux questions les plus courantes sur mes services, mon processus de travail et mes tarifs.",
+    "description": "Tarifs, délais, SEO, maintenance : toutes les réponses aux questions courantes sur mes services de création de sites web freelance en Belgique.",
     "sectionLabel": "Questions",
     "sectionTitle": "Ce que vous devez savoir",
     "items": {
       "q1": {
         "question": "Pourquoi choisir un freelance plutôt qu'une agence ?",
-        "answer": "La réactivité et le prix. En travaillant avec moi, vous avez un interlocuteur unique qui connaît votre projet par cœur. Pas de frais de structure d'agence répercutés sur votre facture, et une communication directe sans intermédiaire."
+        "answer": "Avec un freelance, vous avez un interlocuteur unique qui connaît votre projet du premier échange à la mise en ligne — pas de chef de projet, pas de développeur anonyme. Les tarifs sont généralement 30 à 50 % inférieurs à ceux d'une agence, les délais plus courts, et la communication directe avec la personne qui construit votre site."
       },
       "q2": {
         "question": "Combien coûte la création d'un site web ?",
-        "answer": "Chaque projet est unique, mais je travaille toujours sur la base d'un forfait défini à l'avance. Pas de mauvaise surprise. Un site vitrine professionnel commence généralement autour de 1500€, incluant design, développement et optimisation SEO."
+        "answer": "Le tarif dépend du projet, de sa complexité et des fonctionnalités souhaitées. Je travaille toujours sur la base d'un forfait fixe défini à l'avance, après un premier échange gratuit. Vous connaissez le prix total avant de commencer — sans dépassement possible et sans mauvaise surprise."
       },
       "q3": {
         "question": "Quel est le délai de réalisation ?",
-        "answer": "Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Ces délais incluent les phases de conception, développement, révisions et mise en ligne. Je m'engage sur des dates précises dès le lancement du projet."
+        "answer": "Un site vitrine standard est livré entre 2 et 4 semaines. Une landing page peut être prête en 1 à 2 semaines. Ces délais incluent la conception, le développement, les révisions et la mise en ligne. Des dates précises sont fixées dès le lancement du projet — pas de 'bientôt' vague."
       },
       "q4": {
         "question": "Proposez-vous un service de maintenance après le lancement ?",
-        "answer": "Oui. Après la livraison, je propose un accompagnement pour les mises à jour de contenu, les ajustements techniques et l'optimisation continue des performances. La maintenance est optionnelle et peut être souscrite sous forme de forfait mensuel adapté à vos besoins."
+        "answer": "Oui. Après la livraison, je propose des forfaits de maintenance mensuelle incluant mises à jour de contenu, ajustements techniques et optimisation continue des performances SEO. La maintenance est optionnelle. Elle assure que votre site reste rapide, sécurisé et bien référencé sur la durée."
       },
       "q5": {
         "question": "Mon site sera-t-il optimisé pour Google ?",
-        "answer": "Absolument. Chaque site est construit avec les meilleures pratiques SEO : structure HTML sémantique, métadonnées optimisées, performances maximales (Core Web Vitals), compatibilité mobile parfaite et données structurées. Votre site est conçu pour être visible sur Google et les moteurs de recherche IA."
+        "answer": "Oui. Chaque site est construit selon les meilleures pratiques SEO : HTML sémantique, métadonnées optimisées, score Core Web Vitals supérieur à 90, compatibilité mobile parfaite et données structurées Schema.org. Le site est également configuré pour être cité par les moteurs de recherche IA comme ChatGPT et Google AI Overviews."
       },
       "q6": {
         "question": "Comment se déroule la collaboration ?",
-        "answer": "Le processus est simple : un premier échange gratuit pour comprendre vos besoins, puis une proposition détaillée avec maquettes. Après validation, je développe le site avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
+        "answer": "En trois étapes : un premier échange gratuit pour comprendre vos besoins et objectifs, une proposition détaillée avec maquettes après validation du devis, puis le développement avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
+      },
+      "q7": {
+        "question": "Mon site peut-il apparaître sur ChatGPT et les moteurs de recherche IA ?",
+        "answer": "Oui, et c'est un avantage clé depuis 2024. ChatGPT, Google AI Overviews et Gemini citent directement des sites dans leurs réponses. Chaque site que je développe intègre les optimisations nécessaires : données structurées Schema.org, fichier llms.txt pour les robots IA, et contenu structuré pour l'extraction automatique. Vos clients vous trouvent peu importe l'outil qu'ils utilisent."
+      },
+      "q8": {
+        "question": "Vaut-il mieux un site WordPress ou un site développé sur mesure ?",
+        "answer": "WordPress convient aux blogs simples ou aux très petits budgets. Pour un site vitrine professionnel, un développement sur mesure avec Next.js est supérieur sur tous les points : vitesse (score Lighthouse 95+), sécurité sans plugins vulnérables, SEO technique avancé et personnalisation totale. Le coût est comparable mais les performances et la durabilité sont incomparables."
+      },
+      "q9": {
+        "question": "Comment savoir si mon site actuel a besoin d'être refait ?",
+        "answer": "Voici les signaux d'alarme concrets : score de vitesse Google PageSpeed sous 70, site non adapté aux mobiles, aucune mise à jour depuis plus de 2 ans, aucun client ne vous contacte via le site, ou il est difficile à modifier. Si vous répondez oui à au moins deux de ces points, une refonte vous apporterait un retour sur investissement rapide."
+      },
+      "q10": {
+        "question": "Pourquoi mon site n'apparaît-il pas sur Google ?",
+        "answer": "Les causes les plus fréquentes sont : un site trop lent (Core Web Vitals insuffisants), un contenu non indexé par Google, des mots-clés absents des balises title et description, aucun lien entrant (backlinks), ou un problème technique de crawlabilité. Un audit rapide lors du premier échange gratuit permet d'identifier la cause exacte et de définir le plan d'action."
+      },
+      "q11": {
+        "question": "Travaillez-vous uniquement à Nivelles ou dans toute la Belgique ?",
+        "answer": "Je travaille avec des clients dans toute la Belgique — Bruxelles, Liège, Namur, Charleroi, Mons, Louvain-la-Neuve et au-delà. La distance n'est pas un obstacle : le processus est structuré pour fonctionner efficacement peu importe la localisation, avec des points d'étape réguliers tout au long du projet."
+      },
+      "q12": {
+        "question": "Proposez-vous des forfaits ou uniquement des projets ponctuels ?",
+        "answer": "Les deux. Pour un projet ponctuel (site vitrine, landing page), je travaille sur devis fixe défini à l'avance. Pour un accompagnement continu, je propose des forfaits de maintenance mensuelle incluant mises à jour, optimisations SEO et support technique. On définit ensemble la formule la plus adaptée lors du premier échange gratuit."
       }
     },
     "returnCTA": "Contactez-moi",
