@@ -55,7 +55,7 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     setStatus("PLAYING");
   }, [generateFood]);
 
-  const draw = useCallback(() => {
+  const draw = useCallback((time: number, progress: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -66,56 +66,134 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
     ctx.fillStyle = dark ? "#1A1816" : "#FAF8F5";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.strokeStyle = dark ? "rgba(255,255,255,0.1)" : "rgba(180,175,170,0.55)";
+    ctx.strokeStyle = dark ? "rgba(255,255,255,0.08)" : "rgba(180,175,170,0.4)";
     ctx.lineWidth = 0.5;
     for (let i = 0; i <= GRID_SIZE; i++) {
       ctx.beginPath(); ctx.moveTo(i * tile, 0); ctx.lineTo(i * tile, canvas.height); ctx.stroke();
       ctx.beginPath(); ctx.moveTo(0, i * tile); ctx.lineTo(canvas.width, i * tile); ctx.stroke();
     }
 
+    // Food with pulsing glow
+    const pulse = Math.sin(time / 150) * 0.15;
+    const foodX = foodRef.current.x * tile + tile / 2;
+    const foodY = foodRef.current.y * tile + tile / 2;
+
+    ctx.shadowColor = "#10b981";
+    ctx.shadowBlur = 15 + pulse * 10;
     ctx.fillStyle = "#10b981";
     ctx.beginPath();
-    ctx.arc(foodRef.current.x * tile + tile / 2, foodRef.current.y * tile + tile / 2, tile / 3, 0, Math.PI * 2);
+    ctx.arc(foodX, foodY, (tile / 3) * (1 + pulse), 0, Math.PI * 2);
     ctx.fill();
+    ctx.shadowBlur = 0; // reset
 
+    // Snake
     snakeRef.current.forEach((seg, i) => {
-      ctx.fillStyle = i === 0 ? "#B34B44" : "#B34B44DD";
+      let vx = seg.x;
+      let vy = seg.y;
+
+      // Interpolation for smooth motion
+      if (status === "PLAYING") {
+        if (i === 0) {
+          vx += directionRef.current.x * progress;
+          vy += directionRef.current.y * progress;
+        } else {
+          const prev = snakeRef.current[i - 1];
+          // Determine if wrapping occurred logically to prevent visual wrapping glitch
+          if (Math.abs(prev.x - seg.x) <= 1 && Math.abs(prev.y - seg.y) <= 1) {
+            vx += (prev.x - seg.x) * progress;
+            vy += (prev.y - seg.y) * progress;
+          }
+        }
+      }
+
+      ctx.fillStyle = i === 0 ? "#B34B44" : "#B34B44EE";
       const p = 1.5;
+      const xPx = vx * tile + p;
+      const yPx = vy * tile + p;
+      const sSize = tile - p * 2;
+
+      ctx.save();
+      // Squash & Stretch on head
+      if (i === 0 && status === "PLAYING") {
+        ctx.translate(xPx + sSize / 2, yPx + sSize / 2);
+        const stretch = 1 + Math.sin(progress * Math.PI) * 0.15;
+        const squash = 1 - Math.sin(progress * Math.PI) * 0.05;
+        if (directionRef.current.x !== 0) ctx.scale(stretch, squash);
+        else ctx.scale(squash, stretch);
+        ctx.translate(-(xPx + sSize / 2), -(yPx + sSize / 2));
+      }
+
       ctx.beginPath();
-      ctx.roundRect(seg.x * tile + p, seg.y * tile + p, tile - p * 2, tile - p * 2, 4);
+      ctx.roundRect(xPx, yPx, sSize, sSize, 6);
       ctx.fill();
+
+      // Eyes for head
+      if (i === 0) {
+        ctx.fillStyle = "#FAF8F5";
+        const dir = status === "PLAYING" ? directionRef.current : { x: 0, y: -1 };
+        let ey1 = { x: 0, y: 0 }, ey2 = { x: 0, y: 0 };
+        const eOffset = sSize * 0.25;
+        const eSize = sSize * 0.15;
+        const cX = xPx + sSize / 2;
+        const cY = yPx + sSize / 2;
+
+        if (dir.x === 1) { ey1 = { x: cX + eOffset, y: cY - eOffset }; ey2 = { x: cX + eOffset, y: cY + eOffset }; }
+        else if (dir.x === -1) { ey1 = { x: cX - eOffset, y: cY - eOffset }; ey2 = { x: cX - eOffset, y: cY + eOffset }; }
+        else if (dir.y === 1) { ey1 = { x: cX - eOffset, y: cY + eOffset }; ey2 = { x: cX + eOffset, y: cY + eOffset }; }
+        else { ey1 = { x: cX - eOffset, y: cY - eOffset }; ey2 = { x: cX + eOffset, y: cY - eOffset }; } // UP or IDLE
+
+        if (status === "GAME_OVER") {
+          // Dead eyes!
+          ctx.beginPath(); ctx.moveTo(ey1.x - eSize, ey1.y - eSize); ctx.lineTo(ey1.x + eSize, ey1.y + eSize); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(ey2.x - eSize, ey2.y - eSize); ctx.lineTo(ey2.x + eSize, ey2.y + eSize); ctx.stroke();
+        } else {
+          ctx.beginPath(); ctx.arc(ey1.x, ey1.y, eSize, 0, Math.PI * 2); ctx.fill();
+          ctx.beginPath(); ctx.arc(ey2.x, ey2.y, eSize, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+      ctx.restore();
     });
-  }, []);
+  }, [status]);
 
   const update = useCallback((time: number) => {
-    if (status !== "PLAYING") return;
-    if (time - lastRenderTimeRef.current < INITIAL_SPEED) { requestRef.current = requestAnimationFrame(update); return; }
-    lastRenderTimeRef.current = time;
-    directionRef.current = nextDirectionRef.current;
+    if (status !== "PLAYING") {
+      draw(time, 0);
+      requestRef.current = requestAnimationFrame(update);
+      return;
+    }
 
-    const head = { ...snakeRef.current[0] };
-    head.x += directionRef.current.x;
-    head.y += directionRef.current.y;
+    const currentSpeed = Math.max(50, INITIAL_SPEED - Math.floor(score / 50) * 4);
+    const elapsed = time - lastRenderTimeRef.current;
 
-    if (head.x < 0 || head.x >= GRID_SIZE || head.y < 0 || head.y >= GRID_SIZE) { setStatus("GAME_OVER"); return; }
-    if (snakeRef.current.some((s) => s.x === head.x && s.y === head.y)) { setStatus("GAME_OVER"); return; }
+    if (elapsed >= currentSpeed) {
+      lastRenderTimeRef.current = time;
+      directionRef.current = nextDirectionRef.current;
 
-    const ns = [head, ...snakeRef.current];
-    if (head.x === foodRef.current.x && head.y === foodRef.current.y) {
-      setScore((s) => s + 10);
-      foodRef.current = generateFood(ns);
-    } else { ns.pop(); }
+      const head = { ...snakeRef.current[0] };
+      head.x += directionRef.current.x;
+      head.y += directionRef.current.y;
 
-    snakeRef.current = ns;
-    draw();
+      if (head.x < 0 || head.x >= GRID_SIZE || head.y < 0 || head.y >= GRID_SIZE) { setStatus("GAME_OVER"); return; }
+      if (snakeRef.current.some((s) => s.x === head.x && s.y === head.y)) { setStatus("GAME_OVER"); return; }
+
+      const ns = [head, ...snakeRef.current];
+      if (head.x === foodRef.current.x && head.y === foodRef.current.y) {
+        setScore((s) => s + 10);
+        foodRef.current = generateFood(ns);
+      } else { ns.pop(); }
+
+      snakeRef.current = ns;
+    }
+
+    const progress = Math.min(1, Math.max(0, (time - lastRenderTimeRef.current) / currentSpeed));
+    draw(time, progress);
     requestRef.current = requestAnimationFrame(update);
-  }, [status, draw, generateFood]);
+  }, [status, draw, generateFood, score]);
 
   useEffect(() => {
-    if (status === "PLAYING") requestRef.current = requestAnimationFrame(update);
-    else draw();
+    requestRef.current = requestAnimationFrame(update);
     return () => { if (requestRef.current) cancelAnimationFrame(requestRef.current); };
-  }, [status, update, draw]);
+  }, [update]);
 
   useEffect(() => {
     if (!active) return;
@@ -125,14 +203,14 @@ export default function SnakeGameContent({ active, onRequestClose }: SnakeGameCo
       const isArrow = key === "arrowup" || key === "arrowdown" || key === "arrowleft" || key === "arrowright";
       if (isArrow || key === " ") e.preventDefault();
       if (status === "IDLE" || status === "GAME_OVER") {
-        if (isArrow || ["z","q","s","d"," "].includes(key)) resetGame();
+        if (isArrow || ["z", "q", "s", "d", " "].includes(key)) resetGame();
         return;
       }
       const dir = directionRef.current;
-      if ((key === "arrowup"    || key === "z") && dir.y === 0) nextDirectionRef.current = { x: 0, y: -1 };
-      if ((key === "arrowdown"  || key === "s") && dir.y === 0) nextDirectionRef.current = { x: 0, y:  1 };
-      if ((key === "arrowleft"  || key === "q") && dir.x === 0) nextDirectionRef.current = { x: -1, y: 0 };
-      if ((key === "arrowright" || key === "d") && dir.x === 0) nextDirectionRef.current = { x:  1, y: 0 };
+      if ((key === "arrowup" || key === "z") && dir.y === 0) nextDirectionRef.current = { x: 0, y: -1 };
+      if ((key === "arrowdown" || key === "s") && dir.y === 0) nextDirectionRef.current = { x: 0, y: 1 };
+      if ((key === "arrowleft" || key === "q") && dir.x === 0) nextDirectionRef.current = { x: -1, y: 0 };
+      if ((key === "arrowright" || key === "d") && dir.x === 0) nextDirectionRef.current = { x: 1, y: 0 };
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
