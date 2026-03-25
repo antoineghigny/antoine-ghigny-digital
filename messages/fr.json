@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Antoine Ghigny · Développeur Web Freelance | Nivelles, Belgique",
-    "description": "Développeur web freelance à Nivelles, Belgique. Je crée votre site web sur mesure : rapide, visible sur Google et cité par les IA. Premier échange gratuit."
+    "description": "Développeur web freelance à Nivelles, Belgique. Je crée votre site web sur mesure : rapide, visible sur Google et optimisé pour être trouvé partout. Premier échange gratuit."
   },
   "hero": {
     "availability": "Disponible maintenant",
@@ -45,8 +45,8 @@
         "title": "Oubliez les intermédiaires. Vous échangez en direct avec <highlight>l'ingénieur qui construit</highlight> votre site."
       },
       "performance": {
-        "label": "SEO & IA",
-        "title": "Premier sur Google et <highlight>cité par les IA</highlight>. Vos clients vous trouvent, peu importe leur outil."
+        "label": "SEO & Visibilité",
+        "title": "Premier sur Google et <highlight>visible sur les nouvelles recherches IA</highlight>. Vos clients vous trouvent, peu importe leur outil."
       },
       "design": {
         "label": "Vraiment sur-mesure",
@@ -73,7 +73,7 @@
           "time": "Votre site travaille pendant que vous dormez"
         },
         "aisearch": {
-          "title": "Recommandé par ChatGPT & Google AI",
+          "title": "Visible sur Google AI & ChatGPT",
           "time": "\"Quel artisan à Nivelles ?\" → Votre nom"
         },
         "booking": {
@@ -107,7 +107,7 @@
     "step2_desc": "Je code votre site de A à Z. Pas de templates, que du sur-mesure validé par vos soins.",
     "step3_number": "03",
     "step3_label": "Lancement & Impact",
-    "step3_desc": "Mise en ligne, SEO et référencement IA. Votre site commence à travailler pour vous.",
+    "step3_desc": "Mise en ligne et SEO technique avancé. Votre site commence à travailler pour vous.",
     "marker1": "Diagnostic gratuit",
     "marker2": "Livré en 2 à 4 semaines",
     "marker3": "Accompagnement haute performance"
@@ -226,15 +226,15 @@
       },
       "q5": {
         "question": "Mon site sera-t-il optimisé pour Google ?",
-        "answer": "Oui. Chaque site est construit selon les meilleures pratiques SEO : HTML sémantique, métadonnées optimisées, score Core Web Vitals supérieur à 90, compatibilité mobile parfaite et données structurées Schema.org. Le site est également configuré pour être cité par les moteurs de recherche IA comme ChatGPT et Google AI Overviews."
+        "answer": "Oui. Chaque site est construit selon les meilleures pratiques SEO : HTML sémantique, métadonnées optimisées, score Core Web Vitals supérieur à 90, compatibilité mobile parfaite et données structurées Schema.org. Le site est également structuré pour être correctement lu par les moteurs de recherche IA comme ChatGPT et Google AI Overviews."
       },
       "q6": {
         "question": "Comment se déroule la collaboration ?",
         "answer": "En trois étapes : un premier échange gratuit pour comprendre vos besoins et objectifs, une proposition détaillée avec maquettes après validation du devis, puis le développement avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
       },
       "q7": {
-        "question": "Mon site peut-il apparaître sur ChatGPT et les moteurs de recherche IA ?",
-        "answer": "Oui, et c'est un avantage clé depuis 2024. ChatGPT, Google AI Overviews et Gemini citent directement des sites dans leurs réponses. Chaque site que je développe intègre les optimisations nécessaires : données structurées Schema.org, fichier llms.txt pour les robots IA, et contenu structuré pour l'extraction automatique. Vos clients vous trouvent peu importe l'outil qu'ils utilisent."
+        "question": "Mon site sera-t-il techniquement prêt pour les recherches IA ?",
+        "answer": "Oui. Chaque site intègre les bases techniques nécessaires pour être correctement lu par les IA : données structurées Schema.org, fichier llms.txt pour les crawlers IA, HTML sémantique et contenu structuré. Ces optimisations maximisent vos chances d'apparaître dans les résultats Google AI Overviews, ChatGPT et Gemini. Apparaître régulièrement dépend aussi de l'autorité de votre domaine — ce qui se construit dans le temps, notamment via des mentions sur d'autres sites."
       },
       "q8": {
         "question": "Vaut-il mieux un site WordPress ou un site développé sur mesure ?",

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Antoine Ghigny · Freelance Web Developer | Nivelles, Belgium",
-    "description": "Freelance web developer in Nivelles, Belgium. Bespoke websites for freelancers and SMEs — fast, Google-visible, and cited by AI search engines. Free quote."
+    "description": "Freelance web developer in Nivelles, Belgium. Bespoke websites for freelancers and SMEs — fast, optimised for Google and built to be found everywhere. Free quote."
   },
   "hero": {
     "availability": "Available now",
@@ -45,8 +45,8 @@
         "title": "No salespeople, no project managers, no back-and-forth. You speak directly to <highlight>the one building</highlight> your site."
       },
       "performance": {
-        "label": "SEO & AI",
-        "title": "First on Google and <highlight>cited by AI</highlight>. Your clients find you, whatever tool they use."
+        "label": "SEO & Visibility",
+        "title": "First on Google and <highlight>visible on AI search</highlight>. Your clients find you, whatever tool they use."
       },
       "design": {
         "label": "Made for you",
@@ -73,7 +73,7 @@
           "time": "Your site works while you sleep"
         },
         "aisearch": {
-          "title": "Recommended by ChatGPT & Google AI",
+          "title": "Found on Google AI & ChatGPT",
           "time": "\"Best tradesperson in Nivelles?\" → Your name"
         },
         "booking": {
@@ -226,15 +226,15 @@
       },
       "q5": {
         "question": "Will my site be optimised for Google?",
-        "answer": "Yes. Every site is built to SEO best practices: semantic HTML, optimised metadata, Core Web Vitals score above 90, perfect mobile compatibility and Schema.org structured data. The site is also configured to be cited by AI search engines like ChatGPT and Google AI Overviews."
+        "answer": "Yes. Every site is built to SEO best practices: semantic HTML, optimised metadata, Core Web Vitals score above 90, perfect mobile compatibility and Schema.org structured data. The site is also structured to be correctly read by AI search engines like ChatGPT and Google AI Overviews."
       },
       "q6": {
         "question": "How does the collaboration work?",
         "answer": "Three steps: a free initial call to understand your needs and goals, a detailed proposal with mockups after quote approval, then development with regular checkpoints. You get revisions until full satisfaction before the final launch."
       },
       "q7": {
-        "question": "Can my website appear in ChatGPT and AI search engines?",
-        "answer": "Yes, and this is a key advantage since 2024. ChatGPT, Google AI Overviews and Gemini directly cite websites in their answers. Every site I build includes the necessary optimisations: Schema.org structured data, an llms.txt file for AI robots, and content structured for automatic extraction. Your clients find you regardless of the tool they use."
+        "question": "Will my site be technically ready for AI search engines?",
+        "answer": "Yes. Every site includes the technical foundations needed to be correctly read by AI: Schema.org structured data, an llms.txt file for AI crawlers, semantic HTML and structured content. These optimisations maximise your chances of appearing in Google AI Overviews, ChatGPT and Gemini results. Appearing consistently also depends on your domain authority — which builds over time, especially through mentions on other sites."
       },
       "q8": {
         "question": "Is WordPress or a custom-built website better?",
