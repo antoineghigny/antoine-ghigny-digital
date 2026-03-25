@@ -25,7 +25,7 @@
   "artisan": {
     "badge": "The Digital Craftsman",
     "experience_at": "Experience at",
-    "title": "Behind every project, there's me.",
+    "title": "Engineer's expertise. Freelancer's agility.",
     "content": "One dedicated expert, zero intermediaries. From your website to a bespoke business tool, I develop what you need. More agile than an agency, more accessible than a large firm. I listen, I simplify, I build.",
     "experience": "Software engineering experience",
     "location": "Based in Nivelles, Belgium"
@@ -45,8 +45,8 @@
         "title": "No salespeople, no project managers, no back-and-forth. You speak directly to <highlight>the one building</highlight> your site."
       },
       "performance": {
-        "label": "Visible on Google",
-        "title": "First on Google, first in your clients' minds. They <highlight>find you</highlight> before your competitors."
+        "label": "SEO & AI",
+        "title": "First on Google and <highlight>cited by AI</highlight>. Your clients find you, whatever tool they use."
       },
       "design": {
         "label": "Made for you",
@@ -214,7 +214,7 @@
       },
       "q2": {
         "question": "How much does it cost to create a website?",
-        "answer": "The price depends on the project, its complexity and the features required. I always work on a fixed-price basis defined after a free initial call. You know the total cost before starting — no overruns, no bad surprises."
+        "answer": "The price depends on the project and its features. As a guide: a landing page starts around €800, a professional showcase website between €1,500 and €3,000, and a bespoke business tool is quoted individually. These rates are typically 30 to 50% lower than an agency for a superior result. I always work on a fixed-price basis defined during the free initial call — you know the total cost before starting, no overruns possible."
       },
       "q3": {
         "question": "What is the delivery timeline?",
