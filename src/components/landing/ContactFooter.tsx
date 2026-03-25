@@ -32,23 +32,30 @@ export default function ContactFooter() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ staggerChildren: 0.1, ...SPRING }}
+            transition={{ staggerChildren: 0.12, ...SPRING }}
             className="flex flex-col md:flex-row gap-16 md:gap-24 items-start"
           >
             {/* Left side: Heading */}
             <div className="flex-1 space-y-8">
               <m.span
                 variants={fadeUp}
-                className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44]"
+                className="text-sm uppercase tracking-[0.2em] font-bold text-[#B34B44] block"
               >
                 {t("badge")}
               </m.span>
-              <m.h2
-                variants={fadeUp}
-                className="text-5xl md:text-8xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.95] lg:leading-[1.1] max-w-[12ch]"
-              >
-                {t("title")}
-              </m.h2>
+
+              {/* Dramatic masked title reveal */}
+              <div className="overflow-hidden">
+                <m.h2
+                  initial={{ y: "105%", opacity: 0 }}
+                  whileInView={{ y: "0%", opacity: 1 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 1.1, ease: [0.21, 0.45, 0.32, 0.9] }}
+                  className="text-5xl md:text-8xl font-bold tracking-tight text-[#2D2926] dark:text-[#FAF8F5] leading-[0.95] lg:leading-[1.1] max-w-[12ch]"
+                >
+                  {t("title")}
+                </m.h2>
+              </div>
             </div>
 
             {/* Right side: Action */}
@@ -58,23 +65,47 @@ export default function ContactFooter() {
                   <ChatCircleText size={20} weight="fill" />
                   <span className="text-xs uppercase tracking-widest font-medium">{t("inquiry_label")}</span>
                 </div>
-                <p className="text-xl md:text-2xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[40ch]">
+                <m.p
+                  initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+                  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.25, ease: [0.21, 0.45, 0.32, 0.9] }}
+                  className="text-xl md:text-2xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[40ch]"
+                >
                   {t("description")}
-                </p>
+                </m.p>
               </m.div>
-              
+
               <m.div variants={fadeUp} className="space-y-8">
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                  <m.a
-                    href={`https://wa.me/${t("phone_url")}`}
-                    onClick={() => analytics.whatsappClicked("footer")}
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-8 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 group"
-                  >
-                    <WhatsappLogo weight="fill" size={24} />
-                    <span>{t("cta_whatsapp")}</span>
-                  </m.a>
+
+                  {/* WhatsApp button with radiating pulse rings */}
+                  <div className="relative inline-flex">
+                    {[0, 1, 2].map((i) => (
+                      <m.span
+                        key={i}
+                        aria-hidden
+                        className="absolute inset-0 rounded-full border border-[#B34B44]/50 pointer-events-none"
+                        animate={{ scale: [1, 2.1], opacity: [0.55, 0] }}
+                        transition={{
+                          duration: 2.5,
+                          delay: i * 0.8,
+                          repeat: Infinity,
+                          ease: "easeOut",
+                        }}
+                      />
+                    ))}
+                    <m.a
+                      href={`https://wa.me/${t("phone_url")}`}
+                      onClick={() => analytics.whatsappClicked("footer")}
+                      whileHover={{ y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="relative z-10 inline-flex items-center justify-center gap-3 bg-[#B34B44] text-white px-8 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 group"
+                    >
+                      <WhatsappLogo weight="fill" size={24} />
+                      <span>{t("cta_whatsapp")}</span>
+                    </m.a>
+                  </div>
 
                   <m.a
                     href={`mailto:${t("email")}?subject=${t("inquiry_label")}`}
@@ -87,7 +118,7 @@ export default function ContactFooter() {
                     <span>{t("cta_mail")}</span>
                   </m.a>
                 </div>
-                
+
                 <div className="flex items-center gap-3 px-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <p className="text-sm text-[#5C5652] dark:text-[#A8A29E] font-medium tracking-wide">

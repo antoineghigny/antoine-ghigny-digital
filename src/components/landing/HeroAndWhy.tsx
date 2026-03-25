@@ -22,17 +22,43 @@ import { analytics } from "@/lib/analytics";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: [0.21, 0.45, 0.32, 0.9] },
-};
+const EASE = [0.21, 0.45, 0.32, 0.9];
 
-const staggerContainer = {
-  animate: {
-    transition: { staggerChildren: 0.1 },
-  },
-};
+/* ── Word-by-word reveal — each word slides up from below ─────────────────── */
+function WordReveal({
+  text,
+  className,
+  startDelay = 0,
+}: {
+  text: string;
+  className?: string;
+  startDelay?: number;
+}) {
+  const words = text.split(" ");
+  return (
+    <span className={className}>
+      {words.map((word, i) => (
+        <React.Fragment key={i}>
+          <span className="inline-block overflow-hidden align-bottom">
+            <m.span
+              className="inline-block"
+              initial={{ y: "110%", rotate: 4 }}
+              animate={{ y: "0%", rotate: 0 }}
+              transition={{
+                duration: 0.75,
+                delay: startDelay + i * 0.08,
+                ease: EASE,
+              }}
+            >
+              {word}
+            </m.span>
+          </span>
+          {i < words.length - 1 && " "}
+        </React.Fragment>
+      ))}
+    </span>
+  );
+}
 
 const BrowserMockup = () => {
   const t = useTranslations("hero");
@@ -278,7 +304,7 @@ export default function HeroAndWhy() {
         <m.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.21, 0.45, 0.32, 0.9] }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="relative z-10 w-full pt-8 md:pt-10 pb-2"
         >
           <div className="max-w-[1400px] mx-auto px-4 md:px-12 flex items-center justify-between">
@@ -305,88 +331,127 @@ export default function HeroAndWhy() {
 
         {/* Hero content */}
         <div className="flex-1 flex items-center py-8 md:py-12">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
-            <m.div
-              initial={{ opacity: 0, x: -50, rotate: 2 }}
-              animate={{ opacity: 1, x: 0, rotate: -2 }}
-              whileHover={{ scale: 1.02, rotate: 0 }}
-              transition={{
-                duration: 1.2,
-                ease: [0.21, 0.45, 0.32, 0.9],
-                scale: { type: "spring", stiffness: 100, damping: 20 }
-              }}
-              className="hidden md:block md:col-span-5 order-2 md:order-1"
-            >
-              <BrowserMockup />
-            </m.div>
-
-            <m.div
-              variants={staggerContainer}
-              initial="initial"
-              animate="animate"
-              className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2"
-            >
-              <m.div variants={fadeInUp} className="space-y-6">
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
-                  {t("title_part1")}<br />
-                  <span className="text-[#B34B44]">{t("title_part2")}</span>
-                </h1>
-
-                <p className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]">
-                  {t("description")}
-                </p>
-                </m.div>
-
-                <m.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center gap-6">
-                <m.a
-                  href="#contact"
-                  onClick={() => analytics.heroCTAClicked()}
-                  whileHover="hover"
-                  whileTap={{ scale: 0.98 }}
-                  className="bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden group"
-                >
-                  <span>{t("cta")}</span>
-                  <ArrowUpRight weight="bold" size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </m.a>
-                </m.div>
-              {/* Mobile Mockup Display */}
+          <div className="max-w-[1400px] mx-auto px-4 md:px-12 w-full relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
               <m.div
-                variants={fadeInUp}
-                className="md:hidden pt-4 pb-8 px-1"
+                initial={{ opacity: 0, x: -50, rotate: 2 }}
+                animate={{ opacity: 1, x: 0, rotate: -2 }}
+                whileHover={{ scale: 1.02, rotate: 0 }}
+                transition={{
+                  duration: 1.2,
+                  ease: EASE,
+                  scale: { type: "spring", stiffness: 100, damping: 20 }
+                }}
+                className="hidden md:block md:col-span-5 order-2 md:order-1"
               >
                 <BrowserMockup />
               </m.div>
 
-              <m.div
-                variants={fadeInUp}
-                className="mt-6 md:mt-12 pt-8 md:pt-12 border-t border-stone-200/60 dark:border-white/[0.07] flex flex-col gap-10"
-              >
-                {/* Trust Markers */}
-                <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-6">
-                  <div className="flex items-center gap-4 group shrink-0">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
-                      <CheckCircle weight="fill" size={24} />
-                    </div>
-                    <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t("trust.satisfied")}</span>
-                  </div>
-                  <div className="flex items-center gap-4 group shrink-0">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
-                      <ShieldCheck weight="fill" size={24} />
-                    </div>
-                    <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t("trust.fixed_price")}</span>
-                  </div>
-                  <div className="flex items-center gap-4 group shrink-0">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
-                      <Clock weight="fill" size={24} />
-                    </div>
-                    <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">{t("trust.response_time")}</span>
-                  </div>
+              <div className="md:col-span-7 flex flex-col space-y-8 md:space-y-10 order-1 md:order-2">
+                {/* H1 — word-by-word reveal */}
+                <div className="space-y-6">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#2D2926] dark:text-[#FAF8F5] leading-[1.05] tracking-tighter">
+                    <WordReveal text={t("title_part1")} startDelay={0.1} />
+                    <br />
+                    <WordReveal
+                      text={t("title_part2")}
+                      className="text-[#B34B44]"
+                      startDelay={0.28}
+                    />
+                  </h1>
+
+                  {/* Description — blur → sharp */}
+                  <m.p
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 1.1, delay: 0.6, ease: EASE }}
+                    className="text-lg md:text-xl text-[#5C5652] dark:text-[#A8A29E] leading-relaxed font-light max-w-[60ch]"
+                  >
+                    {t("description")}
+                  </m.p>
                 </div>
-              </m.div>
-            </m.div>
+
+                {/* CTA — shimmer sweep */}
+                <m.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8, ease: EASE }}
+                  className="flex flex-col sm:flex-row items-center gap-6"
+                >
+                  <m.a
+                    href="#contact"
+                    onClick={() => analytics.heroCTAClicked()}
+                    whileTap={{ scale: 0.98 }}
+                    className="relative bg-[#B34B44] text-white px-10 py-5 rounded-full font-medium text-lg shadow-lg shadow-[#B34B44]/20 hover:bg-[#963f39] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 overflow-hidden group"
+                  >
+                    {/* Periodic shimmer */}
+                    <m.span
+                      aria-hidden
+                      className="absolute inset-y-0 w-1/3 pointer-events-none"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.28) 50%, transparent 100%)",
+                      }}
+                      animate={{ x: ["-200%", "500%"] }}
+                      transition={{
+                        duration: 1.4,
+                        repeat: Infinity,
+                        repeatDelay: 3.5,
+                        ease: "easeInOut",
+                      }}
+                    />
+                    <span>{t("cta")}</span>
+                    <ArrowUpRight
+                      weight="bold"
+                      size={20}
+                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    />
+                  </m.a>
+                </m.div>
+
+                {/* Mobile Mockup */}
+                <m.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.9, ease: EASE }}
+                  className="md:hidden pt-4 pb-8 px-1"
+                >
+                  <BrowserMockup />
+                </m.div>
+
+                {/* Trust Markers */}
+                <m.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1.0, ease: EASE }}
+                  className="mt-6 md:mt-12 pt-8 md:pt-12 border-t border-stone-200/60 dark:border-white/[0.07] flex flex-col gap-10"
+                >
+                  <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-8 md:gap-x-12 gap-y-6">
+                    {[
+                      { Icon: CheckCircle, label: t("trust.satisfied"), delay: 1.05 },
+                      { Icon: ShieldCheck, label: t("trust.fixed_price"), delay: 1.15 },
+                      { Icon: Clock, label: t("trust.response_time"), delay: 1.25 },
+                    ].map(({ Icon, label, delay }) => (
+                      <m.div
+                        key={label}
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay, ease: EASE }}
+                        className="flex items-center gap-4 group shrink-0"
+                      >
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#B34B44]/5 flex items-center justify-center text-[#B34B44] transition-colors duration-300 group-hover:bg-[#B34B44]/10">
+                          <Icon weight="fill" size={24} />
+                        </div>
+                        <span className="text-[15px] font-medium text-[#2D2926] dark:text-[#FAF8F5] leading-tight">
+                          {label}
+                        </span>
+                      </m.div>
+                    ))}
+                  </div>
+                </m.div>
+              </div>
+            </div>
           </div>
-        </div>
         </div>
       </section>
     </>
