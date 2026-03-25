@@ -22,7 +22,7 @@ import { analytics } from "@/lib/analytics";
 
 const DinoGame = dynamic(() => import("./DinoGame"), { ssr: false });
 
-const EASE = [0.21, 0.45, 0.32, 0.9];
+const EASE: [number, number, number, number] = [0.21, 0.45, 0.32, 0.9];
 
 /* ── Word-by-word reveal — each word slides up from below ─────────────────── */
 function WordReveal({
