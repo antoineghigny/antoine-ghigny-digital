@@ -5,8 +5,8 @@ function getProfessionalServiceSchema(locale: string) {
   const url = `${BASE_URL}/${locale}`;
   const description =
     locale === "fr"
-      ? "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
-      : "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium.";
+      ? "Stratégie, création de sites web sur mesure et accompagnement humain pour indépendants et PME. Basé à Nivelles, Belgique."
+      : "Strategy, bespoke website development and human support for freelancers and SMEs. Based in Nivelles, Belgium.";
 
   return {
     "@type": "ProfessionalService",
@@ -45,7 +45,7 @@ function getProfessionalServiceSchema(locale: string) {
     sameAs: ["https://www.linkedin.com/in/antoine-ghigny-9b88a9252"],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: locale === "fr" ? "Services Web Sur-Mesure" : "Bespoke Web Services",
+      name: locale === "fr" ? "Stratégie & Sites Web Sur-Mesure" : "Strategy & Bespoke Websites",
       itemListElement: [
         {
           "@type": "Offer",
@@ -54,8 +54,8 @@ function getProfessionalServiceSchema(locale: string) {
             name: locale === "fr" ? "Création de site vitrine" : "Professional showcase website",
             description:
               locale === "fr"
-                ? "Site web professionnel sur mesure avec SEO intégré"
-                : "Custom professional website with integrated SEO",
+                ? "Site web professionnel sur mesure avec stratégie d'offre et SEO intégré"
+                : "Bespoke professional website with offer strategy and integrated SEO",
           },
         },
         {
@@ -65,8 +65,8 @@ function getProfessionalServiceSchema(locale: string) {
             name: locale === "fr" ? "Landing page" : "Landing page",
             description:
               locale === "fr"
-                ? "Page d'atterrissage optimisée pour la conversion"
-                : "Conversion-optimized landing page",
+                ? "Page d'atterrissage sur mesure avec message, preuves et conversion clarifiés"
+                : "Bespoke landing page with clarified message, proof points and conversion path",
           },
         },
         {
@@ -76,8 +76,8 @@ function getProfessionalServiceSchema(locale: string) {
             name: locale === "fr" ? "Optimisation SEO & IA" : "SEO & AI Optimisation",
             description:
               locale === "fr"
-                ? "Référencement Google et visibilité sur les moteurs IA"
-                : "Google ranking and visibility on AI search engines",
+                ? "Structuration SEO et IA pour rendre l'offre compréhensible par les moteurs et les clients"
+                : "SEO and AI-search structuring so the offer is clear to search engines and clients",
           },
         },
       ],
@@ -129,8 +129,8 @@ function getPersonSchema() {
 function getWebSiteSchema(locale: string) {
   const description =
     locale === "fr"
-      ? "Conception de sites web et landing pages sur mesure pour indépendants et PME. Basé à Nivelles, Belgique."
-      : "Bespoke website and landing page design for freelancers and SMEs. Based in Nivelles, Belgium.";
+      ? "Stratégie, création de sites web sur mesure et accompagnement humain pour indépendants et PME. Basé à Nivelles, Belgique."
+      : "Strategy, bespoke website development and human support for freelancers and SMEs. Based in Nivelles, Belgium.";
 
   return {
     "@type": "WebSite",
