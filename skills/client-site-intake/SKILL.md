@@ -11,7 +11,7 @@ Use this skill to turn a client contact into:
 
 - a personalized client-facing next-step message and questionnaire in French
 - an internal strategy read on positioning, offer, audience, blockers, and conversion goals
-- a build-ready handoff brief for Claude/Codex with copy direction, UX scope, visual direction, technical constraints, assumptions, and open questions
+- a build-ready handoff brief for Claude/Codex/Gemini with copy direction, UX scope, SEO/AI search direction, visual direction, technical constraints, assumptions, and open questions
 
 Default to French unless the user asks for another language. Use a direct, human tone that a non-technical founder can answer quickly. Let the client say "je ne sais pas" without blocking the process.
 
@@ -24,6 +24,7 @@ Treat the site's "Prochain pas / Parlons de ce qui vous rend different / Demande
    - Draft intake: create the client message, questionnaire, form fields, or email sequence.
    - Analyze answers: extract strategy, requirements, risks, and missing details from client responses.
    - Build handoff: produce a brief that another Claude/Codex agent can use to build without avoidable follow-up.
+   - SEO handoff: convert client answers into metadata, page intent, local/service-area SEO, schema, redirects, and AI search requirements.
    - Automation: propose form fields, CRM/Notion/Sheets columns, status flow, and automatic reply structure.
 2. Load `references/intake-framework.md` when creating a comprehensive questionnaire, analyzing real client answers, or producing a build-ready handoff.
 3. For client-facing replies, first extract 2-4 concrete details from the client's first message: project, offer, audience, urgency, blocker, words they used, or uncertainty they expressed.
@@ -68,11 +69,12 @@ For build-ready handoff, produce:
 - page-by-page section plan
 - product copy direction based on client words
 - UX and conversion notes
+- SEO and AI search requirements: page intent, metadata direction, structured data, canonical/sitemap/robots, redirects, local SEO if relevant, internal linking, content gaps, and performance expectations
 - visual direction, including what to avoid
 - data/content required
 - integrations and non-functional constraints
 - acceptance criteria
-- a final prompt that can be pasted into Claude/Codex
+- a final first prompt that can be pasted into Claude/Codex or used before calling Gemini MCP
 
 ## Rules
 
@@ -84,6 +86,9 @@ For build-ready handoff, produce:
 - If the client has already committed to working with the user, frame questions as the next step to move forward together, not as lead qualification.
 - Prefer fewer required questions plus optional detail sections over a wall of questions.
 - Do not invent proof, metrics, testimonials, pricing, or technical constraints.
+- Do not invent SEO claims, rankings, keyword volumes, Google data, or competitor facts. Ask for URLs or use a research tool only when the user explicitly wants research.
+- For SEO, translate client language into search intent and page structure; do not stuff generic keywords.
+- When the user mentions Gemini MCP, prepare a complete design handoff prompt with business context, client words, page intent, SEO constraints, design direction, assets, and what to avoid. Do not write frontend/UI code yourself.
 - When the user asks for "tout", include the full framework from `references/intake-framework.md`.
 - When preparing automation, automate collection, formatting, reminders, and brief generation; do not pretend strategic judgment can be fully automated.
 

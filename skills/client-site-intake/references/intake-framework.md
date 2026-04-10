@@ -186,6 +186,120 @@ Use this when the user asks for "tout", wants an automated form, or needs enough
 - Generation automatique d'un brief interne.
 - Generation automatique d'une checklist assets.
 
+## SEO and AI Search Intake
+
+Use this section when the project involves a new site, refonte, landing page, local visibility, Google visibility, AI search visibility, content strategy, or migration.
+
+Ask only what matters for the project stage. Do not turn the first client reply into an SEO audit unless the user asks for one.
+
+### Client Questions
+
+- Quelle zone geographique compte vraiment ? Local, Belgique, France, international, ville precise, service area ?
+- Quels services/offres doivent etre trouvables sur Google ou via les moteurs de recherche IA ?
+- Quels mots vos clients utilisent deja pour parler du probleme ? Garder les mots exacts.
+- Y a-t-il des pages, articles, cas clients, guides, ou FAQ existants qui attirent deja du trafic ?
+- Avez-vous deja une Google Business Profile, des avis Google, ou une strategie locale ?
+- Avez-vous des concurrents ou alternatives que vos clients comparent souvent ?
+- Y a-t-il des pages existantes a ne pas casser, garder, rediriger, ou reecrire ?
+- Est-ce que le site actuel a deja du trafic ou des positions connues ? Si oui, demander Search Console/Analytics ou une capture, sans inventer.
+- Quelles questions reviennent souvent avant qu'un client vous contacte ?
+- Quels elements de preuve peuvent aider la confiance : avis, cas clients, resultats, logos, photos, certifications, process ?
+
+### SEO Requirements For Handoff
+
+Always include when building:
+
+- primary search intent by page
+- suggested title/meta description direction, without pretending they are final if copy is missing
+- H1/H2 structure direction
+- internal linking opportunities
+- image alt-text direction based on real assets
+- schema.org candidates: LocalBusiness, ProfessionalService, Service, WebPage, FAQPage, Product, BreadcrumbList, Article, Organization, depending on the project
+- canonical, sitemap, robots, OpenGraph, Twitter Card expectations
+- performance/Core Web Vitals expectation
+- mobile readability expectation
+- redirect notes for refontes or migrations
+- content gaps that block quality SEO
+- AI search notes: direct answer sections, FAQ, definitions, clear service pages, proof, author/entity clarity
+
+If current SEO data is unavailable, write `A confirmer` instead of inventing traffic, rankings, or keyword volume.
+
+## First AI Prompt Quality Bar
+
+The first prompt given to Claude/Codex/Gemini should be complete enough that the user has minimal edits to do after generation.
+
+Include:
+
+- client context and exact words worth preserving
+- business goal and conversion goal
+- target audience and non-target audience
+- offer hierarchy
+- what is blocked today
+- page type recommendation: landing page, refonte, multi-page site, or `a confirmer`
+- technical platform and constraints if known
+- content and asset inventory
+- SEO/AI search requirements
+- copy tone and words to avoid
+- visual direction and references if available
+- Gemini MCP note when design/frontend will be generated through Gemini
+- assumptions and open questions
+- acceptance criteria
+
+### Prompt Template
+
+```text
+Tu vas m'aider a transformer ce brief client en [site/landing/refonte] pret a produire.
+
+Contexte client:
+- Activite:
+- Offre prioritaire:
+- Audience:
+- Blocage actuel:
+- Conversion principale:
+- Mots exacts a preserver:
+
+Decision produit:
+- Type recommande: [landing/refonte/site multi-page/a confirmer]
+- Raison:
+- Hors scope:
+
+SEO / AI search:
+- Intentions de recherche par page:
+- Zone geographique:
+- Pages a garder/rediriger:
+- Metadata direction:
+- Schema.org candidats:
+- FAQ ou reponses directes a prevoir:
+- Donnees manquantes:
+
+Copy:
+- Ton:
+- Promesse prudente:
+- Objections a traiter:
+- Mots/formulations a eviter:
+
+Design / Gemini MCP:
+- Ressenti:
+- References:
+- Assets disponibles:
+- Assets manquants:
+- Contraintes du repo:
+- Si Gemini MCP est utilise, produire un brief design complet avant tout code UI et respecter les instructions locales du projet.
+
+Contraintes:
+- Stack/plateforme:
+- Integrations:
+- Legal/RGPD:
+- Performance/accessibilite:
+
+Acceptance criteria:
+- Le site explique vite ce qui est vendu, pour qui, et pourquoi c'est different.
+- Le parcours mene clairement vers [CTA].
+- Le SEO repose sur le contenu reel et les mots client, sans inventer de chiffres ou de positions.
+- Les preuves disponibles sont utilisees sans sur-vendre.
+- Les informations manquantes sont marquees TODO ou A confirmer.
+```
+
 ## Analysis Method
 
 When client answers are provided, produce this sequence:
@@ -269,6 +383,18 @@ Use this missing-info policy:
 - Legal/RGPD:
 - Performance/accessibilite:
 
+## SEO / AI search
+- Intention de recherche principale:
+- Pages SEO importantes:
+- Zone geographique:
+- Title/meta direction:
+- Structure H1/H2:
+- Donnees structurees:
+- FAQ/reponses directes:
+- Redirects/canonical/sitemap/robots:
+- Contenu manquant:
+- A confirmer:
+
 ## Donnees et contenu
 - Fourni:
 - A creer:
@@ -287,5 +413,5 @@ Use this missing-info policy:
 - [ ] Les contraintes techniques et legales connues sont respectees.
 
 ## Prompt Claude/Codex
-Tu vas construire [type de site] pour [client/audience]. Objectif principal: [conversion]. Respecte le brief ci-dessus, preserve les mots exacts du client quand ils portent le positionnement, n'invente pas de preuves ou de chiffres, marque les informations manquantes comme TODO, et suis les instructions locales du repo avant toute modification UI/frontend.
+Tu vas construire [type de site] pour [client/audience]. Objectif principal: [conversion]. Respecte le brief ci-dessus, preserve les mots exacts du client quand ils portent le positionnement, n'invente pas de preuves, chiffres, rankings SEO, volumes de recherche, ou contraintes techniques. Integre les exigences SEO/AI search, marque les informations manquantes comme TODO/A confirmer, et suis les instructions locales du repo avant toute modification UI/frontend. Si Gemini MCP est utilise pour le design/frontend, prepare le brief design complet et passe par Gemini conformement aux instructions du repo.
 ```
