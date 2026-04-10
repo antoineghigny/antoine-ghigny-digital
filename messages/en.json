@@ -7,7 +7,7 @@
     "availability": "Available now",
     "title_part1": "Your clients have options.",
     "title_part2": "Give them a reason to choose you.",
-    "description": "I do not just deliver a website. We clarify your offer, your proof points and your message, then I build a bespoke presence that builds trust, can be found on Google and stays supported after launch.",
+    "description": "We start with your clients, goals and what makes you credible. Then I build a clear, fast website designed to generate qualified enquiries.",
     "cta": "Let's talk about your project",
     "cta_secondary": "or discover how it works >",
     "trust": {
@@ -25,32 +25,32 @@
   "artisan": {
     "badge": "Strategy + development",
     "experience_at": "Experience at",
-    "title": "Not one more website. A presence that makes people want to choose you.",
-    "content": "With AI, producing a generic website has never been easier. The real issue is the clarity of your offer: what you sell, who it is for, why people should choose you, and how to show it without empty wording. I question your positioning, look for your angles, build the path, then develop the site around what makes you credible and easy to choose.",
+    "title": "Substance first. Website second.",
+    "content": "Before writing code, I take the time to understand your business, clients and constraints. We set a clear direction, then I build a bespoke website that presents the essentials simply, with no template and no vague wording.",
     "experience": "Software engineering experience",
     "location": "Based in Nivelles, Belgium"
   },
   "whyMe": {
-    "badge": "Why me",
-    "title_part1": "Your site should prove",
-    "title_part2": "why choose you",
-    "title_part3": ", not just that you exist.",
+    "badge": "In practice",
+    "title_part1": "A site that builds trust,",
+    "title_part2": "guides",
+    "title_part3": " and starts the conversation.",
     "bento": {
       "professionalism": {
-        "label": "Differentiation",
-        "title": "We turn what makes you genuinely useful into simple, credible messages that are <highlight>hard to confuse with a competitor</highlight>."
+        "label": "Positioning",
+        "title": "We make your business easy to understand: what you do, who it is for and <highlight>why people should contact you now</highlight>."
       },
       "trust": {
-        "label": "Human support",
-        "title": "You work with me, with no intermediaries. I listen to your reality, challenge weak angles and help you <highlight>make the right decisions</highlight>."
+        "label": "Support",
+        "title": "You work directly with me. I help you move forward <highlight>without jargon or intermediaries</highlight>."
       },
       "performance": {
         "label": "Acquisition strategy",
-        "title": "Google, AI search, pages, proof points, calls to action: we build a strategy to attract <highlight>the right enquiries</highlight>."
+        "title": "We shape the pages and calls to action to turn interest into <highlight>qualified enquiries</highlight>."
       },
       "design": {
         "label": "Bespoke",
-        "title": "Your site starts from your business, your clients and how you work. No copied offer, <highlight>no template</highlight>."
+        "title": "Each page is built around your business, your clients and your proof points. <highlight>No template</highlight>, no generic copy."
       }
     },
     "mockup": {
@@ -73,8 +73,8 @@
           "time": "A clear need, useful context, fewer back-and-forths"
         },
         "aisearch": {
-          "title": "Offer structured for Google AI & ChatGPT",
-          "time": "The right signals are clear for humans and AI"
+          "title": "Offer structured to be understood",
+          "time": "The right signals are clear for your future clients"
         },
         "booking": {
           "title": "Next call framed",
@@ -91,7 +91,7 @@
       "my": {
         "title_part1": "My Web",
         "title_part2": "Method.",
-        "description": "I turn that material into positioning, content and a clear path: a site designed to help the right people understand your value, trust you and take action."
+        "description": "I turn that material into positioning, content and a clear path: a site designed to help the right people understand what you bring, trust you and take action."
       }
     }
   },
@@ -104,7 +104,7 @@
     "step1_desc": "We map your business, clients, competitors, objections and proof points. The goal: know what deserves to be said before writing a line of code.",
     "step2_number": "02",
     "step2_label": "Build the strategy",
-    "step2_desc": "We define the messages, path, content and calls to action that explain why people should choose you over someone else.",
+    "step2_desc": "We define the messages, path, content and calls to action that turn visitors into concrete enquiries.",
     "step3_number": "03",
     "step3_label": "Develop & support",
     "step3_desc": "I build the bespoke site, launch it, then stay available to adjust the content, technical priorities and next moves after the first feedback.",
@@ -210,7 +210,7 @@
     "items": {
       "q1": {
         "question": "Why work with you instead of an agency or another freelancer?",
-        "answer": "Because I combine strategy, development and support. Many people can produce a website, even more so with AI. My work starts before the code: understanding your market, clarifying your difference, shaping your offer and building a path that makes people want to contact you. You have one direct contact from the first call to launch."
+        "answer": "Because I combine strategy, development and support. Many people can produce a website. My work starts before the code: understanding your market, clarifying your difference, shaping your offer and building a path that makes people want to contact you. You have one direct contact from the first call to launch."
       },
       "q2": {
         "question": "How much does it cost to create a website?",
@@ -233,8 +233,8 @@
         "answer": "Three steps: a free initial call to understand your business, clients and goals; a strategy phase to clarify the offer, messages, proof points and path; then development with regular checkpoints. You stay involved without having to manage the technical side."
       },
       "q7": {
-        "question": "Will my site be technically ready for AI search engines?",
-        "answer": "Yes. I include the useful technical foundations: Schema.org structured data, an llms.txt file for AI crawlers, semantic HTML and structured content. I do not sell a magic promise: AI makes the market more competitive, so you mainly need a clear offer, useful content, credible proof and authority that compounds over time."
+        "question": "Will my site be well structured for Google?",
+        "answer": "Yes. I include the useful technical foundations: Schema.org structured data, semantic HTML, organized content, clear metadata and solid performance. I do not sell a magic promise: you mainly need a clear offer, useful content, credible proof and authority that compounds over time."
       },
       "q8": {
         "question": "Is WordPress or a custom-built website better?",

@@ -7,7 +7,7 @@
     "availability": "Disponible maintenant",
     "title_part1": "Vos clients ont le choix.",
     "title_part2": "Donnez-leur une raison de vous choisir.",
-    "description": "Je ne vous livre pas seulement un site. On clarifie votre offre, vos preuves et votre message, puis je développe une présence sur mesure qui rassure, se trouve sur Google et reste accompagnée après la mise en ligne.",
+    "description": "On part de vos clients, de vos objectifs et de ce qui vous rend crédible. Puis je crée un site clair, rapide et pensé pour générer des demandes qualifiées.",
     "cta": "Discutons de votre projet",
     "cta_secondary": "En savoir plus",
     "trust": {
@@ -25,32 +25,32 @@
   "artisan": {
     "badge": "Stratégie + développement",
     "experience_at": "Expérience chez",
-    "title": "Pas un site de plus. Une présence qui donne envie de vous choisir.",
-    "content": "Avec l'IA, produire un site générique n'a jamais été aussi simple. Le vrai sujet, c'est la clarté de votre offre : ce que vous vendez, à qui, pourquoi vous, et comment le montrer sans discours creux. Je questionne votre positionnement, je cherche vos angles, je construis le parcours, puis je développe le site autour de ce qui vous rend crédible et facile à choisir.",
+    "title": "D'abord le fond. Ensuite le site.",
+    "content": "Avant de coder, je prends le temps de comprendre votre activité, vos clients et vos contraintes. On pose une direction claire, puis je développe un site sur mesure qui présente l'essentiel simplement, sans template ni discours vague.",
     "experience": "Expérience en ingénierie logicielle",
     "location": "Basé à Nivelles, Belgique"
   },
   "whyMe": {
-    "badge": "Pourquoi moi",
-    "title_part1": "Votre site doit prouver",
-    "title_part2": "pourquoi vous choisir",
-    "title_part3": ", pas seulement que vous existez.",
+    "badge": "Concrètement",
+    "title_part1": "Un site qui rassure,",
+    "title_part2": "oriente",
+    "title_part3": " et déclenche le contact.",
     "bento": {
       "professionalism": {
-        "label": "Différenciation",
-        "title": "On transforme ce qui vous rend vraiment utile en messages simples, crédibles et <highlight>impossibles à confondre avec un concurrent</highlight>."
+        "label": "Positionnement",
+        "title": "On rend votre activité facile à comprendre : ce que vous faites, pour qui, et <highlight>pourquoi vous contacter maintenant</highlight>."
       },
       "trust": {
-        "label": "Accompagnement humain",
-        "title": "Vous travaillez avec moi, sans intermédiaires. J'écoute votre réalité, je questionne les angles faibles et je vous aide à <highlight>prendre les bonnes décisions</highlight>."
+        "label": "Accompagnement",
+        "title": "Vous échangez directement avec moi. Je vous aide à avancer <highlight>sans jargon ni intermédiaires</highlight>."
       },
       "performance": {
         "label": "Stratégie d'acquisition",
-        "title": "Google, recherches IA, pages, preuves, appels à l'action : on construit une stratégie pour attirer <highlight>les bonnes demandes</highlight>."
+        "title": "On construit les pages et les appels à l'action pour transformer l'intérêt en <highlight>demandes qualifiées</highlight>."
       },
       "design": {
         "label": "Sur mesure",
-        "title": "Votre site part de votre métier, de vos clients et de votre manière de travailler. Pas d'offre copiée-collée, <highlight>pas de template</highlight>."
+        "title": "Chaque page est pensée autour de votre activité, de vos clients et de vos preuves. <highlight>Pas de template</highlight>, pas de texte générique."
       }
     },
     "mockup": {
@@ -73,8 +73,8 @@
           "time": "Un besoin clair, un bon contexte, moins d'allers-retours"
         },
         "aisearch": {
-          "title": "Offre structurée pour Google AI & ChatGPT",
-          "time": "Les bons signaux sont clairs pour les humains comme pour les IA"
+          "title": "Offre structurée pour être comprise",
+          "time": "Les bons signaux sont clairs pour vos futurs clients"
         },
         "booking": {
           "title": "Prochain rendez-vous cadré",
@@ -91,7 +91,7 @@
       "my": {
         "title_part1": "Ma Méthode",
         "title_part2": "Web.",
-        "description": "Je transforme cette matière en positionnement, contenus et parcours clair : un site pensé pour aider les bonnes personnes à comprendre votre valeur, à vous faire confiance et à passer à l'action."
+        "description": "Je transforme cette matière en positionnement, contenus et parcours clair : un site pensé pour aider les bonnes personnes à comprendre ce que vous apportez, à vous faire confiance et à passer à l'action."
       }
     }
   },
@@ -104,7 +104,7 @@
     "step1_desc": "On met à plat votre activité, vos clients, vos concurrents, leurs objections et vos preuves. L'objectif : savoir ce qui mérite d'être dit avant d'écrire une ligne de code.",
     "step2_number": "02",
     "step2_label": "Élaborer la stratégie",
-    "step2_desc": "On construit les messages, le parcours, les contenus et les appels à l'action qui expliquent pourquoi vous choisir plutôt qu'un autre.",
+    "step2_desc": "On construit les messages, le parcours, les contenus et les appels à l'action pour transformer vos visiteurs en prises de contact concrètes.",
     "step3_number": "03",
     "step3_label": "Développer & accompagner",
     "step3_desc": "Je développe le site sur mesure, je le mets en ligne, puis je reste présent pour ajuster les contenus, la technique et les priorités après les premiers retours.",
@@ -210,7 +210,7 @@
     "items": {
       "q1": {
         "question": "Pourquoi travailler avec vous plutôt qu'une agence ou un autre freelance ?",
-        "answer": "Parce que je combine stratégie, développement et accompagnement. Beaucoup peuvent produire un site, encore plus avec l'IA. Mon travail commence avant le code : comprendre votre marché, clarifier votre différence, formuler votre offre et construire un parcours qui donne envie de vous contacter. Vous avez un interlocuteur unique du premier échange à la mise en ligne."
+        "answer": "Parce que je combine stratégie, développement et accompagnement. Beaucoup peuvent produire un site. Mon travail commence avant le code : comprendre votre marché, clarifier votre différence, formuler votre offre et construire un parcours qui donne envie de vous contacter. Vous avez un interlocuteur unique du premier échange à la mise en ligne."
       },
       "q2": {
         "question": "Combien coûte la création d'un site web ?",
@@ -233,8 +233,8 @@
         "answer": "En trois étapes : un premier échange gratuit pour comprendre votre activité, vos clients et vos objectifs ; une phase de stratégie pour clarifier l'offre, les messages, les preuves et le parcours ; puis le développement avec des points d'étape réguliers. Vous restez impliqué sans devoir gérer la partie technique."
       },
       "q7": {
-        "question": "Mon site sera-t-il techniquement prêt pour les recherches IA ?",
-        "answer": "Oui. J'intègre les bases techniques utiles : données structurées Schema.org, fichier llms.txt pour les crawlers IA, HTML sémantique et contenu structuré. Je ne vends pas une promesse magique : les IA rendent le marché plus concurrentiel, donc il faut surtout une offre claire, des contenus utiles, des preuves crédibles et une autorité qui se construit dans le temps."
+        "question": "Mon site sera-t-il bien structuré pour Google ?",
+        "answer": "Oui. J'intègre les bases techniques utiles : données structurées Schema.org, HTML sémantique, contenu organisé, métadonnées claires et performance solide. Je ne vends pas une promesse magique : il faut surtout une offre claire, des contenus utiles, des preuves crédibles et une autorité qui se construit dans le temps."
       },
       "q8": {
         "question": "Vaut-il mieux un site WordPress ou un site développé sur mesure ?",
