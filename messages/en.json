@@ -1,17 +1,17 @@
 {
   "metadata": {
     "title": "Antoine Ghigny · Freelance Web Developer | Nivelles, Belgium",
-    "description": "Freelance web developer in Nivelles, Belgium. Bespoke websites for freelancers and SMEs — fast, optimised for Google and built to be found everywhere. Free quote."
+    "description": "Freelance web developer in Nivelles, Belgium. I help freelancers and SMEs clarify their offer and turn their website into a client acquisition asset: strategy, bespoke development and human support."
   },
   "hero": {
     "availability": "Available now",
-    "title_part1": "Your clients are searching.",
-    "title_part2": "Help them find you.",
-    "description": "I create your bespoke website. Fast, visible on Google, and designed so your future clients find and contact you.",
+    "title_part1": "Your clients have options.",
+    "title_part2": "Give them a reason to choose you.",
+    "description": "I do not just deliver a website. We clarify your offer, your proof points and your message, then I build a bespoke presence that builds trust, can be found on Google and stays supported after launch.",
     "cta": "Let's talk about your project",
     "cta_secondary": "or discover how it works >",
     "trust": {
-      "satisfied": "Satisfied or reworked",
+      "satisfied": "Human support",
       "fixed_price": "Fixed price, no surprises",
       "response_time": "Reply within 24h"
     },
@@ -23,62 +23,62 @@
     }
   },
   "artisan": {
-    "badge": "The Digital Craftsman",
+    "badge": "Strategy + development",
     "experience_at": "Experience at",
-    "title": "Engineer's expertise. Freelancer's agility.",
-    "content": "One dedicated expert, zero intermediaries. From your website to a bespoke business tool, I develop what you need. More agile than an agency, more accessible than a large firm. I listen, I simplify, I build.",
+    "title": "Not one more website. A presence that makes people want to choose you.",
+    "content": "With AI, producing a generic website has never been easier. The real issue is the clarity of your offer: what you sell, who it is for, why people should choose you, and how to show it without empty wording. I question your positioning, look for your angles, build the path, then develop the site around what makes you credible and easy to choose.",
     "experience": "Software engineering experience",
     "location": "Based in Nivelles, Belgium"
   },
   "whyMe": {
-    "badge": "What it changes for you",
-    "title_part1": "Your site should bring you",
-    "title_part2": "customers",
-    "title_part3": ", not worries.",
+    "badge": "Why me",
+    "title_part1": "Your site should prove",
+    "title_part2": "why choose you",
+    "title_part3": ", not just that you exist.",
     "bento": {
       "professionalism": {
-        "label": "First Impression",
-        "title": "A visitor judges your site in <highlight>3 seconds</highlight>. Better make them want to call you."
+        "label": "Differentiation",
+        "title": "We turn what makes you genuinely useful into simple, credible messages that are <highlight>hard to confuse with a competitor</highlight>."
       },
       "trust": {
-        "label": "One dedicated contact",
-        "title": "No salespeople, no project managers, no back-and-forth. You speak directly to <highlight>the one building</highlight> your site."
+        "label": "Human support",
+        "title": "You work with me, with no intermediaries. I listen to your reality, challenge weak angles and help you <highlight>make the right decisions</highlight>."
       },
       "performance": {
-        "label": "SEO & Visibility",
-        "title": "First on Google and <highlight>visible on AI search</highlight>. Your clients find you, whatever tool they use."
+        "label": "Acquisition strategy",
+        "title": "Google, AI search, pages, proof points, calls to action: we build a strategy to attract <highlight>the right enquiries</highlight>."
       },
       "design": {
-        "label": "Made for you",
-        "title": "No templates. A site that looks like you and <highlight>sets you apart</highlight> from the competition."
+        "label": "Bespoke",
+        "title": "Your site starts from your business, your clients and how you work. No copied offer, <highlight>no template</highlight>."
       }
     },
     "mockup": {
       "url": "your-business.com",
       "tasks": {
         "review": {
-          "title": "5-star Google review received",
-          "time": "4.9 rating · 47 reviews · Max credibility"
+          "title": "Trust argument added",
+          "time": "What makes you different becomes visible"
         },
         "seo": {
-          "title": "Ranked #1 on Google",
-          "time": "\"Plumber Nivelles\" — above all competitors"
+          "title": "Local strategy validated",
+          "time": "We target their words, not a generic formula"
         },
         "client": {
-          "title": "New client from your website",
-          "time": "\"Found you on Google this morning\""
+          "title": "New client convinced",
+          "time": "\"I immediately understood why I should call you\""
         },
         "quote": {
-          "title": "Quote request at 11:47 PM",
-          "time": "Your site works while you sleep"
+          "title": "Qualified quote request received",
+          "time": "A clear need, useful context, fewer back-and-forths"
         },
         "aisearch": {
-          "title": "Found on Google AI & ChatGPT",
-          "time": "\"Best tradesperson in Nivelles?\" → Your name"
+          "title": "Offer structured for Google AI & ChatGPT",
+          "time": "The right signals are clear for humans and AI"
         },
         "booking": {
-          "title": "Appointment booked online",
-          "time": "No calls, no back-and-forth emails"
+          "title": "Next call framed",
+          "time": "We know what to say, to whom, and why now"
         }
       }
     },
@@ -90,24 +90,24 @@
       },
       "my": {
         "title_part1": "My Web",
-        "title_part2": "Vision.",
-        "description": "I turn all of that into a site that works for you: visible on Google, clear for your visitors and designed to make them take the next step."
+        "title_part2": "Method.",
+        "description": "I turn that material into positioning, content and a clear path: a site designed to help the right people understand your value, trust you and take action."
       }
     }
   },
   "process": {
-    "badge": "How it works",
-    "title_part1": "From first chat",
-    "title_part2": "to going live.",
+    "badge": "Offer, strategy, website",
+    "title_part1": "From strategy",
+    "title_part2": "to acquisition.",
     "step1_number": "01",
-    "step1_label": "Let's talk",
-    "step1_desc": "You explain your business and your needs. Free, no obligation.",
+    "step1_label": "Clarify the offer",
+    "step1_desc": "We map your business, clients, competitors, objections and proof points. The goal: know what deserves to be said before writing a line of code.",
     "step2_number": "02",
-    "step2_label": "I build your site",
-    "step2_desc": "Design, content, SEO. You validate every step.",
+    "step2_label": "Build the strategy",
+    "step2_desc": "We define the messages, path, content and calls to action that explain why people should choose you over someone else.",
     "step3_number": "03",
-    "step3_label": "You get customers",
-    "step3_desc": "Your site is live. Visible on Google. Your clients find you.",
+    "step3_label": "Develop & support",
+    "step3_desc": "I build the bespoke site, launch it, then stay available to adjust the content, technical priorities and next moves after the first feedback.",
     "marker1": "Free initial consultation",
     "marker2": "Delivered in 2 to 4 weeks",
     "marker3": "Post-launch support"
@@ -138,8 +138,8 @@
   },
   "contact": {
     "badge": "Next step",
-    "title": "Ready to be found?",
-    "description": "Tell me about your project. I'll get back to you personally within 24h.",
+    "title": "Let's talk about what makes you different.",
+    "description": "Tell me what you sell, who you sell it to and what is blocking you today. I will reply personally with the first strategic angles within 24h.",
     "cta_mail": "Send me an email",
     "cta_whatsapp": "Chat on WhatsApp",
     "status": "Antoine replies within 24h — Available this week",
@@ -209,12 +209,12 @@
     "sectionTitle": "What you need to know",
     "items": {
       "q1": {
-        "question": "Why choose a freelancer over an agency?",
-        "answer": "With a freelancer, you have a single point of contact who knows your project from first call to launch — no project manager, no anonymous developer. Rates are typically 30 to 50% lower than an agency, timelines are shorter, and you communicate directly with the person building your site."
+        "question": "Why work with you instead of an agency or another freelancer?",
+        "answer": "Because I combine strategy, development and support. Many people can produce a website, even more so with AI. My work starts before the code: understanding your market, clarifying your difference, shaping your offer and building a path that makes people want to contact you. You have one direct contact from the first call to launch."
       },
       "q2": {
         "question": "How much does it cost to create a website?",
-        "answer": "The price depends on the project and its features. As a guide: a landing page starts around €800, a professional showcase website between €1,500 and €3,000, and a bespoke business tool is quoted individually. These rates are typically 30 to 50% lower than an agency for a superior result. I always work on a fixed-price basis defined during the free initial call — you know the total cost before starting, no overruns possible."
+        "answer": "The price depends on the project, number of pages, level of strategy, support and required features. As a guide: a landing page starts around €800, a professional showcase website between €1,500 and €3,000, and a bespoke business tool is quoted individually. I work on a fixed-price basis defined during the free initial call, so you know the total cost before starting, with no surprise overruns."
       },
       "q3": {
         "question": "What is the delivery timeline?",
@@ -226,15 +226,15 @@
       },
       "q5": {
         "question": "Will my site be optimised for Google?",
-        "answer": "Yes. Every site is built to SEO best practices: semantic HTML, optimised metadata, Core Web Vitals score above 90, perfect mobile compatibility and Schema.org structured data. The site is also structured to be correctly read by AI search engines like ChatGPT and Google AI Overviews."
+        "answer": "Yes. Every site is built with solid SEO foundations: semantic HTML, optimised metadata, performance, mobile compatibility and Schema.org structured data. But SEO is not just technical: we also work on the offer, pages, proof points and questions your clients ask before contacting you."
       },
       "q6": {
         "question": "How does the collaboration work?",
-        "answer": "Three steps: a free initial call to understand your needs and goals, a detailed proposal with mockups after quote approval, then development with regular checkpoints. You get revisions until full satisfaction before the final launch."
+        "answer": "Three steps: a free initial call to understand your business, clients and goals; a strategy phase to clarify the offer, messages, proof points and path; then development with regular checkpoints. You stay involved without having to manage the technical side."
       },
       "q7": {
         "question": "Will my site be technically ready for AI search engines?",
-        "answer": "Yes. Every site includes the technical foundations needed to be correctly read by AI: Schema.org structured data, an llms.txt file for AI crawlers, semantic HTML and structured content. These optimisations maximise your chances of appearing in Google AI Overviews, ChatGPT and Gemini results. Appearing consistently also depends on your domain authority — which builds over time, especially through mentions on other sites."
+        "answer": "Yes. I include the useful technical foundations: Schema.org structured data, an llms.txt file for AI crawlers, semantic HTML and structured content. I do not sell a magic promise: AI makes the market more competitive, so you mainly need a clear offer, useful content, credible proof and authority that compounds over time."
       },
       "q8": {
         "question": "Is WordPress or a custom-built website better?",
@@ -254,7 +254,7 @@
       },
       "q12": {
         "question": "Do you offer packages or only one-off projects?",
-        "answer": "Both. For a one-off project (showcase site, landing page), I work on a fixed quote defined upfront. For ongoing support, I offer monthly maintenance packages covering updates, SEO optimisations and technical support. We define the right formula together during the free initial call."
+        "answer": "Both. For a one-off project (showcase site, landing page), I work on a fixed quote defined upfront. For ongoing support, I offer monthly maintenance packages covering updates, SEO optimisations, content adjustments and technical support. We define the right formula together during the free initial call."
       }
     },
     "returnCTA": "Contact me",

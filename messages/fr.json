@@ -1,17 +1,17 @@
 {
   "metadata": {
     "title": "Antoine Ghigny · Développeur Web Freelance | Nivelles, Belgique",
-    "description": "Développeur web freelance à Nivelles, Belgique. Je crée votre site web sur mesure : rapide, visible sur Google et optimisé pour être trouvé partout. Premier échange gratuit."
+    "description": "Développeur web freelance à Nivelles, Belgique. J'aide les indépendants et PME à clarifier leur offre et à transformer leur site en levier de clients : stratégie, développement sur mesure et accompagnement humain."
   },
   "hero": {
     "availability": "Disponible maintenant",
-    "title_part1": "Vos clients vous cherchent.",
-    "title_part2": "Aidez-les à vous trouver.",
-    "description": "Je crée votre site sur mesure. Rapide, visible sur Google et conçu pour que vos futurs clients vous trouvent et vous contactent.",
+    "title_part1": "Vos clients ont le choix.",
+    "title_part2": "Donnez-leur une raison de vous choisir.",
+    "description": "Je ne vous livre pas seulement un site. On clarifie votre offre, vos preuves et votre message, puis je développe une présence sur mesure qui rassure, se trouve sur Google et reste accompagnée après la mise en ligne.",
     "cta": "Discutons de votre projet",
     "cta_secondary": "En savoir plus",
     "trust": {
-      "satisfied": "Satisfait ou retravaillé",
+      "satisfied": "Accompagnement humain",
       "fixed_price": "Prix fixe, sans surprise",
       "response_time": "Réponse sous 24h"
     },
@@ -23,94 +23,94 @@
     }
   },
   "artisan": {
-    "badge": "L'Artisan Numérique",
+    "badge": "Stratégie + développement",
     "experience_at": "Expérience chez",
-    "title": "L'expertise d'un ingénieur, l'agilité d'un indépendant.",
-    "content": "Un seul interlocuteur pour tout votre projet. De votre site vitrine à un outil métier complexe, je développe des solutions performantes sans le jargon ni les délais d'une agence. J'écoute, je simplifie, je construis.",
+    "title": "Pas un site de plus. Une présence qui donne envie de vous choisir.",
+    "content": "Avec l'IA, produire un site générique n'a jamais été aussi simple. Le vrai sujet, c'est la clarté de votre offre : ce que vous vendez, à qui, pourquoi vous, et comment le montrer sans discours creux. Je questionne votre positionnement, je cherche vos angles, je construis le parcours, puis je développe le site autour de ce qui vous rend crédible et facile à choisir.",
     "experience": "Expérience en ingénierie logicielle",
     "location": "Basé à Nivelles, Belgique"
   },
   "whyMe": {
-    "badge": "Ce que ça change pour vous",
-    "title_part1": "Votre site devrait vous rapporter",
-    "title_part2": "des clients",
-    "title_part3": ", pas des soucis.",
+    "badge": "Pourquoi moi",
+    "title_part1": "Votre site doit prouver",
+    "title_part2": "pourquoi vous choisir",
+    "title_part3": ", pas seulement que vous existez.",
     "bento": {
       "professionalism": {
-        "label": "Première Impression",
-        "title": "Un site qui rassure et qui <highlight>convertit</highlight>. Soyez impeccable dès le premier coup d'œil."
+        "label": "Différenciation",
+        "title": "On transforme ce qui vous rend vraiment utile en messages simples, crédibles et <highlight>impossibles à confondre avec un concurrent</highlight>."
       },
       "trust": {
-        "label": "Direct & Expert",
-        "title": "Oubliez les intermédiaires. Vous échangez en direct avec <highlight>l'ingénieur qui construit</highlight> votre site."
+        "label": "Accompagnement humain",
+        "title": "Vous travaillez avec moi, sans intermédiaires. J'écoute votre réalité, je questionne les angles faibles et je vous aide à <highlight>prendre les bonnes décisions</highlight>."
       },
       "performance": {
-        "label": "SEO & Visibilité",
-        "title": "Premier sur Google et <highlight>visible sur les nouvelles recherches IA</highlight>. Vos clients vous trouvent, peu importe leur outil."
+        "label": "Stratégie d'acquisition",
+        "title": "Google, recherches IA, pages, preuves, appels à l'action : on construit une stratégie pour attirer <highlight>les bonnes demandes</highlight>."
       },
       "design": {
-        "label": "Vraiment sur-mesure",
-        "title": "Pas de templates, pas de compromis. Un site <highlight>unique</highlight> pensé exclusivement pour votre activité."
+        "label": "Sur mesure",
+        "title": "Votre site part de votre métier, de vos clients et de votre manière de travailler. Pas d'offre copiée-collée, <highlight>pas de template</highlight>."
       }
     },
     "mockup": {
       "url": "votre-business.be",
       "tasks": {
         "review": {
-          "title": "Avis 5 étoiles Google reçu",
-          "time": "Note 4.9 · 47 avis · Crédibilité maximale"
+          "title": "Argument de confiance ajouté",
+          "time": "Ce qui vous différencie devient visible"
         },
         "seo": {
-          "title": "Position 1 sur Google",
-          "time": "\"Plombier Nivelles\" — devant vos concurrents"
+          "title": "Requêtes clients validées",
+          "time": "On vise leurs mots, pas une formule générique"
         },
         "client": {
-          "title": "Nouveau client via votre site",
-          "time": "\"Je vous ai trouvé sur Google ce matin\""
+          "title": "Nouveau client convaincu",
+          "time": "\"J'ai compris tout de suite pourquoi vous appeler\""
         },
         "quote": {
-          "title": "Demande de devis reçue à 23h47",
-          "time": "Votre site travaille pendant que vous dormez"
+          "title": "Demande de devis qualifiée reçue",
+          "time": "Un besoin clair, un bon contexte, moins d'allers-retours"
         },
         "aisearch": {
-          "title": "Visible sur Google AI & ChatGPT",
-          "time": "\"Quel artisan à Nivelles ?\" → Votre nom"
+          "title": "Offre structurée pour Google AI & ChatGPT",
+          "time": "Les bons signaux sont clairs pour les humains comme pour les IA"
         },
         "booking": {
-          "title": "Rendez-vous pris en ligne",
-          "time": "Sans appel, sans échanges de mails"
+          "title": "Prochain rendez-vous cadré",
+          "time": "On sait quoi dire, à qui, et pourquoi maintenant"
         }
       }
     },
     "collaboration": {
       "client": {
-        "title_part1": "Votre Expertise",
+        "title_part1": "Votre Réalité",
         "title_part2": "Métier.",
-        "description": "Personne ne connaît votre métier mieux que vous. Vous savez ce que vos clients cherchent et ce qui les convainc."
+        "description": "Vous connaissez vos clients, leurs hésitations et ce qui fait votre différence. C'est la matière première du projet."
       },
       "my": {
-        "title_part1": "Ma Vision",
+        "title_part1": "Ma Méthode",
         "title_part2": "Web.",
-        "description": "Je transforme tout ça en un site qui travaille pour vous : visible sur Google, clair pour vos visiteurs et qui donne envie d'aller plus loin."
+        "description": "Je transforme cette matière en positionnement, contenus et parcours clair : un site pensé pour aider les bonnes personnes à comprendre votre valeur, à vous faire confiance et à passer à l'action."
       }
     }
   },
   "process": {
-    "badge": "Votre projet sur-mesure",
+    "badge": "Offre, stratégie, site",
     "title_part1": "De la stratégie",
-    "title_part2": "à la mise en ligne.",
+    "title_part2": "à l'acquisition.",
     "step1_number": "01",
-    "step1_label": "Analyse & Stratégie",
-    "step1_desc": "On définit vos objectifs et ce qui rend votre activité unique. Premier échange gratuit.",
+    "step1_label": "Clarifier l'offre",
+    "step1_desc": "On met à plat votre activité, vos clients, vos concurrents, leurs objections et vos preuves. L'objectif : savoir ce qui mérite d'être dit avant d'écrire une ligne de code.",
     "step2_number": "02",
-    "step2_label": "Création Artisanale",
-    "step2_desc": "Je code votre site de A à Z. Pas de templates, que du sur-mesure validé par vos soins.",
+    "step2_label": "Élaborer la stratégie",
+    "step2_desc": "On construit les messages, le parcours, les contenus et les appels à l'action qui expliquent pourquoi vous choisir plutôt qu'un autre.",
     "step3_number": "03",
-    "step3_label": "Lancement & Impact",
-    "step3_desc": "Mise en ligne et SEO technique avancé. Votre site commence à travailler pour vous.",
+    "step3_label": "Développer & accompagner",
+    "step3_desc": "Je développe le site sur mesure, je le mets en ligne, puis je reste présent pour ajuster les contenus, la technique et les priorités après les premiers retours.",
     "marker1": "Diagnostic gratuit",
     "marker2": "Livré en 2 à 4 semaines",
-    "marker3": "Accompagnement haute performance"
+    "marker3": "Accompagnement après lancement"
   },
   "games": {
     "dino": {
@@ -138,8 +138,8 @@
   },
   "contact": {
     "badge": "Prochain pas",
-    "title": "Prêt à être visible ?",
-    "description": "Parlez-moi de votre projet. Je vous réponds personnellement sous 24h.",
+    "title": "Parlons de ce qui vous rend différent.",
+    "description": "Envoyez-moi ce que vous vendez, à qui, et ce qui bloque aujourd'hui. Je vous réponds personnellement avec les premières pistes de stratégie sous 24h.",
     "cta_mail": "M'envoyer un mail",
     "cta_whatsapp": "Discuter sur WhatsApp",
     "status": "Antoine répond sous 24h — Disponible cette semaine",
@@ -209,12 +209,12 @@
     "sectionTitle": "Ce que vous devez savoir",
     "items": {
       "q1": {
-        "question": "Pourquoi choisir un freelance plutôt qu'une agence ?",
-        "answer": "Avec un freelance, vous avez un interlocuteur unique qui connaît votre projet du premier échange à la mise en ligne — pas de chef de projet, pas de développeur anonyme. Les tarifs sont généralement 30 à 50 % inférieurs à ceux d'une agence, les délais plus courts, et la communication directe avec la personne qui construit votre site."
+        "question": "Pourquoi travailler avec vous plutôt qu'une agence ou un autre freelance ?",
+        "answer": "Parce que je combine stratégie, développement et accompagnement. Beaucoup peuvent produire un site, encore plus avec l'IA. Mon travail commence avant le code : comprendre votre marché, clarifier votre différence, formuler votre offre et construire un parcours qui donne envie de vous contacter. Vous avez un interlocuteur unique du premier échange à la mise en ligne."
       },
       "q2": {
         "question": "Combien coûte la création d'un site web ?",
-        "answer": "Le tarif dépend du projet et de ses fonctionnalités. À titre indicatif : une landing page démarre autour de 800 €, un site vitrine professionnel entre 1 500 € et 3 000 €, un outil métier sur mesure fait l'objet d'un devis personnalisé. Ces tarifs sont 30 à 50 % inférieurs à ceux d'une agence pour un résultat supérieur. Je travaille toujours sur la base d'un forfait fixe défini lors du premier échange gratuit — vous connaissez le prix total avant de commencer, sans dépassement possible."
+        "answer": "Le tarif dépend du projet, du nombre de pages, du niveau de stratégie, de l'accompagnement et des fonctionnalités nécessaires. À titre indicatif : une landing page démarre autour de 800 €, un site vitrine professionnel entre 1 500 € et 3 000 €, un outil métier sur mesure fait l'objet d'un devis personnalisé. Je travaille sur la base d'un forfait fixe défini lors du premier échange gratuit — vous connaissez le prix total avant de commencer, sans dépassement surprise."
       },
       "q3": {
         "question": "Quel est le délai de réalisation ?",
@@ -226,15 +226,15 @@
       },
       "q5": {
         "question": "Mon site sera-t-il optimisé pour Google ?",
-        "answer": "Oui. Chaque site est construit selon les meilleures pratiques SEO : HTML sémantique, métadonnées optimisées, score Core Web Vitals supérieur à 90, compatibilité mobile parfaite et données structurées Schema.org. Le site est également structuré pour être correctement lu par les moteurs de recherche IA comme ChatGPT et Google AI Overviews."
+        "answer": "Oui. Chaque site est construit avec des bases SEO solides : HTML sémantique, métadonnées optimisées, performance, compatibilité mobile et données structurées Schema.org. Mais le SEO ne se limite pas à la technique : on travaille aussi l'offre, les pages, les preuves et les questions que vos clients se posent avant de vous contacter."
       },
       "q6": {
         "question": "Comment se déroule la collaboration ?",
-        "answer": "En trois étapes : un premier échange gratuit pour comprendre vos besoins et objectifs, une proposition détaillée avec maquettes après validation du devis, puis le développement avec des points d'étape réguliers. Vous avez droit à des révisions jusqu'à satisfaction complète avant la mise en ligne finale."
+        "answer": "En trois étapes : un premier échange gratuit pour comprendre votre activité, vos clients et vos objectifs ; une phase de stratégie pour clarifier l'offre, les messages, les preuves et le parcours ; puis le développement avec des points d'étape réguliers. Vous restez impliqué sans devoir gérer la partie technique."
       },
       "q7": {
         "question": "Mon site sera-t-il techniquement prêt pour les recherches IA ?",
-        "answer": "Oui. Chaque site intègre les bases techniques nécessaires pour être correctement lu par les IA : données structurées Schema.org, fichier llms.txt pour les crawlers IA, HTML sémantique et contenu structuré. Ces optimisations maximisent vos chances d'apparaître dans les résultats Google AI Overviews, ChatGPT et Gemini. Apparaître régulièrement dépend aussi de l'autorité de votre domaine — ce qui se construit dans le temps, notamment via des mentions sur d'autres sites."
+        "answer": "Oui. J'intègre les bases techniques utiles : données structurées Schema.org, fichier llms.txt pour les crawlers IA, HTML sémantique et contenu structuré. Je ne vends pas une promesse magique : les IA rendent le marché plus concurrentiel, donc il faut surtout une offre claire, des contenus utiles, des preuves crédibles et une autorité qui se construit dans le temps."
       },
       "q8": {
         "question": "Vaut-il mieux un site WordPress ou un site développé sur mesure ?",
@@ -254,7 +254,7 @@
       },
       "q12": {
         "question": "Proposez-vous des forfaits ou uniquement des projets ponctuels ?",
-        "answer": "Les deux. Pour un projet ponctuel (site vitrine, landing page), je travaille sur devis fixe défini à l'avance. Pour un accompagnement continu, je propose des forfaits de maintenance mensuelle incluant mises à jour, optimisations SEO et support technique. On définit ensemble la formule la plus adaptée lors du premier échange gratuit."
+        "answer": "Les deux. Pour un projet ponctuel (site vitrine, landing page), je travaille sur devis fixe défini à l'avance. Pour un accompagnement continu, je propose des forfaits de maintenance mensuelle incluant mises à jour, optimisations SEO, ajustements de contenu et support technique. On définit ensemble la formule la plus adaptée lors du premier échange gratuit."
       }
     },
     "returnCTA": "Contactez-moi",
