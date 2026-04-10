@@ -1,6 +1,8 @@
 # Client Site Intake Framework
 
-Use this reference when the user needs a complete client questionnaire, analysis of real client answers, or a handoff that lets Claude/Codex build a website with minimal follow-up.
+Use this reference when the user needs a complete but useful client intake, analysis of real client answers, or a handoff that lets Claude/Codex build a website with minimal follow-up.
+
+Do not send this reference as a raw questionnaire. Use it to select the smallest complete set of questions for the specific client, based on what they already wrote.
 
 ## Personalized Client Reply
 
@@ -50,6 +52,49 @@ Avec ca, je peux vous renvoyer les premieres pistes de strategie et la suite con
 - Use one sentence to explain why the questions matter: to understand the offer, the audience, the blocker, and what must be built.
 - Never reuse the exact site block "Prochain pas / Demande de projet" as the answer.
 
+## One-Shot Useful Intake
+
+Use this when the user wants enough information to move forward without sending several follow-up emails.
+
+This is not a request to ask everything. It is a request to ask everything that matters for this specific client.
+
+Before outputting a client-facing question, check that it helps at least one of these decisions:
+
+- positioning: understand what makes the client different
+- offer: know what to sell and what not to sell
+- audience: know who the site must attract or filter out
+- conversion: know what action the site should create
+- scope: decide landing page, refonte, multi-page site, feature, or handoff
+- content/assets: know what can be reused and what is missing
+- SEO/AI search: preserve traffic, define page intent, answer real client questions
+- technical feasibility: know the current platform, domain, tools, integrations, constraints
+- timeline/operations: know urgency, validation process, access, and non-negotiables
+
+If a question does not affect a decision, remove it.
+
+### One-Shot Reply Structure
+
+```text
+[Personalized opening based on the client's message.]
+
+Ce que je comprends: [specific summary].
+
+Pour avancer sans partir sur une mauvaise hypothese, envoyez-moi les elements ci-dessous. Vous pouvez repondre en vrac, avec des liens, des captures, ou "je ne sais pas encore".
+
+1. [current site/platform/access question, only if relevant]
+2. [offer question]
+3. [audience/filtering question]
+4. [conversion question]
+5. [content/assets/proof question]
+6. [SEO/current traffic/existing page question, if relevant]
+7. [style/reference question]
+8. [deadline/constraint question]
+
+Avec ca, je pourrai [specific next step: recommend landing vs refonte, prepare strategy, estimate scope, build brief, etc.].
+```
+
+Keep it personal. Merge related questions when possible. A good intake email feels like 6-10 precise questions chosen for the client, not a 40-question audit.
+
 ## Fast Intake
 
 Use this when the user wants a short version that still captures the minimum needed.
@@ -65,9 +110,9 @@ Use this when the user wants a short version that still captures the minimum nee
 9. Quel style ou ressenti voulez-vous ? Quel style voulez-vous eviter ?
 10. Y a-t-il une deadline, un budget, une contrainte technique, ou un outil obligatoire ?
 
-## Master Questionnaire
+## Selection Question Bank
 
-Use this when the user asks for "tout", wants an automated form, or needs enough input to build faithfully.
+Use this as a bank of possible questions for automated forms, deep analysis, or build-ready handoffs. Do not send it as-is to the client. Select and rewrite the relevant questions based on the first message, the project type, and what is still missing.
 
 ### 1. Contexte
 

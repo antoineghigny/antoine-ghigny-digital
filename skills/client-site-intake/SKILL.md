@@ -45,8 +45,8 @@ For client-facing intake, produce:
 - a personalized opening that proves the first client message was read
 - a "ce que j'ai compris" sentence when enough context exists
 - an easy instruction for how to answer
-- grouped questions, with the smallest required set first
-- optional deeper questions for strategy/design/content only if useful
+- grouped questions selected from the framework, not a raw questionnaire dump
+- enough useful questions to avoid avoidable back-and-forth before strategy/build work
 - a short closing line that explains the next step and keeps the tone human
 
 For internal analysis, produce:
@@ -82,16 +82,19 @@ For build-ready handoff, produce:
 - Never paste the site's "Prochain pas / Demande de projet" block into a client reply.
 - Never paste a template unchanged; use templates only as structure, then rewrite around the client's actual words.
 - Never send a generic intake if a real first message is available; adapt the wording and question order to that message.
+- Avoid calling it a "questionnaire" in client-facing copy when that would feel like a form; prefer "quelques elements", "les infos utiles", or "ce dont j'ai besoin pour avancer".
 - Show interest before extracting information: acknowledge what the client is trying to do, what seems important, or what is unclear.
 - If the client has already committed to working with the user, frame questions as the next step to move forward together, not as lead qualification.
-- Prefer fewer required questions plus optional detail sections over a wall of questions.
+- Prefer one strong personalized intake email over multiple follow-up emails.
+- Every client-facing question must have a clear use: strategy, scope, content/assets, SEO, conversion, technical feasibility, constraints, or handoff quality. If a question does not change what the user would recommend or build, omit it.
+- Use the full framework as a selection map, not as a form to paste. Do not ask all questions unless every question is genuinely relevant to this client and project.
 - Do not invent proof, metrics, testimonials, pricing, or technical constraints.
 - Do not invent SEO claims, rankings, keyword volumes, Google data, or competitor facts. Ask for URLs or use a research tool only when the user explicitly wants research.
 - For SEO, translate client language into search intent and page structure; do not stuff generic keywords.
 - When the user mentions Gemini MCP, prepare a complete design handoff prompt with business context, client words, page intent, SEO constraints, design direction, assets, and what to avoid. Do not write frontend/UI code yourself.
-- When the user asks for "tout", include the full framework from `references/intake-framework.md`.
+- When the user asks for "tout", interpret it as "everything useful for this case in one personalized message", not as every possible question.
 - When preparing automation, automate collection, formatting, reminders, and brief generation; do not pretend strategic judgment can be fully automated.
 
 ## Reference
 
-- `references/intake-framework.md`: master questionnaire, automation fields, analysis method, and build-ready brief schema.
+- `references/intake-framework.md`: one-shot intake framework, SEO questions, automation fields, analysis method, and build-ready brief schema.
