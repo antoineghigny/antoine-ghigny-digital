@@ -1,0 +1,4 @@
+interface:
+  display_name: "Client Site Intake"
+  short_description: "Create personal intake replies and site briefs"
+  default_prompt: "Use $client-site-intake to draft a personalized client reply and build-ready website brief."
