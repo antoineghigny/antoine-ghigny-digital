@@ -16,7 +16,7 @@ function getProfessionalServiceSchema(locale: string) {
     description,
     image: `${BASE_URL}/og-image.png`,
     telephone: "+32 475 91 13 74",
-    email: "antoine@ghigny.be",
+    email: "contact@antoineghigny.be",
     foundingDate: "2023",
     address: {
       "@type": "PostalAddress",
@@ -98,7 +98,7 @@ function getPersonSchema() {
     name: "Antoine Ghigny",
     jobTitle: "Développeur Web Freelance & Software Engineer",
     url: BASE_URL,
-    email: "antoine@ghigny.be",
+    email: "contact@antoineghigny.be",
     telephone: "+32 475 91 13 74",
     image: `${BASE_URL}/images/antoine.jpg`,
     address: {
@@ -149,7 +149,7 @@ function getWebSiteSchema(locale: string) {
     author: { "@id": `${BASE_URL}/#person` },
     potentialAction: {
       "@type": "ContactAction",
-      target: "mailto:antoine@ghigny.be",
+      target: "mailto:contact@antoineghigny.be",
       name: locale === "fr" ? "Contacter Antoine Ghigny" : "Contact Antoine Ghigny",
     },
   };
