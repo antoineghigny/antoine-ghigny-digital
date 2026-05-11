@@ -189,7 +189,7 @@ export default function JsonLd({
   type?: "LocalBusiness" | "WebPage";
 }) {
   const schema =
-    type === "ProfessionalService" || type === "LocalBusiness"
+    type === "LocalBusiness"
       ? {
           "@context": "https://schema.org",
           "@graph": [
