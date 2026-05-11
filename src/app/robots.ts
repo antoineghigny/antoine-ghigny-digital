@@ -42,6 +42,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://antoine-ghigny-digital.vercel.app/sitemap.xml',
+    sitemap: 'https://antoineghigny.be/sitemap.xml',
   };
 }

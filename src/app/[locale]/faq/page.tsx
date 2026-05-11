@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import FAQContent from "@/components/landing/FAQContent";
 
-const BASE_URL = "https://antoine-ghigny-digital.vercel.app";
+const BASE_URL = "https://antoineghigny.be";
 
 export async function generateMetadata({
   params,

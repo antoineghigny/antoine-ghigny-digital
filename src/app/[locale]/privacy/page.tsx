@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import PrivacyContent from "@/components/landing/PrivacyContent";
 
+const BASE_URL = "https://antoineghigny.be";
+
 export async function generateMetadata({
   params,
 }: {
@@ -14,6 +16,13 @@ export async function generateMetadata({
     robots: {
       index: false,
       follow: false,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/privacy`,
+      languages: {
+        fr: `${BASE_URL}/fr/privacy`,
+        en: `${BASE_URL}/en/privacy`,
+      },
     },
   };
 }

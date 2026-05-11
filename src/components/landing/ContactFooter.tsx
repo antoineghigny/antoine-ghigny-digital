@@ -145,9 +145,15 @@ export default function ContactFooter() {
                 {tf("links.privacy")}
               </Link>
             </div>
-            <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
-              {tf("tva")}
-            </p>
+            <div className="flex items-center gap-4">
+              <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
+                {tf("tva")}
+              </p>
+              <span className="w-px h-3 bg-[#2D2926]/10 dark:bg-white/10" />
+              <p className="text-[10px] text-[#5C5652] dark:text-[#A8A29E] font-[family-name:var(--font-geist-mono)] tracking-[0.2em] uppercase opacity-60">
+                Mis à jour : mai 2026
+              </p>
+            </div>
           </div>
           <div className="mt-8 pt-8 border-t border-[#2D2926]/5 dark:border-white/[0.05] flex justify-center">
             <p
