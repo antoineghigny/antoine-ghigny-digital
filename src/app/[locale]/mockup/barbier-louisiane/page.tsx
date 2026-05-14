@@ -284,10 +284,10 @@ const ContactView = () => (
       </div>
     </div>
     <div className="max-w-[1400px] mx-auto mt-24 px-4 md:px-8">
-      <div className="relative w-full h-[350px] md:h-[400px] overflow-hidden rounded-2xl border border-[#E5E5DF]">
+      <div className="relative w-full h-[350px] md:h-[400px] overflow-hidden rounded-2xl border border-[#E5E5DF] shadow-sm">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.6144165756163!2d4.298715!3d50.841359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c6b7c5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sChauss%C3%A9e+de+Mons+909%2C+1070+Anderlecht!5e0!3m2!1sfr!2sbe!4v1"
-          width="100%" height="100%" style={{ border: 0, filter: 'grayscale(100%) sepia(20%)' }}
+          width="100%" height="100%" style={{ border: 0 }}
           allowFullScreen loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Chaussée de Mons 909, 1070 Anderlecht"
