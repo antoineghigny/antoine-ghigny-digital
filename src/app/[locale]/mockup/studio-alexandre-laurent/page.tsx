@@ -38,6 +38,10 @@ const injectStyles = () => {
     .mockup-alex-wrapper * { font-family: inherit; }
     .mockup-alex-wrapper .font-heading { font-family: 'Cabinet Grotesk', sans-serif !important; }
     .mockup-alex-wrapper nav button { background: none; border: none; padding: 0; cursor: pointer; font-family: 'Geist', sans-serif; }
+    .mockup-alex-wrapper nav button.text-white { color: #fff !important; }
+    .mockup-alex-wrapper nav button.text-zinc-950 { color: #09090b !important; }
+    .mockup-alex-wrapper nav .font-heading.text-white { color: #fff !important; }
+    .mockup-alex-wrapper nav .font-heading.text-zinc-950 { color: #09090b !important; }
     .mockup-alex-wrapper nav button:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }
     .mockup-alex-wrapper input,
     .mockup-alex-wrapper select,
