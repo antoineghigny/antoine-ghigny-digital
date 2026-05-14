@@ -378,6 +378,20 @@ const ContactView = () => (
         </div>
       </div>
     </div>
+    <div className="max-w-[1400px] mx-auto mt-24 px-4 reveal-blur">
+      <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden rounded-sm border border-zinc-200">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40403.82552430824!2d4.340911!3d50.684577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b3e1c0b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sBraine-l%27Alleud!5e0!3m2!1sfr!2sbe!4v1"
+          width="100%"
+          height="100%"
+          style={{ border: 0, filter: 'grayscale(100%) invert(10%)' }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Braine-l'Alleud - Brabant Wallon"
+        />
+      </div>
+    </div>
   </main>
 );
 
