@@ -409,21 +409,23 @@ const FaqView = () => {
 const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: NavigateFn }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  useEffect(() => { const handleScroll = () => setScrolled(window.scrollY > 50); window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []);
-  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (currentPage === 'home' ? 'bg-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
+  useEffect(() => { const handleScroll = () => setScrolled(window.scrollY > 50); handleScroll(); window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []);
+  const isHome = currentPage === 'home';
+  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (isHome ? 'bg-gradient-to-b from-zinc-950/60 via-zinc-950/30 to-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
+  const dark = scrolled || !isHome;
   const navItems = [{ id: 'home', label: 'Accueil' }, { id: 'services', label: 'Services' }, { id: 'galerie', label: 'Galerie' }, { id: 'apropos', label: 'À propos' }, { id: 'faq', label: 'FAQ' }, { id: 'contact', label: 'Contact' }];
   const handleNav = (id: string) => { navigate(id); setMobileMenuOpen(false); };
   return (
     <>
       <nav className={navClass}>
         <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center">
-          <div className="font-heading text-3xl font-bold cursor-pointer tracking-tighter text-white" onClick={() => handleNav('home')}>A. LAURENT</div>
+          <div onClick={() => handleNav('home')} className={`font-heading text-3xl font-bold cursor-pointer tracking-tighter ${dark ? 'text-zinc-950' : 'text-white'}`}>A. LAURENT</div>
           <div className="nav-desktop flex gap-6 items-center">{navItems.map(item => (
             item.id === 'contact'
-              ? <button key={item.id} onClick={() => handleNav(item.id)} className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-none ${scrolled ? 'bg-zinc-950 text-white hover:bg-emerald-600' : 'bg-white text-zinc-950 hover:bg-emerald-600 hover:text-white'}`}>{item.label}</button>
-              : <button key={item.id} onClick={() => handleNav(item.id)} className={`text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${scrolled ? 'text-zinc-950' : 'text-white'}`}>{item.label}</button>
+              ? <button key={item.id} onClick={() => handleNav(item.id)} className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-none ${dark ? 'bg-zinc-950 text-white hover:bg-emerald-600' : 'bg-white text-zinc-950 hover:bg-emerald-600 hover:text-white'}`}>{item.label}</button>
+              : <button key={item.id} onClick={() => handleNav(item.id)} className={`text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${dark ? 'text-zinc-950' : 'text-white'}`}>{item.label}</button>
           ))}</div>
-          <button className={`nav-mobile-btn ${scrolled ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
+          <button className={`nav-mobile-btn ${dark ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
         </div>
       </nav>
       {mobileMenuOpen && (
