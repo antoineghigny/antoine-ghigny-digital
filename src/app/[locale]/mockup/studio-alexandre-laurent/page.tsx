@@ -406,6 +406,80 @@ const FaqView = () => {
   );
 };
 
+const LegalView = ({ navigate }: { navigate: NavigateFn }) => (
+  <main className="w-full pt-40 pb-32 bg-white min-h-[100dvh]">
+    <div className="max-w-[900px] mx-auto px-4">
+      <h1 className="font-heading text-6xl md:text-7xl font-bold text-zinc-950 mb-16 tracking-tight">Mentions légales</h1>
+      <div className="space-y-12 text-zinc-600 text-lg font-light leading-relaxed">
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Identité</h2>
+          <p><strong>Nom :</strong> Studio Alexandre Laurent / Alexandre Laurent</p>
+          <p><strong>Activité :</strong> Photographie professionnelle B2B — publicité, industrie, corporate, aérien</p>
+          <p><strong>Zone :</strong> Brabant Wallon — Interventions dans toute la Belgique</p>
+          <p><strong>Email :</strong> alexandrelaurent@me.com</p>
+          <p><strong>Téléphone :</strong> +32 475 26 46 79</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Numéro d'entreprise</h2>
+          <p>À confirmer — numéro BCE/TVA en cours de vérification auprès du client.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Hébergeur</h2>
+          <p>Vercel Inc. — 440 N Barranca Ave #4133, Covina, CA 91723, USA</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Propriété intellectuelle</h2>
+          <p>Toutes les images présentes sur ce site sont protégées par le droit d'auteur. Alexandre Laurent est seul titulaire des droits sur les photographies reproduites. Toute reproduction, représentation, modification ou utilisation sans autorisation préalable est interdite.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Protection des données (RGPD)</h2>
+          <p>Les informations recueillies via le formulaire de contact sont destinées au Studio Alexandre Laurent dans le but de répondre à votre demande. Elles ne sont pas conservées au-delà du temps nécessaire au traitement de votre demande et ne sont en aucun cas transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez alexandrelaurent@me.com.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Cookies</h2>
+          <p>Ce site n'utilise pas de cookies de suivi ou de publicité. Des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés (gestion de session, préférences d'affichage).</p>
+        </div>
+      </div>
+      <div className="mt-16"><Button onClick={() => navigate('home')} variant="outline">Retour à l'accueil</Button></div>
+    </div>
+  </main>
+);
+
+const PrivacyView = ({ navigate }: { navigate: NavigateFn }) => (
+  <main className="w-full pt-40 pb-32 bg-white min-h-[100dvh]">
+    <div className="max-w-[900px] mx-auto px-4">
+      <h1 className="font-heading text-6xl md:text-7xl font-bold text-zinc-950 mb-16 tracking-tight">Politique de confidentialité</h1>
+      <div className="space-y-12 text-zinc-600 text-lg font-light leading-relaxed">
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Responsable du traitement</h2>
+          <p>Alexandre Laurent, Studio Alexandre Laurent — alexandrelaurent@me.com — +32 475 26 46 79</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Données collectées</h2>
+          <p>Via le formulaire de contact : nom, prénom, adresse email, téléphone, message. Aucune donnée sensible n'est collectée. Les photos présentes sur le site sont des œuvres protégées et ne sont pas téléchargeables en haute définition.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Finalité du traitement</h2>
+          <p>Les données collectées via le formulaire sont utilisées uniquement pour répondre à votre demande de devis ou d'information. Elles ne sont pas utilisées à des fins commerciales automatisées.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Durée de conservation</h2>
+          <p>Les données sont conservées le temps nécessaire au traitement de votre demande, et au maximum 12 mois après le dernier contact.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Vos droits</h2>
+          <p>Conformément au RGPD, vous disposez des droits suivants : droit d'accès, de rectification, d'effacement, à la limitation du traitement, à la portabilité des données, et d'opposition. Pour les exercer, contactez alexandrelaurent@me.com.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-zinc-950 mb-4">Sécurité</h2>
+          <p>Les données sont transmises via une connexion sécurisée (HTTPS). Le site est hébergé sur Vercel, infrastructure certifiée ISO 27001 et SOC 2.</p>
+        </div>
+      </div>
+      <div className="mt-16"><Button onClick={() => navigate('home')} variant="outline">Retour à l'accueil</Button></div>
+    </div>
+  </main>
+);
+
 const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: NavigateFn }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -461,7 +535,7 @@ const Footer = ({ navigate }: { navigate: NavigateFn }) => (
     </div>
     <div className="max-w-[1400px] mx-auto pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-600 font-medium uppercase tracking-widest">
       <p>&copy; {new Date().getFullYear()} Studio Alexandre Laurent.</p>
-      <div className="flex gap-8"><button className="hover:text-zinc-300 transition-colors">Mentions légales</button><button className="hover:text-zinc-300 transition-colors">Politique de confidentialité</button></div>
+      <div className="flex gap-8"><button onClick={() => navigate('mentions-legales')} className="hover:text-zinc-300 transition-colors">Mentions légales</button><button onClick={() => navigate('confidentialite')} className="hover:text-zinc-300 transition-colors">Politique de confidentialité</button></div>
     </div>
   </footer>
 );
@@ -478,6 +552,8 @@ export default function StudioAlexandreLaurentMockup() {
       case 'apropos': return <AboutView navigate={navigate} />;
       case 'contact': return <ContactView />;
       case 'faq': return <FaqView />;
+      case 'mentions-legales': return <LegalView navigate={navigate} />;
+      case 'confidentialite': return <PrivacyView navigate={navigate} />;
       default: return <HomeView navigate={navigate} />;
     }
   };
