@@ -37,11 +37,13 @@ const injectStyles = () => {
     .mockup-alex-wrapper { font-family: 'Geist', sans-serif; background-color: #fafafa; color: #09090b; -webkit-font-smoothing: antialiased; }
     .mockup-alex-wrapper * { font-family: inherit; }
     .mockup-alex-wrapper .font-heading { font-family: 'Cabinet Grotesk', sans-serif !important; }
-    .mockup-alex-wrapper nav button { background: none; border: none; padding: 0; cursor: pointer; font-family: 'Geist', sans-serif; }
+    .mockup-alex-wrapper nav button { background-color: transparent; border: none; padding: 0; cursor: pointer; font-family: 'Geist', sans-serif; }
     .mockup-alex-wrapper nav button.text-white { color: #fff !important; }
     .mockup-alex-wrapper nav button.text-zinc-950 { color: #09090b !important; }
     .mockup-alex-wrapper nav .font-heading.text-white { color: #fff !important; }
     .mockup-alex-wrapper nav .font-heading.text-zinc-950 { color: #09090b !important; }
+    .mockup-alex-wrapper nav .cta-button { background-color: #059669 !important; color: #fff !important; }
+    .mockup-alex-wrapper nav .cta-button:hover { background-color: #047857 !important; }
     .mockup-alex-wrapper nav button:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }
     .mockup-alex-wrapper input,
     .mockup-alex-wrapper select,
@@ -420,7 +422,7 @@ const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: 
           <div className="font-heading text-3xl font-bold cursor-pointer tracking-tighter text-white" onClick={() => handleNav('home')}>A. LAURENT</div>
           <div className="nav-desktop flex gap-6 items-center">{navItems.map(item => (
             item.id === 'contact'
-              ? <button key={item.id} onClick={() => handleNav(item.id)} className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-none ${scrolled ? 'bg-zinc-950 text-white hover:bg-emerald-600' : 'bg-white text-zinc-950 hover:bg-emerald-600 hover:text-white'}`}>{item.label}</button>
+              ? <button key={item.id} onClick={() => handleNav(item.id)} className="cta-button px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">{item.label}</button>
               : <button key={item.id} onClick={() => handleNav(item.id)} className={`text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${scrolled ? 'text-zinc-950' : 'text-white'}`}>{item.label}</button>
           ))}</div>
           <button className={`nav-mobile-btn ${scrolled ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
