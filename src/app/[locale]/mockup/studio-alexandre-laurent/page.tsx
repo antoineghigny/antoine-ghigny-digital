@@ -34,8 +34,16 @@ const injectStyles = () => {
     @import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400,300&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
     :root { --bg-zinc-50: #fafafa; --bg-zinc-950: #09090b; --accent-emerald: #059669; }
-    body { font-family: 'Geist', sans-serif; background-color: var(--bg-zinc-50); color: var(--bg-zinc-950); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    .font-heading { font-family: 'Cabinet Grotesk', sans-serif; }
+    .mockup-alex-wrapper { font-family: 'Geist', sans-serif; background-color: #fafafa; color: #09090b; -webkit-font-smoothing: antialiased; }
+    .mockup-alex-wrapper * { font-family: inherit; }
+    .mockup-alex-wrapper .font-heading { font-family: 'Cabinet Grotesk', sans-serif !important; }
+    .mockup-alex-wrapper nav button { all: unset; cursor: pointer; font-family: 'Geist', sans-serif; }
+    .mockup-alex-wrapper nav button:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }
+    .mockup-alex-wrapper input,
+    .mockup-alex-wrapper select,
+    .mockup-alex-wrapper textarea { font-family: 'Geist', sans-serif; }
+    @media (max-width: 767px) { .mockup-alex-wrapper .nav-desktop { display: none !important; } }
+    @media (min-width: 768px) { .mockup-alex-wrapper .nav-mobile-btn { display: none !important; } }
     .masonry-grid { column-count: 1; column-gap: 1.5rem; }
     @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
     @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
@@ -408,8 +416,8 @@ const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: 
       <nav className={navClass}>
         <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center">
           <div onClick={() => handleNav('home')} className={`font-heading text-3xl font-bold cursor-pointer tracking-tighter ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`}>A. LAURENT</div>
-          <div className="hidden md:flex gap-10 items-center">{navItems.map(item => (<button key={item.id} onClick={() => handleNav(item.id)} className={`${linkClass} ${currentPage === item.id ? 'opacity-50 pointer-events-none' : ''}`}>{item.label}</button>))}</div>
-          <button className={`md:hidden ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
+          <div className="nav-desktop flex gap-10 items-center">{navItems.map(item => (<button key={item.id} onClick={() => handleNav(item.id)} className={`${linkClass} ${currentPage === item.id ? 'opacity-50 pointer-events-none' : ''}`}>{item.label}</button>))}</div>
+          <button className={`nav-mobile-btn ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
         </div>
       </nav>
       {mobileMenuOpen && (
@@ -466,7 +474,7 @@ export default function StudioAlexandreLaurentMockup() {
     }
   };
   return (
-    <div className="pt-12 min-h-screen flex flex-col bg-zinc-50 selection:bg-emerald-500/30 selection:text-emerald-900">
+    <div className="mockup-alex-wrapper pt-12 min-h-screen flex flex-col bg-zinc-50 selection:bg-emerald-500/30 selection:text-emerald-900">
       <Navigation currentPage={currentPage} navigate={navigate} />
       <div className="flex-grow">{renderPage()}</div>
       <Footer navigate={navigate} />
