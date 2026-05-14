@@ -243,6 +243,60 @@ const AboutView = ({ navigate }: { navigate: NavigateFn }) => (
   </main>
 );
 
+const ContactView = () => (
+  <main className="w-full pt-40 pb-32 bg-white min-h-[100dvh]">
+    <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+      <div className="mb-16">
+        <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#2A342D] mb-6 tracking-tight">Prenez soin de vos pieds</h1>
+        <p className="text-xl text-[#5C665F] font-light max-w-2xl">Contactez Louisiane au 0496 10 96 97 pour prendre rendez-vous, au cabinet ou à domicile.</p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+        <div className="lg:col-span-5 space-y-8">
+          <a href="tel:+32496109697" className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-2xl border border-[#E5E5DF] hover:border-[#7A9E7E] transition-colors group">
+            <div className="mt-1 text-[#7A9E7E]"><Phone size={24} /></div>
+            <div><p className="text-sm text-[#7A857D] font-medium mb-1">Téléphone</p><p className="text-2xl font-heading text-[#2A342D]">0496 10 96 97</p></div>
+          </a>
+          <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-2xl border border-[#E5E5DF]">
+            <div className="mt-1 text-[#7A9E7E]"><MapPin size={24} /></div>
+            <div><p className="text-sm text-[#7A857D] font-medium mb-1">Cabinet</p><p className="text-xl font-heading text-[#2A342D]">Chaussée de Mons 909</p><p className="text-lg text-[#2A342D]">1070 Anderlecht</p><p className="text-sm text-[#7A9E7E] font-medium mt-1">Parking facile</p></div>
+          </div>
+          <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-2xl border border-[#E5E5DF]">
+            <div className="mt-1 text-[#7A9E7E]"><MapPin size={24} /></div>
+            <div><p className="text-sm text-[#7A857D] font-medium mb-1">Consultations</p><p className="text-lg font-heading text-[#2A342D]">Au cabinet : mercredi 12h-19h</p><p className="text-lg font-heading text-[#2A342D]">À domicile : lundi-vendredi</p><p className="text-sm text-[#5C665F] font-light mt-1">Nivelles, Braine-l'Alleud, Waterloo et environs</p></div>
+          </div>
+        </div>
+        <div className="lg:col-span-7 bg-[#FAF9F7] p-8 md:p-12 rounded-3xl border border-[#E5E5DF]">
+          <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Demande envoyée."); }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Nom complet</label><input type="text" required className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors text-[#2A342D]" /></div>
+              <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Téléphone</label><input type="tel" required className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors text-[#2A342D]" /></div>
+            </div>
+            <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Motif de consultation</label>
+              <select className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors appearance-none text-[#2A342D]">
+                <option value="">Sélectionnez un motif...</option>
+                {SERVICES.map(s => <option key={s.id}>{s.category}</option>)}
+              </select>
+            </div>
+            <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Votre message (optionnel)</label><textarea rows={4} className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors resize-none text-[#2A342D]"></textarea></div>
+            <Button type="submit" className="w-full py-4 text-base">Envoyer la demande</Button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div className="max-w-[1400px] mx-auto mt-24 px-4 md:px-8">
+      <div className="relative w-full h-[350px] md:h-[400px] overflow-hidden rounded-2xl border border-[#E5E5DF]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.6144165756163!2d4.298715!3d50.841359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c6b7c5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sChauss%C3%A9e+de+Mons+909%2C+1070+Anderlecht!5e0!3m2!1sfr!2sbe!4v1"
+          width="100%" height="100%" style={{ border: 0, filter: 'grayscale(100%) sepia(20%)' }}
+          allowFullScreen loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Chaussée de Mons 909, 1070 Anderlecht"
+        />
+      </div>
+    </div>
+  </main>
+);
+
 const FaqView = () => (
   <main className="w-full pt-40 pb-32 bg-[#FAF9F7] min-h-[100dvh]">
     <div className="max-w-[800px] mx-auto px-4 md:px-8">
@@ -259,56 +313,36 @@ const FaqView = () => (
   </main>
 );
 
-const ContactView = () => (
+const LegalView = ({ navigate }: { navigate: NavigateFn }) => (
   <main className="w-full pt-40 pb-32 bg-white min-h-[100dvh]">
-    <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-      <div className="mb-16">
-        <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#2A342D] mb-6 tracking-tight">Prenez soin de vos pieds</h1>
-        <p className="text-xl text-[#5C665F] font-light max-w-2xl">Contactez Louisiane au 0496 10 96 97 pour prendre rendez-vous, au cabinet ou à domicile.</p>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-        <div className="lg:col-span-5 space-y-8">
-          <a href="tel:+32496109697" className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-2xl border border-[#E5E5DF] hover:border-[#7A9E7E] transition-colors group">
-            <div className="mt-1 text-[#7A9E7E]"><Phone size={24} /></div>
-            <div><p className="text-sm text-[#7A857D] font-medium mb-1">Téléphone</p><p className="text-2xl font-heading text-[#2A342D]">0496 10 96 97</p></div>
-          </a>
-          <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-2xl border border-[#E5E5DF]">
-            <div className="mt-1 text-[#7A9E7E]"><MapPin size={24} /></div>
-            <div>
-              <p className="text-sm text-[#7A857D] font-medium mb-1">Cabinet</p>
-              <p className="text-xl font-heading text-[#2A342D]">Chaussée de Mons 909</p>
-              <p className="text-lg text-[#2A342D]">1070 Anderlecht</p>
-              <p className="text-sm text-[#7A9E7E] font-medium mt-1">Parking facile</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-6 bg-[#FAF9F7] rounded-2xl border border-[#E5E5DF]">
-            <div className="mt-1 text-[#7A9E7E]"><MapPin size={24} /></div>
-            <div>
-              <p className="text-sm text-[#7A857D] font-medium mb-1">Consultations</p>
-              <p className="text-lg font-heading text-[#2A342D]">Au cabinet : mercredi 12h-19h</p>
-              <p className="text-lg font-heading text-[#2A342D]">À domicile : lundi-vendredi</p>
-              <p className="text-sm text-[#5C665F] font-light mt-1">Nivelles, Braine-l'Alleud, Waterloo et environs</p>
-            </div>
-          </div>
+    <div className="max-w-[900px] mx-auto px-4 md:px-8">
+      <h1 className="font-heading text-5xl md:text-7xl font-bold text-[#2A342D] mb-16 tracking-tight">Mentions légales</h1>
+      <div className="space-y-12 text-[#5C665F] text-lg font-light leading-relaxed">
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-[#2A342D] mb-4">Identité</h2>
+          <p><strong>Nom :</strong> Louisiane Barbier</p>
+          <p><strong>Activité :</strong> Pédicure médicale</p>
+          <p><strong>Adresse :</strong> Chaussée de Mons 909, 1070 Anderlecht</p>
+          <p><strong>Téléphone :</strong> 0496 10 96 97</p>
         </div>
-        <div className="lg:col-span-7 bg-[#FAF9F7] p-8 md:p-12 rounded-3xl border border-[#E5E5DF]">
-          <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Demande envoyée."); }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Nom complet</label><input type="text" required className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors text-[#2A342D]" /></div>
-              <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Téléphone</label><input type="tel" required className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors text-[#2A342D]" /></div>
-            </div>
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-[#5C665F]">Motif de consultation</label>
-              <select className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors appearance-none text-[#2A342D]">
-                <option value="">Sélectionnez un motif...</option>
-                {SERVICES.map(s => <option key={s.id}>{s.category}</option>)}
-              </select>
-            </div>
-            <div className="space-y-2"><label className="text-sm font-medium text-[#5C665F]">Votre message (optionnel)</label><textarea rows={4} className="w-full p-4 bg-white border border-[#E5E5DF] rounded-xl focus:outline-none focus:border-[#7A9E7E] transition-colors resize-none text-[#2A342D]"></textarea></div>
-            <Button type="submit" className="w-full py-4 text-base">Envoyer la demande</Button>
-          </form>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-[#2A342D] mb-4">Numéro d'entreprise</h2>
+          <p>À confirmer — numéro BCE/TVA en cours de vérification.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-[#2A342D] mb-4">Hébergeur</h2>
+          <p>Vercel Inc. — 440 N Barranca Ave #4133, Covina, CA 91723, USA</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-[#2A342D] mb-4">Protection des données (RGPD)</h2>
+          <p>Les informations recueillies via le formulaire de contact sont destinées à Louisiane Barbier dans le but de répondre à votre demande. Elles ne sont pas conservées au-delà du temps nécessaire au traitement de votre demande et ne sont en aucun cas transmises à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, contactez Louisiane Barbier par téléphone au 0496 10 96 97.</p>
+        </div>
+        <div>
+          <h2 className="font-heading text-2xl font-bold text-[#2A342D] mb-4">Cookies</h2>
+          <p>Ce site n'utilise pas de cookies de suivi ou de publicité. Des cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés.</p>
         </div>
       </div>
+      <div className="mt-16"><Button onClick={() => navigate('home')} variant="outline">Retour à l'accueil</Button></div>
     </div>
   </main>
 );
@@ -378,7 +412,7 @@ const Footer = ({ navigate }: { navigate: NavigateFn }) => (
     </div>
     <div className="max-w-[1400px] mx-auto pt-8 border-t border-[#E5E5DF] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#7A857D] font-light">
       <p>&copy; {new Date().getFullYear()} Barbier Louisiane, Pédicure Médicale.</p>
-      <button className="hover:text-[#2A342D] transition-colors">Mentions légales</button>
+      <button onClick={() => navigate('legal')} className="hover:text-[#2A342D] transition-colors">Mentions légales</button>
     </div>
   </footer>
 );
@@ -393,6 +427,7 @@ export default function App() {
       case 'soins': return <SoinsView navigate={navigate} />;
       case 'apropos': return <AboutView navigate={navigate} />;
       case 'faq': return <FaqView />;
+      case 'legal': return <LegalView navigate={navigate} />;
       case 'contact': return <ContactView />;
       default: return <HomeView navigate={navigate} />;
     }
