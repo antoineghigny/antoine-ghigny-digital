@@ -37,7 +37,11 @@ const injectStyles = () => {
     .mockup-alex-wrapper { font-family: 'Geist', sans-serif; background-color: #fafafa; color: #09090b; -webkit-font-smoothing: antialiased; }
     .mockup-alex-wrapper * { font-family: inherit; }
     .mockup-alex-wrapper .font-heading { font-family: 'Cabinet Grotesk', sans-serif !important; }
-    .mockup-alex-wrapper nav button { all: unset; cursor: pointer; font-family: 'Geist', sans-serif; }
+    .mockup-alex-wrapper nav button { background: none; border: none; padding: 0; cursor: pointer; font-family: 'Geist', sans-serif; }
+    .mockup-alex-wrapper nav button.text-white { color: #fff !important; }
+    .mockup-alex-wrapper nav button.text-zinc-950 { color: #09090b !important; }
+    .mockup-alex-wrapper nav .font-heading.text-white { color: #fff !important; }
+    .mockup-alex-wrapper nav .font-heading.text-zinc-950 { color: #09090b !important; }
     .mockup-alex-wrapper nav button:focus-visible { outline: 2px solid #059669; outline-offset: 2px; }
     .mockup-alex-wrapper input,
     .mockup-alex-wrapper select,
@@ -232,7 +236,7 @@ const HomeView = ({ navigate }: { navigate: NavigateFn }) => (
     <section className="py-40 bg-zinc-50 text-center px-4 border-t border-zinc-200">
       <FadeInSection>
         <h2 className="font-heading text-5xl md:text-7xl font-bold text-zinc-950 mb-8 tracking-tight">Vous avez un projet en tête ?</h2>
-        <p className="text-2xl text-zinc-600 mb-12 font-light">Parlons-en autour d'un café ou d'un vol de repérage.</p>
+        <p className="text-2xl text-zinc-600 mb-12 font-light">Je suis impatient de vous rencontrer et de partager avec vous mon amour pour la photographie.</p>
         <Button onClick={() => navigate('contact')}>Me contacter</Button>
       </FadeInSection>
     </section>
@@ -330,7 +334,7 @@ const ContactView = () => (
     <div className="max-w-[1400px] mx-auto px-4">
       <div className="mb-24 reveal-blur">
         <h1 className="font-heading text-6xl md:text-8xl font-bold text-zinc-950 mb-8 tracking-tighter">Contact</h1>
-        <p className="text-2xl text-zinc-600 font-light max-w-2xl">Une question, un projet, une envie de voler ? Parlons-en.</p>
+        <p className="text-2xl text-zinc-600 font-light max-w-2xl">Une question, un projet ? Je suis à votre écoute.</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         <div className="lg:col-span-5 space-y-16 reveal-blur" style={{ animationDelay: '0.2s' }}>
@@ -406,18 +410,20 @@ const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: 
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => { const handleScroll = () => setScrolled(window.scrollY > 50); window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []);
-  const isHome = currentPage === 'home';
-  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (isHome ? 'bg-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
-  const linkClass = `text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`;
+  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (currentPage === 'home' ? 'bg-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
   const navItems = [{ id: 'home', label: 'Accueil' }, { id: 'services', label: 'Services' }, { id: 'galerie', label: 'Galerie' }, { id: 'apropos', label: 'À propos' }, { id: 'faq', label: 'FAQ' }, { id: 'contact', label: 'Contact' }];
   const handleNav = (id: string) => { navigate(id); setMobileMenuOpen(false); };
   return (
     <>
       <nav className={navClass}>
         <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center">
-          <div onClick={() => handleNav('home')} className={`font-heading text-3xl font-bold cursor-pointer tracking-tighter ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`}>A. LAURENT</div>
-          <div className="nav-desktop flex gap-10 items-center">{navItems.map(item => (<button key={item.id} onClick={() => handleNav(item.id)} className={`${linkClass} ${currentPage === item.id ? 'opacity-50 pointer-events-none' : ''}`}>{item.label}</button>))}</div>
-          <button className={`nav-mobile-btn ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
+          <div className="font-heading text-3xl font-bold cursor-pointer tracking-tighter text-white" onClick={() => handleNav('home')}>A. LAURENT</div>
+          <div className="nav-desktop flex gap-6 items-center">{navItems.map(item => (
+            item.id === 'contact'
+              ? <button key={item.id} onClick={() => handleNav(item.id)} className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-none ${scrolled ? 'bg-zinc-950 text-white hover:bg-emerald-600' : 'bg-white text-zinc-950 hover:bg-emerald-600 hover:text-white'}`}>{item.label}</button>
+              : <button key={item.id} onClick={() => handleNav(item.id)} className={`text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${scrolled ? 'text-zinc-950' : 'text-white'}`}>{item.label}</button>
+          ))}</div>
+          <button className={`nav-mobile-btn ${scrolled ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
         </div>
       </nav>
       {mobileMenuOpen && (
