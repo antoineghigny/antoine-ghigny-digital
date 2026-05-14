@@ -349,7 +349,7 @@ const ContactView = () => (
             </a>
             <div className="flex items-start gap-6">
               <div className="mt-1 text-zinc-400"><MapPin size={28} strokeWidth={1.5} /></div>
-              <div><p className="text-sm text-zinc-500 uppercase tracking-widest mb-2 font-medium">Localisation</p><p className="text-2xl font-heading text-zinc-950">Brabant Wallon, Belgique</p><p className="text-lg text-zinc-500 font-light mt-2">Interventions dans tout le pays</p></div>
+              <div><p className="text-sm text-zinc-500 uppercase tracking-widest mb-2 font-medium">Zone d'intervention</p><p className="text-2xl font-heading text-zinc-950">Brabant Wallon — Belgique</p><p className="text-lg text-zinc-500 font-light mt-2">Déplacements dans toute la Belgique</p></div>
             </div>
           </div>
           <div className="p-10 bg-zinc-950 text-white">
@@ -377,21 +377,7 @@ const ContactView = () => (
           </form>
         </div>
       </div>
-    </div>
-    <div className="max-w-[1400px] mx-auto mt-24 px-4 reveal-blur">
-      <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden rounded-sm border border-zinc-200">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40403.82552430824!2d4.340911!3d50.684577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3b3e1c0b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sBraine-l%27Alleud!5e0!3m2!1sfr!2sbe!4v1"
-          width="100%"
-          height="100%"
-          style={{ border: 0, filter: 'grayscale(100%) invert(10%)' }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Braine-l'Alleud - Brabant Wallon"
-        />
-      </div>
-    </div>
+    </div> 
   </main>
 );
 
@@ -424,20 +410,23 @@ const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: 
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => { const handleScroll = () => setScrolled(window.scrollY > 50); window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []);
-  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (currentPage === 'home' ? 'bg-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
+  const isHome = currentPage === 'home';
+  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (isHome ? 'bg-gradient-to-b from-zinc-950/60 via-zinc-950/30 to-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
+  const linkClass = `text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500`;
+  const textColor = scrolled || !isHome ? 'text-zinc-950' : 'text-white';
   const navItems = [{ id: 'home', label: 'Accueil' }, { id: 'services', label: 'Services' }, { id: 'galerie', label: 'Galerie' }, { id: 'apropos', label: 'À propos' }, { id: 'faq', label: 'FAQ' }, { id: 'contact', label: 'Contact' }];
   const handleNav = (id: string) => { navigate(id); setMobileMenuOpen(false); };
   return (
     <>
       <nav className={navClass}>
         <div className="max-w-[1400px] mx-auto px-4 flex justify-between items-center">
-          <div className="font-heading text-3xl font-bold cursor-pointer tracking-tighter text-white" onClick={() => handleNav('home')}>A. LAURENT</div>
+          <div onClick={() => handleNav('home')} className={`font-heading text-3xl font-bold cursor-pointer tracking-tighter ${textColor}`}>A. LAURENT</div>
           <div className="nav-desktop flex gap-6 items-center">{navItems.map(item => (
             item.id === 'contact'
-              ? <button key={item.id} onClick={() => handleNav(item.id)} className={`px-5 py-2.5 text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 rounded-none ${scrolled ? 'bg-zinc-950 text-white hover:bg-emerald-600' : 'bg-white text-zinc-950 hover:bg-emerald-600 hover:text-white'}`}>{item.label}</button>
-              : <button key={item.id} onClick={() => handleNav(item.id)} className={`text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${scrolled ? 'text-zinc-950' : 'text-white'}`}>{item.label}</button>
+              ? <button key={item.id} onClick={() => handleNav(item.id)} className={`px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 ${scrolled || !isHome ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'bg-white text-zinc-950 hover:bg-emerald-600 hover:text-white'}`}>{item.label}</button>
+              : <button key={item.id} onClick={() => handleNav(item.id)} className={`${linkClass} ${textColor} ${currentPage === item.id ? 'opacity-50 pointer-events-none' : ''}`}>{item.label}</button>
           ))}</div>
-          <button className={`nav-mobile-btn ${scrolled ? 'text-zinc-950' : 'text-white'}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
+          <button className={`nav-mobile-btn ${textColor}`} onClick={() => setMobileMenuOpen(true)}><Menu size={28} strokeWidth={1.5} /></button>
         </div>
       </nav>
       {mobileMenuOpen && (
