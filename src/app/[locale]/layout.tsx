@@ -31,7 +31,7 @@ function ClientNoise() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
-  const baseUrl = "https://antoine-ghigny-digital.vercel.app";
+  const baseUrl = "https://antoineghigny.be";
 
   return {
     metadataBase: new URL(baseUrl),

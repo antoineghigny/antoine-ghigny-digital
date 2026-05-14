@@ -1,4 +1,4 @@
-const BASE_URL = "https://antoine-ghigny-digital.vercel.app";
+const BASE_URL = "https://antoineghigny.be";
 const DATE_MODIFIED = new Date().toISOString().split("T")[0]; // build-time date
 
 function getProfessionalServiceSchema(locale: string) {
@@ -9,14 +9,15 @@ function getProfessionalServiceSchema(locale: string) {
       : "Strategy, bespoke website development and human support for freelancers and SMEs. Based in Nivelles, Belgium.";
 
   return {
-    "@type": "ProfessionalService",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "@id": `${BASE_URL}/#business`,
     name: "Antoine Ghigny · Digital Creation",
     url,
     description,
     image: `${BASE_URL}/og-image.png`,
     telephone: "+32 475 91 13 74",
-    email: "antoine@ghigny.be",
+    email: "contact@antoineghigny.be",
+    foundingDate: "2023",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Chaussée de Braine le Comte, 70",
@@ -29,7 +30,7 @@ function getProfessionalServiceSchema(locale: string) {
       latitude: 50.5977,
       longitude: 4.3232,
     },
-    priceRange: "$$",
+    priceRange: "€€",
     currenciesAccepted: "EUR",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -38,9 +39,14 @@ function getProfessionalServiceSchema(locale: string) {
       closes: "18:00",
     },
     areaServed: [
-      { "@type": "Country", name: "Belgium" },
       { "@type": "City", name: "Nivelles" },
       { "@type": "City", name: "Bruxelles" },
+      { "@type": "City", name: "Liège" },
+      { "@type": "City", name: "Namur" },
+      { "@type": "City", name: "Charleroi" },
+      { "@type": "City", name: "Mons" },
+      { "@type": "City", name: "Louvain-la-Neuve" },
+      { "@type": "Country", name: "Belgium" },
     ],
     sameAs: ["https://www.linkedin.com/in/antoine-ghigny-9b88a9252"],
     hasOfferCatalog: {
@@ -92,7 +98,7 @@ function getPersonSchema() {
     name: "Antoine Ghigny",
     jobTitle: "Développeur Web Freelance & Software Engineer",
     url: BASE_URL,
-    email: "antoine@ghigny.be",
+    email: "contact@antoineghigny.be",
     telephone: "+32 475 91 13 74",
     image: `${BASE_URL}/images/antoine.jpg`,
     address: {
@@ -143,7 +149,7 @@ function getWebSiteSchema(locale: string) {
     author: { "@id": `${BASE_URL}/#person` },
     potentialAction: {
       "@type": "ContactAction",
-      target: "mailto:antoine@ghigny.be",
+      target: "mailto:contact@antoineghigny.be",
       name: locale === "fr" ? "Contacter Antoine Ghigny" : "Contact Antoine Ghigny",
     },
   };
@@ -177,13 +183,13 @@ function getBreadcrumbSchema(locale: string) {
 
 export default function JsonLd({
   locale,
-  type = "ProfessionalService",
+  type = "LocalBusiness",
 }: {
   locale: string;
-  type?: "ProfessionalService" | "WebPage";
+  type?: "LocalBusiness" | "WebPage";
 }) {
   const schema =
-    type === "ProfessionalService"
+    type === "LocalBusiness"
       ? {
           "@context": "https://schema.org",
           "@graph": [

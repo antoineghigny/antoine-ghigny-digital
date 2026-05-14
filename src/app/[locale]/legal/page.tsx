@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import LegalContent from "@/components/landing/LegalContent";
 
+const BASE_URL = "https://antoineghigny.be";
+
 export async function generateMetadata({
   params,
 }: {
@@ -14,6 +16,13 @@ export async function generateMetadata({
     robots: {
       index: false,
       follow: false,
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/legal`,
+      languages: {
+        fr: `${BASE_URL}/fr/legal`,
+        en: `${BASE_URL}/en/legal`,
+      },
     },
   };
 }

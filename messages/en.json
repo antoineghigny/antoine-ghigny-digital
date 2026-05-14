@@ -144,7 +144,7 @@
     "cta_whatsapp": "Chat on WhatsApp",
     "status": "Antoine replies within 24h — Available this week",
     "inquiry_label": "Project Inquiry",
-    "email": "antoine@ghigny.be",
+    "email": "contact@antoineghigny.be",
     "phone": "+32 475 91 13 74",
     "phone_url": "32475911374"
   },
@@ -174,7 +174,7 @@
         "name": "Antoine Ghigny",
         "address": "Registered Office: Chaussée de Braine le Comte, 70, 1400 Nivelles, Belgium",
         "vat": "Enterprise Number / VAT: BE 1033.932.403",
-        "email": "antoine@ghigny.be"
+        "email": "contact@antoineghigny.be"
       },
       "hosting": {
         "label": "Infrastructure",
@@ -335,7 +335,7 @@
         "label": "Responsibility",
         "title": "Data Controller",
         "content": "Antoine Ghigny is the sole controller for the processing of your data collected on this site.",
-        "email": "antoine@ghigny.be"
+        "email": "contact@antoineghigny.be"
       },
       "data": {
         "label": "Collection",
@@ -345,7 +345,7 @@
       "rights": {
         "label": "Your Rights",
         "title": "Access & Rectification",
-        "content": "You have the right to access, rectify, and erase your data. Contact us for any request at antoine@ghigny.be."
+        "content": "You have the right to access, rectify, and erase your data. Contact us for any request at contact@antoineghigny.be."
       },
       "cookies": {
         "label": "Cookies",
