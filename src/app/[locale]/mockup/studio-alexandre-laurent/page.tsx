@@ -382,6 +382,7 @@ const ContactView = () => (
 );
 
 const FaqView = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const faqs = [
     { q: "Combien de temps dure un shooting ?", a: "Cela dépend du type de prestation. Un portrait dure 1 à 2 heures, un reportage industriel une demi-journée, un mariage la journée complète. Je vous donne une estimation précise lors de notre échange." },
     { q: "Livrez-vous les photos retouchées ?", a: "Oui, toutes les photos sélectionnées sont retouchées et livrées en haute définition dans une galerie en ligne privée." },
@@ -393,12 +394,25 @@ const FaqView = () => {
     <main className="w-full pt-40 pb-32 bg-white min-h-[100dvh]">
       <div className="max-w-[800px] mx-auto px-4">
         <h1 className="font-heading text-5xl md:text-7xl font-bold text-zinc-950 mb-16 text-center reveal-blur tracking-tight">Questions fréquentes</h1>
-        <div className="space-y-6 reveal-blur" style={{ animationDelay: '0.2s' }}>
+        <div className="space-y-4 reveal-blur" style={{ animationDelay: '0.2s' }}>
           {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-zinc-200 pb-6 cursor-pointer marker:content-['']">
-              <summary className="font-heading text-2xl font-medium text-zinc-950 flex justify-between items-center outline-none hover:text-emerald-600 transition-colors">{faq.q}<ChevronDown className="transition-transform duration-300 group-open:rotate-180 text-zinc-400" /></summary>
-              <div className="pt-6 text-zinc-600 font-light text-lg leading-relaxed">{faq.a}</div>
-            </details>
+            <div key={i} className="border-b border-zinc-200 pb-4">
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex justify-between items-center py-3 text-left outline-none hover:text-emerald-600 transition-colors"
+              >
+                <span className="font-heading text-2xl font-medium text-zinc-950">{faq.q}</span>
+                <ChevronDown
+                  size={20}
+                  className={`text-zinc-400 transition-transform duration-300 shrink-0 ml-4 ${openIndex === i ? 'rotate-180' : ''}`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+              >
+                <p className="pb-4 text-zinc-600 font-light text-lg leading-relaxed">{faq.a}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
