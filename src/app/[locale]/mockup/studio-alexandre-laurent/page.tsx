@@ -407,7 +407,7 @@ const Navigation = ({ currentPage, navigate }: { currentPage: string; navigate: 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => { const handleScroll = () => setScrolled(window.scrollY > 50); window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll); }, []);
   const isHome = currentPage === 'home';
-  const navClass = `fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (isHome ? 'bg-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
+  const navClass = `fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-zinc-200 py-4 shadow-sm' : (isHome ? 'bg-transparent py-8' : 'bg-white py-8 border-b border-zinc-100')}`;
   const linkClass = `text-xs uppercase tracking-[0.2em] font-medium transition-colors hover:text-emerald-500 ${scrolled || !isHome ? 'text-zinc-950' : 'text-white'}`;
   const navItems = [{ id: 'home', label: 'Accueil' }, { id: 'services', label: 'Services' }, { id: 'galerie', label: 'Galerie' }, { id: 'apropos', label: 'À propos' }, { id: 'faq', label: 'FAQ' }, { id: 'contact', label: 'Contact' }];
   const handleNav = (id: string) => { navigate(id); setMobileMenuOpen(false); };
@@ -474,7 +474,7 @@ export default function StudioAlexandreLaurentMockup() {
     }
   };
   return (
-    <div className="mockup-alex-wrapper pt-12 min-h-screen flex flex-col bg-zinc-50 selection:bg-emerald-500/30 selection:text-emerald-900">
+    <div className="mockup-alex-wrapper min-h-screen flex flex-col bg-zinc-50 selection:bg-emerald-500/30 selection:text-emerald-900">
       <Navigation currentPage={currentPage} navigate={navigate} />
       <div className="flex-grow">{renderPage()}</div>
       <Footer navigate={navigate} />
