@@ -624,7 +624,7 @@ export default function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-[#1a365d] py-12 pb-32 md:pb-12 text-white/80">
+      <footer className="bg-[#1a365d] py-12 md:pb-12 text-white/80">
         <div className="max-w-[90rem] mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2 pr-12">
@@ -669,16 +669,6 @@ export default function App() {
         </div>
       </footer>
 
-      {/* CTA STICKY MOBILE */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-zinc-200 z-40">
-        <button 
-          onClick={() => scrollTo('contact')}
-          className="w-full bg-[#f59e0b] text-white py-4 rounded-xl font-bold shadow-lg flex justify-center items-center gap-2 text-lg"
-        >
-          Demander un devis
-          <ArrowRight size={18} />
-        </button>
-      </div>
     </div>
   );
 }
