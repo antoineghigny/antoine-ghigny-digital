@@ -21,6 +21,7 @@ const injectStyles = () => {
     @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
     .mockup-barbier-wrapper { font-family: 'Outfit', sans-serif; background-color: #FAF9F7; color: #2A342D; -webkit-font-smoothing: antialiased; }
+    html, body { background-color: #FAF9F7 !important; }
     .mockup-barbier-wrapper * { font-family: inherit; }
     .mockup-barbier-wrapper .font-heading { font-family: 'Satoshi', sans-serif !important; }
     .mockup-barbier-wrapper nav button { background: none; border: none; padding: 0; cursor: pointer; font-family: 'Outfit', sans-serif; }
