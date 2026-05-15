@@ -15,8 +15,7 @@ import {
   Truck,
   Sparkles,
   PackageCheck,
-  Heart,
-  FileText
+  Heart
 } from 'lucide-react';
 
 const injectStyles = () => {
@@ -416,7 +415,7 @@ export default function App() {
                   <span className="text-[#f59e0b]">week-ends à ranger ?</span>
                 </h2>
                 <p className="text-lg md:text-xl text-zinc-600 mb-10 leading-relaxed">
-                  Le samedi, vous pourriez être au parc, prendre un verre en terrasse ou simplement ne rien faire. Au lieu de ça, vous frottez, portez, trimballez. Je suis étudiant et indépendant : je prends le relais, vous gardez votre temps libre.
+                  Le temps est votre ressource la plus précieuse. Pourquoi le passer à frotter une terrasse, trier des cartons ou louer un camion ? En tant qu'étudiant indépendant, j'offre une solution locale, humaine et redoutablement efficace.
                 </p>
 
                 <div className="space-y-6">
@@ -633,22 +632,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* MENTIONS LÉGALES */}
-        <section className="py-16 bg-zinc-50 border-t border-zinc-100">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <FileText size={24} className="text-[#1a365d] mx-auto mb-4" />
-            <h2 className="font-display font-bold text-2xl text-[#1a365d] mb-3">Mentions légales</h2>
-            <p className="text-zinc-500 text-sm mb-6">Identité, hébergement, RGPD, cookies, droit applicable</p>
-            <a 
-              href="/fr/mockup/elie-yoka/mentions-legales"
-              className="inline-flex items-center gap-2 text-[#1a365d] font-bold hover:text-[#f59e0b] transition-colors group"
-            >
-              Voir les mentions légales
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-        </section>
-
       </main>
 
       {/* FOOTER */}
@@ -666,7 +649,9 @@ export default function App() {
               <ul className="space-y-3 text-sm">
                 <li><button onClick={() => scrollTo('pourquoi-moi')} className="hover:text-[#f59e0b] transition-colors">Pourquoi me choisir</button></li>
                 <li><button onClick={() => scrollTo('services')} className="hover:text-[#f59e0b] transition-colors">Mes services</button></li>
-                <li><a href="/fr/mockup/elie-yoka/mentions-legales" className="hover:text-[#f59e0b] transition-colors">Mentions légales</a></li>
+                <li><a href="/fr/mockup/elie-yoka/mentions-legales" className="hover:text-[#f59e0b] transition-colors">Mentions légales</a>
+                  <p className="text-zinc-500 text-xs mt-1 leading-snug">Identité, hébergement, RGPD, cookies, droit applicable</p>
+                </li>
               </ul>
             </div>
             <div>
