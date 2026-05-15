@@ -63,7 +63,7 @@ const SERVICES_DATA = [
     category: 'Nettoyage',
     title: 'Nettoyage intérieur et extérieur',
     shortDesc: 'Sols, murs, sanitaires, façades et terrasses. Un nettoyage en profondeur de la cave au grenier.',
-    description: "Elie assure un nettoyage complet de vos espaces intérieurs et extérieurs. À l'intérieur : sols, murs, poussières, surfaces, sanitaires — chaque recoin est passé en revue avec soin. À l'extérieur : allées, terrasses, façades, mobilier de jardin. Le matériel de nettoyage adapté est apporté sur place. Résultat garanti : un espace propre, sain et agréable à vivre.",
+    description: "J'assure un nettoyage complet de vos espaces intérieurs et extérieurs. À l'intérieur : sols, murs, poussières, surfaces, sanitaires — chaque recoin est passé en revue avec soin. À l'extérieur : allées, terrasses, façades, mobilier de jardin. Le matériel de nettoyage adapté est apporté sur place. Résultat garanti : un espace propre, sain et agréable à vivre.",
     cta: 'Ce service m\'intéresse',
     icon: Home
   },
@@ -72,7 +72,7 @@ const SERVICES_DATA = [
     category: 'Nettoyage',
     title: 'Nettoyage terrasse et allée',
     shortDesc: 'Haute pression, traitement anti-mousse. Retrouvez la couleur d\'origine de vos extérieurs.',
-    description: "Les terrasses et allées prennent une patine grise avec le temps, la mousse s'installe. Elie intervient avec du matériel adapté (nettoyeur haute pression, brosses spécifiques) pour retrouver la couleur originelle de vos pierres, bois ou carrelages. Le traitement anti-mousse est inclus.",
+    description: "Les terrasses et allées prennent une patine grise avec le temps, la mousse s'installe. J'interviens avec du matériel adapté (nettoyeur haute pression, brosses spécifiques) pour retrouver la couleur originelle de vos pierres, bois ou carrelages. Le traitement anti-mousse est inclus.",
     cta: 'Ce service m\'intéresse',
     icon: Sparkles
   },
@@ -81,7 +81,7 @@ const SERVICES_DATA = [
     category: 'Nettoyage',
     title: 'Nettoyage après déménagement',
     shortDesc: 'Remise à neuf après départ ou avant emménagement pour une transition sereine.',
-    description: "Un déménagement laisse toujours des traces. Elie prend en charge le nettoyage complet de votre ancien ou nouveau logement après le départ des cartons. Tout est passé au crible : cuisine, sanitaires, sols, vitres. Le logement est rendu dans un état irréprochable.",
+    description: "Un déménagement laisse toujours des traces. Je prends en charge le nettoyage complet de votre ancien ou nouveau logement après le départ des cartons. Tout est passé au crible : cuisine, sanitaires, sols, vitres. Le logement est rendu dans un état irréprochable.",
     cta: 'Ce service m\'intéresse',
     icon: Sparkles
   },
@@ -90,7 +90,7 @@ const SERVICES_DATA = [
     category: 'Nettoyage',
     title: 'Nettoyage de vitres',
     shortDesc: 'Vitres intérieures et extérieures sans traces, cadres et rebords dépoussiérés.',
-    description: "Des vitres propres changent la luminosité d'une pièce. Elie nettoie vos vitres intérieures et extérieures (rez-de-chaussée), sans traces ni coulures. Les cadres et rebords sont également dépoussiérés et essuyés. Le matériel professionnel garantit un résultat net.",
+    description: "Des vitres propres changent la luminosité d'une pièce. Je nettoie vos vitres intérieures et extérieures (rez-de-chaussée), sans traces ni coulures. Les cadres et rebords sont également dépoussiérés et essuyés. Le matériel professionnel garantit un résultat net.",
     cta: 'Ce service m\'intéresse',
     icon: Sparkles
   },
@@ -99,7 +99,7 @@ const SERVICES_DATA = [
     category: 'Manutention',
     title: 'Aide au déménagement',
     shortDesc: 'Renfort musculaire pour porter, charger et décharger vos meubles le jour J.',
-    description: "Déménager seul est épuisant et risqué. Elie vous aide le jour J : port des cartons et meubles, chargement du camion, déchargement à destination. Il apporte le renfort musculaire et logistique dont vous avez besoin. Les objets fragiles sont manipulés avec précaution.",
+    description: "Déménager seul est épuisant et risqué. Je vous aide le jour J : port des cartons et meubles, chargement du camion, déchargement à destination. J'apporte le renfort musculaire et logistique dont vous avez besoin. Les objets fragiles sont manipulés avec précaution.",
     cta: 'Ce service m\'intéresse',
     icon: PackageCheck
   },
@@ -108,7 +108,7 @@ const SERVICES_DATA = [
     category: 'Transport',
     title: "Transport d'objets et meubles",
     shortDesc: 'Déplacement de biens encombrants en toute sécurité dans le Brabant Wallon.',
-    description: "Vous avez un meuble à récupérer, un objet encombrant à déplacer ? Elie assure le transport de vos biens avec son véhicule adapté. Les objets sont calés, sanglés et protégés pour éviter les chocs. Livraison à domicile ou dépôt en magasin, facturé au trajet.",
+    description: "Vous avez un meuble à récupérer, un objet encombrant à déplacer ? J'assure le transport de vos biens avec mon véhicule adapté. Les objets sont calés, sanglés et protégés pour éviter les chocs. Livraison à domicile ou dépôt en magasin, facturé au trajet.",
     cta: 'Ce service m\'intéresse',
     icon: Truck
   }
@@ -335,12 +335,12 @@ export default function App() {
               <div className="relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-zinc-200 animate-pulse"></div>
                 <img 
-                  src="https://picsum.photos/id/1012/1000/1200" 
-                  alt="Elie Yoka - Indépendant Brabant Wallon" 
+                  src="https://picsum.photos/id/210/1000/1200" 
+                  alt="Espace de vie propre et accueillant" 
                   className="w-full h-full object-cover relative z-10"
                 />
                 <div className="absolute top-4 right-4 z-20 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs text-white">
-                  *Photo d'Elie à ajouter
+                  Photo du résultat à ajouter
                 </div>
               </div>
 
@@ -460,15 +460,15 @@ export default function App() {
                 className="relative"
               >
                 <div className="aspect-[4/5] bg-zinc-100 rounded-[2.5rem] overflow-hidden relative shadow-xl">
-                  <img src="https://picsum.photos/id/1013/800/1000" alt="Action propreté et manutention" className="w-full h-full object-cover" />
+                  <img src="https://picsum.photos/id/211/800/1000" alt="Intérieur propre et rangé" className="w-full h-full object-cover" />
                   <div className="absolute top-4 right-4 z-20 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs text-white">
-                    *Photo de prestation à ajouter
+                    Photo de prestation à ajouter
                   </div>
                   
                   <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/20">
                     <p className="font-display font-bold text-[#1a365d] text-lg mb-2 flex items-center gap-2">
                       <Heart size={20} className="text-[#f59e0b]" fill="currentColor" /> 
-                      La méthode Elie
+                      Ma méthode
                     </p>
                     <p className="text-sm text-zinc-600 font-medium">
                       "La confiance ne s'achète pas, elle se gagne sur le terrain. Mon objectif est simple : que vous m'appeliez à nouveau la prochaine fois."
@@ -532,32 +532,30 @@ export default function App() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="py-24 bg-white border-t border-zinc-100 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f8f9fa] -skew-x-12 translate-x-32 z-0 hidden lg:block"></div>
-          
-          <div className="max-w-7xl mx-auto px-6 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16">
+        <section id="contact" className="py-24 bg-[#f8f9fa] border-t border-zinc-100">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
               
-              <div>
+              <div className="lg:col-span-2 lg:pt-8">
                 <h2 className="font-display font-extrabold text-4xl md:text-5xl text-[#1a365d] mb-6 tracking-tight">On en parle ?</h2>
                 <p className="text-zinc-600 text-xl mb-10 leading-relaxed">
                   Pas besoin de formulaire compliqué. Un appel ou un message rapide suffit pour évaluer votre besoin. <strong className="text-[#1a365d]">Réponse garantie sous 24h.</strong>
                 </p>
 
                 <div className="space-y-6">
-                  <a href="tel:+32466494536" className="flex items-center gap-6 p-6 md:p-8 rounded-[2rem] bg-zinc-50 border border-zinc-200 shadow-sm hover:shadow-md hover:border-[#f59e0b] hover:bg-white transition-all group">
-                    <div className="w-16 h-16 rounded-2xl bg-[#1a365d] shadow-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                  <a href="tel:+32466494536" className="flex items-center gap-6 p-6 md:p-8 rounded-[2rem] bg-white border border-zinc-200 shadow-sm hover:shadow-md hover:border-[#f59e0b] transition-all group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#1a365d] shadow-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shrink-0">
                       <Phone size={28} />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm font-medium text-zinc-500 mb-1">Ligne directe (Nivelles & Brabant Wallon)</p>
-                      <p className="font-display font-bold text-3xl md:text-4xl text-[#1a365d] tracking-tight group-hover:text-[#f59e0b] transition-colors">+32 466 49 45 36</p>
+                      <p className="font-display font-bold text-3xl md:text-4xl text-[#1a365d] tracking-tight group-hover:text-[#f59e0b] transition-colors truncate">+32 466 49 45 36</p>
                     </div>
                   </a>
                   
-                  <div className="p-8 rounded-[2rem] bg-zinc-50 border border-zinc-100">
+                  <div className="p-8 rounded-[2rem] bg-white border border-zinc-100">
                     <h4 className="font-display font-bold text-xl text-[#1a365d] mb-4">Informations pratiques</h4>
-                    <ul className="space-y-3 text-zinc-600">
+                    <ul className="space-y-4 text-zinc-600">
                       <li className="flex items-start gap-3">
                         <Home size={20} className="text-[#f59e0b] shrink-0 mt-0.5" />
                         <span><strong>Zone couverte :</strong> Brabant Wallon (Nivelles et environs). Déplacements possibles au-delà sur devis.</span>
@@ -571,7 +569,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] border border-zinc-100">
+              <div className="lg:col-span-3 bg-white p-8 md:p-10 rounded-[2.5rem] shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)] border border-zinc-100">
                 {formStatus === 'sent' ? (
                   <motion.div 
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -651,16 +649,9 @@ export default function App() {
               </motion.div>
             </button>
 
-            <AnimatePresence>
-              {showLegal && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="overflow-hidden"
-                >
-                  <div className="mt-8 pt-8 border-t border-zinc-200 space-y-8 text-sm text-zinc-600 leading-relaxed">
+            <div className={`grid transition-[grid-template-rows] duration-400 ease-in-out ${showLegal ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+              <div className="overflow-hidden">
+                <div className="mt-8 pt-8 border-t border-zinc-200 space-y-8 text-sm text-zinc-600 leading-relaxed">
                     
                     <div>
                       <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">1. Identité de l'exploitant</h3>
@@ -714,9 +705,8 @@ export default function App() {
                       <p className="text-xs text-zinc-400">Dernière mise à jour : mai 2026</p>
                     </div>
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                </div>
+              </div>
           </div>
         </section>
 
