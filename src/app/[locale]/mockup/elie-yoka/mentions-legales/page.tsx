@@ -15,9 +15,9 @@ const injectStyles = () => {
       --font-body: 'Outfit', sans-serif;
       font-family: var(--font-body);
       color: #09090b;
-      background-color: #f8f9fa;
       -webkit-font-smoothing: antialiased;
     }
+    html, body { background-color: #f8f9fa !important; }
     .elie-legal-wrapper * { font-family: inherit; }
     .elie-legal-wrapper h1, .elie-legal-wrapper h2, .elie-legal-wrapper h3, .elie-legal-wrapper .font-display {
       font-family: var(--font-display) !important;

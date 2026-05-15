@@ -35,6 +35,7 @@ const injectStyles = () => {
     @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap');
     :root { --bg-zinc-50: #fafafa; --bg-zinc-950: #09090b; --accent-emerald: #059669; }
     .mockup-alex-wrapper { font-family: 'Geist', sans-serif; background-color: #fafafa; color: #09090b; -webkit-font-smoothing: antialiased; }
+    html, body { background-color: #fafafa !important; }
     .mockup-alex-wrapper * { font-family: inherit; }
     .mockup-alex-wrapper .font-heading { font-family: 'Cabinet Grotesk', sans-serif !important; }
     .mockup-alex-wrapper nav button { cursor: pointer; font-family: 'Geist', sans-serif; }

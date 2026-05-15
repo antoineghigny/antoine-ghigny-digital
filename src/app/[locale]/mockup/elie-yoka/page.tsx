@@ -31,9 +31,9 @@ const injectStyles = () => {
       --font-body: 'Outfit', sans-serif;
       font-family: var(--font-body);
       color: #09090b;
-      background-color: #f8f9fa;
       -webkit-font-smoothing: antialiased;
     }
+    html, body { background-color: #f8f9fa !important; }
     .elie-mockup-wrapper * { font-family: inherit; }
     .elie-mockup-wrapper h1, .elie-mockup-wrapper h2, .elie-mockup-wrapper h3, .elie-mockup-wrapper h4, .elie-mockup-wrapper .font-display {
       font-family: var(--font-display) !important;
