@@ -114,23 +114,30 @@ const SERVICES_DATA = [
   }
 ];
 
-const ServiceCard = ({ service }) => {
+interface ServiceItem {
+  id: string;
+  category: string;
+  title: string;
+  shortDesc: string;
+  description: string;
+  cta: string;
+  icon: React.ElementType;
+}
+
+const ServiceCard = ({ service }: { service: ServiceItem }) => {
   const [isOpen, setIsOpen] = useState(false);
   const Icon = service.icon;
 
-  const toggleCard = (e) => {
-    if (e.currentTarget === e.target || e.target.closest('button')) return;
-    setIsOpen(!isOpen);
-  };
+  const toggleCard = () => setIsOpen(!isOpen);
 
-  const toggleChevron = (e) => {
+  const toggleChevron = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     setIsOpen(!isOpen);
   };
 
-  const scrollToContact = (e) => {
+  const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -194,7 +201,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (id) => {
+  const scrollTo = (id: string) => {
     setIsMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
@@ -202,7 +209,7 @@ export default function App() {
     }
   };
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus('sending');
     setTimeout(() => setFormStatus('sent'), 1000);
@@ -611,7 +618,7 @@ export default function App() {
                     </div>
                     <div className="space-y-1.5">
                       <label className="text-sm font-medium text-zinc-700">Précisez votre demande</label>
-                      <textarea required rows="4" placeholder="Décrivez la surface, le type de meuble, ou la fréquence souhaitée..." className="w-full px-4 py-3.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1a365d]/20 focus:border-[#1a365d] transition-all resize-none"></textarea>
+                      <textarea required rows={4} placeholder="Décrivez la surface, le type de meuble, ou la fréquence souhaitée..." className="w-full px-4 py-3.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-[#1a365d]/20 focus:border-[#1a365d] transition-all resize-none"></textarea>
                     </div>
                     <button 
                       type="submit" 
