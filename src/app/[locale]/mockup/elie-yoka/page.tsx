@@ -415,7 +415,7 @@ export default function App() {
                   <span className="text-[#f59e0b]">week-ends à ranger ?</span>
                 </h2>
                 <p className="text-lg md:text-xl text-zinc-600 mb-10 leading-relaxed">
-                  Le temps est votre ressource la plus précieuse. Pourquoi le passer à frotter une terrasse, trier des cartons ou louer un camion ? En tant qu'étudiant indépendant, j'offre une solution locale, humaine et redoutablement efficace.
+                  Le temps est votre ressource la plus précieuse. Pourquoi le passer à frotter, porter ou louer un camion ? Je suis étudiant et indépendant : je prends le relais, vous gardez votre temps libre.
                 </p>
 
                 <div className="space-y-6">
@@ -508,21 +508,10 @@ export default function App() {
                   <div className="w-14 h-14 rounded-2xl bg-[#1a365d] text-white flex items-center justify-center shadow-lg shadow-[#1a365d]/20">
                     <PackageCheck size={28} />
                   </div>
-                  <h3 className="font-display font-bold text-3xl text-[#1a365d]">Force & Manutention</h3>
+                  <h3 className="font-display font-bold text-3xl text-[#1a365d]">Manutention & Transport</h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {manutention.map(service => <ServiceCard key={service.id} service={service} />)}
-                </div>
-              </motion.div>
-
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}>
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-2xl bg-zinc-800 text-white flex items-center justify-center shadow-lg shadow-zinc-800/20">
-                    <Truck size={28} />
-                  </div>
-                  <h3 className="font-display font-bold text-3xl text-[#1a365d]">Transport adapté</h3>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {transport.map(service => <ServiceCard key={service.id} service={service} />)}
                 </div>
               </motion.div>
