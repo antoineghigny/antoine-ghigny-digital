@@ -16,9 +16,7 @@ import {
   Sparkles,
   PackageCheck,
   Heart,
-  FileText,
-  Mail,
-  MapPin
+  FileText
 } from 'lucide-react';
 
 const injectStyles = () => {
@@ -64,7 +62,7 @@ const SERVICES_DATA = [
     title: 'Nettoyage intérieur et extérieur',
     shortDesc: 'Sols, murs, sanitaires, façades et terrasses. Un nettoyage en profondeur de la cave au grenier.',
     description: "J'assure un nettoyage complet de vos espaces intérieurs et extérieurs. À l'intérieur : sols, murs, poussières, surfaces, sanitaires — chaque recoin est passé en revue avec soin. À l'extérieur : allées, terrasses, façades, mobilier de jardin. Le matériel de nettoyage adapté est apporté sur place. Résultat garanti : un espace propre, sain et agréable à vivre.",
-    cta: 'Ce service m\'intéresse',
+    cta: 'Je veux un devis nettoyage',
     icon: Home
   },
   {
@@ -73,7 +71,7 @@ const SERVICES_DATA = [
     title: 'Nettoyage terrasse et allée',
     shortDesc: 'Haute pression, traitement anti-mousse. Retrouvez la couleur d\'origine de vos extérieurs.',
     description: "Les terrasses et allées prennent une patine grise avec le temps, la mousse s'installe. J'interviens avec du matériel adapté (nettoyeur haute pression, brosses spécifiques) pour retrouver la couleur originelle de vos pierres, bois ou carrelages. Le traitement anti-mousse est inclus.",
-    cta: 'Ce service m\'intéresse',
+    cta: 'Raviver ma terrasse',
     icon: Sparkles
   },
   {
@@ -82,7 +80,7 @@ const SERVICES_DATA = [
     title: 'Nettoyage après déménagement',
     shortDesc: 'Remise à neuf après départ ou avant emménagement pour une transition sereine.',
     description: "Un déménagement laisse toujours des traces. Je prends en charge le nettoyage complet de votre ancien ou nouveau logement après le départ des cartons. Tout est passé au crible : cuisine, sanitaires, sols, vitres. Le logement est rendu dans un état irréprochable.",
-    cta: 'Ce service m\'intéresse',
+    cta: 'Programmer un nettoyage',
     icon: Sparkles
   },
   {
@@ -91,7 +89,7 @@ const SERVICES_DATA = [
     title: 'Nettoyage de vitres',
     shortDesc: 'Vitres intérieures et extérieures sans traces, cadres et rebords dépoussiérés.',
     description: "Des vitres propres changent la luminosité d'une pièce. Je nettoie vos vitres intérieures et extérieures (rez-de-chaussée), sans traces ni coulures. Les cadres et rebords sont également dépoussiérés et essuyés. Le matériel professionnel garantit un résultat net.",
-    cta: 'Ce service m\'intéresse',
+    cta: 'Des vitres impeccables',
     icon: Sparkles
   },
   {
@@ -100,7 +98,7 @@ const SERVICES_DATA = [
     title: 'Aide au déménagement',
     shortDesc: 'Renfort musculaire pour porter, charger et décharger vos meubles le jour J.',
     description: "Déménager seul est épuisant et risqué. Je vous aide le jour J : port des cartons et meubles, chargement du camion, déchargement à destination. J'apporte le renfort musculaire et logistique dont vous avez besoin. Les objets fragiles sont manipulés avec précaution.",
-    cta: 'Ce service m\'intéresse',
+    cta: 'J\'ai besoin d\'aide',
     icon: PackageCheck
   },
   {
@@ -109,7 +107,7 @@ const SERVICES_DATA = [
     title: "Transport d'objets et meubles",
     shortDesc: 'Déplacement de biens encombrants en toute sécurité dans le Brabant Wallon.',
     description: "Vous avez un meuble à récupérer, un objet encombrant à déplacer ? J'assure le transport de vos biens avec mon véhicule adapté. Les objets sont calés, sanglés et protégés pour éviter les chocs. Livraison à domicile ou dépôt en magasin, facturé au trajet.",
-    cta: 'Ce service m\'intéresse',
+    cta: 'Transporter mes biens',
     icon: Truck
   }
 ];
@@ -192,7 +190,6 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [formStatus, setFormStatus] = useState('idle');
-  const [showLegal, setShowLegal] = useState(false);
 
   useEffect(() => {
     injectStyles();
@@ -302,17 +299,20 @@ export default function App() {
             
             <div className="z-10 relative">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 text-sm font-medium text-zinc-600 mb-8 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse"></span>
-                Étudiant indépendant • Brabant Wallon
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Disponible • Brabant Wallon
               </div>
 
               <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-[5rem] text-[#1a365d] leading-[1.05] tracking-tight mb-6">
-                Déléguez vos corvées.<br />
-                <span className="text-zinc-400 font-medium text-4xl sm:text-5xl lg:text-6xl mt-2 block">Retrouvez votre temps.</span>
+                Je nettoie, je porte,<br />
+                <span className="text-[#f59e0b]">je transporte.</span>
               </h1>
+              <h2 className="text-zinc-400 font-medium text-4xl sm:text-5xl lg:text-6xl -mt-2 mb-6 block leading-tight">
+                Vous, vous respirez.
+              </h2>
 
               <p className="text-zinc-600 text-lg sm:text-xl leading-relaxed max-w-lg mb-10">
-                Nettoyage, manutention, transport. Ne perdez plus vos week-ends à chercher plusieurs prestataires. Un seul étudiant motivé pour tout gérer avec soin.
+                Un coup de main pour votre maison, votre bureau ou votre déménagement. Pas de plateforme, pas d'agence : un étudiant du coin, motivé, assuré, et disponible ce week-end.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -320,13 +320,13 @@ export default function App() {
                   onClick={() => scrollTo('contact')}
                   className="bg-[#f59e0b] hover:bg-[#d97706] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all hover:shadow-[0_8px_30px_-4px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 flex items-center justify-center gap-3 w-full sm:w-auto"
                 >
-                  Demander un devis
+                  Obtenir mon devis gratuit
                   <ArrowRight size={20} />
                 </button>
                 
                 <div className="flex flex-col gap-1 text-sm text-zinc-500">
-                  <span className="flex items-center gap-2 font-medium"><CheckCircle2 size={16} className="text-[#1a365d]" /> Réponse sous 24h</span>
-                  <span className="flex items-center gap-2 font-medium"><CheckCircle2 size={16} className="text-[#1a365d]" /> Sans aucun engagement</span>
+                  <span className="flex items-center gap-2 font-medium"><CheckCircle2 size={16} className="text-[#1a365d]" /> Réponse sous 24h — max</span>
+                  <span className="flex items-center gap-2 font-medium"><CheckCircle2 size={16} className="text-[#1a365d]" /> Je me déplace chez vous</span>
                 </div>
               </div>
             </div>
@@ -366,7 +366,7 @@ export default function App() {
         </section>
 
         {/* BANDEAU CONFIANCE */}
-        <section className="bg-[#1a365d] py-12 mt-16">
+        <section className="bg-[#1a365d] py-12">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
               <div className="flex items-center gap-5 md:justify-center pt-4 md:pt-0">
@@ -374,8 +374,8 @@ export default function App() {
                   <Sparkles size={28} />
                 </div>
                 <div>
-                  <h4 className="text-white font-display font-bold text-lg">Matériel Fourni</h4>
-                  <p className="text-zinc-400 text-sm leading-snug mt-1">J'apporte mes produits et mon matériel pro.</p>
+                  <h4 className="text-white font-display font-bold text-lg">Matériel inclus</h4>
+                  <p className="text-zinc-400 text-sm leading-snug mt-1">Je viens avec tout le nécessaire. Vous n'avez rien à prévoir.</p>
                 </div>
               </div>
               <div className="flex items-center gap-5 md:justify-center pt-4 md:pt-0">
@@ -383,8 +383,8 @@ export default function App() {
                   <ShieldCheck size={28} />
                 </div>
                 <div>
-                  <h4 className="text-white font-display font-bold text-lg">Assurance Incluse</h4>
-                  <p className="text-zinc-400 text-sm leading-snug mt-1">Responsabilité civile couvrant vos biens.</p>
+                  <h4 className="text-white font-display font-bold text-lg">Assurance RC</h4>
+                  <p className="text-zinc-400 text-sm leading-snug mt-1">Vos biens sont couverts pendant mon intervention.</p>
                 </div>
               </div>
               <div className="flex items-center gap-5 md:justify-center pt-4 md:pt-0">
@@ -392,8 +392,8 @@ export default function App() {
                   <CheckCircle2 size={28} />
                 </div>
                 <div>
-                  <h4 className="text-white font-display font-bold text-lg">Paiement Sécurisé</h4>
-                  <p className="text-zinc-400 text-sm leading-snug mt-1">Vous ne payez qu'après la prestation.</p>
+                  <h4 className="text-white font-display font-bold text-lg">Paiement après</h4>
+                  <p className="text-zinc-400 text-sm leading-snug mt-1">Vous réglez quand le travail est fait, pas avant.</p>
                 </div>
               </div>
             </div>
@@ -412,11 +412,11 @@ export default function App() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="font-display font-extrabold text-4xl lg:text-5xl text-[#1a365d] mb-6 tracking-tight leading-[1.1]">
-                  Ne sacrifiez plus <br />
-                  <span className="text-[#f59e0b]">vos week-ends.</span>
+                  Vous perdez vos <br />
+                  <span className="text-[#f59e0b]">week-ends à ranger ?</span>
                 </h2>
                 <p className="text-lg md:text-xl text-zinc-600 mb-10 leading-relaxed">
-                  Le temps est votre ressource la plus précieuse. Pourquoi le passer à frotter une terrasse, trier des cartons ou louer un camion ? En tant qu'étudiant indépendant, j'offre une solution locale, humaine et redoutablement efficace.
+                  Le samedi, vous pourriez être au parc, prendre un verre en terrasse ou simplement ne rien faire. Au lieu de ça, vous frottez, portez, trimballez. Je suis étudiant et indépendant : je prends le relais, vous gardez votre temps libre.
                 </p>
 
                 <div className="space-y-6">
@@ -445,8 +445,8 @@ export default function App() {
                       <CheckCircle2 size={20} />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-[#1a365d] text-xl mb-1">Approche sur-mesure</h4>
-                      <p className="text-zinc-600">Un besoin particulier ? Une demande spécifique ? On en discute simplement. Pas de package rigide imposé.</p>
+                      <h4 className="font-display font-bold text-[#1a365d] text-xl mb-1">Sur-mesure, pas de contrat</h4>
+                      <p className="text-zinc-600">Un besoin particulier ? On en discute et je m'adapte. Pas de package imposé, pas d'abonnement, pas d'engagement.</p>
                     </div>
                   </div>
                 </div>
@@ -623,7 +623,7 @@ export default function App() {
                       disabled={formStatus === 'sending'}
                       className="w-full bg-[#1a365d] hover:bg-[#112440] text-white py-5 rounded-2xl font-bold text-xl transition-colors disabled:opacity-70 flex justify-center items-center gap-2 mt-2 shadow-md hover:shadow-lg"
                     >
-                      {formStatus === 'sending' ? 'Envoi en cours...' : 'Envoyer ma demande'}
+                      {formStatus === 'sending' ? 'Envoi en cours...' : 'Recevoir mon devis'}
                     </button>
                     <p className="text-xs text-center text-zinc-500 mt-4">Vos données restent confidentielles. Aucun spam.</p>
                   </form>
@@ -634,79 +634,18 @@ export default function App() {
         </section>
 
         {/* MENTIONS LÉGALES */}
-        <section id="mentions-legales" className="py-20 bg-zinc-50 border-t border-zinc-100">
-          <div className="max-w-4xl mx-auto px-6">
-            <button
-              onClick={() => setShowLegal(!showLegal)}
-              className="w-full flex items-center justify-between gap-4 text-left"
+        <section className="py-16 bg-zinc-50 border-t border-zinc-100">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <FileText size={24} className="text-[#1a365d] mx-auto mb-4" />
+            <h2 className="font-display font-bold text-2xl text-[#1a365d] mb-3">Mentions légales</h2>
+            <p className="text-zinc-500 text-sm mb-6">Identité, hébergement, RGPD, cookies, droit applicable</p>
+            <a 
+              href="/fr/mockup/elie-yoka/mentions-legales"
+              className="inline-flex items-center gap-2 text-[#1a365d] font-bold hover:text-[#f59e0b] transition-colors group"
             >
-              <div className="flex items-center gap-3">
-                <FileText size={24} className="text-[#1a365d]" />
-                <h2 className="font-display font-bold text-2xl text-[#1a365d]">Mentions légales</h2>
-              </div>
-              <motion.div animate={{ rotate: showLegal ? 180 : 0 }} transition={{ duration: 0.3 }}>
-                <ChevronDown size={24} className="text-zinc-400" />
-              </motion.div>
-            </button>
-
-            <div className={`grid transition-[grid-template-rows] duration-400 ease-in-out ${showLegal ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
-              <div className="overflow-hidden">
-                <div className="mt-8 pt-8 border-t border-zinc-200 space-y-8 text-sm text-zinc-600 leading-relaxed">
-                    
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">1. Identité de l'exploitant</h3>
-                      <p className="mb-1"><strong>Nom :</strong> Elie Yoka</p>
-                      <p className="mb-1"><strong>Statut :</strong> Étudiant indépendant (Brabant Wallon)</p>
-                      <p className="mb-1"><strong>Numéro d'entreprise :</strong> En cours d'immatriculation auprès de la Banque-Carrefour des Entreprises (BCE)</p>
-                      <p><strong>Adresse :</strong> Nivelles, Brabant Wallon, Belgique</p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">2. Coordonnées de contact</h3>
-                      <p className="mb-1"><strong>Téléphone :</strong> <a href="tel:+32466494536" className="text-[#1a365d] font-medium hover:text-[#f59e0b] transition-colors">+32 466 49 45 36</a></p>
-                      <p><strong>Email :</strong> À définir</p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">3. Hébergement</h3>
-                      <p className="mb-1"><strong>Hébergeur :</strong> Vercel Inc.</p>
-                      <p className="mb-1">340 S Lemon Ave #4133</p>
-                      <p className="mb-1">Walnut, CA 91789, États-Unis</p>
-                      <p><a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-[#1a365d] font-medium hover:text-[#f59e0b] transition-colors">vercel.com</a></p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">4. Propriété intellectuelle</h3>
-                      <p>L'ensemble du contenu de ce site (textes, images, logo, structure) est la propriété d'Elie Yoka, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation préalable est interdite.</p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">5. Protection des données (RGPD)</h3>
-                      <p className="mb-3">Conformément au Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679) et à la loi belge du 30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel :</p>
-                      <ul className="space-y-2 ml-4">
-                        <li className="flex items-start gap-2"><span className="text-[#f59e0b] mt-1">•</span> Les données collectées via le formulaire de contact (nom, prénom, email, téléphone) sont utilisées uniquement dans le but de répondre à votre demande.</li>
-                        <li className="flex items-start gap-2"><span className="text-[#f59e0b] mt-1">•</span> Ces données ne sont pas revendues, ni partagées avec des tiers.</li>
-                        <li className="flex items-start gap-2"><span className="text-[#f59e0b] mt-1">•</span> Elles sont conservées le temps nécessaire au traitement de votre demande et supprimées sur simple demande.</li>
-                        <li className="flex items-start gap-2"><span className="text-[#f59e0b] mt-1">•</span> Conformément à la loi, vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression de vos données. Pour l'exercer, contactez Elie Yoka par téléphone ou via le formulaire de contact.</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">6. Cookies</h3>
-                      <p>Ce site n'utilise pas de cookies de suivi ou de pistage publicitaire. Des cookies strictement fonctionnels peuvent être utilisés par l'hébergeur Vercel à des fins de performance et de sécurité. Aucune donnée personnelle n'est collectée via des cookies.</p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-display font-bold text-lg text-[#1a365d] mb-3">7. Droit applicable</h3>
-                      <p>Le présent site est soumis au droit belge. En cas de litige, les tribunaux de l'arrondissement judiciaire du Brabant Wallon sont seuls compétents.</p>
-                    </div>
-
-                    <div className="pt-4 border-t border-zinc-200">
-                      <p className="text-xs text-zinc-400">Dernière mise à jour : mai 2026</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              Voir les mentions légales
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </section>
 
@@ -727,7 +666,7 @@ export default function App() {
               <ul className="space-y-3 text-sm">
                 <li><button onClick={() => scrollTo('pourquoi-moi')} className="hover:text-[#f59e0b] transition-colors">Pourquoi me choisir</button></li>
                 <li><button onClick={() => scrollTo('services')} className="hover:text-[#f59e0b] transition-colors">Mes services</button></li>
-                <li><button onClick={() => scrollTo('mentions-legales')} className="hover:text-[#f59e0b] transition-colors">Mentions légales</button></li>
+                <li><a href="/fr/mockup/elie-yoka/mentions-legales" className="hover:text-[#f59e0b] transition-colors">Mentions légales</a></li>
               </ul>
             </div>
             <div>
