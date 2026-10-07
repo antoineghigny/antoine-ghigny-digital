@@ -1,32 +1,12 @@
-import { getTranslations } from "next-intl/server";
-import PrivacyContent from "@/components/landing/PrivacyContent";
+import { RemaPrivacy } from "@/components/rema/RemaInfo";
+import { remaMetadata } from "@/lib/rema";
 
-const BASE_URL = "https://antoineghigny.be";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "privacy" });
-
-  return {
-    title: t("title"),
-    robots: {
-      index: false,
-      follow: false,
-    },
-    alternates: {
-      canonical: `${BASE_URL}/${locale}/privacy`,
-      languages: {
-        fr: `${BASE_URL}/fr/privacy`,
-        en: `${BASE_URL}/en/privacy`,
-      },
-    },
-  };
+  return remaMetadata(locale, "privacy");
 }
 
-export default function PrivacyPage() {
-  return <PrivacyContent />;
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return <RemaPrivacy locale={locale} />;
 }

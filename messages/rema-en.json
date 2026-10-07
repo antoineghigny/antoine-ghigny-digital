@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "title": "Rema — Dream journal by Antoine Ghigny",
+    "description": "Your dream journal for iPhone. Keep your memories, find what returns and explore your story over time. Rema, an app by Antoine Ghigny."
+  },
+  "nav": {
+    "product": "The journal",
+    "next": "What's next",
+    "about": "About",
+    "faq": "Questions",
+    "menu": "Menu",
+    "skip": "Skip to content",
+    "by": "by Antoine Ghigny",
+    "home": "Rema home",
+    "language": "Website language",
+    "launch": "The launch"
+  },
+  "hero": {
+    "status": "Dream journal for iPhone",
+    "title": "Your dreams have more to tell.",
+    "description": "Keep a trace of your nights. Find the people, places and feelings that return. Take the time to see what your journal tells you about yourself.",
+    "cta": "Coming to the App Store",
+    "secondary": "Explore the previews",
+    "note": "An app by Antoine Ghigny, developed in Belgium.",
+    "caption": "Illustrative journal interface. Fictional dreams and data."
+  },
+  "preview": {
+    "label": "Explore a product example",
+    "journal": "Journal",
+    "threads": "Patterns",
+    "weekly": "Weekly recap",
+    "month": "September",
+    "search": "A person, a place, a memory…",
+    "dream1": {
+      "date": "28 September",
+      "title": "The house by the sea",
+      "summary": "An open door, the sound of waves. Léa is waiting for me on the terrace.",
+      "tags": "Léa · the sea · serenity"
+    },
+    "dream2": {
+      "date": "21 September",
+      "title": "The morning train",
+      "summary": "The train crosses a forest. I get off at a station I don't recognise.",
+      "tags": "the forest · curiosity"
+    },
+    "dream3": {
+      "date": "12 September",
+      "title": "The beach at dusk",
+      "summary": "I walk along the water with Léa. We look for blue stones.",
+      "tags": "Léa · the sea · curiosity"
+    },
+    "dream4": {
+      "date": "4 September",
+      "title": "The crossing",
+      "summary": "I'm on a small boat. The water is calm and I see the coast in the distance.",
+      "tags": "the sea · calm"
+    },
+    "threadTitle": "The sea returns in 3 dreams.",
+    "threadDescription": "One place, at three points in your journal. Return to each memory to find its context.",
+    "sourceLabel": "Read the fictional dream",
+    "weeklyTitle": "A week to read again.",
+    "weeklyPeriod": "21–28 September · example",
+    "weeklyBody": "On the train on 21 September, you arrive somewhere unfamiliar. On the 28th, an open door and someone you know are waiting for you.",
+    "questionLabel": "A question for you",
+    "weeklyQuestion": "What place makes you feel you belong today?",
+    "sources": "The dreams behind this recap",
+    "appNote": "Fictional example"
+  },
+  "product": {
+    "title": "A night fades. A journal stays.",
+    "intro": "Rema is built around a simple habit: keep what you remember, then return to it with a little distance.",
+    "captureTitle": "The memory, as it comes back.",
+    "captureBody": "Speak your dream aloud or write a few lines. A detail is enough to begin. Find your story again, correct it and add what comes back to you.",
+    "connectTitle": "Connections take shape over time.",
+    "connectBody": "Find recurring people, places, feelings and themes. Watch them change across your own journal, with the original dreams close at hand.",
+    "reflectTitle": "Something to keep thinking about.",
+    "reflectBody": "Read a weekly recap linked to your dreams or ask your journal a question. Your memories remain the starting point; their meaning is yours to explore.",
+    "status": "",
+    "quote": "I mostly remember the light on the water. And wanting to stay.",
+    "quoteSource": "An excerpt from a fictional dream",
+    "saved": "A fragment can become a memory.",
+    "principleTitle": "Your perspective, your pace.",
+    "principleBody": "No dream to get right, no conclusion to accept. Rema invites you to notice your own story and add your own words."
+  },
+  "next": {
+    "title": "A little perspective. A small step for you.",
+    "intro": "What's next for Rema: see a whole month with perspective and take steps towards goals you choose.",
+    "status": "Coming to the app. Explore the monthly recap and personal guidance previews below.",
+    "prototype": "Coming soon",
+    "monthlyTitle": "Your month, with perspective.",
+    "monthlyLabel": "Monthly recap",
+    "monthSelector": "Choose an example month",
+    "september": "September",
+    "august": "August",
+    "septemberCount": "4 saved dreams in this example",
+    "septemberLead": "The sea returns. The setting changes.",
+    "septemberBody": "A boat on the 4th, a beach on the 12th, a house on the 28th. The sea appears in three of your four September dreams. Léa is in the last two: what stands out when you read them together?",
+    "septemberQuestion": "What do you associate with these places where you can take your time?",
+    "augustCount": "2 saved dreams in this example",
+    "augustLead": "Two places to return to.",
+    "augustBody": "The library on 8 August and the garden on the 19th are two different places where you take your time looking for something. Do these memories bring a moment of waking life to mind?",
+    "augustQuestion": "What were you looking for in each of these dreams?",
+    "augustDream1": {
+      "date": "8 August",
+      "title": "The library",
+      "summary": "I look for a book in an empty library. I recognise its blue spine."
+    },
+    "augustDream2": {
+      "date": "19 August",
+      "title": "The garden",
+      "summary": "I look for my keys among the flowers. I stop to smell them."
+    },
+    "sources": "Read the original dreams",
+    "question": "To keep reflecting",
+    "goalTitle": "An intention of your own.",
+    "goalLabel": "Personal guidance",
+    "goalSelector": "Choose an example goal",
+    "understand": "Understand myself",
+    "create": "Create more",
+    "understandQuestion": "In the house by the sea, what makes you want to stay?",
+    "understandAction": "Write down a moment in your day when you felt this same calm. What did it have in common with this memory?",
+    "createQuestion": "If you could take one image from the beach at dusk, which would it be?",
+    "createAction": "Take five minutes to draw the blue stones or write a few lines inspired by this scene.",
+    "action": "A small step to try",
+    "goalSource": "Starting point: a dream from your journal",
+    "note": "Demonstrations with fictional dreams. Your choices stay on this page and do not create an account."
+  },
+  "footer": {
+    "description": "A dream journal for personal reflection.",
+    "project": "Rema is a product developed by Antoine Ghigny, a Belgian independent developer.",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "rights": "All rights reserved.",
+    "vat": "VAT BE 1033.932.403"
+  },
+  "about": {
+    "title": "A dream becomes a project.",
+    "description": "Meet Rema, the dream journal for iPhone developed by Antoine Ghigny, an independent developer in Nivelles, Belgium.",
+    "intro": "I'm Antoine Ghigny. I'm building Rema, a dream journal to keep memories of the night and support personal reflection over time.",
+    "whyTitle": "What interests me: what returns.",
+    "whyBody": "A single dream can leave an impression. A journal lets you return to it, recognise a person or place and see how your memories change. That continuity is what I want to make easier with Rema.",
+    "nowTitle": "An app to revisit your nights.",
+    "nowBody": "Rema brings together voice and written capture, a journal, recurring patterns, weekly recaps and questions linked to original dreams. Its App Store launch is in preparation.",
+    "nextBody": "Monthly recaps and personal guidance are planned next. The website previews let you explore that direction.",
+    "companyTitle": "An independent product, in Belgium.",
+    "companyBody": "Rema is the product name. The business is operated by Antoine Ghigny, an independent developer based in Nivelles, Belgium. You speak directly with the person building it.",
+    "portrait": "Antoine Ghigny, creator of Rema",
+    "contact": "Write to Antoine",
+    "preview": "Explore the previews"
+  },
+  "faq": {
+    "title": "Before you begin.",
+    "description": "Answers about Rema, the dream journal for iPhone, its App Store launch and upcoming features.",
+    "intro": "A few answers about Rema, its launch and the website previews.",
+    "items": {
+      "q1": {
+        "question": "What is Rema?",
+        "answer": "Rema is a mobile dream journal under development. It helps you keep memories, find recurring people, places, feelings and themes, and explore how they change over time."
+      },
+      "q2": {
+        "question": "Can I download Rema already?",
+        "answer": "Rema's App Store launch is in preparation. To hear when it is available, you can write to Antoine using the link on this page."
+      },
+      "q3": {
+        "question": "What can I do with Rema?",
+        "answer": "Capture dreams by speaking or writing, find them in your journal, explore recurring people, places, feelings and themes, and follow their evolution. Weekly recaps and questions to the journal invite further reflection based on the original dreams."
+      },
+      "q4": {
+        "question": "What about monthly recaps or personal guidance?",
+        "answer": "They are planned next for Rema. The website previews show the direction: revisit a month with its source dreams, then explore questions and small actions connected to a goal you choose. These features are not yet available in the app."
+      },
+      "q5": {
+        "question": "Are the dreams shown here real?",
+        "answer": "No. All dreams, patterns and recaps in the previews are fictional. The interfaces illustrate the journal and its upcoming features; they are not user testimonials."
+      },
+      "q6": {
+        "question": "Does Rema give my dreams a definitive meaning?",
+        "answer": "Rema is a tool for personal reflection. Its prompts start from your journal and leave room for your own perspective. They are neither a diagnosis nor a promise of therapeutic results."
+      },
+      "q7": {
+        "question": "How can I hear when Rema is available?",
+        "answer": "Write to contact@antoineghigny.be using the link on this page. It opens your email app: you choose to send the email to ask about the launch. The site does not create an account or sign you up automatically."
+      },
+      "q8": {
+        "question": "What happens to my data on this website?",
+        "answer": "The demos do not ask for any dreams and their selections stay in your browser. The privacy policy explains email correspondence, hosting and website analytics. The app's terms will be provided when it launches."
+      }
+    },
+    "contact": "Another question? Write to Antoine."
+  },
+  "legal": {
+    "title": "Legal notice",
+    "intro": "The antoineghigny.be website presents Rema, the dream journal for iPhone developed by Antoine Ghigny.",
+    "updated": "Updated on 7 October 2026",
+    "identityTitle": "Website publisher",
+    "identityBody": "Antoine Ghigny, acting as an independent professional in Belgium. Rema is the product name; the legal business remains Antoine Ghigny.",
+    "address": "Registered office: Chaussée de Braine le Comte, 70, 1400 Nivelles, Belgium",
+    "vat": "Enterprise number / VAT: BE 1033.932.403",
+    "hostingTitle": "Hosting",
+    "hostingBody": "The website is hosted by Vercel Inc., Covina, CA 91723, United States.",
+    "propertyTitle": "Content and illustrations",
+    "propertyBody": "Original website content belongs to Antoine Ghigny. Third-party assets remain subject to their respective licences. Dreams and data in previews are fictional; the interfaces illustrate the app and some upcoming features.",
+    "statusTitle": "App availability",
+    "statusBody": "Rema's App Store launch is in preparation. This website does not offer purchases or account creation. Launch enquiries are handled by email.",
+    "privacyTitle": "Personal data",
+    "privacyBody": "Processing related to this website is described in the privacy policy.",
+    "accessTitle": "Accessibility",
+    "accessBody": "If you have difficulty browsing the website or using its links, contact Antoine at contact@antoineghigny.be."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "intro": "This policy covers the public antoineghigny.be website. Information about how the app processes dreams will be provided when it launches.",
+    "updated": "Updated on 7 October 2026",
+    "controllerTitle": "Data controller",
+    "controllerBody": "Antoine Ghigny, a Belgian independent professional, is responsible for data processing related to this website. Address: Chaussée de Braine le Comte, 70, 1400 Nivelles, Belgium. Enterprise number / VAT: BE 1033.932.403. Contact: contact@antoineghigny.be.",
+    "emailTitle": "Email correspondence",
+    "emailBody": "The website has no signup form. The contact link opens your email app. If you send an email, your address and the information you choose to share are used to answer your request and, if you ask, tell you about Rema's launch. You do not need to share a dream to contact us. Correspondence is retained for as long as needed to handle your request, subject to applicable legal obligations.",
+    "demoTitle": "Demonstrations",
+    "demoBody": "Dreams and recaps in the previews are fictional. Choosing a month, screen or goal does not create an account and is not sent as a tracking event. These choices disappear when the page is reloaded.",
+    "technicalTitle": "Hosting and website measurement",
+    "technicalBody": "Vercel hosts the site and processes technical data needed to deliver and secure it, including request information. Vercel Web Analytics and Speed Insights provide visit and performance statistics: pages viewed, referrer, browser or device type, country and loading times. These tools do not use advertising cookies. They do not receive the content of your emails. Vercel is based in the United States.",
+    "analyticsLink": "Vercel Web Analytics privacy",
+    "speedLink": "Vercel Speed Insights privacy",
+    "cookiesTitle": "Cookies and local storage",
+    "cookiesBody": "A technical NEXT_LOCALE cookie remembers the website language. A display preference may be stored locally by the website's theme system. No advertising pixel or dream collection form is added to the Rema pages.",
+    "rightsTitle": "Your rights",
+    "rightsBody": "You can request access to, correction or deletion of information you have shared, and restrict or object to processing under the applicable conditions. Write to contact@antoineghigny.be. You can also lodge a complaint with the Belgian Data Protection Authority.",
+    "authorityLink": "Belgian Data Protection Authority"
+  },
+  "launch": {
+    "status": "Coming to the App Store",
+    "title": "Make room for your dreams.",
+    "body": "Rema is coming to iPhone. To discover the app when it launches, ask a question or share what you hope to find in a dream journal, write to Antoine.",
+    "cta": "Tell me when it launches",
+    "note": "This link opens your email app to write to Antoine. No account is created on this website.",
+    "subject": "Rema — App Store launch",
+    "emailBody": "Hello Antoine,\n\nI'd like to hear when Rema launches on the App Store.\n\n"
+  }
+}

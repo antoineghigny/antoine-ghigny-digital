@@ -1,4 +1,18 @@
-# Design System — Antoine Ghigny
+# Design System — Rema
+
+## Site public de Rema
+
+L'accueil, À propos, les questions et les pages légales utilisent `src/components/rema/Rema.module.css`.
+
+- Fonds : `#070809`, `#111315`, `#191C1F`.
+- Texte : `#F3F0EA`, texte secondaire `#ABAEB2`.
+- Accent : `#F4A66A`, texte sur l'accent `#2A1A0E`.
+- Titres et lecture : Newsreader. Interface et corps : DM Sans. Polices locales issues de l'app iOS.
+- Identité : symbole actuellement livré dans les assets de Rema iOS.
+- Aperçus : données fictives, sources consultables et fonctions futures signalées « À venir ».
+- Navigation mobile, focus clavier visible et respect de la préférence de mouvement réduit.
+
+## Conventions historiques et mockups
 
 ## Chosen Vibe: Warm Asymmetric (Vibe D)
 
