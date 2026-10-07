@@ -1,39 +1,34 @@
-# antoine-ghigny-digital
-> **Votre site web. Enfin bien fait.**
+# Rema
 
-Landing page premium pour les services de création digitale d'Antoine Ghigny. Axée sur la haute conversion, la performance technique et un design "Warm Asymmetric".
+Site public de Rema, le journal de rêves pour iPhone développé par Antoine Ghigny.
 
-## 🚀 Stack Technique
-- **Framework :** [Next.js 14](https://nextjs.org/) (App Router)
-- **Langage :** [TypeScript](https://www.typescriptlang.org/)
-- **Styles :** [Tailwind CSS](https://tailwindcss.com/)
-- **Animations :** [Framer Motion](https://www.framer.com/motion/)
-- **Icônes :** [Phosphor Icons](https://phosphoricons.com/)
+Le site présente le journal, les récurrences, les bilans hebdomadaires et la réflexion personnelle. Les aperçus interactifs du bilan mensuel et de l'accompagnement par objectifs sont signalés comme fonctions à venir et utilisent des rêves fictifs.
 
-## 🎨 Design System
-Le projet suit un système de design rigoureux ("Warm Asymmetric") :
-- **Palette :** Pierre Chaude (`#FAF8F5`), Texte Anthracite (`#2D2926`), Accent Terracotta (`#B34B44`).
-- **Typographie :** Satoshi (Display) & Geist (Body/Mono).
-- **Philosophie :** Design minimaliste, aéré et asymétrique (Bento 2.0).
+Le lancement sur l'App Store est en préparation. Le contact pour être informé du lancement ouvre la messagerie du visiteur ; aucun compte ni inscription automatique n'est créé.
 
-## 🛠 Installation & Développement
+## Développement
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/antoine-ghigny/antoine-ghigny-digital.git
-   ```
+Next.js 16, React, TypeScript, CSS Modules et next-intl 4. Les pages publiques sont générées statiquement en français et en anglais.
 
-2. Installez les dépendances :
-   ```bash
-   npm install
-   ```
+```bash
+npm ci
+npm run dev
+npm run build
+npm run start
+```
 
-3. Lancez le serveur de développement :
-   ```bash
-   npm run dev
-   ```
+Les URLs sont préfixées par `/fr` ou `/en`. La racine redirige vers `/fr`.
 
-4. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+- `src/components/rema/` : pages, navigation et démonstrations du produit.
+- `messages/rema-fr.json`, `messages/rema-en.json` : textes Rema.
+- `src/lib/rema.ts` : contact et métadonnées des pages.
+- `public/rema/` : identité de l'app et images de partage.
+- `src/app/fonts/` : Newsreader et DM Sans, avec leurs licences OFL.
 
-## 📄 Licence
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Les pages de mockups existantes sont conservées. Leurs styles restent distincts du site Rema.
+
+## Publication
+
+Vercel publie automatiquement les commits de `main` sur [antoineghigny.be](https://antoineghigny.be). Le workflow du dépôt reste : branche de travail, PR vers `develop`, puis PR vers `main`.
+
+Les pages légales identifient Antoine Ghigny comme éditeur et distinguent les traitements du site de ceux de l'app. La mesure d'audience et de performance existante est décrite dans la politique de confidentialité.

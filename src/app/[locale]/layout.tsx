@@ -1,4 +1,5 @@
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 import localFont from "next/font/local";
 import "../globals.css";
 import Providers from "@/components/Providers";
@@ -19,6 +20,19 @@ const geistMono = localFont({
   preload: false,
 });
 
+const remaSans = localFont({
+  src: "../fonts/DMSans-Variable.ttf",
+  variable: "--font-rema-sans",
+  weight: "100 900",
+  display: "swap",
+});
+const remaSerif = localFont({
+  src: "../fonts/Newsreader-Variable.ttf",
+  variable: "--font-rema-serif",
+  weight: "200 800",
+  display: "swap",
+});
+
 // A simple client-only component for the noise background to prevent hydration issues
 function ClientNoise() {
   return (
@@ -30,83 +44,34 @@ function ClientNoise() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const t = await getTranslations({ locale, namespace: "rema.metadata" });
   const baseUrl = "https://antoineghigny.be";
 
   return {
     metadataBase: new URL(baseUrl),
-    title: {
-      default: t("title"),
-      template: `%s | Antoine Ghigny`,
-    },
+    title: { default: t("title"), template: "%s | Rema" },
     description: t("description"),
     keywords: locale === "fr"
-      ? [
-          "développeur web freelance",
-          "création site web sur mesure",
-          "Nivelles",
-          "Belgique",
-          "développeur web indépendant belgique",
-          "site web PME",
-          "freelance web belgique",
-          "landing page",
-          "SEO Belgique",
-          "site web rapide",
-        ]
-      : [
-          "freelance web developer Belgium",
-          "bespoke website",
-          "web design Nivelles",
-          "custom website SME",
-          "SEO Belgium",
-          "landing page Belgium",
-          "web developer Wallonia",
-        ],
-    authors: [{ name: "Antoine Ghigny", url: baseUrl }],
+      ? ["Rema", "journal de rêves", "rêves récurrents", "réflexion personnelle", "journal iPhone", "Antoine Ghigny"]
+      : ["Rema", "dream journal", "recurring dreams", "personal reflection", "iPhone journal", "Antoine Ghigny"],
+    authors: [{ name: "Antoine Ghigny", url: baseUrl + "/" + locale + "/about" }],
     creator: "Antoine Ghigny",
     openGraph: {
       type: "website",
       locale: locale === "fr" ? "fr_BE" : "en_US",
-      url: `${baseUrl}/${locale}`,
+      url: baseUrl + "/" + locale,
       title: t("title"),
       description: t("description"),
-      siteName: "Antoine Ghigny · Digital Creation",
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1243,
-          height: 745,
-          alt: t("title"),
-        },
-      ],
+      siteName: "Rema",
+      images: [{ url: "/rema/social-" + locale + ".png", width: 1200, height: 630, alt: t("title") }],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: ["/og-image.png"],
-    },
+    twitter: { card: "summary_large_image", title: t("title"), description: t("description"), images: ["/rema/social-" + locale + ".png"] },
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
-      languages: {
-        fr: `${baseUrl}/fr`,
-        en: `${baseUrl}/en`,
-      },
+      canonical: baseUrl + "/" + locale,
+      languages: { fr: baseUrl + "/fr", en: baseUrl + "/en", "x-default": baseUrl + "/fr" },
     },
-    verification: {
-      google: "6u__m6RbbQ7KptTxLp8UfXzZYZLRwU0G03hO7xLWnUk",
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    verification: { google: "6u__m6RbbQ7KptTxLp8UfXzZYZLRwU0G03hO7xLWnUk" },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large" as const, "max-snippet": -1 } },
   };
 }
 
@@ -115,7 +80,7 @@ export function generateStaticParams() {
 }
 
 export const viewport = {
-  themeColor: "#FAF8F5",
+  themeColor: "#070809",
   width: "device-width",
   initialScale: 1,
 };
@@ -128,6 +93,8 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (locale !== "fr" && locale !== "en") notFound();
+  setRequestLocale(locale);
   // Pre-load critical translations for the whole layout
   const messages = await getMessages({ locale });
 
@@ -141,10 +108,10 @@ export default async function LocaleLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-[#B34B44]/20 selection:text-[#B34B44] bg-[#FAF8F5] dark:bg-[#1A1816]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${remaSans.variable} ${remaSerif.variable} antialiased selection:bg-[#B34B44]/20 selection:text-[#B34B44] bg-[#FAF8F5] dark:bg-[#1A1816]`}
       >
         <ClientNoise />
-        <Providers locale={locale} messages={messages}>
+        <Providers locale={locale} messages={{ rema: messages.rema }}>
           {/* overflow-x-hidden on a div (not body/html) — the only reliable iOS Safari fix */}
           <div className="overflow-x-hidden">
             {children}
